@@ -352,27 +352,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <None Include="armada2.map" />
-    <None Include="LuaTypes.txt" />
-    <None Include="Scribble.txt" />
-    <None Include="CinerativeScribble.txt" />
-    <None Include="CraftScribble.txt" />
-    <None Include="dbScribble.txt" />
-    <None Include="EntityScribble.txt" />
-    <None Include="FreighterScribble.txt" />
-    <None Include="GameObjectScribble.txt" />
-    <None Include="GameSetupScribble.txt" />
-    <None Include="GameTypeScribble.txt" />
-    <None Include="ObjectivesDisplay.txt" />
-    <None Include="OverviewImp.txt" />
-    <None Include="PathScribble.txt" />
-    <None Include="PlanetScribble.txt" />
-    <None Include="ProducerScribble.txt" />
-    <None Include="ResourceInterfaceScribble.txt" />
-    <None Include="Smeg.txt" />
-    <None Include="TeamScribble.txt" />
-    <None Include="TechTreeScribble.txt" />
-    <None Include="WHScribble.txt" />
     <None Include="A2.def" />
   </ItemGroup>
   <ItemGroup>

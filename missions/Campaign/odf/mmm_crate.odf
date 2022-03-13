@@ -1,0 +1,18 @@
+basename = "mmm_crate"
+
+ainame 	 = "CraftProcess"
+
+classlabel = "craft"
+
+race 	 = "unitedfederation"
+
+unitname = "Cargo Crate"
+
+possiblecraftnames = "Cargo Crate" "Cargo Crate" "Cargo Crate" "Cargo Crate" "Cargo Crate" "Cargo Crate" "Cargo Crate" "Cargo Crate" "Cargo Crate" "Cargo Crate" "Cargo Crate" "Cargo Crate" "Cargo Crate" "Cargo Crate" "Cargo Crate" "Cargo Crate" "Cargo Crate"
+
+physicsfile 		= "mmm_fleet_physics.odf"
+trekphysicsfile 	= "mmm_fleet_physics.odf"
+
+enginesHitPoints = 0
+
+fireball = "x_mini_explosion"

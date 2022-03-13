@@ -1,0 +1,7 @@
+Monitor Tutorial
+
+This tutorial demonstrates monitors. When you acquire 500 … you will receive an Akira class starship.
+
+See the Monitor Tutorial in the Megadroid's Mission Mod section of Modding on the Fleet Operations guide for more information (http://guide.fleetops.net).
+
+*Acquire 500 … 

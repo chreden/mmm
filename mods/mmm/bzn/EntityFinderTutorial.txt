@@ -1,0 +1,50 @@
+	// Map Definitions
+
+	// Handle for Vor'cha Class (kli_vorcha) object kli_vorc1008
+	Handle kli_vorc1008
+
+	// Handle for Negh'var Class (kli_neghvar) object kli_negh1007
+	Handle kli_negh1007
+
+	// Handle for SuS'a' Class (kli_susa) object kli_susa1006
+	Handle kli_susa1006
+
+	// Handle for K'Vort Class (kli_kvort) object kli_kvor1005
+	Handle kli_kvor1005
+
+	// Handle for B'rel Class (kli_brel) object kli_brel1004
+	Handle kli_brel1004
+
+	// Handle for B'rel Class (kli_brel) object kli_brel1003
+	Handle kli_brel1003
+
+	// Handle for Topmey Class (kli_topmey) object kli_topm1002
+	Handle kli_topm1002
+
+	// Handle for Chor Class (kli_chor) object kli_chor1001
+	Handle kli_chor1001
+
+
+
+
+	// Map Object Initialization
+
+	kli_vorc1008 = GetHandle( "kli_vorc1008" );
+	kli_negh1007 = GetHandle( "kli_negh1007" );
+	kli_susa1006 = GetHandle( "kli_susa1006" );
+	kli_kvor1005 = GetHandle( "kli_kvor1005" );
+	kli_brel1004 = GetHandle( "kli_brel1004" );
+	kli_brel1003 = GetHandle( "kli_brel1003" );
+	kli_topm1002 = GetHandle( "kli_topm1002" );
+	kli_chor1001 = GetHandle( "kli_chor1001" );
+
+
+
+	// AI special forces
+
+
+
+	//
+	// PATHS
+	//
+

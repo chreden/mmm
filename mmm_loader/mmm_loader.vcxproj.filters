@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Loader">
+      <UniqueIdentifier>{54775acb-abdd-48d2-9305-ebb11f885748}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Precompiled Header">
+      <UniqueIdentifier>{af359458-daa7-42ec-b205-d7bf1170919f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="A2.def">
+      <Filter>Loader</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp">
+      <Filter>Precompiled Header</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Loader</Filter>
+    </ClCompile>
+    <ClCompile Include="Worker.cpp">
+      <Filter>Loader</Filter>
+    </ClCompile>
+    <ClCompile Include="RuleHelper.cpp">
+      <Filter>Loader</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h">
+      <Filter>Precompiled Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Worker.h">
+      <Filter>Loader</Filter>
+    </ClInclude>
+    <ClInclude Include="RuleHelper.h">
+      <Filter>Loader</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="mmm_loader.rc" />
+  </ItemGroup>
+</Project>

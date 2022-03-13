@@ -1,0 +1,27 @@
+//Physics file for MMM fleets.
+//Fleets are generally pretty slow and turn slow too. They are meant
+//to look kind of lumbering to represent the scale of the hex map.
+
+combatspeed 				= 50
+impulsespeed 				= 50
+physics 					= "smooth"
+warpspeed 					= -1
+combatphysicsfile 			= "basic_smooth_combat.odf"
+tooclosetoturn 				= 100;
+pathleaddistance 			= 400;
+forwardaccel 				= 0.2;
+backwardaccel 				= 4;
+turnomega 					= 0.1;
+turnalpha 					= 0.1;
+pitchomega 					= 1.0;
+pitchalpha 					= 0.1;
+rollcoupling 				= 5;
+turnomegafractionatrest 	= 1;
+turnalphafractionatrest 	= 1;
+pitchomegafractionatrest 	= 1;
+pitchalphafractionatrest 	= 1;
+pitchdefault 				= 0;
+pitchdefaultspeed 			= 0.5;
+turncontrolsquared 			= 0;
+turncontrolangle 			= 20;
+forwardcontroldistance 		= 70;

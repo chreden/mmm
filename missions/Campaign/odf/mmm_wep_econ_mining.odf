@@ -1,0 +1,22 @@
+//The wep_econ_mining weapon transforms a fed_
+
+wpnname = "Economic Mission : Mining"
+tooltip = "Economic Mission : Mining"
+verbosetooltip = "AUTOTOOLTIP-mmm_wep_econ_mining.odf"
+buttonslot = 500
+replacementmode = 2
+specialenergycost = 0
+replacementinstantai = 1
+replacementinstantdelay = 120
+replacementkeepname = 1
+shotdelay = 0
+replacementignorefleetcap = 1
+classlabel = "replaceweapon"
+special = 1
+replacementmaintainorders = 1
+replacementregisterasnew = 0
+replacementcreationtype = 1
+speakonattack = 0
+attackspeech = 0
+replacement0condition = "mmm_fleet_econ_fed"
+replacement0class0 = "mmm_fleet_econ_fed_mining"

@@ -1,0 +1,66 @@
+	// Map Definitions
+
+	// Handle for Mandril Class (fed_mandril) object fed_mand1038
+	Handle fed_mand1038
+
+	// Handle for Mandril Class (fed_mandril) object fed_mand1037
+	Handle fed_mand1037
+
+	// Handle for Mandril Class (fed_mandril) object fed_mand1036
+	Handle fed_mand1036
+
+	// Handle for Mandril Class (fed_mandril) object fed_mand1035
+	Handle fed_mand1035
+
+	// Handle for Mandril Class (fed_mandril) object fed_mand1034
+	Handle fed_mand1034
+
+	// Handle for Mandril Class (fed_mandril) object fed_mand1033
+	Handle fed_mand1033
+
+	// Handle for Mandril Class (fed_mandril) object fed_mand1032
+	Handle fed_mand1032
+
+	// Handle for Mandril Class (fed_mandril) object fed_mand1031
+	Handle fed_mand1031
+
+	// Handle for Mandril Class (fed_mandril) object fed_mand1030
+	Handle fed_mand1030
+
+	// Handle for Mandril Class (fed_mandril) object fed_mand1029
+	Handle fed_mand1029
+
+	// Handle for Mandril Class (fed_mandril) object fed_mand1028
+	Handle fed_mand1028
+
+	// Handle for Sensor Platform (fed_platform_sensor) object fed_plat1004
+	Handle fed_plat1004
+
+
+
+
+	// Map Object Initialization
+
+	fed_mand1038 = GetHandle( "fed_mand1038" );
+	fed_mand1037 = GetHandle( "fed_mand1037" );
+	fed_mand1036 = GetHandle( "fed_mand1036" );
+	fed_mand1035 = GetHandle( "fed_mand1035" );
+	fed_mand1034 = GetHandle( "fed_mand1034" );
+	fed_mand1033 = GetHandle( "fed_mand1033" );
+	fed_mand1032 = GetHandle( "fed_mand1032" );
+	fed_mand1031 = GetHandle( "fed_mand1031" );
+	fed_mand1030 = GetHandle( "fed_mand1030" );
+	fed_mand1029 = GetHandle( "fed_mand1029" );
+	fed_mand1028 = GetHandle( "fed_mand1028" );
+	fed_plat1004 = GetHandle( "fed_plat1004" );
+
+
+
+	// AI special forces
+
+
+
+	//
+	// PATHS
+	//
+

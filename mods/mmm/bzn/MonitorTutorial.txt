@@ -1,0 +1,42 @@
+	// Map Definitions
+
+	// Handle for Mandril Class (fed_mandril) object fed_mand1009
+	Handle fed_mand1009
+
+	// Handle for Mandril Class (fed_mandril) object fed_mand1008
+	Handle fed_mand1008
+
+	// Handle for Mandril Class (fed_mandril) object fed_mand1007
+	Handle fed_mand1007
+
+	// Handle for Storage Dock (fed_storage_dock) object fed_stor1006
+	Handle fed_stor1006
+
+	// Handle for  (effect_empty) object hook_dil1005
+	Handle hook_dil1005
+
+	// Handle for Dilithium Moon (map_dilithium_moon1) object map_dili1004
+	Handle map_dili1004
+
+
+
+
+	// Map Object Initialization
+
+	fed_mand1009 = GetHandle( "fed_mand1009" );
+	fed_mand1008 = GetHandle( "fed_mand1008" );
+	fed_mand1007 = GetHandle( "fed_mand1007" );
+	fed_stor1006 = GetHandle( "fed_stor1006" );
+	hook_dil1005 = GetHandle( "hook_dil1005" );
+	map_dili1004 = GetHandle( "map_dili1004" );
+
+
+
+	// AI special forces
+
+
+
+	//
+	// PATHS
+	//
+

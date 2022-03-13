@@ -1,0 +1,25 @@
+#include "mmm_fleet_def.odf"
+
+race = "unitedfederation"
+
+//This uses the mining ship model for this purpose.
+basename = "fed_akira"
+
+//Weapons for the different missions that the ship can initiate. No
+//hardpoint ( does that matter?? )
+weapon1 = "mmm_wep_def_convoyraid"
+
+verbosetooltip = "AUTOTOOLTIP-fed_akiraY.odf"
+tooltip = "Akira Class"
+buildtime = 102
+dilithiumcost = 0
+tritancost = 0
+supplycost = 0
+shipclass = "cruiser"
+shiptype = "C"
+avoidanceclass = 5
+weldingradius = 0.25
+fireball = "x_large_explosion"
+damagedscan = 50.0
+ship = 1
+rangescan = 850

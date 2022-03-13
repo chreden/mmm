@@ -1,0 +1,5 @@
+Cineractive Tutorial
+
+This tutorial demonstrates cineractives. The sovereign approached the station in cineractive mode.
+
+See the Cineractive Tutorial in the Megadroid's Mission Mod section of Modding on the Fleet Operations guide for more information (http://guide.fleetops.net).

@@ -1,0 +1,26 @@
+	// Map Definitions
+
+
+
+
+	// Map Object Initialization
+
+
+
+
+	// AI special forces
+
+
+
+	//
+	// PATHS
+	//
+
+	// Path: "Camera_1" (2 points)
+	// Path: "Camera_2" (1 points)
+	// Path: "Camera_3" (1 points)
+	// Path: "Camera_4" (1 points)
+	// Path: "Camera_5" (2 points)
+	// Path: "Camera_6" (1 points)
+	// Path: "Camera_7" (1 points)
+	// Path: "Camera_8" (1 points)

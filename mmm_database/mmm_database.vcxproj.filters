@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Node">
+      <UniqueIdentifier>{de636281-4959-4224-b02d-235e8a3e5fd6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Schema">
+      <UniqueIdentifier>{bc170268-b645-4f6d-aa2d-f0c9ca8f5a05}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Plan.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="mmm_database.h" />
+    <ClInclude Include="DatabaseSchema.h">
+      <Filter>Schema</Filter>
+    </ClInclude>
+    <ClInclude Include="Database.h">
+      <Filter>Node</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DatabaseSchema.cpp">
+      <Filter>Schema</Filter>
+    </ClCompile>
+    <ClCompile Include="Database.cpp">
+      <Filter>Node</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

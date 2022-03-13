@@ -1,0 +1,1778 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Precompiled Header">
+      <UniqueIdentifier>{e0b65f8f-35fb-48e1-be7b-991dd0e51b32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada">
+      <UniqueIdentifier>{8f6fe4ab-b4f9-4a38-88f7-0c11aaaa4059}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MemRaider">
+      <UniqueIdentifier>{83f1df34-4916-46c9-912e-bfe8f9369e12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Conversion">
+      <UniqueIdentifier>{3844d046-3f56-49b7-8416-506050334e90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Functions">
+      <UniqueIdentifier>{dddce3b4-ee0b-41ad-abba-4944c64ec369}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\ScriptError">
+      <UniqueIdentifier>{1bfdc87d-097d-45aa-9f91-3b1416241c75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\EntityFinder">
+      <UniqueIdentifier>{b17fefa1-3d51-495a-a2d1-3527bc194a1c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Monitor">
+      <UniqueIdentifier>{ff39e3f4-7028-475c-820c-45f44e183615}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Application">
+      <UniqueIdentifier>{2bb1b46f-026c-4808-bcee-68cedf199405}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Globals">
+      <UniqueIdentifier>{cf69e12b-6816-4dcf-b69c-287cd34bee85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\PrintMessages">
+      <UniqueIdentifier>{492c5a46-506b-48a1-aab6-6b0da650927b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\TextInput">
+      <UniqueIdentifier>{b5763c82-5171-4d73-ba00-3eaada0b0f09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Timer">
+      <UniqueIdentifier>{b3dfac25-f110-4f41-9d50-a121e484b683}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Lua">
+      <UniqueIdentifier>{4c23be04-4c62-4568-a835-cae71c9a1b8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Armada">
+      <UniqueIdentifier>{a6cc6e55-c7fa-441a-a35a-be1c1989b671}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\UI">
+      <UniqueIdentifier>{e8a3f736-593a-4778-83f6-6ffb0cd5d8a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Camera">
+      <UniqueIdentifier>{5ff27242-5412-4537-be3e-5a54c4900e94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Cineractive">
+      <UniqueIdentifier>{dbc09ba0-303f-4a8f-b6a8-3fcea552a54c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Debug">
+      <UniqueIdentifier>{100941f4-0e53-4942-84b3-1d547be29cf3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entities">
+      <UniqueIdentifier>{5dc40066-2b57-4d1a-ab93-0b8db14d6fa7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity">
+      <UniqueIdentifier>{74376f9c-8e8d-45fe-a6df-cd771ad75e88}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Game Object">
+      <UniqueIdentifier>{4dc6d979-9756-4fca-9065-febd5b0ef971}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Game Object\Craft">
+      <UniqueIdentifier>{8be2cef2-15e1-42cf-8e00-a8692772b980}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Game Object\Craft\Producer">
+      <UniqueIdentifier>{55c8457f-ea9a-47e8-a4bf-6c0bcfb01628}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Game Object\Craft\Producer\Planet">
+      <UniqueIdentifier>{37014a76-b633-4161-a18e-e5915953214d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Game Object\Craft\Producer\Resource Transfer Interface">
+      <UniqueIdentifier>{89754a11-b479-4e64-9af2-2e8519dbfefa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Game Object\Craft\Producer\Shipyard">
+      <UniqueIdentifier>{08bf6d0a-3098-4a25-845e-a732c3cce0c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Game Object\Craft\Producer\Shipyard\Starbase">
+      <UniqueIdentifier>{f9ca19f4-bee0-407f-97bc-9aa36e2d8a8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Game Object\Craft\Freighter">
+      <UniqueIdentifier>{71fc96ac-cdb0-4187-8516-04853d487ff4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Game Object\Craft\CraftSystem">
+      <UniqueIdentifier>{ae160419-53aa-4f65-990f-9bd1e00968cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Game Object\Craft\CargoShip">
+      <UniqueIdentifier>{55ecbbe6-146d-42f5-a7bd-2cb3f0987301}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Game Object\Craft\Colony">
+      <UniqueIdentifier>{d1e63478-f317-4746-84b6-da6294e30d33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Game Object\TerrainObject">
+      <UniqueIdentifier>{00ed27ce-0fe1-4e2a-9cac-aea2610c14dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Game Object\TerrainObject\AreaEffectObject">
+      <UniqueIdentifier>{d0e70f5f-a209-4f97-a9a6-4a70a4875f43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Game Object\TerrainObject\AreaEffectObject\Wormhole">
+      <UniqueIdentifier>{957dd8c7-d7d7-4677-a3f7-ba604fefa6ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Game Object\TerrainObject\AreaEffectObject\Nebula">
+      <UniqueIdentifier>{2a96ab84-2ecd-482e-ad40-841b3280a73f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Game Object\TerrainObject\AreaEffectObject\IonStorm">
+      <UniqueIdentifier>{322c897a-a06d-4161-ac39-84e24018560b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Game Object\TerrainObject\AsteroidField">
+      <UniqueIdentifier>{db9aba8d-311f-486b-8e1c-7d4e2b28a2ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Game Object\ConstructionObject">
+      <UniqueIdentifier>{b7234a8b-2b10-457e-846e-3b83460d50e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Game Object\Class">
+      <UniqueIdentifier>{016d0bb4-5b4f-4c69-840a-d3149f0ab2d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\ResourceInterface">
+      <UniqueIdentifier>{001b5c95-b82b-4acf-9d0a-e15764b9ec1c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Explosion">
+      <UniqueIdentifier>{da8969e6-4719-449b-a893-cefcd29569a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Explosion\ShockwaveExplosion">
+      <UniqueIdentifier>{39a98749-3ea7-4c83-ae7e-d2c234b30848}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Explosion\ShockwaveExplosion\ShockwaveCannon">
+      <UniqueIdentifier>{583cf6b2-d135-4204-9c6d-4ab722fc3f81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Explosion\FireballExplosion">
+      <UniqueIdentifier>{8d71c901-24f9-43da-b0a7-178009eeb787}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Ordnance">
+      <UniqueIdentifier>{179696ff-79cc-43f6-8dd0-1113046479d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Ordnance\Beam">
+      <UniqueIdentifier>{1e2674e3-a252-4cff-8bd6-005c94a646e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Ordnance\Beam\Phaser">
+      <UniqueIdentifier>{1c32a194-c9d2-4253-b537-4126949eb273}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Ordnance\Missile">
+      <UniqueIdentifier>{55482d00-1242-4f43-a0a0-715a73780fbf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Ordnance\Missile\PhotonTorpedo">
+      <UniqueIdentifier>{68e38300-100a-4f5f-a689-03c4f3cc291d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Ordnance\Bullet">
+      <UniqueIdentifier>{59265ca3-224f-494f-93c3-05e344f67a28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Ordnance\Bullet\PulsePhaser">
+      <UniqueIdentifier>{e7229659-a0fb-4ff2-9fbb-38af0cf308f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Ordnance\Bullet\Artillery">
+      <UniqueIdentifier>{997450e4-02d6-4ab9-866a-b7bbcb71f1e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Ordnance\Mine">
+      <UniqueIdentifier>{42b265ff-2aac-4e8b-bb29-7bef60b33fac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Ordnance\Mine\GravityMine">
+      <UniqueIdentifier>{806f17b8-6860-467c-9103-809428ea7de3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Ordnance\BeamToggle">
+      <UniqueIdentifier>{44941316-fcaa-4c2d-8528-84d02eca7b7e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Load">
+      <UniqueIdentifier>{60f72d93-ce22-498b-8fe6-6569d33c571d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Map">
+      <UniqueIdentifier>{965af1a1-b506-4298-ac1f-2bc1673e57c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Media">
+      <UniqueIdentifier>{d9f841a1-bd27-4b91-a2d1-b31222ec55ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Mission">
+      <UniqueIdentifier>{fa5273dc-9381-4b01-8bda-1b4bea8e8bc6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Objectives">
+      <UniqueIdentifier>{9b69b8d3-2850-476d-971e-47d9f66ed121}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Path">
+      <UniqueIdentifier>{fcf7d21e-a56b-44a9-849f-a48c9e05c043}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Race">
+      <UniqueIdentifier>{8c51d43b-14b4-42c2-b92d-0cede4a85605}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Save">
+      <UniqueIdentifier>{6fd727b8-0eb7-469b-af5b-4b103353051c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Team">
+      <UniqueIdentifier>{cdba7502-f1ab-4e0f-be62-93bad4ec29f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Vector">
+      <UniqueIdentifier>{aad83a58-c61d-4e8d-991c-a7b2a2c4f0e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Matrix">
+      <UniqueIdentifier>{8c1ee503-c982-4a17-98b2-6a6b91c79100}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Colour">
+      <UniqueIdentifier>{c73c114c-048a-4c93-90a1-22c453acd1fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Game Object\Craft\Class">
+      <UniqueIdentifier>{35cc5aca-1351-4b6a-a7b4-8cf84099d194}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Game Object\Craft\Producer\Class">
+      <UniqueIdentifier>{3908fd37-fa87-4aa7-965f-66e76e7dc5ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Game Object\TerrainObject\Class">
+      <UniqueIdentifier>{cb3e7122-15cc-45f8-b426-ef8bb9d73ae8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Game Object\Craft\RepairShip">
+      <UniqueIdentifier>{8e9cd2a0-e5c2-4707-ae37-48c4fcbeee5d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Game Object\Craft\RepairShip\Class">
+      <UniqueIdentifier>{b148178d-ae2b-4e67-8649-b23b0e710f0b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Game Object\Craft\Producer\ConstructionRig">
+      <UniqueIdentifier>{492b6dd4-fbd4-4194-aacb-bd9e608fd308}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Game Object\TerrainObject\Scrap">
+      <UniqueIdentifier>{7da51c13-5590-4631-9b78-16e7958b91ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Game Object\TerrainObject\Scrap\Class">
+      <UniqueIdentifier>{70f23175-a601-4399-9284-f8f7e1889506}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Game Object\TerrainObject\AreaEffectObject\BlackHole">
+      <UniqueIdentifier>{3406e50f-f3f0-4823-bcdc-09a0b1133438}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Game Object\TerrainObject\AreaEffectObject\BlackHole\Class">
+      <UniqueIdentifier>{31859fc4-3764-472d-88b1-df31f34cea7a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Game Object\TerrainObject\AreaEffectObject\Class">
+      <UniqueIdentifier>{56dea331-47f3-422c-bdec-99827f004bfc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Storm3D">
+      <UniqueIdentifier>{0ea40d00-f801-473f-80ca-d7b231c8f824}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Game Object\TerrainObject\UtritiumBall">
+      <UniqueIdentifier>{d6ee58ed-81e3-47d9-820f-84ca12bf071e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Game Object\TerrainObject\UtritiumBall\Class">
+      <UniqueIdentifier>{ef76f15b-b96c-4694-83fa-0ff702892c2a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Game Object\Craft\Producer\ResearchStation">
+      <UniqueIdentifier>{1bcd0126-1622-4423-886c-f5334453f9c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Game Object\Craft\Producer\Evolver">
+      <UniqueIdentifier>{86d88e43-c9d4-496d-8791-8cccb2b10840}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Game Object\Craft\Producer\Evolver\Class">
+      <UniqueIdentifier>{f9e15b23-947e-40e4-8a16-26cbb9ca57a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Game Object\Craft\Producer\ConstructionRig\Class">
+      <UniqueIdentifier>{6304efdb-aa8a-4f98-8124-c7b1ffe05af6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Game Object\Craft\Colony\Class">
+      <UniqueIdentifier>{869c9716-46f2-4865-a615-fe2918a90f28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Game Object\Craft\Producer\Shipyard\Starbase\Class">
+      <UniqueIdentifier>{8895b36b-1f3f-443f-ada7-cb32727eef38}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Game Object\Craft\Producer\Shipyard\Class">
+      <UniqueIdentifier>{591ff6b0-fca3-4d02-a0ad-2ede35bf7e62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Game Object\TerrainObject\BackgroundObject">
+      <UniqueIdentifier>{46b2b641-6c11-4ea7-accc-c7b53671e582}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Game Object\TerrainObject\BackgroundObject\BackgroundPlanet">
+      <UniqueIdentifier>{667872d4-0064-41e4-bc2b-26ac2c9c23ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Game Object\TerrainObject\BackgroundObject\BackgroundPlanet\Class">
+      <UniqueIdentifier>{4fe40401-2a99-49df-b154-bbaa5d6004df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Game Object\TerrainObject\BackgroundObject\Class">
+      <UniqueIdentifier>{9b0a29ef-eee2-4555-998f-cf5d1ee6cd92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Game Object\TerrainObject\LatinumNebula">
+      <UniqueIdentifier>{6b67ef13-5dc0-4161-b4bb-a4b4633cccdf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Game Object\TerrainObject\LatinumNebula\Class">
+      <UniqueIdentifier>{f87857e5-723a-4d41-abe0-0ca0b7677d6a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Game Object\Craft\SensorArray">
+      <UniqueIdentifier>{d8af555c-8b2a-41ce-95c7-2627576662d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Game Object\Craft\Scavenger">
+      <UniqueIdentifier>{c7c45060-bc70-4f78-a68f-4acea6f344d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Game Object\Craft\Scavenger\Class">
+      <UniqueIdentifier>{1ba7872c-cee0-4a56-aa9d-5bb760484bde}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Game Object\Craft\SensorArray\Class">
+      <UniqueIdentifier>{3fa395ff-f7e1-4167-afa5-1e73fcdd7b2e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Game Object\Craft\ResearchPod">
+      <UniqueIdentifier>{296c9ce1-c9de-4de7-b80d-4c9af09f4740}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Game Object\Craft\ResearchPod\Class">
+      <UniqueIdentifier>{d9eafff9-7242-4774-b3b7-c1d2337b7d87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Game Object\Craft\Producer\ResearchStation\Class">
+      <UniqueIdentifier>{5c6b9d59-fa26-4645-8045-123b65823a6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Ordnance\Bullet\Class">
+      <UniqueIdentifier>{47405ad9-9590-46e1-b034-8ff9e997350c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Ordnance\Beam\Class">
+      <UniqueIdentifier>{0bc35fdc-d1a0-4c82-95ae-573395b80474}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Ordnance\Beam\Phaser\Class">
+      <UniqueIdentifier>{f4255082-6bf3-4a95-920e-6baa499281d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Ordnance\Bullet\Artillery\Class">
+      <UniqueIdentifier>{f5946922-cb8c-460d-89c9-6d44787d7312}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Ordnance\Mine\AnimatterMine">
+      <UniqueIdentifier>{0bcf9b18-f653-47ad-91da-f5da0a810079}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Ordnance\Mine\AnimatterMine\Class">
+      <UniqueIdentifier>{00ee5234-b983-4451-8c11-b5170339ebc8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Ordnance\Mine\GravityMine\Class">
+      <UniqueIdentifier>{bbf71e5f-1acb-4556-9df9-1cd6cb57ad7b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Ordnance\Mine\Class">
+      <UniqueIdentifier>{a09c3234-adb4-4e82-a6fd-14c8b5d8cb08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Ordnance\Missile\Class">
+      <UniqueIdentifier>{91885aa3-b78f-4054-bef8-1cea20d41ca5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Ordnance\Missile\PhotonTorpedo\Class">
+      <UniqueIdentifier>{e741eca6-ef11-4079-949d-a1c930abab5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Ordnance\Bullet\PulsePhaser\Class">
+      <UniqueIdentifier>{fac9b404-ae71-4592-9a1e-1f404014cbf1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Ordnance\BeamToggle\Class">
+      <UniqueIdentifier>{dea1febc-0986-4a85-b5ed-7e2dfd29883f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Test">
+      <UniqueIdentifier>{97244319-23b3-4364-bd8a-46f3d31554b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Game Object\Craft\Producer\MiningStation">
+      <UniqueIdentifier>{c5655dd8-9e65-469b-8152-a0175076b1ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Game Object\Craft\Producer\MiningStation\TradingStation">
+      <UniqueIdentifier>{d390d3bc-2983-4099-bca5-e83ed86ec052}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Game Object\Craft\Producer\MiningStation\TradingStation\Class">
+      <UniqueIdentifier>{a86a9e02-de58-4f22-af35-f7744ea71426}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Game Object\Craft\Producer\MiningStation\Class">
+      <UniqueIdentifier>{3fc77aab-09d8-48f3-9bb3-8371fdda7889}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\SObject">
+      <UniqueIdentifier>{763ef157-e66e-4066-87df-165cbf558cf0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\SObject\AiProcess">
+      <UniqueIdentifier>{02bada13-34a2-4316-aeaa-6af63bdb9bfe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\SObject\AiProcess\MineProcess">
+      <UniqueIdentifier>{f7fc8613-5575-4a5f-b86e-c1a75df54a10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\SObject\AiProcess\CraftProcess">
+      <UniqueIdentifier>{0e3fa50e-a32b-4675-b350-f82d24eb917f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Game Object\Craft\PlanetMiningBase">
+      <UniqueIdentifier>{602387b0-ab5b-4971-aba9-cfaa1779752c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Queue">
+      <UniqueIdentifier>{1d5c5b01-a416-4c36-afb7-0de403af8de8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Queue\SplineQueue">
+      <UniqueIdentifier>{01de60af-66ac-46fb-aee2-889d9a1722f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Queue\SplineQueue\OrientedQueue">
+      <UniqueIdentifier>{d1715322-5786-4653-95a4-0d2f89c6d538}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Game Object\Craft\MineArray">
+      <UniqueIdentifier>{d9183754-e00b-4557-99c9-99f4d8acf27c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Helpers">
+      <UniqueIdentifier>{a38e0b39-16d5-422b-8ed0-559f7383fda0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Helpers\Container">
+      <UniqueIdentifier>{f25d3815-cc6f-4932-8a66-9d39a71c2270}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Game Object\Craft\Producer\BuildQueue">
+      <UniqueIdentifier>{813e377b-57a3-471e-af2d-94a918416bdd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Ordnance\Damage">
+      <UniqueIdentifier>{70d96ec2-13df-4f79-a26b-e2724341272b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Hooks">
+      <UniqueIdentifier>{81f4547b-0798-47f6-bf41-2302450187af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Hooks\TextInput">
+      <UniqueIdentifier>{8e012272-c2e7-4892-964b-be0a5d14be63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Hooks\Timer">
+      <UniqueIdentifier>{8679c8ba-5c14-45d1-9df3-2287cff21293}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Hooks\Monitor">
+      <UniqueIdentifier>{0de4e235-502a-4b6d-a5fd-e84d966d9705}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Hooks\Entity">
+      <UniqueIdentifier>{d8c6aff8-f474-4b82-915c-7efdc1ce7077}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Memory">
+      <UniqueIdentifier>{656a55ab-e411-4dc0-8fcf-6bd2fc6d3369}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp">
+      <Filter>Precompiled Header</Filter>
+    </ClCompile>
+    <ClCompile Include="mmm_armada.cpp">
+      <Filter>Armada</Filter>
+    </ClCompile>
+    <ClCompile Include="Cineractive_Internal.cpp">
+      <Filter>Armada\Cineractive</Filter>
+    </ClCompile>
+    <ClCompile Include="Craft_Internal.cpp">
+      <Filter>Armada\Entity\Game Object\Craft</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug_Internal.cpp">
+      <Filter>Armada\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Entities_Internal.cpp">
+      <Filter>Armada\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity_Internal.cpp">
+      <Filter>Armada\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject_Internal.cpp">
+      <Filter>Armada\Entity\Game Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Load_Internal.cpp">
+      <Filter>Armada\Load</Filter>
+    </ClCompile>
+    <ClCompile Include="Mission_Internal.cpp">
+      <Filter>Armada\Mission</Filter>
+    </ClCompile>
+    <ClCompile Include="Path_Internal.cpp">
+      <Filter>Armada\Path</Filter>
+    </ClCompile>
+    <ClCompile Include="Team_Internal.cpp">
+      <Filter>Armada\Team</Filter>
+    </ClCompile>
+    <ClCompile Include="Save_Internal.cpp">
+      <Filter>Armada\Save</Filter>
+    </ClCompile>
+    <ClCompile Include="Planet_Internal.cpp">
+      <Filter>Armada\Entity\Game Object\Craft\Producer\Planet</Filter>
+    </ClCompile>
+    <ClCompile Include="UI_Internal.cpp">
+      <Filter>Armada\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Media_Internal.cpp">
+      <Filter>Armada\Media</Filter>
+    </ClCompile>
+    <ClCompile Include="Map_Internal.cpp">
+      <Filter>Armada\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="MemRaider.cpp">
+      <Filter>MemRaider</Filter>
+    </ClCompile>
+    <ClCompile Include="Freighter_Internal.cpp">
+      <Filter>Armada\Entity\Game Object\Craft\Freighter</Filter>
+    </ClCompile>
+    <ClCompile Include="Nebula_Internal.cpp">
+      <Filter>Armada\Entity\Game Object\TerrainObject\AreaEffectObject\Nebula</Filter>
+    </ClCompile>
+    <ClCompile Include="Shipyard_Internal.cpp">
+      <Filter>Armada\Entity\Game Object\Craft\Producer\Shipyard</Filter>
+    </ClCompile>
+    <ClCompile Include="Starbase_Internal.cpp">
+      <Filter>Armada\Entity\Game Object\Craft\Producer\Shipyard\Starbase</Filter>
+    </ClCompile>
+    <ClCompile Include="Race_Internal.cpp">
+      <Filter>Armada\Race</Filter>
+    </ClCompile>
+    <ClCompile Include="IonStorm_Internal.cpp">
+      <Filter>Armada\Entity\Game Object\TerrainObject\AreaEffectObject\IonStorm</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceInterface_Internal.cpp">
+      <Filter>Armada\Entity\ResourceInterface</Filter>
+    </ClCompile>
+    <ClCompile Include="StringAdapter.cpp">
+      <Filter>Armada\Conversion</Filter>
+    </ClCompile>
+    <ClCompile Include="Explosion_Internal.cpp">
+      <Filter>Armada\Entity\Explosion</Filter>
+    </ClCompile>
+    <ClCompile Include="ConstructionObject_Internal.cpp">
+      <Filter>Armada\Entity\Game Object\ConstructionObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Beam_Internal.cpp">
+      <Filter>Armada\Entity\Ordnance\Beam</Filter>
+    </ClCompile>
+    <ClCompile Include="Phaser_Internal.cpp">
+      <Filter>Armada\Entity\Ordnance\Beam\Phaser</Filter>
+    </ClCompile>
+    <ClCompile Include="PhotonTorpedo_Internal.cpp">
+      <Filter>Armada\Entity\Ordnance\Missile\PhotonTorpedo</Filter>
+    </ClCompile>
+    <ClCompile Include="Missile_Internal.cpp">
+      <Filter>Armada\Entity\Ordnance\Missile</Filter>
+    </ClCompile>
+    <ClCompile Include="PulsePhaser_Internal.cpp">
+      <Filter>Armada\Entity\Ordnance\Bullet\PulsePhaser</Filter>
+    </ClCompile>
+    <ClCompile Include="ST3D_Colour.cpp">
+      <Filter>Armada\Colour</Filter>
+    </ClCompile>
+    <ClCompile Include="Objectives_Internal.cpp">
+      <Filter>Armada\Objectives</Filter>
+    </ClCompile>
+    <ClCompile Include="Functions_ItemCache.cpp">
+      <Filter>Armada\Functions</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityReference.cpp">
+      <Filter>Armada</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector3.cpp">
+      <Filter>Armada\Vector</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera_Internal.cpp">
+      <Filter>Armada\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector3Binding.cpp">
+      <Filter>Armada\Vector</Filter>
+    </ClCompile>
+    <ClCompile Include="ST3D_ColourBinding.cpp">
+      <Filter>Armada\Colour</Filter>
+    </ClCompile>
+    <ClCompile Include="UIBinding.cpp">
+      <Filter>Armada\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="MapBinding.cpp">
+      <Filter>Armada\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="RaceBinding.cpp">
+      <Filter>Armada\Race</Filter>
+    </ClCompile>
+    <ClCompile Include="MediaBinding.cpp">
+      <Filter>Armada\Media</Filter>
+    </ClCompile>
+    <ClCompile Include="CameraBinding.cpp">
+      <Filter>Armada\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="CineractiveBinding.cpp">
+      <Filter>Armada\Cineractive</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityBinding.cpp">
+      <Filter>Armada\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="MissionBinding.cpp">
+      <Filter>Armada\Mission</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugBinding.cpp">
+      <Filter>Armada\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="SaveBinding.cpp">
+      <Filter>Armada\Save</Filter>
+    </ClCompile>
+    <ClCompile Include="LoadBinding.cpp">
+      <Filter>Armada\Load</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectivesBinding.cpp">
+      <Filter>Armada\Objectives</Filter>
+    </ClCompile>
+    <ClCompile Include="ProducerBinding.cpp">
+      <Filter>Armada\Entity\Game Object\Craft\Producer</Filter>
+    </ClCompile>
+    <ClCompile Include="PlanetBinding.cpp">
+      <Filter>Armada\Entity\Game Object\Craft\Producer\Planet</Filter>
+    </ClCompile>
+    <ClCompile Include="MiningStationBinding.cpp">
+      <Filter>Armada\Entity\Game Object\Craft\Producer\MiningStation</Filter>
+    </ClCompile>
+    <ClCompile Include="ShipyardBinding.cpp">
+      <Filter>Armada\Entity\Game Object\Craft\Producer\Shipyard</Filter>
+    </ClCompile>
+    <ClCompile Include="NebulaBinding.cpp">
+      <Filter>Armada\Entity\Game Object\TerrainObject\AreaEffectObject\Nebula</Filter>
+    </ClCompile>
+    <ClCompile Include="WormholeBinding.cpp">
+      <Filter>Armada\Entity\Game Object\TerrainObject\AreaEffectObject\Wormhole</Filter>
+    </ClCompile>
+    <ClCompile Include="OrdnanceBinding.cpp">
+      <Filter>Armada\Entity\Ordnance</Filter>
+    </ClCompile>
+    <ClCompile Include="BeamBinding.cpp">
+      <Filter>Armada\Entity\Ordnance\Beam</Filter>
+    </ClCompile>
+    <ClCompile Include="PhaserBinding.cpp">
+      <Filter>Armada\Entity\Ordnance\Beam\Phaser</Filter>
+    </ClCompile>
+    <ClCompile Include="BulletBinding.cpp">
+      <Filter>Armada\Entity\Ordnance\Bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="PulsePhaserBinding.cpp">
+      <Filter>Armada\Entity\Ordnance\Bullet\PulsePhaser</Filter>
+    </ClCompile>
+    <ClCompile Include="MissileBinding.cpp">
+      <Filter>Armada\Entity\Ordnance\Missile</Filter>
+    </ClCompile>
+    <ClCompile Include="PhotonTorpedoBinding.cpp">
+      <Filter>Armada\Entity\Ordnance\Missile\PhotonTorpedo</Filter>
+    </ClCompile>
+    <ClCompile Include="ExplosionBinding.cpp">
+      <Filter>Armada\Entity\Explosion</Filter>
+    </ClCompile>
+    <ClCompile Include="FreighterBinding.cpp">
+      <Filter>Armada\Entity\Game Object\Craft\Freighter</Filter>
+    </ClCompile>
+    <ClCompile Include="AreaEffectObjectBinding.cpp">
+      <Filter>Armada\Entity\Game Object\TerrainObject\AreaEffectObject</Filter>
+    </ClCompile>
+    <ClCompile Include="IonStormBinding.cpp">
+      <Filter>Armada\Entity\Game Object\TerrainObject\AreaEffectObject\IonStorm</Filter>
+    </ClCompile>
+    <ClCompile Include="TerrainObjectBinding.cpp">
+      <Filter>Armada\Entity\Game Object\TerrainObject</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceTransferInterfaceBinding.cpp">
+      <Filter>Armada\Entity\Game Object\Craft\Producer\Resource Transfer Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="ConstructionObjectBinding.cpp">
+      <Filter>Armada\Entity\Game Object\ConstructionObject</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObjectBinding.cpp">
+      <Filter>Armada\Entity\Game Object</Filter>
+    </ClCompile>
+    <ClCompile Include="CraftSystemBinding.cpp">
+      <Filter>Armada\Entity\Game Object\Craft\CraftSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="CraftSystem_Internal.cpp">
+      <Filter>Armada\Entity\Game Object\Craft\CraftSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="CraftBinding.cpp">
+      <Filter>Armada\Entity\Game Object\Craft</Filter>
+    </ClCompile>
+    <ClCompile Include="PathBinding.cpp">
+      <Filter>Armada\Path</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptErrors.cpp">
+      <Filter>Armada\ScriptError</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityFinder.cpp">
+      <Filter>Armada\EntityFinder</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityFinderBinding.cpp">
+      <Filter>Armada\EntityFinder</Filter>
+    </ClCompile>
+    <ClCompile Include="Monitor.cpp">
+      <Filter>Armada\Monitor</Filter>
+    </ClCompile>
+    <ClCompile Include="Application.cpp">
+      <Filter>Armada\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="PrintMessages.cpp">
+      <Filter>Armada\PrintMessages</Filter>
+    </ClCompile>
+    <ClCompile Include="Globals.cpp">
+      <Filter>Armada\Globals</Filter>
+    </ClCompile>
+    <ClCompile Include="TextInput.cpp">
+      <Filter>Armada\TextInput</Filter>
+    </ClCompile>
+    <ClCompile Include="Timer.cpp">
+      <Filter>Armada\Timer</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceInterfaceBinding.cpp">
+      <Filter>Armada\Entity\ResourceInterface</Filter>
+    </ClCompile>
+    <ClCompile Include="TeamBinding.cpp">
+      <Filter>Armada\Team</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaBinding.cpp">
+      <Filter>Armada\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="Team_Resources.cpp">
+      <Filter>Armada\Team</Filter>
+    </ClCompile>
+    <ClCompile Include="Matrix.cpp">
+      <Filter>Armada\Matrix</Filter>
+    </ClCompile>
+    <ClCompile Include="MatrixBinding.cpp">
+      <Filter>Armada\Matrix</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObjectClassBinding.cpp">
+      <Filter>Armada\Entity\Game Object\Class</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObjectClass_Internal.cpp">
+      <Filter>Armada\Entity\Game Object\Class</Filter>
+    </ClCompile>
+    <ClCompile Include="Type_Entity.cpp">
+      <Filter>Armada\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="Type_ObjectivesText.cpp">
+      <Filter>Armada\Objectives</Filter>
+    </ClCompile>
+    <ClCompile Include="CraftClass_Internal.cpp">
+      <Filter>Armada\Entity\Game Object\Craft\Class</Filter>
+    </ClCompile>
+    <ClCompile Include="CraftClassBinding.cpp">
+      <Filter>Armada\Entity\Game Object\Craft\Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ProducerClass_Internal.cpp">
+      <Filter>Armada\Entity\Game Object\Craft\Producer\Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ProducerClassBinding.cpp">
+      <Filter>Armada\Entity\Game Object\Craft\Producer\Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ScrapClass_Internal.cpp">
+      <Filter>Armada\Entity\Game Object\TerrainObject\Scrap\Class</Filter>
+    </ClCompile>
+    <ClCompile Include="TerrainObjectClass_Internal.cpp">
+      <Filter>Armada\Entity\Game Object\TerrainObject\Class</Filter>
+    </ClCompile>
+    <ClCompile Include="TerrainObjectClassBinding.cpp">
+      <Filter>Armada\Entity\Game Object\TerrainObject\Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ScrapClassBinding.cpp">
+      <Filter>Armada\Entity\Game Object\TerrainObject\Scrap\Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ScrapBinding.cpp">
+      <Filter>Armada\Entity\Game Object\TerrainObject\Scrap</Filter>
+    </ClCompile>
+    <ClCompile Include="Scrap_Internal.cpp">
+      <Filter>Armada\Entity\Game Object\TerrainObject\Scrap</Filter>
+    </ClCompile>
+    <ClCompile Include="RepairShip_Internal.cpp">
+      <Filter>Armada\Entity\Game Object\Craft\RepairShip</Filter>
+    </ClCompile>
+    <ClCompile Include="RepairShipBinding.cpp">
+      <Filter>Armada\Entity\Game Object\Craft\RepairShip</Filter>
+    </ClCompile>
+    <ClCompile Include="RepairShipClass_Internal.cpp">
+      <Filter>Armada\Entity\Game Object\Craft\RepairShip\Class</Filter>
+    </ClCompile>
+    <ClCompile Include="RepairShipClassBinding.cpp">
+      <Filter>Armada\Entity\Game Object\Craft\RepairShip\Class</Filter>
+    </ClCompile>
+    <ClCompile Include="BlackHoleClass_Internal.cpp">
+      <Filter>Armada\Entity\Game Object\TerrainObject\AreaEffectObject\BlackHole\Class</Filter>
+    </ClCompile>
+    <ClCompile Include="AreaEffectObjectClass_Internal.cpp">
+      <Filter>Armada\Entity\Game Object\TerrainObject\AreaEffectObject\Class</Filter>
+    </ClCompile>
+    <ClCompile Include="AreaEffectObjectClassBinding.cpp">
+      <Filter>Armada\Entity\Game Object\TerrainObject\AreaEffectObject\Class</Filter>
+    </ClCompile>
+    <ClCompile Include="BlackHoleClassBinding.cpp">
+      <Filter>Armada\Entity\Game Object\TerrainObject\AreaEffectObject\BlackHole\Class</Filter>
+    </ClCompile>
+    <ClCompile Include="AreaEffectObject_Internal.cpp">
+      <Filter>Armada\Entity\Game Object\TerrainObject\AreaEffectObject</Filter>
+    </ClCompile>
+    <ClCompile Include="BlackHole_Internal.cpp">
+      <Filter>Armada\Entity\Game Object\TerrainObject\AreaEffectObject\BlackHole</Filter>
+    </ClCompile>
+    <ClCompile Include="BlackHoleBinding.cpp">
+      <Filter>Armada\Entity\Game Object\TerrainObject\AreaEffectObject\BlackHole</Filter>
+    </ClCompile>
+    <ClCompile Include="Type_ST3D_GraphicsEngine.cpp">
+      <Filter>Armada\Storm3D</Filter>
+    </ClCompile>
+    <ClCompile Include="Type_ST3D_Camera.cpp">
+      <Filter>Armada\Storm3D</Filter>
+    </ClCompile>
+    <ClCompile Include="UtritiumBall_Internal.cpp">
+      <Filter>Armada\Entity\Game Object\TerrainObject\UtritiumBall</Filter>
+    </ClCompile>
+    <ClCompile Include="UtritiumBallClass_Internal.cpp">
+      <Filter>Armada\Entity\Game Object\TerrainObject\UtritiumBall\Class</Filter>
+    </ClCompile>
+    <ClCompile Include="TerrainObject_Internal.cpp">
+      <Filter>Armada\Entity\Game Object\TerrainObject</Filter>
+    </ClCompile>
+    <ClCompile Include="UtritiumBallBinding.cpp">
+      <Filter>Armada\Entity\Game Object\TerrainObject\UtritiumBall</Filter>
+    </ClCompile>
+    <ClCompile Include="UtritiumBallClassBinding.cpp">
+      <Filter>Armada\Entity\Game Object\TerrainObject\UtritiumBall\Class</Filter>
+    </ClCompile>
+    <ClCompile Include="Colony_Internal.cpp">
+      <Filter>Armada\Entity\Game Object\Craft\Colony</Filter>
+    </ClCompile>
+    <ClCompile Include="ColonyBinding.cpp">
+      <Filter>Armada\Entity\Game Object\Craft\Colony</Filter>
+    </ClCompile>
+    <ClCompile Include="EvolverBinding.cpp">
+      <Filter>Armada\Entity\Game Object\Craft\Producer\Evolver</Filter>
+    </ClCompile>
+    <ClCompile Include="Evolver_Internal.cpp">
+      <Filter>Armada\Entity\Game Object\Craft\Producer\Evolver</Filter>
+    </ClCompile>
+    <ClCompile Include="EvolverClass_Internal.cpp">
+      <Filter>Armada\Entity\Game Object\Craft\Producer\Evolver\Class</Filter>
+    </ClCompile>
+    <ClCompile Include="EvolverClassBinding.cpp">
+      <Filter>Armada\Entity\Game Object\Craft\Producer\Evolver\Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ConstructionRig_Internal.cpp">
+      <Filter>Armada\Entity\Game Object\Craft\Producer\ConstructionRig</Filter>
+    </ClCompile>
+    <ClCompile Include="ConstructionRigBinding.cpp">
+      <Filter>Armada\Entity\Game Object\Craft\Producer\ConstructionRig</Filter>
+    </ClCompile>
+    <ClCompile Include="ColonyClass_Internal.cpp">
+      <Filter>Armada\Entity\Game Object\Craft\Colony\Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ColonyClassBinding.cpp">
+      <Filter>Armada\Entity\Game Object\Craft\Colony\Class</Filter>
+    </ClCompile>
+    <ClCompile Include="StarbaseBinding.cpp">
+      <Filter>Armada\Entity\Game Object\Craft\Producer\Shipyard\Starbase</Filter>
+    </ClCompile>
+    <ClCompile Include="BackgroundPlanetClassBinding.cpp">
+      <Filter>Armada\Entity\Game Object\TerrainObject\BackgroundObject\BackgroundPlanet\Class</Filter>
+    </ClCompile>
+    <ClCompile Include="BackgroundPlanetClass_Internal.cpp">
+      <Filter>Armada\Entity\Game Object\TerrainObject\BackgroundObject\BackgroundPlanet\Class</Filter>
+    </ClCompile>
+    <ClCompile Include="BackgroundObjectClass_Internal.cpp">
+      <Filter>Armada\Entity\Game Object\TerrainObject\BackgroundObject\Class</Filter>
+    </ClCompile>
+    <ClCompile Include="BackgroundObjectClassBinding.cpp">
+      <Filter>Armada\Entity\Game Object\TerrainObject\BackgroundObject\Class</Filter>
+    </ClCompile>
+    <ClCompile Include="BackgroundObject_Internal.cpp">
+      <Filter>Armada\Entity\Game Object\TerrainObject\BackgroundObject</Filter>
+    </ClCompile>
+    <ClCompile Include="BackgroundObjectBinding.cpp">
+      <Filter>Armada\Entity\Game Object\TerrainObject\BackgroundObject</Filter>
+    </ClCompile>
+    <ClCompile Include="BackgroundPlanet_Internal.cpp">
+      <Filter>Armada\Entity\Game Object\TerrainObject\BackgroundObject\BackgroundPlanet</Filter>
+    </ClCompile>
+    <ClCompile Include="BackgroundPlanetBinding.cpp">
+      <Filter>Armada\Entity\Game Object\TerrainObject\BackgroundObject\BackgroundPlanet</Filter>
+    </ClCompile>
+    <ClCompile Include="LatinumNebula_Internal.cpp">
+      <Filter>Armada\Entity\Game Object\TerrainObject\LatinumNebula</Filter>
+    </ClCompile>
+    <ClCompile Include="LatinumNebulaBinding.cpp">
+      <Filter>Armada\Entity\Game Object\TerrainObject\LatinumNebula</Filter>
+    </ClCompile>
+    <ClCompile Include="LatinumNebulaClass_Internal.cpp">
+      <Filter>Armada\Entity\Game Object\TerrainObject\LatinumNebula\Class</Filter>
+    </ClCompile>
+    <ClCompile Include="LatinumNebulaClassBinding.cpp">
+      <Filter>Armada\Entity\Game Object\TerrainObject\LatinumNebula\Class</Filter>
+    </ClCompile>
+    <ClCompile Include="DebuggerConnection.cpp">
+      <Filter>Armada\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="ResearchPod_Internal.cpp">
+      <Filter>Armada\Entity\Game Object\Craft\ResearchPod</Filter>
+    </ClCompile>
+    <ClCompile Include="ResearchPodBinding.cpp">
+      <Filter>Armada\Entity\Game Object\Craft\ResearchPod</Filter>
+    </ClCompile>
+    <ClCompile Include="ResearchStationBinding.cpp">
+      <Filter>Armada\Entity\Game Object\Craft\Producer\ResearchStation</Filter>
+    </ClCompile>
+    <ClCompile Include="CargoShip_Internal.cpp">
+      <Filter>Armada\Entity\Game Object\Craft\CargoShip</Filter>
+    </ClCompile>
+    <ClCompile Include="CargoShipBinding.cpp">
+      <Filter>Armada\Entity\Game Object\Craft\CargoShip</Filter>
+    </ClCompile>
+    <ClCompile Include="TradingStationBinding.cpp">
+      <Filter>Armada\Entity\Game Object\Craft\Producer\MiningStation\TradingStation</Filter>
+    </ClCompile>
+    <ClCompile Include="TradingStationClass_Internal.cpp">
+      <Filter>Armada\Entity\Game Object\Craft\Producer\MiningStation\TradingStation\Class</Filter>
+    </ClCompile>
+    <ClCompile Include="MiningStationClass_Internal.cpp">
+      <Filter>Armada\Entity\Game Object\Craft\Producer\MiningStation\Class</Filter>
+    </ClCompile>
+    <ClCompile Include="MiningStationClassBinding.cpp">
+      <Filter>Armada\Entity\Game Object\Craft\Producer\MiningStation\Class</Filter>
+    </ClCompile>
+    <ClCompile Include="TradingStationClassBinding.cpp">
+      <Filter>Armada\Entity\Game Object\Craft\Producer\MiningStation\TradingStation\Class</Filter>
+    </ClCompile>
+    <ClCompile Include="TradingStation.cpp">
+      <Filter>Armada\Entity\Game Object\Craft\Producer\MiningStation\TradingStation</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceTransferInterface.cpp">
+      <Filter>Armada\Entity\Game Object\Craft\Producer\Resource Transfer Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="Bullet.cpp">
+      <Filter>Armada\Entity\Ordnance\Bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="ResearchStation.cpp">
+      <Filter>Armada\Entity\Game Object\Craft\Producer\ResearchStation</Filter>
+    </ClCompile>
+    <ClCompile Include="Artillery.cpp">
+      <Filter>Armada\Entity\Ordnance\Bullet\Artillery</Filter>
+    </ClCompile>
+    <ClCompile Include="ArtilleryBinding.cpp">
+      <Filter>Armada\Entity\Ordnance\Bullet\Artillery</Filter>
+    </ClCompile>
+    <ClCompile Include="Ordnance.cpp">
+      <Filter>Armada\Entity\Ordnance</Filter>
+    </ClCompile>
+    <ClCompile Include="BeamToggle.cpp">
+      <Filter>Armada\Entity\Ordnance\BeamToggle</Filter>
+    </ClCompile>
+    <ClCompile Include="BeamToggleBinding.cpp">
+      <Filter>Armada\Entity\Ordnance\BeamToggle</Filter>
+    </ClCompile>
+    <ClCompile Include="AntimatterMine.cpp">
+      <Filter>Armada\Entity\Ordnance\Mine\AnimatterMine</Filter>
+    </ClCompile>
+    <ClCompile Include="AntimatterMineBinding.cpp">
+      <Filter>Armada\Entity\Ordnance\Mine\AnimatterMine</Filter>
+    </ClCompile>
+    <ClCompile Include="Mine.cpp">
+      <Filter>Armada\Entity\Ordnance\Mine</Filter>
+    </ClCompile>
+    <ClCompile Include="MineBinding.cpp">
+      <Filter>Armada\Entity\Ordnance\Mine</Filter>
+    </ClCompile>
+    <ClCompile Include="GravityMine.cpp">
+      <Filter>Armada\Entity\Ordnance\Mine\GravityMine</Filter>
+    </ClCompile>
+    <ClCompile Include="GravityMineBinding.cpp">
+      <Filter>Armada\Entity\Ordnance\Mine\GravityMine</Filter>
+    </ClCompile>
+    <ClCompile Include="TestBinding.cpp">
+      <Filter>Armada\Test</Filter>
+    </ClCompile>
+    <ClCompile Include="Test.cpp">
+      <Filter>Armada\Test</Filter>
+    </ClCompile>
+    <ClCompile Include="Wormhole.cpp">
+      <Filter>Armada\Entity\Game Object\TerrainObject\AreaEffectObject\Wormhole</Filter>
+    </ClCompile>
+    <ClCompile Include="AsteroidField.cpp">
+      <Filter>Armada\Entity\Game Object\TerrainObject\AsteroidField</Filter>
+    </ClCompile>
+    <ClCompile Include="AsteroidFieldBinding.cpp">
+      <Filter>Armada\Entity\Game Object\TerrainObject\AsteroidField</Filter>
+    </ClCompile>
+    <ClCompile Include="Producer.cpp">
+      <Filter>Armada\Entity\Game Object\Craft\Producer</Filter>
+    </ClCompile>
+    <ClCompile Include="MiningStation.cpp">
+      <Filter>Armada\Entity\Game Object\Craft\Producer\MiningStation</Filter>
+    </ClCompile>
+    <ClCompile Include="Scavenger.cpp">
+      <Filter>Armada\Entity\Game Object\Craft\Scavenger</Filter>
+    </ClCompile>
+    <ClCompile Include="ScavengerBinding.cpp">
+      <Filter>Armada\Entity\Game Object\Craft\Scavenger</Filter>
+    </ClCompile>
+    <ClCompile Include="PlanetMiningBase.cpp">
+      <Filter>Armada\Entity\Game Object\Craft\PlanetMiningBase</Filter>
+    </ClCompile>
+    <ClCompile Include="PlanetMiningBaseBinding.cpp">
+      <Filter>Armada\Entity\Game Object\Craft\PlanetMiningBase</Filter>
+    </ClCompile>
+    <ClCompile Include="SensorArray.cpp">
+      <Filter>Armada\Entity\Game Object\Craft\SensorArray</Filter>
+    </ClCompile>
+    <ClCompile Include="SensorArrayBinding.cpp">
+      <Filter>Armada\Entity\Game Object\Craft\SensorArray</Filter>
+    </ClCompile>
+    <ClCompile Include="QueueBinding.cpp">
+      <Filter>Armada\Queue</Filter>
+    </ClCompile>
+    <ClCompile Include="Queue.cpp">
+      <Filter>Armada\Queue</Filter>
+    </ClCompile>
+    <ClCompile Include="SplineQueueBinding.cpp">
+      <Filter>Armada\Queue\SplineQueue</Filter>
+    </ClCompile>
+    <ClCompile Include="OrientedQueue.cpp">
+      <Filter>Armada\Queue\SplineQueue\OrientedQueue</Filter>
+    </ClCompile>
+    <ClCompile Include="OrientedQueueBinding.cpp">
+      <Filter>Armada\Queue\SplineQueue\OrientedQueue</Filter>
+    </ClCompile>
+    <ClCompile Include="SplineQueue.cpp">
+      <Filter>Armada\Queue\SplineQueue</Filter>
+    </ClCompile>
+    <ClCompile Include="MineArray.cpp">
+      <Filter>Armada\Entity\Game Object\Craft\MineArray</Filter>
+    </ClCompile>
+    <ClCompile Include="MineArrayBinding.cpp">
+      <Filter>Armada\Entity\Game Object\Craft\MineArray</Filter>
+    </ClCompile>
+    <ClCompile Include="Container.cpp">
+      <Filter>Armada\Helpers\Container</Filter>
+    </ClCompile>
+    <ClCompile Include="BuildQueue.cpp">
+      <Filter>Armada\Entity\Game Object\Craft\Producer\BuildQueue</Filter>
+    </ClCompile>
+    <ClCompile Include="BuildQueueBinding.cpp">
+      <Filter>Armada\Entity\Game Object\Craft\Producer\BuildQueue</Filter>
+    </ClCompile>
+    <ClCompile Include="Type_GameObjectClass.cpp">
+      <Filter>Armada\Entity\Game Object\Class</Filter>
+    </ClCompile>
+    <ClCompile Include="OrdnanceDamage.cpp">
+      <Filter>Armada\Entity\Ordnance\Damage</Filter>
+    </ClCompile>
+    <ClCompile Include="OrdnanceDamageBinding.cpp">
+      <Filter>Armada\Entity\Ordnance\Damage</Filter>
+    </ClCompile>
+    <ClCompile Include="Objective.cpp">
+      <Filter>Armada\Objectives</Filter>
+    </ClCompile>
+    <ClCompile Include="MonitorWrapper.cpp">
+      <Filter>Armada\Monitor</Filter>
+    </ClCompile>
+    <ClCompile Include="MonitorWrapperBinding.cpp">
+      <Filter>Armada\Monitor</Filter>
+    </ClCompile>
+    <ClCompile Include="TimerWrapper.cpp">
+      <Filter>Armada\Timer</Filter>
+    </ClCompile>
+    <ClCompile Include="TimerWrapperBinding.cpp">
+      <Filter>Armada\Timer</Filter>
+    </ClCompile>
+    <ClCompile Include="Hook.cpp">
+      <Filter>Armada\Hooks</Filter>
+    </ClCompile>
+    <ClCompile Include="TextInputHook.cpp">
+      <Filter>Armada\Hooks\TextInput</Filter>
+    </ClCompile>
+    <ClCompile Include="TimerHook.cpp">
+      <Filter>Armada\Hooks\Timer</Filter>
+    </ClCompile>
+    <ClCompile Include="MonitorHook.cpp">
+      <Filter>Armada\Hooks\Monitor</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityFinderFilter.cpp">
+      <Filter>Armada\EntityFinder</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityFinderFilterFunction.cpp">
+      <Filter>Armada\EntityFinder</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityFinderFilterObject.cpp">
+      <Filter>Armada\EntityFinder</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityHook.cpp">
+      <Filter>Armada\Hooks\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="Game_Internal.cpp">
+      <Filter>Armada\Armada</Filter>
+    </ClCompile>
+    <ClCompile Include="GameBinding.cpp">
+      <Filter>Armada\Armada</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h">
+      <Filter>Precompiled Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Externals.h">
+      <Filter>Armada</Filter>
+    </ClInclude>
+    <ClInclude Include="FileReader.h">
+      <Filter>Armada</Filter>
+    </ClInclude>
+    <ClInclude Include="mmm_armada.h">
+      <Filter>Armada</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptInterface.h">
+      <Filter>Armada</Filter>
+    </ClInclude>
+    <ClInclude Include="Cineractive_Internal.h">
+      <Filter>Armada\Cineractive</Filter>
+    </ClInclude>
+    <ClInclude Include="Craft_Internal.h">
+      <Filter>Armada\Entity\Game Object\Craft</Filter>
+    </ClInclude>
+    <ClInclude Include="Debug_Internal.h">
+      <Filter>Armada\Debug</Filter>
+    </ClInclude>
+    <ClInclude Include="Entities_Internal.h">
+      <Filter>Armada\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity_Internal.h">
+      <Filter>Armada\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject_Internal.h">
+      <Filter>Armada\Entity\Game Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Load_Internal.h">
+      <Filter>Armada\Load</Filter>
+    </ClInclude>
+    <ClInclude Include="Mission_Internal.h">
+      <Filter>Armada\Mission</Filter>
+    </ClInclude>
+    <ClInclude Include="Path_Internal.h">
+      <Filter>Armada\Path</Filter>
+    </ClInclude>
+    <ClInclude Include="Team_Internal.h">
+      <Filter>Armada\Team</Filter>
+    </ClInclude>
+    <ClInclude Include="Save_Internal.h">
+      <Filter>Armada\Save</Filter>
+    </ClInclude>
+    <ClInclude Include="Planet_Internal.h">
+      <Filter>Armada\Entity\Game Object\Craft\Producer\Planet</Filter>
+    </ClInclude>
+    <ClInclude Include="UI_Internal.h">
+      <Filter>Armada\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Media_Internal.h">
+      <Filter>Armada\Media</Filter>
+    </ClInclude>
+    <ClInclude Include="UIMessage.h">
+      <Filter>Armada\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Map_Internal.h">
+      <Filter>Armada\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="MemRaider.h">
+      <Filter>MemRaider</Filter>
+    </ClInclude>
+    <ClInclude Include="TerrainObject_Internal.h">
+      <Filter>Armada\Entity\Game Object\TerrainObject</Filter>
+    </ClInclude>
+    <ClInclude Include="AreaEffectObject_Internal.h">
+      <Filter>Armada\Entity\Game Object\TerrainObject\AreaEffectObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Freighter_Internal.h">
+      <Filter>Armada\Entity\Game Object\Craft\Freighter</Filter>
+    </ClInclude>
+    <ClInclude Include="Nebula_Internal.h">
+      <Filter>Armada\Entity\Game Object\TerrainObject\AreaEffectObject\Nebula</Filter>
+    </ClInclude>
+    <ClInclude Include="Shipyard_Internal.h">
+      <Filter>Armada\Entity\Game Object\Craft\Producer\Shipyard</Filter>
+    </ClInclude>
+    <ClInclude Include="Starbase_Internal.h">
+      <Filter>Armada\Entity\Game Object\Craft\Producer\Shipyard\Starbase</Filter>
+    </ClInclude>
+    <ClInclude Include="Race_Internal.h">
+      <Filter>Armada\Race</Filter>
+    </ClInclude>
+    <ClInclude Include="IonStorm_Internal.h">
+      <Filter>Armada\Entity\Game Object\TerrainObject\AreaEffectObject\IonStorm</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceInterface_Internal.h">
+      <Filter>Armada\Entity\ResourceInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="StringAdapter.h">
+      <Filter>Armada\Conversion</Filter>
+    </ClInclude>
+    <ClInclude Include="VectorAdapter.h">
+      <Filter>Armada\Conversion</Filter>
+    </ClInclude>
+    <ClInclude Include="Explosion_Internal.h">
+      <Filter>Armada\Entity\Explosion</Filter>
+    </ClInclude>
+    <ClInclude Include="ConstructionObject_Internal.h">
+      <Filter>Armada\Entity\Game Object\ConstructionObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Beam_Internal.h">
+      <Filter>Armada\Entity\Ordnance\Beam</Filter>
+    </ClInclude>
+    <ClInclude Include="Phaser_Internal.h">
+      <Filter>Armada\Entity\Ordnance\Beam\Phaser</Filter>
+    </ClInclude>
+    <ClInclude Include="Missile_Internal.h">
+      <Filter>Armada\Entity\Ordnance\Missile</Filter>
+    </ClInclude>
+    <ClInclude Include="PhotonTorpedo_Internal.h">
+      <Filter>Armada\Entity\Ordnance\Missile\PhotonTorpedo</Filter>
+    </ClInclude>
+    <ClInclude Include="PulsePhaser_Internal.h">
+      <Filter>Armada\Entity\Ordnance\Bullet\PulsePhaser</Filter>
+    </ClInclude>
+    <ClInclude Include="ST3D_Colour.h">
+      <Filter>Armada\Colour</Filter>
+    </ClInclude>
+    <ClInclude Include="Objectives_Internal.h">
+      <Filter>Armada\Objectives</Filter>
+    </ClInclude>
+    <ClInclude Include="Functions_ItemCache.h">
+      <Filter>Armada\Functions</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityReference.h">
+      <Filter>Armada</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector3.h">
+      <Filter>Armada\Vector</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera_Internal.h">
+      <Filter>Armada\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="CraftSystem_Internal.h">
+      <Filter>Armada\Entity\Game Object\Craft\CraftSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptErrors.h">
+      <Filter>Armada\ScriptError</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityFinder.h">
+      <Filter>Armada\EntityFinder</Filter>
+    </ClInclude>
+    <ClInclude Include="Monitor.h">
+      <Filter>Armada\Monitor</Filter>
+    </ClInclude>
+    <ClInclude Include="Application.h">
+      <Filter>Armada\Application</Filter>
+    </ClInclude>
+    <ClInclude Include="PrintMessages.h">
+      <Filter>Armada\PrintMessages</Filter>
+    </ClInclude>
+    <ClInclude Include="Globals.h">
+      <Filter>Armada\Globals</Filter>
+    </ClInclude>
+    <ClInclude Include="TextInput.h">
+      <Filter>Armada\TextInput</Filter>
+    </ClInclude>
+    <ClInclude Include="Timer.h">
+      <Filter>Armada\Timer</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaBinding.h">
+      <Filter>Armada\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="TypeDeclarations.h">
+      <Filter>Armada</Filter>
+    </ClInclude>
+    <ClInclude Include="Team_Resources.h">
+      <Filter>Armada\Team</Filter>
+    </ClInclude>
+    <ClInclude Include="Matrix.h">
+      <Filter>Armada\Matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="ListAdapter.h">
+      <Filter>Armada\Conversion</Filter>
+    </ClInclude>
+    <ClInclude Include="MapAdapter.h">
+      <Filter>Armada\Conversion</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObjectClass_Internal.h">
+      <Filter>Armada\Entity\Game Object\Class</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_GameObject.h">
+      <Filter>Armada\Entity\Game Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_GameObjectClass.h">
+      <Filter>Armada\Entity\Game Object\Class</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_ConstructionObject.h">
+      <Filter>Armada\Entity\Game Object\ConstructionObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_Craft.h">
+      <Filter>Armada\Entity\Game Object\Craft</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_Producer.h">
+      <Filter>Armada\Entity\Game Object\Craft\Producer</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_Freighter.h">
+      <Filter>Armada\Entity\Game Object\Craft\Freighter</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_Planet.h">
+      <Filter>Armada\Entity\Game Object\Craft\Producer\Planet</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_Shipyard.h">
+      <Filter>Armada\Entity\Game Object\Craft\Producer\Shipyard</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_Starbase.h">
+      <Filter>Armada\Entity\Game Object\Craft\Producer\Shipyard\Starbase</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_CargoShip.h">
+      <Filter>Armada\Entity\Game Object\Craft\CargoShip</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_Colony.h">
+      <Filter>Armada\Entity\Game Object\Craft\Colony</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_CraftSystem.h">
+      <Filter>Armada\Entity\Game Object\Craft\CraftSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_TerrainObject.h">
+      <Filter>Armada\Entity\Game Object\TerrainObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_AreaEffectObject.h">
+      <Filter>Armada\Entity\Game Object\TerrainObject\AreaEffectObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_Nebula.h">
+      <Filter>Armada\Entity\Game Object\TerrainObject\AreaEffectObject\Nebula</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_IonStorm.h">
+      <Filter>Armada\Entity\Game Object\TerrainObject\AreaEffectObject\IonStorm</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_Explosion.h">
+      <Filter>Armada\Entity\Explosion</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_AsteroidField.h">
+      <Filter>Armada\Entity\Game Object\TerrainObject\AsteroidField</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_ShockwaveExplosion.h">
+      <Filter>Armada\Entity\Explosion\ShockwaveExplosion</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_ShockwaveCannon.h">
+      <Filter>Armada\Entity\Explosion\ShockwaveExplosion\ShockwaveCannon</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_FireballExplosion.h">
+      <Filter>Armada\Entity\Explosion\FireballExplosion</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_Missile.h">
+      <Filter>Armada\Entity\Ordnance\Missile</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_PhotonTorpedo.h">
+      <Filter>Armada\Entity\Ordnance\Missile\PhotonTorpedo</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_Beam.h">
+      <Filter>Armada\Entity\Ordnance\Beam</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_Phaser.h">
+      <Filter>Armada\Entity\Ordnance\Beam\Phaser</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_BeamToggle.h">
+      <Filter>Armada\Entity\Ordnance\BeamToggle</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_Bullet.h">
+      <Filter>Armada\Entity\Ordnance\Bullet</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_PulsePhaser.h">
+      <Filter>Armada\Entity\Ordnance\Bullet\PulsePhaser</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_Artillery.h">
+      <Filter>Armada\Entity\Ordnance\Bullet\Artillery</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_ResourceInterface.h">
+      <Filter>Armada\Entity\ResourceInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_ResourceTransferInterface.h">
+      <Filter>Armada\Entity\Game Object\Craft\Producer\Resource Transfer Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_Entity.h">
+      <Filter>Armada\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_Team.h">
+      <Filter>Armada\Team</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_Race.h">
+      <Filter>Armada\Race</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_Objectives.h">
+      <Filter>Armada\Objectives</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_ObjectivesText.h">
+      <Filter>Armada\Objectives</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_Cineractive.h">
+      <Filter>Armada\Cineractive</Filter>
+    </ClInclude>
+    <ClInclude Include="Types.h">
+      <Filter>Armada</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_AI.h">
+      <Filter>Armada</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_Weapons.h">
+      <Filter>Armada</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_CraftClass.h">
+      <Filter>Armada\Entity\Game Object\Craft\Class</Filter>
+    </ClInclude>
+    <ClInclude Include="CraftClass_Internal.h">
+      <Filter>Armada\Entity\Game Object\Craft\Class</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_ProducerClass.h">
+      <Filter>Armada\Entity\Game Object\Craft\Producer\Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ProducerClass_Internal.h">
+      <Filter>Armada\Entity\Game Object\Craft\Producer\Class</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_TerrainObjectClass.h">
+      <Filter>Armada\Entity\Game Object\TerrainObject\Class</Filter>
+    </ClInclude>
+    <ClInclude Include="TerrainObjectClass_Internal.h">
+      <Filter>Armada\Entity\Game Object\TerrainObject\Class</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_ScrapClass.h">
+      <Filter>Armada\Entity\Game Object\TerrainObject\Scrap\Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ScrapClass_Internal.h">
+      <Filter>Armada\Entity\Game Object\TerrainObject\Scrap\Class</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_Scrap.h">
+      <Filter>Armada\Entity\Game Object\TerrainObject\Scrap</Filter>
+    </ClInclude>
+    <ClInclude Include="Scrap_Internal.h">
+      <Filter>Armada\Entity\Game Object\TerrainObject\Scrap</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_RepairShip.h">
+      <Filter>Armada\Entity\Game Object\Craft\RepairShip</Filter>
+    </ClInclude>
+    <ClInclude Include="RepairShip_Internal.h">
+      <Filter>Armada\Entity\Game Object\Craft\RepairShip</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_RepairShipClass.h">
+      <Filter>Armada\Entity\Game Object\Craft\RepairShip\Class</Filter>
+    </ClInclude>
+    <ClInclude Include="RepairShipClass_Internal.h">
+      <Filter>Armada\Entity\Game Object\Craft\RepairShip\Class</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_TradingStation.h">
+      <Filter>Armada\Entity\Game Object\Craft\Producer\MiningStation\TradingStation</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_ConstructionRig.h">
+      <Filter>Armada\Entity\Game Object\Craft\Producer\ConstructionRig</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_BlackHole.h">
+      <Filter>Armada\Entity\Game Object\TerrainObject\AreaEffectObject\BlackHole</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_BlackHoleClass.h">
+      <Filter>Armada\Entity\Game Object\TerrainObject\AreaEffectObject\BlackHole\Class</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_AreaEffectObjectClass.h">
+      <Filter>Armada\Entity\Game Object\TerrainObject\AreaEffectObject\Class</Filter>
+    </ClInclude>
+    <ClInclude Include="BlackHoleClass_Internal.h">
+      <Filter>Armada\Entity\Game Object\TerrainObject\AreaEffectObject\BlackHole\Class</Filter>
+    </ClInclude>
+    <ClInclude Include="AreaEffectObjectClass_Internal.h">
+      <Filter>Armada\Entity\Game Object\TerrainObject\AreaEffectObject\Class</Filter>
+    </ClInclude>
+    <ClInclude Include="BlackHole_Internal.h">
+      <Filter>Armada\Entity\Game Object\TerrainObject\AreaEffectObject\BlackHole</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_ST3D_GraphicsEngine.h">
+      <Filter>Armada\Storm3D</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_ST3D_GraphicsEngine_Configuration.h">
+      <Filter>Armada\Storm3D</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_ST3D_DisplayMode.h">
+      <Filter>Armada\Storm3D</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_ST3D_Camera.h">
+      <Filter>Armada\Storm3D</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_UtritiumBall.h">
+      <Filter>Armada\Entity\Game Object\TerrainObject\UtritiumBall</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_UtritiumBallClass.h">
+      <Filter>Armada\Entity\Game Object\TerrainObject\UtritiumBall\Class</Filter>
+    </ClInclude>
+    <ClInclude Include="UtritiumBall_Internal.h">
+      <Filter>Armada\Entity\Game Object\TerrainObject\UtritiumBall</Filter>
+    </ClInclude>
+    <ClInclude Include="UtritiumBallClass_Internal.h">
+      <Filter>Armada\Entity\Game Object\TerrainObject\UtritiumBall\Class</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_ResearchStation.h">
+      <Filter>Armada\Entity\Game Object\Craft\Producer\ResearchStation</Filter>
+    </ClInclude>
+    <ClInclude Include="Colony_Internal.h">
+      <Filter>Armada\Entity\Game Object\Craft\Colony</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_MiningStationClass.h">
+      <Filter>Armada\Entity\Game Object\Craft\Producer\MiningStation\Class</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_Evolver.h">
+      <Filter>Armada\Entity\Game Object\Craft\Producer\Evolver</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_EvolverClass.h">
+      <Filter>Armada\Entity\Game Object\Craft\Producer\Evolver\Class</Filter>
+    </ClInclude>
+    <ClInclude Include="Evolver_Internal.h">
+      <Filter>Armada\Entity\Game Object\Craft\Producer\Evolver</Filter>
+    </ClInclude>
+    <ClInclude Include="EvolverClass_Internal.h">
+      <Filter>Armada\Entity\Game Object\Craft\Producer\Evolver\Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ConstructionRig_Internal.h">
+      <Filter>Armada\Entity\Game Object\Craft\Producer\ConstructionRig</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_ColonyClass.h">
+      <Filter>Armada\Entity\Game Object\Craft\Colony\Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ColonyClass_Internal.h">
+      <Filter>Armada\Entity\Game Object\Craft\Colony\Class</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_StarbaseClass.h">
+      <Filter>Armada\Entity\Game Object\Craft\Producer\Shipyard\Starbase\Class</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_ShipyardClass.h">
+      <Filter>Armada\Entity\Game Object\Craft\Producer\Shipyard\Class</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_BackgroundObject.h">
+      <Filter>Armada\Entity\Game Object\TerrainObject\BackgroundObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_BackgroundPlanet.h">
+      <Filter>Armada\Entity\Game Object\TerrainObject\BackgroundObject\BackgroundPlanet</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_BackgroundPlanetClass.h">
+      <Filter>Armada\Entity\Game Object\TerrainObject\BackgroundObject\BackgroundPlanet\Class</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_BackgroundObjectClass.h">
+      <Filter>Armada\Entity\Game Object\TerrainObject\BackgroundObject\Class</Filter>
+    </ClInclude>
+    <ClInclude Include="BackgroundPlanetClass_Internal.h">
+      <Filter>Armada\Entity\Game Object\TerrainObject\BackgroundObject\BackgroundPlanet\Class</Filter>
+    </ClInclude>
+    <ClInclude Include="BackgroundObjectClass_Internal.h">
+      <Filter>Armada\Entity\Game Object\TerrainObject\BackgroundObject\Class</Filter>
+    </ClInclude>
+    <ClInclude Include="BackgroundObject_Internal.h">
+      <Filter>Armada\Entity\Game Object\TerrainObject\BackgroundObject</Filter>
+    </ClInclude>
+    <ClInclude Include="BackgroundPlanet_Internal.h">
+      <Filter>Armada\Entity\Game Object\TerrainObject\BackgroundObject\BackgroundPlanet</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_LatinumNebula.h">
+      <Filter>Armada\Entity\Game Object\TerrainObject\LatinumNebula</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_LatinumNebulaClass.h">
+      <Filter>Armada\Entity\Game Object\TerrainObject\LatinumNebula\Class</Filter>
+    </ClInclude>
+    <ClInclude Include="LatinumNebula_Internal.h">
+      <Filter>Armada\Entity\Game Object\TerrainObject\LatinumNebula</Filter>
+    </ClInclude>
+    <ClInclude Include="LatinumNebulaClass_Internal.h">
+      <Filter>Armada\Entity\Game Object\TerrainObject\LatinumNebula\Class</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_Scavenger.h">
+      <Filter>Armada\Entity\Game Object\Craft\Scavenger</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_ScavengerClass.h">
+      <Filter>Armada\Entity\Game Object\Craft\Scavenger\Class</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_SensorArrayClass.h">
+      <Filter>Armada\Entity\Game Object\Craft\SensorArray\Class</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_SensorArray.h">
+      <Filter>Armada\Entity\Game Object\Craft\SensorArray</Filter>
+    </ClInclude>
+    <ClInclude Include="DebuggerConnection.h">
+      <Filter>Armada\Debug</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_ST3D_Device.h">
+      <Filter>Armada\Storm3D</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_ST3D_Sprite.h">
+      <Filter>Armada\Storm3D</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_ST3D_AnimationChannel.h">
+      <Filter>Armada\Storm3D</Filter>
+    </ClInclude>
+    <ClInclude Include="ResearchPod_Internal.h">
+      <Filter>Armada\Entity\Game Object\Craft\ResearchPod</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_ResearchPod.h">
+      <Filter>Armada\Entity\Game Object\Craft\ResearchPod</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_ResearchPodClass.h">
+      <Filter>Armada\Entity\Game Object\Craft\ResearchPod\Class</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_ResearchStationClass.h">
+      <Filter>Armada\Entity\Game Object\Craft\Producer\ResearchStation\Class</Filter>
+    </ClInclude>
+    <ClInclude Include="CargoShip_Internal.h">
+      <Filter>Armada\Entity\Game Object\Craft\CargoShip</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_TradingStationClass.h">
+      <Filter>Armada\Entity\Game Object\Craft\Producer\MiningStation\TradingStation\Class</Filter>
+    </ClInclude>
+    <ClInclude Include="TradingStationClass_Internal.h">
+      <Filter>Armada\Entity\Game Object\Craft\Producer\MiningStation\TradingStation\Class</Filter>
+    </ClInclude>
+    <ClInclude Include="MiningStationClass_Internal.h">
+      <Filter>Armada\Entity\Game Object\Craft\Producer\MiningStation\Class</Filter>
+    </ClInclude>
+    <ClInclude Include="TradingStation.h">
+      <Filter>Armada\Entity\Game Object\Craft\Producer\MiningStation\TradingStation</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceTransferInterface.h">
+      <Filter>Armada\Entity\Game Object\Craft\Producer\Resource Transfer Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="Artillery.h">
+      <Filter>Armada\Entity\Ordnance\Bullet\Artillery</Filter>
+    </ClInclude>
+    <ClInclude Include="Bullet.h">
+      <Filter>Armada\Entity\Ordnance\Bullet</Filter>
+    </ClInclude>
+    <ClInclude Include="ResearchStation.h">
+      <Filter>Armada\Entity\Game Object\Craft\Producer\ResearchStation</Filter>
+    </ClInclude>
+    <ClInclude Include="BeamToggle.h">
+      <Filter>Armada\Entity\Ordnance\BeamToggle</Filter>
+    </ClInclude>
+    <ClInclude Include="Ordnance.h">
+      <Filter>Armada\Entity\Ordnance</Filter>
+    </ClInclude>
+    <ClInclude Include="GravityMineType.h">
+      <Filter>Armada\Entity\Ordnance\Mine\GravityMine</Filter>
+    </ClInclude>
+    <ClInclude Include="Mine.h">
+      <Filter>Armada\Entity\Ordnance\Mine</Filter>
+    </ClInclude>
+    <ClInclude Include="MineType.h">
+      <Filter>Armada\Entity\Ordnance\Mine</Filter>
+    </ClInclude>
+    <ClInclude Include="OrdnanceType.h">
+      <Filter>Armada\Entity\Ordnance</Filter>
+    </ClInclude>
+    <ClInclude Include="AntimatterMine.h">
+      <Filter>Armada\Entity\Ordnance\Mine\AnimatterMine</Filter>
+    </ClInclude>
+    <ClInclude Include="AntimatterMineType.h">
+      <Filter>Armada\Entity\Ordnance\Mine\AnimatterMine</Filter>
+    </ClInclude>
+    <ClInclude Include="GravityMine.h">
+      <Filter>Armada\Entity\Ordnance\Mine\GravityMine</Filter>
+    </ClInclude>
+    <ClInclude Include="Test.h">
+      <Filter>Armada\Test</Filter>
+    </ClInclude>
+    <ClInclude Include="Wormhole.h">
+      <Filter>Armada\Entity\Game Object\TerrainObject\AreaEffectObject\Wormhole</Filter>
+    </ClInclude>
+    <ClInclude Include="WormholeType.h">
+      <Filter>Armada\Entity\Game Object\TerrainObject\AreaEffectObject\Wormhole</Filter>
+    </ClInclude>
+    <ClInclude Include="AsteroidField.h">
+      <Filter>Armada\Entity\Game Object\TerrainObject\AsteroidField</Filter>
+    </ClInclude>
+    <ClInclude Include="SObjectType.h">
+      <Filter>Armada\SObject</Filter>
+    </ClInclude>
+    <ClInclude Include="AiProcessType.h">
+      <Filter>Armada\SObject\AiProcess</Filter>
+    </ClInclude>
+    <ClInclude Include="MineProcessType.h">
+      <Filter>Armada\SObject\AiProcess\MineProcess</Filter>
+    </ClInclude>
+    <ClInclude Include="CraftProcessType.h">
+      <Filter>Armada\SObject\AiProcess\CraftProcess</Filter>
+    </ClInclude>
+    <ClInclude Include="Producer.h">
+      <Filter>Armada\Entity\Game Object\Craft\Producer</Filter>
+    </ClInclude>
+    <ClInclude Include="MiningStation.h">
+      <Filter>Armada\Entity\Game Object\Craft\Producer\MiningStation</Filter>
+    </ClInclude>
+    <ClInclude Include="MiningStationType.h">
+      <Filter>Armada\Entity\Game Object\Craft\Producer\MiningStation</Filter>
+    </ClInclude>
+    <ClInclude Include="Scavenger.h">
+      <Filter>Armada\Entity\Game Object\Craft\Scavenger</Filter>
+    </ClInclude>
+    <ClInclude Include="PlanetMiningBaseType.h">
+      <Filter>Armada\Entity\Game Object\Craft\PlanetMiningBase</Filter>
+    </ClInclude>
+    <ClInclude Include="PlanetMiningBase.h">
+      <Filter>Armada\Entity\Game Object\Craft\PlanetMiningBase</Filter>
+    </ClInclude>
+    <ClInclude Include="SensorArray.h">
+      <Filter>Armada\Entity\Game Object\Craft\SensorArray</Filter>
+    </ClInclude>
+    <ClInclude Include="QueueType.h">
+      <Filter>Armada\Queue</Filter>
+    </ClInclude>
+    <ClInclude Include="SplineQueueType.h">
+      <Filter>Armada\Queue\SplineQueue</Filter>
+    </ClInclude>
+    <ClInclude Include="OrientedQueueType.h">
+      <Filter>Armada\Queue\SplineQueue\OrientedQueue</Filter>
+    </ClInclude>
+    <ClInclude Include="Queue.h">
+      <Filter>Armada\Queue</Filter>
+    </ClInclude>
+    <ClInclude Include="SplineQueue.h">
+      <Filter>Armada\Queue\SplineQueue</Filter>
+    </ClInclude>
+    <ClInclude Include="OrientedQueue.h">
+      <Filter>Armada\Queue\SplineQueue\OrientedQueue</Filter>
+    </ClInclude>
+    <ClInclude Include="PathType.h">
+      <Filter>Armada\Path</Filter>
+    </ClInclude>
+    <ClInclude Include="MineArrayType.h">
+      <Filter>Armada\Entity\Game Object\Craft\MineArray</Filter>
+    </ClInclude>
+    <ClInclude Include="MineArray.h">
+      <Filter>Armada\Entity\Game Object\Craft\MineArray</Filter>
+    </ClInclude>
+    <ClInclude Include="Container.h">
+      <Filter>Armada\Helpers\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="BuildQueue.h">
+      <Filter>Armada\Entity\Game Object\Craft\Producer\BuildQueue</Filter>
+    </ClInclude>
+    <ClInclude Include="WormholeClass.h">
+      <Filter>Armada\Entity\Game Object\TerrainObject\AreaEffectObject\Wormhole</Filter>
+    </ClInclude>
+    <ClInclude Include="OrdnanceDamage.h">
+      <Filter>Armada\Entity\Ordnance\Damage</Filter>
+    </ClInclude>
+    <ClInclude Include="Objective.h">
+      <Filter>Armada\Objectives</Filter>
+    </ClInclude>
+    <ClInclude Include="MonitorWrapper.h">
+      <Filter>Armada\Monitor</Filter>
+    </ClInclude>
+    <ClInclude Include="TimerWrapper.h">
+      <Filter>Armada\Timer</Filter>
+    </ClInclude>
+    <ClInclude Include="Hook.h">
+      <Filter>Armada\Hooks</Filter>
+    </ClInclude>
+    <ClInclude Include="TextInputHook.h">
+      <Filter>Armada\Hooks\TextInput</Filter>
+    </ClInclude>
+    <ClInclude Include="TimerHook.h">
+      <Filter>Armada\Hooks\Timer</Filter>
+    </ClInclude>
+    <ClInclude Include="MonitorHook.h">
+      <Filter>Armada\Hooks\Monitor</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityFinderFilter.h">
+      <Filter>Armada\EntityFinder</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityFinderFilterFunction.h">
+      <Filter>Armada\EntityFinder</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityFinderFilterObject.h">
+      <Filter>Armada\EntityFinder</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityHook.h">
+      <Filter>Armada\Hooks\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="ExeMemory.h">
+      <Filter>Armada\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="Functions.h">
+      <Filter>Armada\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="Game_Internal.h">
+      <Filter>Armada\Armada</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MemRaider.inl">
+      <Filter>MemRaider</Filter>
+    </None>
+    <None Include="VectorAdapter.inl">
+      <Filter>Armada\Conversion</Filter>
+    </None>
+    <None Include="Load_Internal.inl">
+      <Filter>Armada\Load</Filter>
+    </None>
+    <None Include="ScriptErrors.inl">
+      <Filter>Armada\ScriptError</Filter>
+    </None>
+    <None Include="ListAdapter.inl">
+      <Filter>Armada\Conversion</Filter>
+    </None>
+    <None Include="Entity_Internal.inl">
+      <Filter>Armada\Entity</Filter>
+    </None>
+    <None Include="Container.inl">
+      <Filter>Armada\Helpers\Container</Filter>
+    </None>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,35 @@
+//Just using craft because there isn't anything really that special about it.
+classlabel 	= "craft"
+ainame 		= "CraftProcess"
+
+//Need to disable some of the options so we have a consistent interface display and so the ships don't start using weapons on their own.
+show_sw_autonomy 		= 0
+show_movement_autonomy 	= 0
+has_crew 				= 0
+canattack 				= 0
+combat 					= 0
+transporter 			= 0
+alert 					= 0
+can_explore 			= 0
+can_sandd 				= 0
+can_repair				= 0
+can_guard				= 0
+has_hitpoints 			= 0
+
+//Some statistics settings
+crewcost 				= 0
+
+//For great slowness
+physicsfile 		= "mmm_fleet_physics.odf"
+trekphysicsfile 	= "mmm_fleet_physics.odf"
+
+//Events for sounds I think or something
+eventselect 		= "Basic1CruiserSelect"
+eventacknowledge 	= "Basic1CruiserAcknowledge"
+eventattack 		= "Basic1CruiserAttack"
+eventstop 			= "Basic1CruiserStop"
+eventmove 			= "Basic1CruiserMove"
+eventrepair 		= "Basic1CruiserRepair"
+
+//Some names - just a giant list for now, nothing special. Need to think of some better names to be honest. These ones are pretty boring.
+possiblecraftnames = "1st Fleet" "2nd Fleet" "3rd Fleet" "4th Fleet" "5th Fleet" "6th Fleet"

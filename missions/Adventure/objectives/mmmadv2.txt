@@ -1,0 +1,7 @@
+MMM Adventure Game
+
+This mission shows how MMM can be used to create alternate ways of playing the game.
+
+* Explore the region
+* Find the USS Pavlov's engine parts
+* Deliver the parts to the USS Pavlov

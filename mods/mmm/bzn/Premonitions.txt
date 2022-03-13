@@ -1,0 +1,89 @@
+	// Map Definitions
+
+	// Handle for Mediterranean Class (fed_mediterranean) object fed_medi1146
+	Handle fed_medi1146
+
+	// Handle for Latinum Moon (trigger_tritanium) object trigger_1019
+	Handle trigger_1019
+
+	// Handle for Dilithium Moon (trigger_dilithium) object trigger_1001
+	Handle trigger_1001
+
+	// Handle for Sovereign Class (fed_sovereign) object fente
+	Handle fente
+
+	// Handle for Akira Class (fed_akira) object fed_akir1016
+	Handle fed_akir1016
+
+	// Handle for Akira Class (fed_akira) object fed_akir1017
+	Handle fed_akir1017
+
+	// Handle for A-20 Attack Destroyer (dom_destroyer) object dom_dest1113
+	Handle dom_dest1113
+
+	// Handle for A-20 Attack Destroyer (dom_destroyer) object dom_dest1114
+	Handle dom_dest1114
+
+	// Handle for A-20 Attack Destroyer (dom_destroyer) object dom_dest1115
+	Handle dom_dest1115
+
+	// Handle for A-20 Attack Destroyer (dom_destroyer) object dom_dest1116
+	Handle dom_dest1116
+
+	// Handle for A-20 Attack Destroyer (dom_destroyer) object dom_dest1117
+	Handle dom_dest1117
+
+	// Handle for A-20 Attack Destroyer (dom_destroyer) object dom_dest1118
+	Handle dom_dest1118
+
+	// Handle for Dilithium Moon (trigger_dilithium) object trigger_1145
+	Handle trigger_1145
+
+	// Handle for Wormhole (map_wormhole) object wh_source
+	Handle wh_source
+
+
+
+
+	// Map Object Initialization
+
+	fed_medi1146 = GetHandle( "fed_medi1146" );
+	trigger_1019 = GetHandle( "trigger_1019" );
+	trigger_1001 = GetHandle( "trigger_1001" );
+	fente = GetHandle( "fente" );
+	fed_akir1016 = GetHandle( "fed_akir1016" );
+	fed_akir1017 = GetHandle( "fed_akir1017" );
+	dom_dest1113 = GetHandle( "dom_dest1113" );
+	dom_dest1114 = GetHandle( "dom_dest1114" );
+	dom_dest1115 = GetHandle( "dom_dest1115" );
+	dom_dest1116 = GetHandle( "dom_dest1116" );
+	dom_dest1117 = GetHandle( "dom_dest1117" );
+	dom_dest1118 = GetHandle( "dom_dest1118" );
+	trigger_1145 = GetHandle( "trigger_1145" );
+	wh_source = GetHandle( "wh_source" );
+
+
+
+	// AI special forces
+
+	SetSpecialForcesFlag( dom_dest1113, true );
+	SetSpecialForcesFlag( dom_dest1114, true );
+	SetSpecialForcesFlag( dom_dest1115, true );
+	SetSpecialForcesFlag( dom_dest1116, true );
+	SetSpecialForcesFlag( dom_dest1117, true );
+	SetSpecialForcesFlag( dom_dest1118, true );
+
+
+	//
+	// PATHS
+	//
+
+	// Path: "path_1" (1 points)
+	// Path: "path_2" (2 points)
+	// Path: "path_3" (2 points)
+	// Path: "path_4" (2 points)
+	// Path: "path_9" (17 points)
+	// Path: "Camera_1" (2 points)
+	// Path: "path_11" (2 points)
+	// Path: "endpath" (1 points)
+	// Path: "zoomout" (2 points)

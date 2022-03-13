@@ -1,0 +1,80 @@
+	// Map Definitions
+
+	// Handle for D'Kora Class Marauder (nfer_marauder) object zferscav1479
+	Handle zferscav1479
+
+	// Handle for D'Kora Class Marauder (nfer_marauder) object zferscav1341
+	Handle zferscav1341
+
+	// Handle for Dilithium Moon (map_dilithium_moon1) object map_dili1342
+	Handle map_dili1342
+
+	// Handle for Latinum Moon (map_tritanium_moon4) object map_trit1343
+	Handle map_trit1343
+
+	// Handle for Dilithium Moon (map_dilithium_moon2) object map_dili1344
+	Handle map_dili1344
+
+	// Handle for Latinum Moon (map_tritanium_moon3) object map_trit1345
+	Handle map_trit1345
+
+	// Handle for Dilithium Moon (map_dilithium_moon3) object map_dili1346
+	Handle map_dili1346
+
+	// Handle for Dilithium Moon (map_dilithium_moon2) object map_dili1347
+	Handle map_dili1347
+
+	// Handle for Latinum Moon (map_tritanium_moon1) object map_trit1348
+	Handle map_trit1348
+
+	// Handle for Dilithium Moon (map_dilithium_moon1) object map_dili1349
+	Handle map_dili1349
+
+	// Handle for Latinum Moon (map_tritanium_moon2) object map_trit1350
+	Handle map_trit1350
+
+	// Handle for Latinum Moon (map_tritanium_moon4) object map_trit1351
+	Handle map_trit1351
+
+	// Handle for Dilithium Moon (map_dilithium_moon1) object map_dili1352
+	Handle map_dili1352
+
+	// Handle for Latinum Moon (map_tritanium_moon3) object map_trit1353
+	Handle map_trit1353
+
+	// Handle for Dilithium Moon (map_dilithium_moon2) object map_dili1354
+	Handle map_dili1354
+
+
+
+
+	// Map Object Initialization
+
+	zferscav1479 = GetHandle( "zferscav1479" );
+	zferscav1341 = GetHandle( "zferscav1341" );
+	map_dili1342 = GetHandle( "map_dili1342" );
+	map_trit1343 = GetHandle( "map_trit1343" );
+	map_dili1344 = GetHandle( "map_dili1344" );
+	map_trit1345 = GetHandle( "map_trit1345" );
+	map_dili1346 = GetHandle( "map_dili1346" );
+	map_dili1347 = GetHandle( "map_dili1347" );
+	map_trit1348 = GetHandle( "map_trit1348" );
+	map_dili1349 = GetHandle( "map_dili1349" );
+	map_trit1350 = GetHandle( "map_trit1350" );
+	map_trit1351 = GetHandle( "map_trit1351" );
+	map_dili1352 = GetHandle( "map_dili1352" );
+	map_trit1353 = GetHandle( "map_trit1353" );
+	map_dili1354 = GetHandle( "map_dili1354" );
+
+
+
+	// AI special forces
+
+
+
+	//
+	// PATHS
+	//
+
+	// Path: "Camera_1" (2 points)
+	// Path: "Camera_2" (2 points)

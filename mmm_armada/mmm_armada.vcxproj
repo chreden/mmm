@@ -1,0 +1,727 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debugger|Win32">
+      <Configuration>Debugger</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DocAppDebug|Win32">
+      <Configuration>DocAppDebug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DocAppRelease|Win32">
+      <Configuration>DocAppRelease</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ScriptAppDebug|Win32">
+      <Configuration>ScriptAppDebug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ScriptAppRelease|Win32">
+      <Configuration>ScriptAppRelease</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3DB607F3-3E96-459C-BCC8-EC17746903EC}</ProjectGuid>
+    <RootNamespace>mmm_armada</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ScriptAppRelease|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DocAppRelease|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ScriptAppDebug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DocAppDebug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debugger|Win32'">
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ScriptAppRelease|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DocAppRelease|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ScriptAppDebug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DocAppDebug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='ScriptAppDebug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='DocAppDebug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='ScriptAppDebug|Win32'">$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='DocAppDebug|Win32'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='ScriptAppRelease|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='DocAppRelease|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='ScriptAppRelease|Win32'">$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='DocAppRelease|Win32'">$(Configuration)\</IntDir>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='ScriptAppDebug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='DocAppDebug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='ScriptAppDebug|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='DocAppDebug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='ScriptAppDebug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='DocAppDebug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='ScriptAppRelease|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='DocAppRelease|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='ScriptAppRelease|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='DocAppRelease|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='ScriptAppRelease|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='DocAppRelease|Win32'" />
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectName)</TargetName>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../luabind/luabind;../boost;$(IncludePath)</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../luabind/luabind;../boost;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <ForcedIncludeFiles>pch.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <AdditionalIncludeDirectories>../luabind;../boost;$(SolutionDir)\..;$(SolutionDir)\..\external\zlib;$(SolutionDir)../external/lua/src;$(SolutionDir)../external/luabind;$(SolutionDir)../external/</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Lib>
+      <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>../bin;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ScriptAppDebug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <ForcedIncludeFiles>pch.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <Lib>
+      <AdditionalDependencies>mmm_common_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>../bin/mmm_armada_d.lib</OutputFile>
+      <AdditionalLibraryDirectories>../bin;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DocAppDebug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <ForcedIncludeFiles>pch.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <Lib>
+      <AdditionalDependencies>mmm_common_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>../bin/mmm_armada_d.lib</OutputFile>
+      <AdditionalLibraryDirectories>../bin;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ForcedIncludeFiles>pch.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <AdditionalIncludeDirectories>../luabind;../lua/include;../boost;$(SolutionDir)\..;$(SolutionDir)\..\external\zlib</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Lib>
+      <AdditionalDependencies>../lua/lib/lua5.1.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>../bin;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ScriptAppRelease|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ForcedIncludeFiles>pch.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <Lib>
+      <AdditionalDependencies>mmm_common.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>../bin/mmm_armada.lib</OutputFile>
+      <AdditionalLibraryDirectories>../bin;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DocAppRelease|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ForcedIncludeFiles>pch.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <Lib>
+      <AdditionalDependencies>mmm_common.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>../bin/mmm_armada.lib</OutputFile>
+      <AdditionalLibraryDirectories>../bin;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AntimatterMine.cpp" />
+    <ClCompile Include="AntimatterMineBinding.cpp" />
+    <ClCompile Include="Application.cpp" />
+    <ClCompile Include="AreaEffectObject_Internal.cpp" />
+    <ClCompile Include="AreaEffectObjectBinding.cpp" />
+    <ClCompile Include="AreaEffectObjectClassBinding.cpp" />
+    <ClCompile Include="AreaEffectObjectClass_Internal.cpp" />
+    <ClCompile Include="Artillery.cpp" />
+    <ClCompile Include="ArtilleryBinding.cpp" />
+    <ClCompile Include="AsteroidField.cpp" />
+    <ClCompile Include="AsteroidFieldBinding.cpp" />
+    <ClCompile Include="BackgroundObjectBinding.cpp" />
+    <ClCompile Include="BackgroundObjectClassBinding.cpp" />
+    <ClCompile Include="BackgroundObjectClass_Internal.cpp" />
+    <ClCompile Include="BackgroundObject_Internal.cpp" />
+    <ClCompile Include="BackgroundPlanetBinding.cpp" />
+    <ClCompile Include="BackgroundPlanetClassBinding.cpp" />
+    <ClCompile Include="BackgroundPlanetClass_Internal.cpp" />
+    <ClCompile Include="BackgroundPlanet_Internal.cpp" />
+    <ClCompile Include="BeamBinding.cpp" />
+    <ClCompile Include="BeamToggle.cpp" />
+    <ClCompile Include="BeamToggleBinding.cpp" />
+    <ClCompile Include="Beam_Internal.cpp" />
+    <ClCompile Include="BlackHoleBinding.cpp" />
+    <ClCompile Include="BlackHoleClassBinding.cpp" />
+    <ClCompile Include="BlackHoleClass_Internal.cpp" />
+    <ClCompile Include="BlackHole_Internal.cpp" />
+    <ClCompile Include="BuildQueue.cpp" />
+    <ClCompile Include="BuildQueueBinding.cpp" />
+    <ClCompile Include="BulletBinding.cpp" />
+    <ClCompile Include="Bullet.cpp" />
+    <ClCompile Include="CameraBinding.cpp" />
+    <ClCompile Include="Camera_Internal.cpp" />
+    <ClCompile Include="CargoShipBinding.cpp" />
+    <ClCompile Include="CargoShip_Internal.cpp" />
+    <ClCompile Include="CineractiveBinding.cpp" />
+    <ClCompile Include="ColonyBinding.cpp" />
+    <ClCompile Include="ColonyClassBinding.cpp" />
+    <ClCompile Include="ColonyClass_Internal.cpp" />
+    <ClCompile Include="Colony_Internal.cpp" />
+    <ClCompile Include="ConstructionObjectBinding.cpp" />
+    <ClCompile Include="ConstructionObject_Internal.cpp" />
+    <ClCompile Include="ConstructionRigBinding.cpp" />
+    <ClCompile Include="ConstructionRig_Internal.cpp" />
+    <ClCompile Include="Container.cpp" />
+    <ClCompile Include="CraftBinding.cpp" />
+    <ClCompile Include="CraftClassBinding.cpp" />
+    <ClCompile Include="CraftClass_Internal.cpp" />
+    <ClCompile Include="CraftSystem_Internal.cpp" />
+    <ClCompile Include="CraftSystemBinding.cpp" />
+    <ClCompile Include="DebugBinding.cpp" />
+    <ClCompile Include="DebuggerConnection.cpp" />
+    <ClCompile Include="EntityBinding.cpp" />
+    <ClCompile Include="EntityFinder.cpp" />
+    <ClCompile Include="EntityFinderBinding.cpp" />
+    <ClCompile Include="EntityFinderFilter.cpp" />
+    <ClCompile Include="EntityFinderFilterFunction.cpp" />
+    <ClCompile Include="EntityFinderFilterObject.cpp" />
+    <ClCompile Include="EntityReference.cpp" />
+    <ClCompile Include="EntityHook.cpp" />
+    <ClCompile Include="EvolverBinding.cpp" />
+    <ClCompile Include="EvolverClassBinding.cpp" />
+    <ClCompile Include="EvolverClass_Internal.cpp" />
+    <ClCompile Include="Evolver_Internal.cpp" />
+    <ClCompile Include="ExplosionBinding.cpp" />
+    <ClCompile Include="Explosion_Internal.cpp" />
+    <ClCompile Include="FreighterBinding.cpp" />
+    <ClCompile Include="Freighter_Internal.cpp" />
+    <ClCompile Include="GameBinding.cpp" />
+    <ClCompile Include="GameObjectBinding.cpp" />
+    <ClCompile Include="GameObjectClassBinding.cpp" />
+    <ClCompile Include="GameObjectClass_Internal.cpp" />
+    <ClCompile Include="Game_Internal.cpp" />
+    <ClCompile Include="Globals.cpp" />
+    <ClCompile Include="GravityMine.cpp" />
+    <ClCompile Include="GravityMineBinding.cpp" />
+    <ClCompile Include="Hook.cpp" />
+    <ClCompile Include="IonStormBinding.cpp" />
+    <ClCompile Include="IonStorm_Internal.cpp" />
+    <ClCompile Include="Functions_ItemCache.cpp" />
+    <ClCompile Include="LatinumNebulaBinding.cpp" />
+    <ClCompile Include="LatinumNebulaClassBinding.cpp" />
+    <ClCompile Include="LatinumNebulaClass_Internal.cpp" />
+    <ClCompile Include="LatinumNebula_Internal.cpp" />
+    <ClCompile Include="LoadBinding.cpp" />
+    <ClCompile Include="LuaBinding.cpp" />
+    <ClCompile Include="MapBinding.cpp" />
+    <ClCompile Include="Map_Internal.cpp" />
+    <ClCompile Include="Matrix.cpp" />
+    <ClCompile Include="MatrixBinding.cpp" />
+    <ClCompile Include="MediaBinding.cpp" />
+    <ClCompile Include="MemRaider.cpp" />
+    <ClCompile Include="Mine.cpp" />
+    <ClCompile Include="MineArray.cpp" />
+    <ClCompile Include="MineArrayBinding.cpp" />
+    <ClCompile Include="MineBinding.cpp" />
+    <ClCompile Include="MiningStationBinding.cpp" />
+    <ClCompile Include="MiningStationClassBinding.cpp" />
+    <ClCompile Include="MiningStationClass_Internal.cpp" />
+    <ClCompile Include="MiningStation.cpp" />
+    <ClCompile Include="MissileBinding.cpp" />
+    <ClCompile Include="Missile_Internal.cpp" />
+    <ClCompile Include="MissionBinding.cpp" />
+    <ClCompile Include="Monitor.cpp" />
+    <ClCompile Include="MonitorHook.cpp" />
+    <ClCompile Include="MonitorWrapper.cpp" />
+    <ClCompile Include="MonitorWrapperBinding.cpp" />
+    <ClCompile Include="Objective.cpp" />
+    <ClCompile Include="OrdnanceDamage.cpp" />
+    <ClCompile Include="OrdnanceDamageBinding.cpp" />
+    <ClCompile Include="OrientedQueue.cpp" />
+    <ClCompile Include="OrientedQueueBinding.cpp" />
+    <ClCompile Include="PlanetMiningBase.cpp" />
+    <ClCompile Include="PlanetMiningBaseBinding.cpp" />
+    <ClCompile Include="Queue.cpp" />
+    <ClCompile Include="QueueBinding.cpp" />
+    <ClCompile Include="RepairShipBinding.cpp" />
+    <ClCompile Include="RepairShipClassBinding.cpp" />
+    <ClCompile Include="RepairShipClass_Internal.cpp" />
+    <ClCompile Include="RepairShip_Internal.cpp" />
+    <ClCompile Include="ResearchPodBinding.cpp" />
+    <ClCompile Include="ResearchPod_Internal.cpp" />
+    <ClCompile Include="ResearchStationBinding.cpp" />
+    <ClCompile Include="ResearchStation.cpp" />
+    <ClCompile Include="Scavenger.cpp" />
+    <ClCompile Include="ScavengerBinding.cpp" />
+    <ClCompile Include="ScrapBinding.cpp" />
+    <ClCompile Include="Scrap_Internal.cpp" />
+    <ClCompile Include="NebulaBinding.cpp" />
+    <ClCompile Include="Nebula_Internal.cpp" />
+    <ClCompile Include="ObjectivesBinding.cpp" />
+    <ClCompile Include="Objectives_Internal.cpp" />
+    <ClCompile Include="OrdnanceBinding.cpp" />
+    <ClCompile Include="Ordnance.cpp" />
+    <ClCompile Include="PathBinding.cpp" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ScriptAppDebug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DocAppDebug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ScriptAppRelease|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DocAppRelease|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="mmm_armada.cpp" />
+    <ClCompile Include="PhaserBinding.cpp" />
+    <ClCompile Include="Phaser_Internal.cpp" />
+    <ClCompile Include="PhotonTorpedoBinding.cpp" />
+    <ClCompile Include="PhotonTorpedo_Internal.cpp" />
+    <ClCompile Include="PlanetBinding.cpp" />
+    <ClCompile Include="PrintMessages.cpp" />
+    <ClCompile Include="ProducerBinding.cpp" />
+    <ClCompile Include="ProducerClassBinding.cpp" />
+    <ClCompile Include="ProducerClass_Internal.cpp" />
+    <ClCompile Include="PulsePhaserBinding.cpp" />
+    <ClCompile Include="PulsePhaser_Internal.cpp" />
+    <ClCompile Include="RaceBinding.cpp" />
+    <ClCompile Include="Race_Internal.cpp" />
+    <ClCompile Include="ResourceInterfaceBinding.cpp" />
+    <ClCompile Include="ResourceInterface_Internal.cpp" />
+    <ClCompile Include="ResourceTransferInterfaceBinding.cpp" />
+    <ClCompile Include="ResourceTransferInterface.cpp" />
+    <ClCompile Include="SaveBinding.cpp" />
+    <ClCompile Include="ScrapClassBinding.cpp" />
+    <ClCompile Include="ScrapClass_Internal.cpp" />
+    <ClCompile Include="ScriptErrors.cpp" />
+    <ClCompile Include="SensorArray.cpp" />
+    <ClCompile Include="SensorArrayBinding.cpp" />
+    <ClCompile Include="ShipyardBinding.cpp" />
+    <ClCompile Include="Shipyard_Internal.cpp" />
+    <ClCompile Include="SplineQueue.cpp" />
+    <ClCompile Include="SplineQueueBinding.cpp" />
+    <ClCompile Include="ST3D_Colour.cpp" />
+    <ClCompile Include="ST3D_ColourBinding.cpp" />
+    <ClCompile Include="StarbaseBinding.cpp" />
+    <ClCompile Include="Starbase_Internal.cpp" />
+    <ClCompile Include="StringAdapter.cpp" />
+    <ClCompile Include="TeamBinding.cpp" />
+    <ClCompile Include="Team_Resources.cpp" />
+    <ClCompile Include="TerrainObject_Internal.cpp" />
+    <ClCompile Include="TerrainObjectBinding.cpp" />
+    <ClCompile Include="TerrainObjectClassBinding.cpp" />
+    <ClCompile Include="TerrainObjectClass_Internal.cpp" />
+    <ClCompile Include="Test.cpp" />
+    <ClCompile Include="TestBinding.cpp" />
+    <ClCompile Include="TextInput.cpp" />
+    <ClCompile Include="TextInputHook.cpp" />
+    <ClCompile Include="Timer.cpp" />
+    <ClCompile Include="TimerHook.cpp" />
+    <ClCompile Include="TimerWrapper.cpp" />
+    <ClCompile Include="TimerWrapperBinding.cpp" />
+    <ClCompile Include="TradingStationBinding.cpp" />
+    <ClCompile Include="TradingStationClassBinding.cpp" />
+    <ClCompile Include="TradingStationClass_Internal.cpp" />
+    <ClCompile Include="TradingStation.cpp" />
+    <ClCompile Include="Type_Entity.cpp" />
+    <ClCompile Include="Cineractive_Internal.cpp" />
+    <ClCompile Include="Craft_Internal.cpp" />
+    <ClCompile Include="Debug_Internal.cpp" />
+    <ClCompile Include="Entities_Internal.cpp" />
+    <ClCompile Include="Entity_Internal.cpp" />
+    <ClCompile Include="GameObject_Internal.cpp" />
+    <ClCompile Include="Load_Internal.cpp" />
+    <ClCompile Include="Mission_Internal.cpp" />
+    <ClCompile Include="Path_Internal.cpp" />
+    <ClCompile Include="Team_Internal.cpp" />
+    <ClCompile Include="Producer.cpp" />
+    <ClCompile Include="Save_Internal.cpp" />
+    <ClCompile Include="Planet_Internal.cpp" />
+    <ClCompile Include="Type_GameObjectClass.cpp" />
+    <ClCompile Include="Type_ObjectivesText.cpp" />
+    <ClCompile Include="Type_ST3D_Camera.cpp" />
+    <ClCompile Include="Type_ST3D_GraphicsEngine.cpp" />
+    <ClCompile Include="UIBinding.cpp" />
+    <ClCompile Include="UI_Internal.cpp" />
+    <ClCompile Include="UtritiumBallBinding.cpp" />
+    <ClCompile Include="UtritiumBallClassBinding.cpp" />
+    <ClCompile Include="UtritiumBallClass_Internal.cpp" />
+    <ClCompile Include="UtritiumBall_Internal.cpp" />
+    <ClCompile Include="Vector3.cpp" />
+    <ClCompile Include="Vector3Binding.cpp" />
+    <ClCompile Include="WormholeBinding.cpp" />
+    <ClCompile Include="Wormhole.cpp" />
+    <ClCompile Include="Media_Internal.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AiProcessType.h" />
+    <ClInclude Include="AntimatterMine.h" />
+    <ClInclude Include="AntimatterMineType.h" />
+    <ClInclude Include="Application.h" />
+    <ClInclude Include="AreaEffectObjectClass_Internal.h" />
+    <ClInclude Include="AreaEffectObject_Internal.h" />
+    <ClInclude Include="Artillery.h" />
+    <ClInclude Include="AsteroidField.h" />
+    <ClInclude Include="BackgroundObjectClass_Internal.h" />
+    <ClInclude Include="BackgroundObject_Internal.h" />
+    <ClInclude Include="BackgroundPlanetClass_Internal.h" />
+    <ClInclude Include="BackgroundPlanet_Internal.h" />
+    <ClInclude Include="BeamToggle.h" />
+    <ClInclude Include="Beam_Internal.h" />
+    <ClInclude Include="BlackHoleClass_Internal.h" />
+    <ClInclude Include="BlackHole_Internal.h" />
+    <ClInclude Include="BuildQueue.h" />
+    <ClInclude Include="Bullet.h" />
+    <ClInclude Include="Camera_Internal.h" />
+    <ClInclude Include="CargoShip_Internal.h" />
+    <ClInclude Include="ColonyClass_Internal.h" />
+    <ClInclude Include="Colony_Internal.h" />
+    <ClInclude Include="ConstructionObject_Internal.h" />
+    <ClInclude Include="ConstructionRig_Internal.h" />
+    <ClInclude Include="Container.h" />
+    <ClInclude Include="CraftClass_Internal.h" />
+    <ClInclude Include="CraftProcessType.h" />
+    <ClInclude Include="CraftSystem_Internal.h" />
+    <ClInclude Include="DebuggerConnection.h" />
+    <ClInclude Include="EntityFinder.h" />
+    <ClInclude Include="EntityFinderFilter.h" />
+    <ClInclude Include="EntityFinderFilterFunction.h" />
+    <ClInclude Include="EntityFinderFilterObject.h" />
+    <ClInclude Include="EntityHook.h" />
+    <ClInclude Include="EntityReference.h" />
+    <ClInclude Include="EvolverClass_Internal.h" />
+    <ClInclude Include="Evolver_Internal.h" />
+    <ClInclude Include="ExeMemory.h" />
+    <ClInclude Include="Explosion_Internal.h" />
+    <ClInclude Include="Freighter_Internal.h" />
+    <ClInclude Include="Functions.h" />
+    <ClInclude Include="GameObjectClass_Internal.h" />
+    <ClInclude Include="Game_Internal.h" />
+    <ClInclude Include="Globals.h" />
+    <ClInclude Include="GravityMine.h" />
+    <ClInclude Include="Hook.h" />
+    <ClInclude Include="IonStorm_Internal.h" />
+    <ClInclude Include="Functions_ItemCache.h" />
+    <ClInclude Include="LatinumNebulaClass_Internal.h" />
+    <ClInclude Include="LatinumNebula_Internal.h" />
+    <ClInclude Include="ListAdapter.h" />
+    <ClInclude Include="LuaBinding.h" />
+    <ClInclude Include="MapAdapter.h" />
+    <ClInclude Include="Map_Internal.h" />
+    <ClInclude Include="Matrix.h" />
+    <ClInclude Include="MemRaider.h" />
+    <ClInclude Include="Mine.h" />
+    <ClInclude Include="MineArray.h" />
+    <ClInclude Include="MineArrayType.h" />
+    <ClInclude Include="MineProcessType.h" />
+    <ClInclude Include="MiningStationClass_Internal.h" />
+    <ClInclude Include="MiningStation.h" />
+    <ClInclude Include="Missile_Internal.h" />
+    <ClInclude Include="Monitor.h" />
+    <ClInclude Include="MonitorHook.h" />
+    <ClInclude Include="MonitorWrapper.h" />
+    <ClInclude Include="Objective.h" />
+    <ClInclude Include="OrdnanceDamage.h" />
+    <ClInclude Include="OrientedQueue.h" />
+    <ClInclude Include="OrientedQueueType.h" />
+    <ClInclude Include="PathType.h" />
+    <ClInclude Include="PlanetMiningBase.h" />
+    <ClInclude Include="Queue.h" />
+    <ClInclude Include="QueueType.h" />
+    <ClInclude Include="RepairShipClass_Internal.h" />
+    <ClInclude Include="RepairShip_Internal.h" />
+    <ClInclude Include="ResearchPod_Internal.h" />
+    <ClInclude Include="ResearchStation.h" />
+    <ClInclude Include="Scavenger.h" />
+    <ClInclude Include="Scrap_Internal.h" />
+    <ClInclude Include="Nebula_Internal.h" />
+    <ClInclude Include="Objectives_Internal.h" />
+    <ClInclude Include="Ordnance.h" />
+    <ClInclude Include="Phaser_Internal.h" />
+    <ClInclude Include="PhotonTorpedo_Internal.h" />
+    <ClInclude Include="PrintMessages.h" />
+    <ClInclude Include="ProducerClass_Internal.h" />
+    <ClInclude Include="PulsePhaser_Internal.h" />
+    <ClInclude Include="Race_Internal.h" />
+    <ClInclude Include="ResourceInterface_Internal.h" />
+    <ClInclude Include="ResourceTransferInterface.h" />
+    <ClInclude Include="ScrapClass_Internal.h" />
+    <ClInclude Include="ScriptErrors.h" />
+    <ClInclude Include="SensorArray.h" />
+    <ClInclude Include="Shipyard_Internal.h" />
+    <ClInclude Include="SObjectType.h" />
+    <ClInclude Include="SplineQueue.h" />
+    <ClInclude Include="SplineQueueType.h" />
+    <ClInclude Include="ST3D_Colour.h" />
+    <ClInclude Include="Starbase_Internal.h" />
+    <ClInclude Include="StringAdapter.h" />
+    <ClInclude Include="Team_Resources.h" />
+    <ClInclude Include="TerrainObjectClass_Internal.h" />
+    <ClInclude Include="TerrainObject_Internal.h" />
+    <ClInclude Include="Test.h" />
+    <ClInclude Include="TextInput.h" />
+    <ClInclude Include="TextInputHook.h" />
+    <ClInclude Include="Timer.h" />
+    <ClInclude Include="TimerHook.h" />
+    <ClInclude Include="TimerWrapper.h" />
+    <ClInclude Include="TradingStationClass_Internal.h" />
+    <ClInclude Include="TradingStation.h" />
+    <ClInclude Include="TypeDeclarations.h" />
+    <ClInclude Include="Type_AI.h" />
+    <ClInclude Include="Type_AreaEffectObjectClass.h" />
+    <ClInclude Include="Type_Artillery.h" />
+    <ClInclude Include="Type_AsteroidField.h" />
+    <ClInclude Include="Type_BackgroundObject.h" />
+    <ClInclude Include="Type_BackgroundObjectClass.h" />
+    <ClInclude Include="Type_BackgroundPlanet.h" />
+    <ClInclude Include="Type_BackgroundPlanetClass.h" />
+    <ClInclude Include="Type_Beam.h" />
+    <ClInclude Include="Type_AreaEffectObject.h" />
+    <ClInclude Include="Type_BeamToggle.h" />
+    <ClInclude Include="Type_BlackHole.h" />
+    <ClInclude Include="Type_BlackHoleClass.h" />
+    <ClInclude Include="Type_Bullet.h" />
+    <ClInclude Include="Type_CargoShip.h" />
+    <ClInclude Include="Type_Colony.h" />
+    <ClInclude Include="Type_ColonyClass.h" />
+    <ClInclude Include="Type_ConstructionObject.h" />
+    <ClInclude Include="Type_ConstructionRig.h" />
+    <ClInclude Include="Type_CraftClass.h" />
+    <ClInclude Include="Type_CraftSystem.h" />
+    <ClInclude Include="Type_Evolver.h" />
+    <ClInclude Include="Type_EvolverClass.h" />
+    <ClInclude Include="Type_Explosion.h" />
+    <ClInclude Include="Type_FireballExplosion.h" />
+    <ClInclude Include="GravityMineType.h" />
+    <ClInclude Include="Type_IonStorm.h" />
+    <ClInclude Include="Type_LatinumNebula.h" />
+    <ClInclude Include="Type_LatinumNebulaClass.h" />
+    <ClInclude Include="MineType.h" />
+    <ClInclude Include="MiningStationType.h" />
+    <ClInclude Include="Type_MiningStationClass.h" />
+    <ClInclude Include="Type_Missile.h" />
+    <ClInclude Include="PlanetMiningBaseType.h" />
+    <ClInclude Include="Type_RepairShip.h" />
+    <ClInclude Include="Type_RepairShipClass.h" />
+    <ClInclude Include="Type_ResearchPod.h" />
+    <ClInclude Include="Type_ResearchPodClass.h" />
+    <ClInclude Include="Type_ResearchStation.h" />
+    <ClInclude Include="Type_ResearchStationClass.h" />
+    <ClInclude Include="Type_Scavenger.h" />
+    <ClInclude Include="Type_ScavengerClass.h" />
+    <ClInclude Include="Type_Scrap.h" />
+    <ClInclude Include="Type_Nebula.h" />
+    <ClInclude Include="Type_Objectives.h" />
+    <ClInclude Include="Type_ObjectivesText.h" />
+    <ClInclude Include="OrdnanceType.h" />
+    <ClInclude Include="Type_Phaser.h" />
+    <ClInclude Include="Type_PhotonTorpedo.h" />
+    <ClInclude Include="Type_ProducerClass.h" />
+    <ClInclude Include="Type_PulsePhaser.h" />
+    <ClInclude Include="Type_Race.h" />
+    <ClInclude Include="Type_ResourceTransferInterface.h" />
+    <ClInclude Include="Type_ScrapClass.h" />
+    <ClInclude Include="Type_SensorArray.h" />
+    <ClInclude Include="Type_SensorArrayClass.h" />
+    <ClInclude Include="Type_Shipyard.h" />
+    <ClInclude Include="Type_ShipyardClass.h" />
+    <ClInclude Include="Type_ShockwaveCannon.h" />
+    <ClInclude Include="Type_ShockwaveExplosion.h" />
+    <ClInclude Include="Type_ST3D_AnimationChannel.h" />
+    <ClInclude Include="Type_ST3D_Camera.h" />
+    <ClInclude Include="Type_ST3D_Device.h" />
+    <ClInclude Include="Type_ST3D_DisplayMode.h" />
+    <ClInclude Include="Type_ST3D_GraphicsEngine.h" />
+    <ClInclude Include="Type_ST3D_GraphicsEngine_Configuration.h" />
+    <ClInclude Include="Type_ST3D_Sprite.h" />
+    <ClInclude Include="Type_Starbase.h" />
+    <ClInclude Include="Type_StarbaseClass.h" />
+    <ClInclude Include="Type_TerrainObject.h" />
+    <ClInclude Include="Type_TerrainObjectClass.h" />
+    <ClInclude Include="Type_TradingStation.h" />
+    <ClInclude Include="Type_TradingStationClass.h" />
+    <ClInclude Include="Type_UtritiumBall.h" />
+    <ClInclude Include="Type_UtritiumBallClass.h" />
+    <ClInclude Include="Type_Weapons.h" />
+    <ClInclude Include="UIMessage.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="Externals.h" />
+    <ClInclude Include="FileReader.h" />
+    <ClInclude Include="mmm_armada.h" />
+    <ClInclude Include="ScriptInterface.h" />
+    <ClInclude Include="Type_Cineractive.h" />
+    <ClInclude Include="Type_Craft.h" />
+    <ClInclude Include="Type_Entity.h" />
+    <ClInclude Include="Type_Freighter.h" />
+    <ClInclude Include="Type_GameObject.h" />
+    <ClInclude Include="Type_GameObjectClass.h" />
+    <ClInclude Include="Type_Planet.h" />
+    <ClInclude Include="Type_Producer.h" />
+    <ClInclude Include="Type_ResourceInterface.h" />
+    <ClInclude Include="Type_Team.h" />
+    <ClInclude Include="WormholeClass.h" />
+    <ClInclude Include="WormholeType.h" />
+    <ClInclude Include="Types.h" />
+    <ClInclude Include="Cineractive_Internal.h" />
+    <ClInclude Include="Craft_Internal.h" />
+    <ClInclude Include="Debug_Internal.h" />
+    <ClInclude Include="Entities_Internal.h" />
+    <ClInclude Include="Entity_Internal.h" />
+    <ClInclude Include="GameObject_Internal.h" />
+    <ClInclude Include="Load_Internal.h" />
+    <ClInclude Include="Mission_Internal.h" />
+    <ClInclude Include="Path_Internal.h" />
+    <ClInclude Include="Team_Internal.h" />
+    <ClInclude Include="Producer.h" />
+    <ClInclude Include="Save_Internal.h" />
+    <ClInclude Include="Planet_Internal.h" />
+    <ClInclude Include="UI_Internal.h" />
+    <ClInclude Include="UtritiumBallClass_Internal.h" />
+    <ClInclude Include="UtritiumBall_Internal.h" />
+    <ClInclude Include="Vector3.h" />
+    <ClInclude Include="VectorAdapter.h" />
+    <ClInclude Include="Wormhole.h" />
+    <ClInclude Include="Media_Internal.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\external\luabind\LuaBind.vcxproj">
+      <Project>{8a6d737f-7d03-4847-9c65-2dc4d6fa3716}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\mmm_common\mmm_common.vcxproj">
+      <Project>{87cfc5d8-d3c2-4b66-abdb-c2e3c593ef01}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Container.inl" />
+    <None Include="Entity_Internal.inl" />
+    <None Include="ListAdapter.inl" />
+    <None Include="Load_Internal.inl" />
+    <None Include="MemRaider.inl" />
+    <None Include="ScriptErrors.inl" />
+    <None Include="VectorAdapter.inl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

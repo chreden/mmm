@@ -1,0 +1,5 @@
+EntityFinder Tutorial
+
+This tutorial demonstrates EntityFinders. The names of all ships with a crew of less than 100 are listed as print messages.
+
+See the EntityFinder Tutorial in the Megadroid's Mission Mod section of Modding on the Fleet Operations guide for more information (http://guide.fleetops.net).

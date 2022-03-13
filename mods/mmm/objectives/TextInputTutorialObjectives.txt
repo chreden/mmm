@@ -1,0 +1,11 @@
+TextInput Tutorial
+
+This tutorial demonstrates text input. Using text commands you can move the ship around. The commands are listed as objectives.
+
+See the TextInput Tutorial in the Megadroid's Mission Mod section of Modding on the Fleet Operations guide for more information (http://guide.fleetops.net).
+
+*north
+*south
+*east
+*west
+*stop

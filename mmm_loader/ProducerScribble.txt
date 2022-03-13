@@ -1,0 +1,50 @@
+0001:000b6540       ??0BuildQueueItem@@QAE@PBVGameObjectClass@@H@Z 004b7540 f   Producer.obj
+0001:000b6560       ??1BuildQueueItem@@QAE@XZ  004b7560 f   Producer.obj
+0001:000b6570       ?RemoveMe@BuildQueueItem@@QAEXXZ 004b7570 f   Producer.obj
+0001:000b65b0       ??0Producer@@QAE@PBVProducerClass@@@Z 004b75b0 f   Producer.obj
+0001:000b6630       ?InitializeGeometry@Producer@@UAEXABVMatrix34@@@Z 004b7630 f   Producer.obj
+0001:000b6700       ?mRemoveConstructionEffect@Producer@@MAEXXZ 004b7700 f   Producer.obj
+0001:000b6750       ?ClearAllConstruction@Producer@@QAEXXZ 004b7750 f   Producer.obj
+0001:000b6790       ?ClearTeam@Producer@@UAEXXZ 004b7790 f   Producer.obj
+0001:000b67d0       ??1Producer@@UAE@XZ        004b77d0 f   Producer.obj
+0001:000b6840       ?Simulate@Producer@@UAEXM@Z 004b7840 f   Producer.obj
+0001:000b6890       ?GetLastBuilt@Producer@@QAEPAVGameObject@@XZ 004b7890 f   Producer.obj
+	0001:000b68c0       ?ClearBuildQueue@Producer@@UAEXXZ 004b78c0 f   Producer.obj
+	0001:000b6930       ?PushBuildQueueItem@Producer@@QAEXPBVGameObjectClass@@@Z 004b7930 f   Producer.obj
+	0001:000b69b0       ?PopBuildQueueItem@Producer@@QAEXXZ 004b79b0 f   Producer.obj
+0001:000b6a10       ?RequestDeleteBuildQueueItem@Producer@@UAEXH@Z 004b7a10 f   Producer.obj
+0001:000b6a60       ?ActDeleteBuildQueueItem@Producer@@UAEXH@Z 004b7a60 f   Producer.obj
+0001:000b6b40       ?GetNextBuildItem@Producer@@QAEPBVGameObjectClass@@XZ 004b7b40 f   Producer.obj
+	0001:000b6b60       ?IsBuildListEmpty@Producer@@UAE_NXZ 004b7b60 f   Producer.obj
+	0001:000b6b70       ?BuildQueueSize@Producer@@QAEHXZ 004b7b70 f   Producer.obj
+0001:000b6b90       ?GetTotalQueueDilithiumCost@Producer@@UAEJXZ 004b7b90 f   Producer.obj
+0001:000b6bc0       ?GetTotalQueueMetalCost@Producer@@UAEJXZ 004b7bc0 f   Producer.obj
+0001:000b6bf0       ?GetTotalQueueLatinumCost@Producer@@UAEJXZ 004b7bf0 f   Producer.obj
+0001:000b6c20       ?GetTotalQueueBiomatterCost@Producer@@UAEJXZ 004b7c20 f   Producer.obj
+0001:000b6c50       ?GetTotalQueueOfficerCost@Producer@@UAEJXZ 004b7c50 f   Producer.obj
+0001:000b6c80       ?GetTotalQueueCrewCost@Producer@@UAEMXZ 004b7c80 f   Producer.obj
+	0001:000b6cd0       ?GetBuildObjectTime@Producer@@QAEMXZ 004b7cd0 f   Producer.obj
+0001:000b6cf0       ?CanAffordNextItem@Producer@@QAE_NXZ 004b7cf0 f   Producer.obj
+0001:000b6ec0       ?CanAffordBuildQueue@Producer@@QAE_NXZ 004b7ec0 f   Producer.obj
+0001:000b7070       ?GetBuildQueue@Producer@@QAEPAPBVGameObjectClass@@XZ 004b8070 f   Producer.obj
+0001:000b7090       ?GetAction@Producer@@UAE?AVAiAction@@ABVModeInfo@@PBVGameObject@@@Z 004b8090 f   Producer.obj
+0001:000b70f0       ?GetAction@Producer@@UAE?AVAiAction@@ABVModeInfo@@ABVVector3@@@Z 004b80f0 f   Producer.obj
+0001:000b7140       ?mStartConstructionEffect@Producer@@MAE_NXZ 004b8140 f   Producer.obj
+	0001:000b7180       ?StartBuild@Producer@@UAE_NXZ 004b8180 f   Producer.obj
+0001:000b7470       ?mCancelConstructionEffect@Producer@@MAEXXZ 004b8470 f   Producer.obj
+0001:000b74b0       ?CancelBuild@Producer@@UAE_NXZ 004b84b0 f   Producer.obj
+0001:000b76b0       ?Build@Producer@@UAEPAVGameObject@@PBVGameObjectClass@@@Z 004b86b0 f   Producer.obj
+0001:000b78d0       ?Load@Producer@@UAE_NAAVFileReader@@@Z 004b88d0 f   Producer.obj
+0001:000b7a50       ?PostLoad@Producer@@UAE_NXZ 004b8a50 f   Producer.obj
+0001:000b7aa0       ?Save@Producer@@UAE_NAAVFileWriter@@@Z 004b8aa0 f   Producer.obj
+0001:000b7c10       ?UpdateBuildButtons@Producer@@MAEXXZ 004b8c10 f   Producer.obj
+0001:000b7d90       ?UpdateBuildList@Producer@@MAEXXZ 004b8d90 f   Producer.obj
+0001:000b7dd0       ?mUpdateConstructionEffect@Producer@@MAEXM@Z 004b8dd0 f   Producer.obj
+	0001:000b7df0       ?UpdateBuild@Producer@@MAEXM@Z 004b8df0 f   Producer.obj
+0001:000b7f30       ?mStopConstructionEffect@Producer@@MAEXXZ 004b8f30 f   Producer.obj
+	0001:000b7f50       ?FinishBuild@Producer@@MAEPAVGameObject@@XZ 004b8f50 f   Producer.obj
+0001:000b8170       ?GetConstructionMatrix@Producer@@MAE?AVMatrix34@@XZ 004b9170 f   Producer.obj
+0001:000b8190       ?GetBuildItemIndex@Producer@@UAEHPAVGameObjectClass@@@Z 004b9190 f   Producer.obj
+0001:000b81c0       ?GetIsEnabled@Producer@@UAE_NW4AiCommand@@@Z 004b91c0 f   Producer.obj
+0001:000b8210       ??_GProducer@@UAEPAXI@Z    004b9210 f i Producer.obj
+0001:000b8210       ??_EProducer@@UAEPAXI@Z    004b9210 f i Producer.obj

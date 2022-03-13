@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="mmm_debugger.SessionView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="436">
+    <Grid>
+        <DockPanel HorizontalAlignment="Stretch" Name="dockPanel" VerticalAlignment="Stretch">
+            <DockPanel LastChildFill="False" HorizontalAlignment="Stretch" Name="dockPanel2" VerticalAlignment="Stretch" DockPanel.Dock="Bottom">
+                <Button Content="Send" Name="sendButton" DockPanel.Dock="Right" HorizontalAlignment="Right" Click="sendButton_Click" />
+                <RichTextBox Name="commandBox" DockPanel.Dock="Left" HorizontalAlignment="Left">
+                    <RichTextBox.Resources>
+                        <Style TargetType="{x:Type Paragraph}">
+                            <Setter Property="Margin" Value="0"/>
+                        </Style>
+                    </RichTextBox.Resources>
+                </RichTextBox>
+            </DockPanel>
+            <ListBox Name="messageList" DockPanel.Dock="Top" VerticalAlignment="Stretch" ItemsSource="{Binding Messages}" SelectionMode="Extended">
+                <ListBox.Resources>
+                    <Style TargetType="{x:Type ListBoxItem}">
+                        <Setter Property="Foreground" Value="{Binding Color}" />
+                    </Style>
+                </ListBox.Resources>
+            </ListBox>
+        </DockPanel>
+    </Grid>
+</UserControl>

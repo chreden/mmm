@@ -1,0 +1,170 @@
+Functions to implement. Implemented functions are indented.
+
+0001:000c08c0       ?WithinTransporterRange@@YA_NPBVGameObject@@0@Z 004c18c0 f   Craft.obj
+0001:000c0950       ??0Craft@@QAE@PBVCraftClass@@@Z 004c1950 f   Craft.obj
+0001:000c0d40       ?AssignCraftName@Craft@@QAEX_NH@Z 004c1d40 f   Craft.obj
+	0001:000c0f00       ?SetCraftName@Craft@@QAEXPBD@Z  f   Craft.obj
+0001:000c0fd0       ?Cleanup@Craft@@UAEXXZ     004c1fd0 f   Craft.obj
+0001:000c1100       ??1Craft@@UAE@XZ           004c2100 f   Craft.obj
+0001:000c12a0       ?RestoreClass@Craft@@UAEXXZ 004c22a0 f   Craft.obj
+0001:000c1340       ?Load@Craft@@UAE_NAAVFileReader@@@Z 004c2340 f   Craft.obj
+0001:000c1870       ?PostLoad@Craft@@UAE_NXZ   004c2870 f   Craft.obj
+0001:000c1980       ?Save@Craft@@UAE_NAAVFileWriter@@@Z 004c2980 f   Craft.obj
+0001:000c1e80       ?CraftSystemLoad@Craft@@MAE_NAAVFileReader@@PAVCraftSystem@@@Z 004c2e80 f   Craft.obj
+0001:000c1f60       ?CraftSystemSave@Craft@@MAE_NAAVFileWriter@@PADPAVCraftSystem@@@Z 004c2f60 f   Craft.obj
+0001:000c20a0       ?GetNumCraft@Craft@@SAHH@Z 004c30a0 f   Craft.obj
+0001:000c20e0       ?Say@Craft@@QAE_NW4eCaptainsVoiceTopic@@@Z 004c30e0 f   Craft.obj
+0001:000c2100       ?UpdateBuildButtons@Craft@@UAEXXZ 004c3100 f   Craft.obj
+0001:000c2180       ?UpdateSpecialWeaponButtons@Craft@@UAEXXZ 004c3180 f   Craft.obj
+0001:000c2220       ?FireAtRegular@Craft@@UAEXPBVGameObject@@_N@Z 004c3220 f   Craft.obj
+0001:000c2580       ?FireArtillery@Craft@@QAEXABVVector3@@@Z 004c3580 f   Craft.obj
+0001:000c2660       ?IncrementShotTimerRegular@Craft@@UAEXM@Z 004c3660 f   Craft.obj
+0001:000c26e0       ?AIFireAtSpecial@Craft@@QAE_NPAVWeapon@@@Z 004c36e0 f   Craft.obj
+0001:000c2750       ?AIFireAtSpecial@Craft@@QAE_NPAVWeapon@@PBV1@@Z 004c3750 f   Craft.obj
+0001:000c27b0       ?AIFireAtSpecial@Craft@@QAE_NPAVWeapon@@ABVVector3@@@Z 004c37b0 f   Craft.obj
+0001:000c2820       ?FireAtSpecial@Craft@@QAE_NHPBVGameObject@@@Z 004c3820 f   Craft.obj
+	0001:000c28e0       ?AbleToCloak@Craft@@UBE_NXZ 004c38e0 f   Craft.obj
+0001:000c2910       ?AbleToFire@Craft@@QBE_NPAVWeapon@@@Z 004c3910 f   Craft.obj
+0001:000c29a0       ?AbleToFireAtCraft@Craft@@QBE_NPAVWeapon@@PBV1@@Z 004c39a0 f   Craft.obj
+0001:000c2a50       ?FireAtSpecial@Craft@@QAE_NHABVVector3@@@Z 004c3a50 f   Craft.obj
+0001:000c2b20       ?FireAtSpecial@Craft@@QAE_NH@Z 004c3b20 f   Craft.obj
+0001:000c2bd0       ?Compute_Intersection_With_Shields@Craft@@QAE_NABVVector3@@0AAV2@@Z 004c3bd0 f   Craft.obj
+0001:000c2c70       ?Are_Our_Shield_Ellipses_Juxtaposed@Craft@@MAE_NPAVGameObject@@AAMAAVVector3@@PAVPlaneABCD@@3@Z 004c3c70 f   Craft.obj
+0001:000c3020       ?mCompute_Tangent_Vector_To_Shields@Craft@@IBEXABVVector3@@PAV2@@Z 004c4020 f   Craft.obj
+0001:000c3110       ?mCompute_Tangent_Vector_To_Shields@Craft@@IBE_NPAVPlaneABCD@@PAV1@AAVVector3@@@Z 004c4110 f   Craft.obj
+0001:000c3290       ?Prevent_Collisions_With_Misc_Objects@Craft@@IAEXPAVGameObject@@@Z 004c4290 f   Craft.obj
+0001:000c3640       ?Craft_Rotate_After_Collision@@YAXPAVCraft@@0MABVVector3@@ABM@Z 004c4640 f   Craft.obj
+0001:000c3940       ?Prevent_Collisions@Craft@@MAEXXZ 004c4940 f   Craft.obj
+0001:000c4250       ?GetProportionalProb@@YAMMM@Z 004c5250 f   Craft.obj
+0001:000c4270       ?mRedistributeDamage@Craft@@IAEXPAM@Z 004c5270 f   Craft.obj
+0001:000c43b0       ?mCalcHardpointDistance@Craft@@IAEXABV?$vector@PBVST3D_Node@@V?$allocator@PBVST3D_Node@@@std@@@std@@PAV?$list@PAVcProbNode@@V?$allocator@PAVcProbNode@@@std@@@3@PAPBVST3D_Node@@PAMPAVGameObject@@PBV5@H@Z 004c53b0 f   Craft.obj
+0001:000c44f0       ?DetermineSystemHitProbability@Craft@@IAEXPAMPAVGameObject@@PAVST3D_Node@@@Z 004c54f0 f   Craft.obj
+0001:000c4820       ?DetermineHitLocation@Craft@@QAEXPAVSTDamage@@PAVGameObject@@PAVST3D_Node@@@Z 004c5820 f   Craft.obj
+0001:000c4950       ?mSpecialDamage@Craft@@IAEXPAVSTDamage@@@Z 004c5950 f   Craft.obj
+0001:000c4bb0       ?DamageAlloc@Craft@@UAE_NPAVSTDamage@@PBVST3D_Node@@PBVVector3@@_N@Z 004c5bb0 f   Craft.obj
+0001:000c53a0       ?PreSimulate@Craft@@UAEXM@Z 004c63a0 f   Craft.obj
+0001:000c53c0       ?BeginRecycle@Craft@@QAEMXZ 004c63c0 f   Craft.obj
+0001:000c5430       ?EndRecycle@Craft@@UAEXPAVShipyard@@@Z 004c6430 f   Craft.obj
+0001:000c5530       ?Simulate@Craft@@UAEXM@Z   004c6530 f   Craft.obj
+0001:000c5730       ?PostSimulate@Craft@@UAEXM@Z 004c6730 f   Craft.obj
+0001:000c58e0       ?InitialExplode@Craft@@UAEXXZ 004c68e0 f   Craft.obj
+0001:000c59e0       ?DramaticDeathSequence@Craft@@UAEXM@Z 004c69e0 f   Craft.obj
+	0001:000c5ab0       ?Explode@Craft@@UAEXXZ     004c6ab0 f   Craft.obj
+0001:000c5c10       ?GetAction@Craft@@UAE?AVAiAction@@ABVModeInfo@@PBVGameObject@@@Z 004c6c10 f   Craft.obj
+0001:000c5ec0       ?GetAction@Craft@@UAE?AVAiAction@@ABVModeInfo@@ABVVector3@@@Z 004c6ec0 f   Craft.obj
+0001:000c60b0       ?GetIsActive@Craft@@UAE_NW4AiCommand@@H@Z 004c70b0 f   Craft.obj
+0001:000c6400       ?GetIsEnabled@Craft@@UAE_NW4AiCommand@@@Z 004c7400 f   Craft.obj
+0001:000c64f0       ?ShieldsDown@Craft@@QAEXXZ 004c74f0 f   Craft.obj
+0001:000c65a0       ?RegenerateShields@Craft@@IAEXM@Z 004c75a0 f   Craft.obj
+0001:000c66e0       ?RegenerateSpecialEnergy@Craft@@MAEXM@Z 004c76e0 f   Craft.obj
+0001:000c6790       ?CheckDerelict@Craft@@IAEXXZ 004c7790 f   Craft.obj
+0001:000c6a90       ?StartTransport@Craft@@QAEXPAV1@@Z 004c7a90 f   Craft.obj
+0001:000c6b30       ?StopTransport@Craft@@QAEXXZ 004c7b30 f   Craft.obj
+0001:000c6bb0       ?CanStartTransportingTo@Craft@@QBE_NPBV1@@Z 004c7bb0 f   Craft.obj
+0001:000c6cf0       ?TransporterPreSimulate@Craft@@QAEXXZ 004c7cf0 f   Craft.obj
+0001:000c6d40       ?TransporterSimulate@Craft@@QAEXM@Z 004c7d40 f   Craft.obj
+0001:000c7140       ?KillCrew@Craft@@QAEXM_N@Z 004c8140 f   Craft.obj
+0001:000c7240       ?KillCrew@Craft@@IAEXMM_N@Z 004c8240 f   Craft.obj
+0001:000c7290       ?KillCrew@Craft@@IAEXMMM_N@Z 004c8290 f   Craft.obj
+0001:000c7340       ?RemoveCrew@Craft@@QAEMM@Z 004c8340 f   Craft.obj
+0001:000c7380       ?AddCrew@Craft@@QAEMM@Z    004c8380 f   Craft.obj
+	0001:000c73e0       ?SetCrew@Craft@@QAEXM@Z    004c83e0 f   Craft.obj
+	0001:000c7430       ?SetMaximumCrew@Craft@@QAEXM@Z 004c8430 f   Craft.obj
+0001:000c7490       ?DistributeSystemHitPercentage@Craft@@QAEXXZ 004c8490 f   Craft.obj
+0001:000c7630       ?RenderInternal@Craft@@UAEXPAVST3D_Camera@@@Z 004c8630 f   Craft.obj
+0001:000c77e0       ?mDisableSystem@Craft@@IAE_NPAVCraftSystem@@M@Z 004c87e0 f   Craft.obj
+0001:000c7860       ?mDisableSystem@Craft@@IAE_NPAVCraftSystem@@_N@Z 004c8860 f   Craft.obj
+0001:000c78f0       ?mDamageSystem@Craft@@IAE_NPAVCraftSystem@@MAAM@Z 004c88f0 f   Craft.obj
+	0001:000c7a20       ?AddShields@Craft@@QAEXM@Z 004c8a20 f   Craft.obj
+	0001:000c7a50       ?GetShields@Craft@@QBEMXZ  004c8a50 f   Craft.obj
+0001:000c7a80       ?DamageHull@Craft@@UAE_NMH@Z 004c8a80 f   Craft.obj
+0001:000c7ad0       ?mRenableSystem@Craft@@IAE_NPAVCraftSystem@@M@Z 004c8ad0 f   Craft.obj
+0001:000c7ba0       ?RepairSystemComplete@Craft@@QAE_NPAVCraftSystem@@@Z 004c8ba0 f   Craft.obj
+0001:000c7bd0       ?CheckAdjustedHitPercents@Craft@@IAEXXZ 004c8bd0 f   Craft.obj
+0001:000c7be0       ?RepairAllSystemsComplete@Craft@@QAEXXZ 004c8be0 f   Craft.obj
+0001:000c7ca0       ?mComputeRepairLeft@Craft@@IBEMPBVCraftSystem@@@Z 004c8ca0 f   Craft.obj
+0001:000c7cf0       ?mComputeModifiedRepairTime@Craft@@IBEMPBVCraftSystem@@@Z 004c8cf0 f   Craft.obj
+0001:000c7da0       ?RepairAllSystems@Craft@@QAEXM@Z 004c8da0 f   Craft.obj
+0001:000c7f50       ?RepairSystemHitpoints@Craft@@QAE_NPAVCraftSystem@@M@Z 004c8f50 f   Craft.obj
+0001:000c7fb0       ?VerifySystemStatus@Craft@@IAE_NPAVCraftSystem@@@Z 004c8fb0 f   Craft.obj
+0001:000c7fe0       ?RepairSystem@Craft@@IAE_NPAVCraftSystem@@M@Z 004c8fe0 f   Craft.obj
+0001:000c8120       ?RenableShip@Craft@@IAEXM@Z 004c9120 f   Craft.obj
+0001:000c81a0       ?NeedsRepair@Craft@@QBE_NPAM_NM@Z 004c91a0 f   Craft.obj
+0001:000c8330       ?DryDockRepairShip@Craft@@QAE_NM_N0MM@Z 004c9330 f   Craft.obj
+0001:000c84a0       ?mRepairShip@Craft@@IAEXM@Z 004c94a0 f   Craft.obj
+0001:000c8540       ?HandleLifeSupport@Craft@@MAEXM@Z 004c9540 f   Craft.obj
+0001:000c85d0       ?DisableWeapons@Craft@@IAEXXZ 004c95d0 f   Craft.obj
+0001:000c85f0       ?EnableWeapons@Craft@@IAEXXZ 004c95f0 f   Craft.obj
+0001:000c8610       ?DisableSensors@Craft@@IAEXXZ 004c9610 f   Craft.obj
+0001:000c8640       ?EnableSensors@Craft@@IAEXXZ 004c9640 f   Craft.obj
+0001:000c8670       ?ShieldCollapse@Craft@@IAEXXZ 004c9670 f   Craft.obj
+0001:000c86c0       ?ShieldCollapseEnd@Craft@@IAEXXZ 004c96c0 f   Craft.obj
+0001:000c86f0       ?DestroyShip@Craft@@UAEXH@Z 004c96f0 f   Craft.obj
+0001:000c8810       ?BestTargetHardpoint@Craft@@QAEPBVST3D_Node@@W4System@STDamage@@PAVGameObject@@PBV2@@Z 004c9810 f   Craft.obj
+0001:000c8960       ?RandomTargetHardpoint@Craft@@QAEPBVST3D_Node@@XZ 004c9960 f   Craft.obj
+	0001:000c8a20       ?GetAlertStatus@Craft@@QBE?AW4eAlertStatus@@XZ 004c9a20 f   Craft.obj
+	0001:000c8a50       ?SetAlertStatus@Craft@@QAEXW4eAlertStatus@@@Z 004c9a50 f   Craft.obj
+0001:000c8a80       ?GetDesiredAttackMode@Craft@@QBEHXZ 004c9a80 f   Craft.obj
+0001:000c8ab0       ?AreSuperRepairing@Craft@@QBE_NXZ 004c9ab0 f   Craft.obj
+	0001:000c8ae0       ?GetSpecialWeaponAutonomy@Craft@@QBE?AW4eSpecialWeaponAutonomy@@XZ 004c9ae0 f   Craft.obj
+	0001:000c8b10       ?SetSpecialWeaponAutonomy@Craft@@QAEXW4eSpecialWeaponAutonomy@@@Z 004c9b10 f   Craft.obj
+	0001:000c8b40       ?GetMovementAutonomy@Craft@@QBE?AW4eMovementAutonomy@@XZ 004c9b40 f   Craft.obj
+	0001:000c8b70       ?SetMovementAutonomy@Craft@@QAEXW4eMovementAutonomy@@@Z 004c9b70 f   Craft.obj
+0001:000c8ba0       ?GetTeamRelation@Craft@@QBE?AW4eTeamRelation@@PBV1@@Z 004c9ba0 f   Craft.obj
+0001:000c8bd0       ?Craft_InitRange@@YAXXZ    004c9bd0 f   Craft.obj
+0001:000c8d10       ?Craft_UpdateRange@@YAXXZ  004c9d10 f   Craft.obj
+0001:000c8ec0       ?Craft_CleanupRange@@YAXXZ 004c9ec0 f   Craft.obj
+	0001:000c8ef0       ?DisableEngines@Craft@@QAE_NM@Z 004c9ef0 f   Craft.obj
+	0001:000c8f80       ?DisableLifeSupport@Craft@@QAE_NM@Z 004c9f80 f   Craft.obj
+	0001:000c9010       ?DisableShieldGenerator@Craft@@QAE_NM@Z 004ca010 f   Craft.obj
+	0001:000c9090       ?DisableWeapons@Craft@@QAE_NM@Z 004ca090 f   Craft.obj
+	0001:000c9110       ?DisableSensors@Craft@@QAE_NM@Z 004ca110 f   Craft.obj
+	0001:000c91a0       ?PermanentDisableEngines@Craft@@QAE_N_N@Z 004ca1a0 f   Craft.obj
+	0001:000c9230       ?PermanentDisableLifeSupport@Craft@@QAE_N_N@Z 004ca230 f   Craft.obj
+	0001:000c92c0       ?PermanentDisableShieldGenerator@Craft@@QAE_N_N@Z 004ca2c0 f   Craft.obj
+	0001:000c9350       ?PermanentDisableWeapons@Craft@@QAE_N_N@Z 004ca350 f   Craft.obj
+	0001:000c93e0       ?PermanentDisableSensors@Craft@@QAE_N_N@Z 004ca3e0 f   Craft.obj
+0001:000c9470       ?SimulateShieldDisabled@Craft@@QAEXXZ 004ca470 f   Craft.obj
+0001:000c94e0       ?RecordShield@Craft@@QAEXXZ 004ca4e0 f   Craft.obj
+0001:000c9510       ?ClearTeam@Craft@@MAEXXZ   004ca510 f   Craft.obj
+0001:000c95b0       ?SetTeam@Craft@@MAEXH@Z    004ca5b0 f   Craft.obj
+0001:000c9660       ?mInitShipsSystems@Craft@@IAEXXZ 004ca660 f   Craft.obj
+0001:000c9770       ?Init@Craft@@UAEXH@Z       004ca770 f   Craft.obj
+0001:000c9930       ?SetAIFleet@Craft@@QAEXH@Z 004ca930 f   Craft.obj
+0001:000c99c0       ?ClearAIFleet@Craft@@QAEXXZ 004ca9c0 f   Craft.obj
+0001:000c99e0       ?Set_Strategic_AI_Goal_Type@Craft@@QAEXW4GOAL_TYPE@@@Z 004ca9e0 f   Craft.obj
+0001:000c99f0       ?UpdateDirection@Craft@@UAEXXZ 004ca9f0 f   Craft.obj
+0001:000c9a00       ?QueueCommandRename@Craft@@QAEXABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z 004caa00 f   Craft.obj
+0001:000c9a90       ?DeQueueCommandRename@Craft@@QAEXABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z 004caa90 f   Craft.obj
+0001:000c9ab0       ?QueueEnter@Craft@@QAEXH@Z 004caab0 f   Craft.obj
+0001:000c9ae0       ?DoExpire@Craft@@UAEXXZ    004caae0 f   Craft.obj
+0001:000c9b00       ?QueueExit@Craft@@QAEXXZ   004cab00 f   Craft.obj
+0001:000c9b20       ?NeedResourceExchange@Craft@@IAE_NMM@Z 004cab20 f   Craft.obj
+0001:000c9b70       ?Reset@cNoControl@@UAEXXZ  004cab70 f i Craft.obj
+0001:000c9b80       ?ServoYaw@cNoControl@@UAEXM@Z 004cab80 f i Craft.obj
+0001:000c9b90       ?ServoPitch@cNoControl@@UAEXM@Z 004cab90 f i Craft.obj
+0001:000c9ba0       ?ServoDirection@cNoControl@@UAEXABVVector3@@@Z 004caba0 f i Craft.obj
+0001:000c9bb0       ?ServoDirectionAndSpeed@cNoControl@@UAEXABVVector3@@M@Z 004cabb0 f i Craft.obj
+0001:000c9bc0       ?ServoSpeed@cNoControl@@UAEXM@Z 004cabc0 f i Craft.obj
+0001:000c9bd0       ?ServoClosePursue@cNoControl@@UAE_NABVVector3@@00@Z 004cabd0 f i Craft.obj
+0001:000c9be0       ?ServoFarPursue@cNoControl@@UAEXABVVector3@@00@Z 004cabe0 f i Craft.obj
+0001:000c9bf0       ?MovingTowardsRepairQueue@cNoControl@@UAEXABVVector3@@@Z 004cabf0 f i Craft.obj
+0001:000c9c00       ?NewDestination@cNoControl@@UAEXXZ 004cac00 f i Craft.obj
+0001:000c9c10       ?SetQueueTransform@cNoControl@@UAEXABVVector3@@0@Z 004cac10 f i Craft.obj
+0001:000c9c20       ?SetCraftControlMode@cNoControl@@UAEXW4eCraftControlMode@@@Z 004cac20 f i Craft.obj
+0001:000c9c30       ?GetCraftControlMode@cNoControl@@UBE?AW4eCraftControlMode@@XZ 004cac30 f i Craft.obj
+0001:000c9c40       ?GetFacingVector@cNoControl@@UBE?AVVector3@@XZ 004cac40 f i Craft.obj
+0001:000c9c60       ?IsWarping@cNoControl@@UBE_NXZ 004cac60 f i Craft.obj
+0001:000c9c70       ?Simulate@cNoControl@@UAEXM@Z 004cac70 f i Craft.obj
+0001:000c9c80       ?UpdateDirection@cNoControl@@UAEXXZ 004cac80 f i Craft.obj
+0001:000c9c90       ?Report@cNoControl@@UAEXAAV?$basic_ostream@DU?$char_traits@D@std@@@std@@@Z 004cac90 f i Craft.obj
+0001:000c9ca0       ?Load@cNoControl@@UAE_NAAVFileReader@@@Z 004caca0 f i Craft.obj
+0001:000c9cb0       ?Save@cNoControl@@UAE_NAAVFileWriter@@@Z 004cacb0 f i Craft.obj
+0001:000c9cc0       ??_GcNoControl@@UAEPAXI@Z  004cacc0 f i Craft.obj
+0001:000c9cc0       ??_EcNoControl@@UAEPAXI@Z  004cacc0 f i Craft.obj
+0001:000c9cf0       ??1cNoControl@@UAE@XZ      004cacf0 f i Craft.obj
+0001:000c9d00       ??_ECraft@@UAEPAXI@Z       004cad00 f i Craft.obj
+0001:000c9d00       ??_GCraft@@UAEPAXI@Z       004cad00 f i Craft.obj
+0001:000c9d30       ?ComputeIntersectionOfRayWithPlane@PlaneABCD@@QAE_NABVVector3@@0AAV2@@Z 004cad30 f i Craft.obj
+0001:000c9de0       ??1ApplyWaveLight@@QAE@XZ  004cade0 f i Craft.obj
+0001:000c9df0       ??1EntityRange@@QAE@XZ     004cadf0 f i Craft.obj

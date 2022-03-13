@@ -1,0 +1,30 @@
+	// Map Definitions
+
+	// Handle for Latinum Moon (trigger_tritanium) object trigger_1003
+	Handle trigger_1003
+
+	// Handle for Dilithium Moon (trigger_dilithium) object trigger_1002
+	Handle trigger_1002
+
+	// Handle for Galaxy Class (fed_galaxy) object fed_gala1001
+	Handle fed_gala1001
+
+
+
+
+	// Map Object Initialization
+
+	trigger_1003 = GetHandle( "trigger_1003" );
+	trigger_1002 = GetHandle( "trigger_1002" );
+	fed_gala1001 = GetHandle( "fed_gala1001" );
+
+
+
+	// AI special forces
+
+
+
+	//
+	// PATHS
+	//
+

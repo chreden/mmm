@@ -1,0 +1,50 @@
+0001:00097c60       ??0TechnologyTree@@QAE@XZ  00498c60 f   TechnologyTree.obj
+0001:00097cc0       ??1TechnologyTree@@UAE@XZ  00498cc0 f   TechnologyTree.obj
+0001:00097cd0       ?Possible@TechnologyTree@@QBE_NABVcPrjID@@@Z 00498cd0 f   TechnologyTree.obj
+0001:00097d60       ?Available@TechnologyTree@@QBE_NABVcPrjID@@@Z 00498d60 f   TechnologyTree.obj
+0001:00097df0       ?ExistingAndPossible@TechnologyTree@@QBEHABVcPrjID@@@Z 00498df0 f   TechnologyTree.obj
+0001:00097e80       ?Created@TechnologyTree@@QAEXABVcPrjID@@@Z 00498e80 f   TechnologyTree.obj
+0001:00097f50       ?Destroyed@TechnologyTree@@QAEXABVcPrjID@@@Z 00498f50 f   TechnologyTree.obj
+0001:00098000       ?mAddWithDependencies@TechnologyTree@@IAEXABVcPrjID@@PAPADH@Z 00499000 f   TechnologyTree.obj
+0001:000982e0       ?mMakeMeAndAllDependentOnMeImpossible@TechnologyTree@@IAEXPAVTechItem@@@Z 004992e0 f   TechnologyTree.obj
+0001:00098310       ?mLoadTree@TechnologyTree@@IAEXPBD@Z 00499310 f   TechnologyTree.obj
+0001:00098360       ?mParseFile@TechnologyTree@@IAEXPBD@Z 00499360 f   TechnologyTree.obj
+0001:000987a0       ?GetTreeName@TechnologyTree@@QBEPBDXZ 004997a0 f   TechnologyTree.obj
+0001:000987b0       ?mClear@TechnologyTree@@IAEXXZ 004997b0 f   TechnologyTree.obj
+0001:00098960       ?mFind@TechnologyTree@@IBEPAVTechItem@@ABVcPrjID@@@Z 00499960 f   TechnologyTree.obj
+0001:000989e0       ?mFind@TechnologyTree@@IBEPAVTechItem@@PBD@Z 004999e0 f   TechnologyTree.obj
+0001:00098a50       ?mFindOrCreate@TechnologyTree@@IAEPAVTechItem@@PBD@Z 00499a50 f   TechnologyTree.obj
+0001:00098b30       ?mAddItem@TechnologyTree@@IAEXPAVTechItem@@@Z 00499b30 f   TechnologyTree.obj
+0001:00098c30       ?mFindWeaponRace@TechnologyTree@@IAEHPAVTechItem@@@Z 00499c30 f   TechnologyTree.obj
+0001:00098c50       ?mComputeTechInfo@TechnologyTree@@IAEXXZ 00499c50 f   TechnologyTree.obj
+0001:00099110       ?ToText@TechnologyTree@@QAEXHAAV?$basic_stringstream@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAH@Z 0049a110 f   TechnologyTree.obj
+0001:00099500       ?ShowDependencies@TechnologyTree@@QAEXAAV?$basic_stringstream@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@ABVcPrjID@@@Z 0049a500 f   TechnologyTree.obj
+0001:000995e0       ?mShowDependencies@TechnologyTree@@IBEXAAV?$basic_stringstream@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PBVTechItem@@H@Z 0049a5e0 f   TechnologyTree.obj
+0001:000997d0       ?LoadAllTeams@TechnologyTree@@SAXPBD@Z 0049a7d0 f   TechnologyTree.obj
+0001:00099870       ?ClearAllTeams@TechnologyTree@@SAXXZ 0049a870 f   TechnologyTree.obj
+0001:00099890       ??_ETechnologyTree@@UAEPAXI@Z 0049a890 f i TechnologyTree.obj
+0001:00099890       ??_GTechnologyTree@@UAEPAXI@Z 0049a890 f i TechnologyTree.obj
+0001:000998c0       ??0TechItem@@QAE@PBD@Z     0049a8c0 f i TechnologyTree.obj
+0001:000998f0       ??1?$DynArray@PAVTechInfo@@@@QAE@XZ 0049a8f0 f i TechnologyTree.obj
+0001:00099940       ??_ETechInfo@@QAEPAXI@Z    0049a940 f i TechnologyTree.obj
+0001:000999a0       ??1TechInfo@@QAE@XZ        0049a9a0 f i TechnologyTree.obj
+0001:00099a50       ??0TechInfo@@QAE@XZ        0049aa50 f i TechnologyTree.obj
+0001:00099ad0       ?sSortSecondaryParents@TechInfo@@SAHPBX0@Z 0049aad0 f i TechnologyTree.obj
+0001:00099af0       ?mSetRaces@TechInfo@@QAEXH@Z 0049aaf0 f i TechnologyTree.obj
+0001:00099b50       ?CreateSecondaries@TechInfo@@QAEXPAV?$DynArray@PAVTechInfo@@@@@Z 0049ab50 f i TechnologyTree.obj
+0001:00099d90       ?FindMaxLevel@TechInfo@@QAEHXZ 0049ad90 f i TechnologyTree.obj
+0001:00099f20       ?sSortChildren@TechInfo@@KAHPBX0@Z 0049af20 f i TechnologyTree.obj
+0001:00099f90       ?mDependentOn@TechInfo@@IAE_NPAV1@@Z 0049af90 f i TechnologyTree.obj
+0001:00099ff0       ?PrintGraph@TechInfo@@QAEXAAV?$basic_stringstream@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z 0049aff0 f i TechnologyTree.obj
+0001:0009a360       ?mPrintNameSpaces@TechInfo@@IBEXAAV?$basic_stringstream@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z 0049b360 f i TechnologyTree.obj
+0001:0009a3b0       ?mPrintNextLine@TechInfo@@IBEXAAV?$basic_stringstream@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z 0049b3b0 f i TechnologyTree.obj
+0001:0009a470       ??1?$DynArray@PBVTechItem@@@@QAE@XZ 0049b470 f i TechnologyTree.obj
+0001:0009a4c0       ??0?$DynArray@PAVTechInfo@@@@QAE@H@Z 0049b4c0 f i TechnologyTree.obj
+0001:0009a4f0       ?Append@?$DynArrayGrowthRate@PAVTechInfo@@$20AEC@@@QAEXABQAVTechInfo@@@Z 0049b4f0 f i TechnologyTree.obj
+0001:0009a5c0       ??0?$DynArray@PBVTechItem@@@@QAE@H@Z 0049b5c0 f i TechnologyTree.obj
+0001:0009a5f0       ??0?$DynArrayGrowthRate@PAVTechInfo@@$20AEC@@@QAE@H@Z 0049b5f0 f i TechnologyTree.obj
+0001:0009a620       ?Grow@?$DynArrayGrowthRate@PAVTechInfo@@$20AEC@@@QAEHH@Z 0049b620 f i TechnologyTree.obj
+0001:0009a700       ?SetSize@?$DynArrayGrowthRate@PAVTechInfo@@$20AEC@@@QAEXH@Z 0049b700 f i TechnologyTree.obj
+0001:0009a7d0       ?SetCapacity@?$DynArrayGrowthRate@PAVTechInfo@@$20AEC@@@QAEXH@Z 0049b7d0 f i TechnologyTree.obj
+
+0003:0004d000       ?g_technologyTreeArray@@3PAVTechnologyTree@@A 00739000     TechnologyTree.obj

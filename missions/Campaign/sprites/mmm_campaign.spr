@@ -1,0 +1,5 @@
+sprite_table
+@reference=512
+@tmaterial=interface
+b_mmm_wep_econ_mining mmm_interface_buttons01 0 0 96 96
+b_mmm_wep_def_convoyraid mmm_interface_buttons01 0 104 96 96

@@ -1,0 +1,882 @@
+############################################################################################################
+############################################################################################################
+##  STAR TREK ARMADA
+############################################################################################################
+############################################################################################################
+
+multi_common {
+	+ insert_CD		{Please insert the Armada II CD}
+}
+
+multiplayer_connection {
+	+ title			{Multiplayer Connection}
+	+ enter_name		{Enter Name:}
+	+ previous_menu		{Previous Menu}
+	+ internet			{Internet - GameSpy}
+	+ internet_manual	{Internet - Manual IP}
+	+ internet_tunngle {Internet - Tunngle}
+	+ connect_lan_try_tunngle {Trying to connect to Tunngle}
+	+ cant_connect_lan_tunngle {Cannot connect to Tunngle}
+	+ lan_tcpip			{Local Area Network}
+	+ lan_ipx			{Local Area Network (IPX)}
+	+ instant_action	{Instant Action}
+	+ enter_name_button	{Enter Name}
+	+ connect_won_try	{Trying to connect to a WON server}
+	+ generic_won_failure	{Could not connect to a GameSpy server}
+	+ connect_lan_try_tcpip	{Trying to connect to the LAN via TCP/IP}
+	+ connect_lan_try_ipx	{Trying to connect to the LAN via IPX}
+	+ connect_try_manual_ip {Trying to connect to Manual IP}
+	+ cant_connect_lan_tcpip	{Cannot connect to the LAN via TCP/IP}
+	+ cant_connect_lan_ipx		{Cannot connect to the LAN via IPX}
+	+ cant_connect_manual_ip	{Cannot connect to Manual IP}
+	+ logon_lan_try		{Attempting to logon to the LAN}
+	+ cant_logon_lan	{Could not logon to the LAN}
+	+ crc_checking		{Checking the version of your game assets...}
+}
+
+tunngle_game {
+	+ waiting_login {Waiting for Tunngle login...}
+	+ waiting_network {Waiting for network...}
+	+ error_client {Could not communicate with Tunngle}
+	+ error_network {Error joining game network}
+	+ error {Error}
+	+ ok {OK}
+}
+
+waiting {
+	+ cancel_button {Cancel}
+}
+
+tunngle_install {
+	+ warning {Tunngle}
+	+ ok_button {Yes}
+	+ cancel_button {No}
+	+ message {Tunngle not installed. Open download site now?}
+}
+
+commandline_net {
+	+ title_gamespy_join	{CONNECTING TO GAMESPY HOST}
+	+ title_gamespy_host	{HOSTING ON GAMESPY}
+	+ title_manual_ip_join	{CONNECTING TO INTERNET HOST}
+	+ title_manual_ip_host	{HOSTING ON THE INTERNET}
+	+ cancel			{Cancel}
+	+ status			{Connecting...}
+}
+
+
+won_login {
+	+ title			{}
+	+ name			{}
+	+ password		{}
+	+ email			{}
+	+ save_password		{}
+	+ new_profile		{Create New Profile}
+	+ change_password	{Change Password}
+	+ previous_menu		{Previous Menu}
+	+ need_profile		{Please enter your name or GameSpy profile name.}
+	+ create_needs_data	{Please enter your e-mail address and a password.}
+	+ create_password_mismatch	{The passwords did not match.  Please try again.}
+	+ log_in		{Log In}
+	+ won			{GameSpy}
+	+ error			{Error}
+	+ ok			{OK}
+	+ cant_connect		{Can't connect to GameSpy server}
+	+ bad_password		{Incorrect password}
+	+ server_busy		{GameSpy Server is unreachable. (Check your internet connection.)}
+	+ unknown_user		{The Account Name is unknown}
+	+ generic_failure	{Unable to log into GameSpy}
+	+ previous_over		{Return to the protocol selection screen}
+	+ login_over		{Log into GameSpy}
+	+ won_over		{Go to the GameSpy web page}
+	+ login_won_try 	{Trying to Log In to a GameSpy server}
+	+ web_page		{http://www.gamespy.com}
+	+ lobby_not_found	{The GameSpy Lobby could not be found!}
+}
+
+
+
+internet_game {
+	+ lobby		{Lobby}
+	+ gamespy_title		{}
+	+ internet_title	{}
+	+ lan_title			{}
+	+ previous_menu		{Previous Menu}
+	+ help			{Help}
+	+ join_won		{GameSpy}
+	+ join_won2		{Message Boards}
+	+ main_menu		{Main Menu}
+	+ join_game		{Join Game}
+	+ create_game		{Create Game}
+	+ join			{Join}
+	+ create		{Create}
+	+ find_player		{Find Player}
+	+ players_in_room	{Players In Room}
+	+ rooms			{Rooms}
+	+ current_games		{Current Games}
+	+ chat			{Chat}
+	+ ignore		{Ignore}
+	+ unignore		{Un-ignore}
+	+ change_room		{Change Room}
+	+ chat_in		{}
+	+ cancel		{Cancel}
+	+ ok			{OK}
+	+ press_cancel		{Please Wait...}
+	+ join_game_try		{Trying To Join Game}
+	+ join_room_try		{Trying To Join Room}
+	+ create_game_try	{Trying To Create Game}
+	+ create_room_try	{Trying To Create Room}
+	+ error			{Error!}
+	+ bad_password		{Incorrect Password!}
+	+ username_in_use	{The game you tried to join already has a player with your name.}
+	+ bad_ping		{You've been rejected because of your ping}
+	+ bad_crc		{This host has a different version of the game.}
+	+ locked		{The game you tried to join has closed}
+	+ launched		{The game you tried to join has launched}
+	+ abandoned		{The game you tried to join was cancelled}
+	+ full			{The game you tried to join is full}
+	+ kicked		{You have been kicked from this game}
+	+ no_connection	{Connection Failed!}
+	+ host_lost		{The host of this game has been lost}
+	+ host_quit		{The host of this game has quit}
+	+ i_quit		{You are unable to join this game}
+	+ game_create_failed	{The Game Create Failed}
+	+ invalid_password	{The Password has invalid characters}
+	+ invalid_name		{The Name has invalid characters}
+	+ room_full		{The room you tried to join is full}
+	+ room_abandon		{The room you tried to join is abandon}
+	+ room_join_failure	{Unable to join room}
+	+ disabled		{Lobby chat is not available in this mode. Create or Join a game to access game chat.}
+	+ player_list_disabled_text_0 {Player list is}
+	+ player_list_disabled_text_1 {not available}
+	+ player_list_disabled_text_2 {in this mode.}
+	+ player_list_disabled_text_3 {}
+	+ player_list_disabled_text_4 {}
+	+ you_say		{You told}
+	+ privately_tells_you   {privately tells you}
+	+ filter_all			{Show all}
+	+ filter_head_to_head	{Head to Head}
+	+ filter_team			{Teams}
+	+ filter_alliance		{Alliances}
+	+ filter_capture_flag	{CTF}
+	+ filter_collect		{Collect Latinum}
+	+ filter_colonize		{Colonize Planets}
+	+ filter_defend			{Defend Planet}
+	+ filter_assault		{Assault}
+	+ local_ip				{Local IP Address: }
+	+ external_ip			{Externally Known IP Address: }
+	+ ip_warning			{Your externally known IP address differs from your local IP address(es).  This may prevent other people from seeing games that you create, and may cause you difficulty joining games.  Please press the help button for more information.}
+}
+
+
+multiplayer_setup {
+	+ incompatible	{(Incompatible) }
+	+ title_instantaction		{Instant Action}
+	+ title_multiplayer		{Game Setup}
+	+ gamespy_title	{}
+	+ messages		{Messages}
+	+ previous_menu		{Previous Menu}
+	+ main_menu		{   Main Menu}
+	+ launch		{LAUNCH}
+	+ select_map		{SELECT MAP}
+	+ map_name		{Map Name}
+	+ map_description	{Map Description}
+	+ max_players		{Max Players}
+	+ kick			{Kick}
+	+ observer			{Observer}
+	+ observers_on		{Observers}
+	+ observers_off		{No Observers}
+	+ random		{Random}
+	+ random_color {Random Color}
+	+ alliance		{Alliances}
+	+ teams			{Teams}
+	+ empty			{Empty Slot}
+	+ computer_easy		{AI: Normal}
+	+ computer_medium	{AI: Hard}
+	+ computer_hard		{AI: Merciless}
+	+ computer_neural	{AI: Neural}
+	+ shroud_fog_on_on	{Shroud On, Fog On}
+	+ shroud_fog_off_on	{Shroud Off, Fog On}
+	+ shroud_fog_on_off	{Shroud On, Fog Off}
+	+ shroud_fog_off_off	{Shroud Off, Fog Off}
+	+ fixed_placement_on	{Random Placement}
+	+ fixed_placement_off	{Fixed Placement}
+	+ show_all		{Show All}
+	+ show_available	{Show Available}
+	+ show_allies		{Show Allies}
+	+ show_none		{Show None}
+	+ hide_minimap_on	{Minimap Shown}
+	+ hide_minimap_off	{Minimap Hidden}
+	+ replay_on			{Replay enabled}
+	+ replay_off		{No Replay}
+	+ tech_level_zero	{Standard Tech}
+	+ tech_level_one	{Free tech}
+	+ tech_level_two	{---}
+	+ tech_level_three	{---}
+	+ tech_level_four	{---}
+	+ tech_level_five       {---}
+	+ timed_peace_one 	{No Cease Fire}
+	+ timed_peace_two 	{5 Minute Cease Fire}
+	+ timed_peace_three	{10 Minute Cease Fire}
+	+ give_units_on 	{Give Units On}
+	+ give_units_off	{Give Units Off}
+	+ directors_off		{Director's Cut On}
+	+ directors_on		{Director's Cut Off}
+	+ infinite_resources_on	    {Infinite Moons/Planets}
+	+ infinite_resources_off    {Standard Moons/Planets}
+	+ trek_physics_on	{Slower Physics}
+	+ trek_physics_off	{Normal Physics}
+	+ mothers_can_move_on	{Species' Mothership Movement}
+	+ mothers_can_move_off	{Species' Mothership Locked}
+	+ ferengi_off		{Non-Player Races Off}
+	+ ferengi_on		{Non-Player Races On}
+	+ default_units_map	{Map Units}
+	+ default_units_minimal	{Minimal Units}
+	+ default_units_standard	{Standard Units}
+	+ default_units_super		{Super Side}
+	+ armada_personal	{Personal}
+	+ armada_1			{Armada 1}
+	+ armada_2			{Armada 2}
+	+ armada_3			{Armada 3}
+	+ armada_4			{Armada 4}
+	+ team_1		{Team 1}
+	+ team_2		{Team 2}
+	+ team_3		{Team 3}
+	+ team_4		{Team 4}
+	+ team_5		{Team 5}
+	+ team_6		{Team 6}
+	+ team_7		{Team 7}
+	+ team_8		{Team 8}
+	+ observer		{Observer}
+	+ game_type_team					{Team Game}
+	+ game_type_alliance				{Alliances Game}
+	+ game_type_capture_flag			{Capture The Flag}
+	+ game_type_collect					{Collect Latinum}
+	+ game_type_colonize				{Colonize Planets}
+	+ game_type_defend					{Defend Planet}
+	+ game_type_assault					{Assault}
+	+ game_type_mission					{Mission}
+	+ game_type_ladder_2p				{Ladder Match}
+	+ game_type_ladder_2t				{Team Ladder Match}
+	+ ping_filter_off	{Ping Filter Off}
+	+ ping_filter_200	{Ping Filter 200}
+	+ ping_filter_400	{Ping Filter 400}
+	+ ping_filter_600	{Ping Filter 600}
+	+ maximum_players_8	{Max Players: 8}
+	+ maximum_players_7	{Max Players: 7}
+	+ maximum_players_6	{Max Players: 6}
+	+ maximum_players_5	{Max Players: 5}
+	+ maximum_players_4	{Max Players: 4}
+	+ maximum_players_3	{Max Players: 3}
+	+ maximum_players_2	{Max Players: 2}
+	+ maximum_players_1	{Max Players: 1}
+	+ lock_game_on		{Game Closed}
+	+ lock_game_off		{Game Open}
+	+ game_name 		{Game Name}
+	+ player_name		{Player}
+	+ side				{Side}
+	+ players			{Players}
+	+ save_of			{Save: }
+	+ alliance_team		{Team Selection Mode}
+	+ super_side		{Super Side}
+	+ handicap		{Handicap}
+	+ all			{ALL}
+	+ private		{PRIVATE}
+	+ allies		{ALLIES}
+	+ enemies		{ENEMIES}
+	+ on			{ON}
+	+ off			{OFF}
+	+ sr_normal		{Resources: Normal}
+	+ sr_lots		{Resources: Double}
+	+ sr_unlimited		{Resources: Unlimited}
+	+ credits_00		{Credits: OFF}
+	+ credits_10		{Credits: 10}
+	+ credits_12		{Credits: 12}
+	+ credits_14		{Credits: 14}
+	+ credits_16		{Credits: 16}
+	+ credits_18		{Credits: 18}
+	+ credits_20		{Credits: 20}
+	+ credits_22		{Credits: 22}
+	+ credits_24		{Credits: 24}
+	+ credits_26		{Credits: 26}
+	+ credits_28		{Credits: 28}
+	+ credits_30		{Credits: 30}
+	+ unused_front		{Unused}
+	+ unused_1		{10}
+	+ unused_2		{10}
+	+ unused_3		{10}
+	+ unused_4		{10}
+	+ unused_5		{10}
+	+ want_to_launch	{The host wants to launch}
+	+ game_overloaded	{There are too many players for this map}
+	+ ai_cannot_play_gametype	{Only humans can play in this type of game.}
+	+ one_team		{There is only one team in this game}	
+	+ need_cds		{You need 1 CD for every 4 players on LAN}
+        + system		{System}
+	+ player_limit_warning	{<System>This game exceeds the recommended number of players for modem Internet play}
+	+ bullet		{•}
+	+ advanced {Advanced}
+	+ random_map_create_on  {Create a Random Map}
+	+ random_map_create_off {Don't Create a Random Map}
+	+ close {Close}
+	+ ok_button {OK}
+	+ cancel_button {Cancel}
+	+ trade_convoy {Trade Using Convoys}
+	+ trade_instant {Ally Trading}
+	+ handicap {Handicap}
+	+ build_time {AI Build Time}
+	+ resource_cost {AI Resource Cost}
+	+ auto_special_weaps_yes {Special Weapons Auto}
+	+ auto_special_weaps_no {Special Weapons Manual}
+	+ warp_enabled {Warp Enabled}
+	+ warp_disabled {Warp Disabled}
+	+ default	{Default}
+	+ defaultSettings {Default Settings}
+	+ save		{Save Settings}
+	+ load		{Load Settings}
+	+ armada {Armada}
+	+ comm {Comm}
+	+ ping {Ping}
+	+ build_time_pct {AI Build Time Modifier %.2f}
+	+ rsc_cost_pct {AI Resource Cost Modifier %.2f}
+	+ game_speed {Game Speed %d}
+	+ skinnydepth {Thin Map}
+	+ defaultdepth {Default Height}
+	+ deepspacedepth {Deep Space}
+	+ damage {Weapon Strength %.2f}
+	+ global_build_time {Ship Build Time %.2f}
+	+ global_unit_cost {Global Build Cost %.2f}
+	+ chat_select_all {All}
+	+ chat_select_team {Team}
+	+ launch_fail_title {Launch Failed}
+	+ launch_fail_button {OK}
+	+ assault_rules {An Assault map was chosen.  Your race, starting units and resources are determined by the start location that you chose.}
+	+ network_setup_warning	{The GameSpy server has not yet registered this game.  This could be because it is busy, or because your network setup does not permit you to host.  See the help on the previous screen for more details.}
+	+ only_host_can_change {Only the host can change this option.}
+	+ chat_unused			{@@ Bug (should not appear) @@}
+	+ chat_all_left			{<}
+	+ chat_all_right		{> }
+	+ chat_private_left		{<}
+	+ chat_private_right	{ tells you> }
+	+ chat_private_from_me	{<You privately said> }
+	+ chat_allies_left		{<}
+	+ chat_allies_right		{ tells his allies> }
+	+ chat_allies_from_me	{<You tell your allies> }
+	+ chat_enemies_left		{<}
+	+ chat_enemies_right	{ tells his enemies> }
+	+ chat_enemies_from_me	{<You tell your enemies> }
+	+ random_map			{Random Map}
+}
+########################################################################################################
+
+multiplayer_create_game_popup {
+	+ name		{}
+	+ password		{}
+	+ ok_button		{OK}
+	+ cancel_button	{Cancel}
+}
+
+multiplayer_create_room_popup {
+	+ name		{Room Name:}
+	+ password		{Password:}
+	+ ok_button		{OK}
+	+ cancel_button	{Cancel}
+}
+
+multiplayer_manual_ip {
+	+ title				{Manual IP connection}
+	+ manual_ip_address		{Enter IP address or hostname to join (leave blank to host)}
+	+ ok_button				{OK}
+	+ cancel_button			{Cancel}
+}
+
+multiplayer_password_popup {
+	+ confirm_password		{Please confirm your password:}
+	+ password		{Password:}
+	+ ok_button		{OK}
+	+ cancel_button	{Cancel}
+}
+
+multiplayer_debriefing {
+	+ continue 		{Continue}
+	+ quit			{Quit To Windows}
+	+ title			{DEBRIEFING}
+	+ dilithiumCollected	{Dilithium Collected}
+	+ dilithiumSpent	{Dilithium Spent}
+	+ latinumCollected	{Latinum Collected}
+	+ latinumSpent		{Latinum Spent}
+	+ metalCollected	{Metal Collected}
+	+ metalSpent		{Metal Spent}
+	+ crewRecruited		{Crew Recruited}
+	+ crewKilled		{Crew Killed}
+	+ officerPeak		{Officer Peak}
+	+ officerEnding		{Officer Ending}
+	+ latinumEarned		{Latinum Earned}
+	+ dilithiumPurchased	{Dilithium Purchased}
+	+ dilithiumSold		{Dilithium Sold}
+	+ metalPurchased	{Metal Purchased}
+	+ metalSold			{Metal Sold}
+	+ planetsColonized	{Planets Colonized}
+	+ planetsLost		{Planets Lost}
+	+ created		{Created}
+	+ lost			{Lost}
+	+ destroyed		{Destroyed}
+	+ assault		{Assault}
+	+ battleship	{Battleship}
+	+ cruiser		{Cruiser}
+	+ destroyer		{Destroyer}
+	+ frigate		{Frigate}
+	+ scout			{Scout}
+	+ cargo			{Cargo}
+	+ colony		{Colony Ship}
+	+ construction	{Construction Rig}
+	+ mining		{Mining Freighter}
+	+ repair		{Repair Ship}
+	+ special		{Special}
+	+ station		{Station}
+	+ name			{Name}
+	+ side			{Side}
+	+ collected		{Collected}
+	+ toggle		{Toggle}
+}
+
+main_menu {
+	+ single_player  	{Single Player}
+	+ multiplayer  		{Multiplayer}
+	+ options		{Options}
+	+ replay_intro		{Replay Intro}
+ 	+ quit			{Exit}
+	+ credits		{Credits}
+	+ instant_action	{Instant Action}
+	+ button_font		{Arial}
+	+ map_edit  	{Map Editor}
+}
+
+single_player {
+	+ previous_menu		{PREVIOUS MENU}
+	+ load_game		{LOAD GAME}
+	+ title			{SINGLE PLAYER}
+	+ federation_incomplete	{}
+	+ klingon_incomplete	{}
+	+ romulan_incomplete	{}
+	+ borg_incomplete {}
+	+ tutorials {}
+	+ federation_campaign {}
+	+ klingon_campaign {}
+	+ borg_campaign {}
+}
+
+mission_select {
+	+ title			{}
+	+ ok_button		{OK}
+	+ cancel_button		{Cancel}
+	+ MonitorTutorial.bzn {Monitor Tutorial}
+	+ TextInputTutorial.bzn {TextInput Tutorial}
+	+ TimerTutorial.bzn {Timer Tutorial}
+	+ CineractiveTutorial.bzn {Cineractive Tutorial}
+	+ EntityFinderTutorial.bzn {EntityFinder Tutorial}
+	+ Premonitions.bzn {Premonitions}
+	+ a2_fed01.bzn		{Invasion}
+	+ a2_fed02.bzn		{Lifelines}
+	+ a2_fed03.bzn		{Recovery}
+	+ a2_fed04.bzn		{Along the Neutral Zone}
+	+ a2_fed05.bzn		{Into the Breach}
+	+ a2_fed06.bzn		{Inferno}
+	+ a2_fed07.bzn		{The Cavalry}
+	+ a2_fed08.bzn		{Data Retrieval}
+	+ a2_fed09.bzn		{Staging Grounds}
+	+ a2_fed10.bzn		{There and Back Again}
+	+ a2_kling01.bzn	{A Dagger At Zarush}
+	+ a2_kling02.bzn	{Executioner}
+	+ a2_kling03.bzn	{Brave New Worlds}
+	+ a2_kling04.bzn	{Blockade}
+	+ a2_kling05.bzn	{The Unknown Prize}
+	+ a2_kling06.bzn	{The Romulan Connection}
+	+ a2_kling07.bzn	{Battle of Crucis Major}
+	+ a2_kling08.bzn	{Trojan Horse}
+	+ a2_kling09.bzn	{To Cardassia and Victory}
+	+ a2_kling10.bzn	{The Final Battle}
+	+ a2_borg01.bzn		{Werewolf Pack}
+	+ a2_borg02.bzn		{Pink Slips}
+	+ a2_borg03.bzn		{Interdiction}
+	+ a2_borg04.bzn		{There Goes the Neighborhood}
+	+ a2_borg05.bzn		{The Catch}
+	+ a2_borg06.bzn		{Interception}
+	+ a2_borg07.bzn		{Strange Bedfellows}
+	+ a2_borg08.bzn		{Tidal Wave}
+	+ a2_borg09.bzn		{The Maw}
+	+ a2_borg10.bzn		{Rifts}
+	+ a2_tutorial_ui.bzn    {Tutorial: User Interface}
+	+ a2_tutorial2.bzn      {Tutorial: Resources and Economy}
+	+ a2_tutorial3.bzn      {Tutorial: Combat}
+	+ a2_tutorial4.bzn      {Tutorial: The Romulans}
+	+ a2_tutorial5.bzn      {Tutorial: The Cardassians}
+	+ a2_tutorial6.bzn      {Tutorial: Species 8472}
+	+ fed1.bzn		{Premonitions}
+	+ fed2.bzn		{Paradise Revisited}
+	+ fed5.bzn		{Vendetta}
+	+ fed3.bzn		{Dark Omens}
+	+ fed4.bzn		{TEST FOR ART}
+	+ kling3.bzn	{To the Gates of Sto'Vo'Kor}
+	+ kling1.bzn	{The Enemy Within}
+	+ kling4.bzn	{A Good Day to Die}
+	+ kling2.bzn	{Broken Ties}
+	+ kling5.bzn	{Gray Eminence}
+	+ rom2.bzn		{Cloak and Dagger}
+	+ rom4.bzn		{Call to Power}
+	+ rom3.bzn		{The Gauntlet}
+	+ rom1.bzn		{Retribution}
+	+ rom5.bzn		{Unholy Alliances}
+	+ borg1.bzn		{Resurrection}
+	+ borg3.bzn		{Assimilation}
+	+ borg4.bzn		{Extermination}
+	+ borg2.bzn		{Day of Reckoning}
+	+ borg5.bzn		{The Twilight Hour}
+	+ finale2.bzn	{Time after Time}
+	+ finale4.bzn	{Once and Again}
+	+ finale3.bzn 	{Strange Bedfellows}
+	+ finale1.bzn	{A Line in the Sand}
+	+ finale5.bzn	{The Alpha and the Omega, Part I}
+	+ finale6.bzn	{The Alpha and the Omega, Part II}
+}
+
+load_game {
+	+ title			{}
+	+ previous_menu		{Previous Menu}
+	+ load_game_text	{Load Savegame}
+	+ delete_game		{Delete Game}
+}
+
+save_game {
+	+ title				{}
+	+ previous_menu		{Previous Menu}
+	+ save_game_text	{Save Game}
+	+ delete_game		{Delete Game}
+	+ game_type_unloadable	{This saved game is either too old to load or corrupt.}
+	+ game_type_replay	{Replay - }
+	+ game_type_instant_action {Instant Action - }
+	+ game_type_multiplayer {Multiplayer - }
+	+ save_game_success	{Save Successful!}
+	+ save_game_failure {Save Failed.}
+	+ save_game_disallowed {Save Not Allowed}
+	+ ok_button			{OK}
+	+ multiplayer_info_title	{Multiplayer Save - Reload from Multiplayer Setup Screen}
+	+ multiplayer_info_message	{To load a multiplayer saved game, you need to set up your multiplayer game as usual.  From the game setup screen, you can select your multiplayer save game from the "select map" popup.  Multiplayer saves may be deleted here.}
+}
+
+
+multiplayer_map_select {
+	+ title			{Select Map}
+	+ size_1		{Size 1?}
+	+ size_2		{Size 2?}
+	+ size_3		{Size 3?}
+	+ all_maps		{All Maps}
+	+ maximum_players_8	{8 Players}
+	+ maximum_players_7	{7 Players}
+	+ maximum_players_6	{6 Players}
+	+ maximum_players_5	{5 Players}
+	+ maximum_players_4	{4 Players}
+	+ maximum_players_3	{3 Players}
+	+ maximum_players_2	{2 Players}
+	+ select_map_button	{Select Map}
+	+ cancel_button		{Cancel}
+	+ random_button		{Random}
+	+ filter_players		{Players}
+}
+
+save_over {
+	+ warning 		{Warning}
+	+ ok_button		{Yes}
+	+ cancel_button		{No}
+	+ message		{Overwrite game?}
+}
+
+delete_game {
+	+ warning 		{Warning}
+	+ ok_button		{Yes}
+	+ cancel_button		{No}
+	+ message		{Are you sure you want to delete this game?}
+}
+
+abort_mission_popup {
+	+ warning 		{Warning}
+	+ ok_button		{Yes}
+	+ cancel_button		{No}
+	+ message		{Are you sure you want to end the mission?}
+}
+
+restart_mission_popup {
+	+ warning 		{Warning}
+	+ ok_button		{Yes}
+	+ cancel_button		{No}
+	+ message		{Are you sure you want to restart the mission?}
+}
+
+
+exit_to_windows_popup {
+	+ warning 		{Warning}
+	+ ok_button		{Yes}
+	+ cancel_button		{No}
+	+ message		{Are you sure you want to exit to Windows?}
+}
+
+
+race_names {
+	+ super		{Super Side}
+}
+
+escape_menu {
+	+ title			{Options}
+	+ restate		{Restate Objectives}
+	+ save_game		{Save Game}
+	+ no_save_game	{Save Not Allowed}
+	+ load_game		{Load Savegame}
+	+ save_map		{Save Map...}
+	+ load_map		{Load Map...}
+	+ graphics		{Graphics Settings}
+	+ sound			{Sound Settings}
+	+ game			{Game Settings}
+	+ voice			{Voice Over Network Settings}
+	+ advanced		{Advanced Settings}
+	+ mods		{Mod Settings}
+	+ abort			{End Mission}
+	+ surrender		{Surrender}
+	+ stats			{View Admiral's Log}
+	+ return		{Return to Game}
+	+ return_edit		{Return to Editor}
+	+ techtree		{Technology Tree}
+	+ restart_mission {Restart Mission}
+	+ exit_to_windows {Exit to Desktop}
+	+ previous_menu		{Previous Menu}
+}
+
+game_settings {
+	+ title			{Game Settings}
+	+ game_difficulty	{Game Difficulty}
+	+ easy			{Easy}
+	+ medium		{Medium}
+	+ hard			{Hard}
+	+ hardcore		{Hardcore}
+	+ game_speed		{Game Speed}
+	+ depth			{Map Height}
+	+ damage		{Weapon Strength}
+	+ global_build_time		{Ship Build Time}
+	+ global_unit_cost		{Global Build Cost}
+	+ mouse_scroll_speed	{Mouse Scroll Speed}
+	+ keyboard_scroll_speed	{Keyboard Scroll Speed}
+	+ mouse_hold_level	{Mouse Hold Level}
+	+ ai_cost_handicap	{AI Build Cost Handicap}
+	+ ai_build_handicap	{AI Build Time Handicap}
+	+ voice_label		{Voice Over Network}
+	+ on			{On}
+	+ off			{Off}
+	+ previous		{Previous Menu}
+	+ interface_mode	{Interface Mouse Mode}
+	+ left_click		{Left Click}
+	+ right_click		{Right Click}
+	+ slow				{Slow}
+	+ fast				{Fast}
+	+ low				{Low}
+	+ high				{High}
+	+ shallow			{Shallow}
+	+ deep				{Deep}
+	+ heavy				{Heavy}
+	+ light				{Light}
+}
+
+sound_settings {
+	+ title			{Sound Settings}
+	+ music_volume		{Music Volume}
+	+ button_volume		{Button Volume}
+	+ effects_volume	{Effects Volume}
+	+ voice_volume		{Voice Volume}
+	+ sound_channels	{Sound Channels}
+	+ unit_speech		{Unit Speech}
+	+ hardware			{Hardware Acceleration}
+	+ previous_menu		{Previous Menu}
+	+ on			{Enabled}
+	+ off			{Disabled}
+}
+
+voice_settings {
+	+ title				{}
+	+ enable_von		{}
+	+ enable_echo_suppression {}
+	+ plackback_volume	{}
+	+ record_volume		{}
+	+ threshold			{}
+	+ quality			{}
+	+ aggressiveness	{}
+	+ initial_settings		{}
+	+ initial_settings_info {}
+	+ general_settings	{}
+	+ general_settings_info	{}
+	+ on				{Enabled}
+	+ off				{Disabled}
+	+ auto				{Auto}
+	+ default			{Default}
+	+ set				{Set}
+	+ peer				{Peer(Default)}
+	+ forwarding		{Forwarding}
+	+ mixing			{Mixing}
+	+ previous			{Previous Menu}
+	+ wizzard			{  Setup Wizard}
+	+ von_type			{}
+	+ compressor		{}
+	+ default_codec		{ (Default)}
+}
+
+graphics_settings {
+	+ title			{Graphic Settings}
+	+ display_settings	{Display Settings}
+	+ display_mode		{Display Mode*}
+	+ display_driver	{Display Driver}
+	+ on			{Enabled}
+	+ off			{Disabled}
+	+ performance_settings  {Performance Settings}
+	+ hardware_vertex_processing {Hardware Vertex Processing}
+	+ bump_mapping {Bump Mapping}
+	+ cinematic_window	{Cinematic Window}
+	+ ship_detail		{Graphics Detail}
+	+ previous		{Back}
+	+ default		{Default}
+	+ unsupported		{* Some resolutions may not be supported by your hardware.}
+	+ multimon		{Dual Display (Multi-Monitoring)}
+	+ gamma_label   {Gamma Correction}
+	+ selection_opacity_label {Selection Effect Opacity}
+	+ asynchronous_cursor	{Asynchronous Cursor}
+	+ asynchronous_cursor_win	{Asynchronous Cursor (Window Mode)}
+	+ window_mode	{Window Mode}
+	+ multisample_mode	{Anti-Aliasing}
+	+ team_colors		{Team Colors}
+}
+
+create_new_account {
+	+ title			{CREATE NEW ACCOUNT}
+	+ name			{Name}
+	+ password		{Password}
+	+ password2		{Re-enter Password}
+	+ email			{Email Address}
+	+ email_message		{If you do not give your e-mail address, we cannot}
+	+ email_message2	{send you your password if you lose it.}
+	+ ok			{OK}
+	+ cancel		{Cancel}
+	+ error			{Error}
+	+ different_passwords	{The two passwords are different}
+	+ generic_error		{The account creation has failed}
+	+ success		{Success!}
+	+ account_created	{Account created!}
+	+ account_create_failed {The account creation has failed}
+	+ account_create_taken	{Sorry, that user name is taken}
+	+ account_create_bad_name	{That name is not acceptable for use one WON}
+	+ account_create_bad_password	{The password you specified is not acceptable for use on WON}
+	+ account_create_try	{Trying to create this account}
+	+ password_short	{The password needs to be at least 6 letters}
+	+ iam13			{I am at least 13 years old}
+}
+
+change_password {
+	+ title			{Change Password}
+	+ name			{Name}
+	+ password		{Old Password}
+	+ password2		{New Password}
+	+ password3		{Reenter New Password}
+	+ ok			{OK}
+	+ cancel		{Cancel}
+	+ password_changed	{Password successfully changed!}
+	+ generic_error		{Unable to change password}
+	+ change_failed		{Unable to change password}
+	+ bad_password		{The password you specified is not acceptable for use on WON}
+	+ attempting		{Attempting to changet he password}
+}	
+
+help_window {
+	+ title			{Help}
+	+ ok			{OK}
+	+ filename		{nethelp.txt}
+}
+
+demo {
+	+ demo_enabled	{Not Available in Demo}
+}
+
+multiplayer_room_select {
+	+ select_room_button {Select Room}
+	+ create_room {Create Room}
+}
+
+admiral_log {
+	+ gamePts	{GAME POINTS}
+	+ military	{MILITARY}
+	+ economic	{ECONOMIC}
+	+ science	{SCIENCE}
+	+ ships		{SHIPS}
+	+ stations	{STATIONS}
+	+ planets	{PLANETS}
+	+ total		{TOTAL}
+	+ dilithium	{DILITHIUM}
+	+ latinum	{TRITANIUM}
+	+ metal		{METAL}
+	+ crew		{CREW}
+	+ trade		{TRADE}
+	+ killed	{Killed}
+	+ lost		{Lost}
+	+ ratio		{Ratio}
+	+ built		{Built}
+	+ max		{Max}
+	+ gathered	{Gathered}
+	+ spent		{Spent}
+	+ traded	{Trade}
+	+ class		{CLASS}
+	+ stardate	{1st STARDATE}
+	+ num_built	{NUMBER BUILT}
+	+ num_lost	{NUMBER LOST}
+	+ kills_with 	{Kills With}
+	+ destroyed		{Destroyed}
+	+ battleName	{Battle Name}
+	+ fleetsInvolved	{Fleets Involved}
+	+ alliedShips	{Allied Ships}
+	+ enemyShips	{Enemy Ships}
+}
+
+
+license_agreement_window {
+	+ title {Map Editor License Agreement}
+	+ accept {ACCEPT}
+	+ cancel {CANCEL}
+	+ filename {license.txt}
+}
+
+
+mod_settings {
+	+ title				{Modifications}
+	+ desktop_shortcut {Create Shortcut}
+	+ launch_mod {Launch Mod}
+	+ website {Visit Website}
+	+ previous_menu		{Previous Menu}	
+}
+
+map_edit {
+	+ title				{Map Editor}
+	+ previous_menu {Previous Menu}
+	+ edit_map	{Edit Map}
+	+ delete_map	{Delete Map}
+	+ create_map	{Create new map}
+	+ error_delete {Error deleting file}
+	+ error {Error}
+	+ ok {OK}
+}
+
+map_edit_delete_popup {
+	+ warning 		{Warning}
+	+ ok_button		{Yes}
+	+ cancel_button		{No}
+	+ message		{Are you sure you want to delete this map?}
+}
+
+map_edit_create_popup {
+	+ title				{Create new map}
+	+ text		{Enter a filename for your new map:}
+	+ ok_button				{OK}
+	+ cancel_button			{Cancel}
+	+ already_taken	{A map with the specified filename already exists. Please choose another name.}
+}

@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="LuaPack.h" />
+    <ClInclude Include="Externals.h" />
+    <ClInclude Include="Pack.h">
+      <Filter>Pack</Filter>
+    </ClInclude>
+    <ClInclude Include="PackInformation.h">
+      <Filter>Pack\Info</Filter>
+    </ClInclude>
+    <ClInclude Include="Node.h">
+      <Filter>Nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="File.h">
+      <Filter>Nodes\File</Filter>
+    </ClInclude>
+    <ClInclude Include="Folder.h">
+      <Filter>Nodes\Folder</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Pack.cpp">
+      <Filter>Pack</Filter>
+    </ClCompile>
+    <ClCompile Include="PackInformation.cpp">
+      <Filter>Pack\Info</Filter>
+    </ClCompile>
+    <ClCompile Include="Node.cpp">
+      <Filter>Nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="File.cpp">
+      <Filter>Nodes\File</Filter>
+    </ClCompile>
+    <ClCompile Include="Folder.cpp">
+      <Filter>Nodes\Folder</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Pack">
+      <UniqueIdentifier>{7d9891dc-d012-4d88-802c-fca736e27f12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pack\Info">
+      <UniqueIdentifier>{1d4438d2-ff00-41e7-a50e-cf09f62c0700}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Nodes">
+      <UniqueIdentifier>{833a0a46-5406-4bda-bcb4-2d4fc60712ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Nodes\File">
+      <UniqueIdentifier>{6e3ebae3-d2e8-47d4-ab68-edafe3833d20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Nodes\Folder">
+      <UniqueIdentifier>{ddcd1894-f28f-4615-b9d5-3b528f86563c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

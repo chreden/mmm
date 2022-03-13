@@ -1,0 +1,86 @@
+List of functions. Implemented functions are indented
+
+0001:000945e0       ?Save@UpgradeInfo@Team@@QAE_NAAVFileWriter@@@Z 004955e0 f   Teams.obj
+0001:00094630       ?Load@UpgradeInfo@Team@@QAE_NAAVFileReader@@@Z 00495630 f   Teams.obj
+0001:00094670       ??0Team@@QAE@H@Z           00495670 f   Teams.obj
+0001:00094850       ??1Team@@QAE@XZ            00495850 f   Teams.obj
+0001:00094930       ?RecordShipAttackOrderByTeam@Team@@QAEXH@Z 00495930 f   Teams.obj
+0001:00094980       ?RecordStationAttackOrderByTeam@Team@@QAEXH@Z 00495980 f   Teams.obj
+0001:000949d0       ?Configure@Team@@SAXHHHHHHHHHHHH@Z 004959d0 f   Teams.obj
+0001:00094a40       ?SimulateAll@Team@@SAXXZ   00495a40 f   Teams.obj
+0001:00094ae0       ?GetDefaultStartingCrew@Team@@SAHXZ 00495ae0 f   Teams.obj
+0001:00094af0       ?GetDefaultStartingDilithium@Team@@SAHXZ 00495af0 f   Teams.obj
+0001:00094b00       ?GetDefaultStartingLatinum@Team@@SAHXZ 00495b00 f   Teams.obj
+0001:00094b10       ?GetDefaultStartingMetal@Team@@SAHXZ 00495b10 f   Teams.obj
+0001:00094b20       ?GetDefaultStartingCrewCapacity@Team@@SAHXZ 00495b20 f   Teams.obj
+0001:00094b30       ?GetDefaultMaxOfficers@Team@@SAHXZ 00495b30 f   Teams.obj
+0001:00094b40       ?GetDefaultStartingBiomatter@Team@@SAHXZ 00495b40 f   Teams.obj
+0001:00094b60       ?PreLoadAll@Team@@SAXXZ    00495b60 f   Teams.obj
+0001:00095300       ?CleanAll@Team@@SAXXZ      00496300 f   Teams.obj
+0001:00095340       ?GetTeam@Team@@SAAAV1@H@Z  00496340 f   Teams.obj
+0001:00095350       ?LoadAll@Team@@SA_NAAVFileReader@@@Z 00496350 f   Teams.obj
+0001:00095430       ?Load@Team@@QAE_NAAVFileReader@@@Z 00496430 f   Teams.obj
+0001:00095830       ?PostLoad@Team@@QAEXXZ     00496830 f   Teams.obj
+0001:00095840       ?PostLoadAll@Team@@SA_NXZ  00496840 f   Teams.obj
+0001:00095850       ?SaveAll@Team@@SA_NAAVFileWriter@@@Z 00496850 f   Teams.obj
+0001:000958d0       ?Save@Team@@QAE_NAAVFileWriter@@@Z 004968d0 f   Teams.obj
+0001:00095ba0       ?SaveUpgradeInfos@Team@@IAE_NAAVFileWriter@@@Z 00496ba0 f   Teams.obj
+0001:00095c30       ?LoadUpgradeInfos@Team@@IAE_NAAVFileReader@@@Z 00496c30 f   Teams.obj
+0001:00095d40       ?AddBiomatter@Team@@QAEMM@Z 00496d40 f   Teams.obj
+	0001:00095dd0       ?SetBiomatter@Team@@QAEXM@Z 00496dd0 f   Teams.obj
+0001:00095e30       ?AddDilithium@Team@@QAEMM@Z 00496e30 f   Teams.obj
+	0001:00095ec0       ?SetDilithium@Team@@QAEXM@Z 00496ec0 f   Teams.obj
+0001:00095f20       ?AddLatinum@Team@@QAEMM@Z  00496f20 f   Teams.obj
+	0001:00095fb0       ?SetLatinum@Team@@QAEXM@Z  00496fb0 f   Teams.obj
+0001:00096010       ?AddMetal@Team@@QAEMM@Z    00497010 f   Teams.obj
+	0001:000960a0       ?SetMetal@Team@@QAEXM@Z    004970a0 f   Teams.obj
+0001:00096100       ?Compute_Teams_Visible_To@Team@@QAEKXZ 00497100 f   Teams.obj
+0001:00096180       ?GetUnconfirmedRelation@Team@@QBE?AW4eTeamRelation@@H@Z 00497180 f   Teams.obj
+0001:000961a0       ?GetConfirmedRelation@Team@@QBE?AW4eTeamRelation@@H@Z 004971a0 f   Teams.obj
+	0001:000961d0       ?SetRelation@Team@@QAEXHW4eTeamRelation@@@Z 004971d0 f   Teams.obj
+0001:000961f0       ?IsUnconfirmedAlly@Team@@QBE_NH@Z 004971f0 f   Teams.obj
+0001:00096210       ?IsUnconfirmedNeutral@Team@@QBE_NH@Z 00497210 f   Teams.obj
+0001:00096230       ?IsUnconfirmedEnemy@Team@@QBE_NH@Z 00497230 f   Teams.obj
+0001:00096250       ?IsConfirmedAlly@Team@@QBE_NH@Z 00497250 f   Teams.obj
+0001:00096290       ?IsConfirmedNeutral@Team@@QBE_NH@Z 00497290 f   Teams.obj
+0001:000962d0       ?IsConfirmedEnemy@Team@@QBE_NH@Z 004972d0 f   Teams.obj
+0001:00096310       ?SetTeamColor@Team@@QAEXH@Z 00497310 f   Teams.obj
+0001:00096340       ?SetMapColor@Team@@QAEXH@Z 00497340 f   Teams.obj
+0001:00096370       ?GiveView@Team@@SAXHH@Z    00497370 f   Teams.obj
+0001:000963a0       ?RemoveView@Team@@SAXHH@Z  004973a0 f   Teams.obj
+0001:000964b0       ?AddCrew@Team@@QAEXM@Z     004974b0 f   Teams.obj
+0001:00096560       ?GetMaxOfficers@Team@@QBEHXZ 00497560 f   Teams.obj
+0001:00096580       ?GetOfficerVacancies@Team@@QBEJXZ 00497580 f   Teams.obj
+0001:000965b0       ?AddCrewCapacity@Team@@QAEXM@Z 004975b0 f   Teams.obj
+0001:00096600       ?SetStartingCrewCapacity@Team@@QAEXM@Z 00497600 f   Teams.obj
+0001:00096660       ?RegisterDilithiumTrade@Team@@QAEXHM@Z 00497660 f   Teams.obj
+0001:00096690       ?RegisterLatinumTrade@Team@@QAEXHM@Z 00497690 f   Teams.obj
+0001:000966c0       ?RegisterMetalTrade@Team@@QAEXHM@Z 004976c0 f   Teams.obj
+0001:00096700       ?RegisterCrewTrade@Team@@QAEXHM@Z 00497700 f   Teams.obj
+0001:00096740       ?GetStartLocation@Team@@QBE?AVVector3@@XZ 00497740 f   Teams.obj
+0001:00096a10       ?GetFlagLocations@Team@@QBE?AV?$vector@VVector3@@V?$allocator@VVector3@@@std@@@std@@XZ 00497a10 f   Teams.obj
+0001:00096b80       ?RenderResourcesSentToTeam@Team@@QAEXH@Z 00497b80 f   Teams.obj
+0001:00096d40       ?RenderTeamMessage@Team@@SAXXZ 00497d40 f   Teams.obj
+0001:00096dc0       ?SetTeamMessage@Team@@SAXPAD@Z 00497dc0 f   Teams.obj
+0001:00096df0       ?RenderUserTeamData@Team@@SAXXZ 00497df0 f   Teams.obj
+0001:00096e90       ?ShowTradeDataTo@Team@@SAXH@Z 00497e90 f   Teams.obj
+	0001:00096ea0       ?AddUnit@Team@@QAEXPAVGameObject@@@Z 00497ea0 f   Teams.obj
+0001:00096f90       ?SetResearchUpgrades@Team@@QAEXPAVCraft@@@Z 00497f90 f   Teams.obj
+0001:00097070       ?SetScannerUpgrade@Team@@QAEXPAVCraft@@@Z 00498070 f   Teams.obj
+0001:00097140       ?SetEngineUpgrade@Team@@QAEXPAVCraft@@@Z 00498140 f   Teams.obj
+0001:000971c0       ?SetShieldUpgrade@Team@@QAEXPAVCraft@@@Z 004981c0 f   Teams.obj
+0001:00097220       ?SetWeaponUpgrade@Team@@QAEXPAVCraft@@@Z 00498220 f   Teams.obj
+0001:00097230       ?UpdateCraftEngines@Team@@SAXH@Z 00498230 f   Teams.obj
+0001:00097310       ?UpdateCraftShields@Team@@SAXH@Z 00498310 f   Teams.obj
+0001:000973d0       ?UpdateCraftSensors@Team@@SAXH@Z 004983d0 f   Teams.obj
+0001:00097430       ?UpdateCraftWeapons@Team@@SAXH@Z 00498430 f   Teams.obj
+0001:00097440       ?CreateUpgradePod@Team@@QAEXHH@Z 00498440 f   Teams.obj
+0001:00097460       ?DestroyUpgradePod@Team@@QAEXHH@Z 00498460 f   Teams.obj
+0001:000977a0       ?GetCurrentUpgradeLevel@Team@@QBEHH@Z 004987a0 f   Teams.obj
+0001:000977d0       ?SetUpgradeModifier@Team@@QAEXHHM@Z 004987d0 f   Teams.obj
+0001:00097850       ?GetUpgradeModifier@Team@@QBEMHH@Z 00498850 f   Teams.obj
+0001:00097870       ?EnlistOfficers@Team@@QAEXH@Z 00498870 f   Teams.obj
+0001:00097890       ?DischargeOfficers@Team@@QAEXH@Z 00498890 f   Teams.obj
+0001:000978d0       ?AddResource@Team@@QAEMMW4eResource@@@Z 004988d0 f   Teams.obj
+	0001:00097b00       ?GetResource@Team@@QAEMW4eResource@@@Z 00498b00 f   Teams.obj
+0001:00097bd0       ?GetViableUnitCount@Team@@QBEHXZ 00498bd0 f   Teams.obj

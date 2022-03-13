@@ -1,0 +1,3 @@
+#include "mmm_fleet_econ_fed.odf"
+
+unitname = "Economy Fleet : Mining"

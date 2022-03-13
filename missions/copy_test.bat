@@ -1,0 +1,1 @@
+copy Test\*.lua d:\games\fo3.1_2\data\missions\

@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Scribbles">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Scribbles\Armada Types">
+      <UniqueIdentifier>{b17014f6-ce74-4b67-b1db-fae865efe4f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Loader">
+      <UniqueIdentifier>{54775acb-abdd-48d2-9305-ebb11f885748}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Precompiled Header">
+      <UniqueIdentifier>{af359458-daa7-42ec-b205-d7bf1170919f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="armada2.map">
+      <Filter>Scribbles</Filter>
+    </None>
+    <None Include="LuaTypes.txt">
+      <Filter>Scribbles</Filter>
+    </None>
+    <None Include="Scribble.txt">
+      <Filter>Scribbles</Filter>
+    </None>
+    <None Include="CinerativeScribble.txt">
+      <Filter>Scribbles\Armada Types</Filter>
+    </None>
+    <None Include="CraftScribble.txt">
+      <Filter>Scribbles\Armada Types</Filter>
+    </None>
+    <None Include="dbScribble.txt">
+      <Filter>Scribbles\Armada Types</Filter>
+    </None>
+    <None Include="EntityScribble.txt">
+      <Filter>Scribbles\Armada Types</Filter>
+    </None>
+    <None Include="FreighterScribble.txt">
+      <Filter>Scribbles\Armada Types</Filter>
+    </None>
+    <None Include="GameObjectScribble.txt">
+      <Filter>Scribbles\Armada Types</Filter>
+    </None>
+    <None Include="GameSetupScribble.txt">
+      <Filter>Scribbles\Armada Types</Filter>
+    </None>
+    <None Include="GameTypeScribble.txt">
+      <Filter>Scribbles\Armada Types</Filter>
+    </None>
+    <None Include="ObjectivesDisplay.txt">
+      <Filter>Scribbles\Armada Types</Filter>
+    </None>
+    <None Include="OverviewImp.txt">
+      <Filter>Scribbles\Armada Types</Filter>
+    </None>
+    <None Include="PathScribble.txt">
+      <Filter>Scribbles\Armada Types</Filter>
+    </None>
+    <None Include="PlanetScribble.txt">
+      <Filter>Scribbles\Armada Types</Filter>
+    </None>
+    <None Include="ProducerScribble.txt">
+      <Filter>Scribbles\Armada Types</Filter>
+    </None>
+    <None Include="ResourceInterfaceScribble.txt">
+      <Filter>Scribbles\Armada Types</Filter>
+    </None>
+    <None Include="Smeg.txt">
+      <Filter>Scribbles\Armada Types</Filter>
+    </None>
+    <None Include="TeamScribble.txt">
+      <Filter>Scribbles\Armada Types</Filter>
+    </None>
+    <None Include="TechTreeScribble.txt">
+      <Filter>Scribbles\Armada Types</Filter>
+    </None>
+    <None Include="WHScribble.txt">
+      <Filter>Scribbles\Armada Types</Filter>
+    </None>
+    <None Include="A2.def">
+      <Filter>Loader</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp">
+      <Filter>Precompiled Header</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Loader</Filter>
+    </ClCompile>
+    <ClCompile Include="Worker.cpp">
+      <Filter>Loader</Filter>
+    </ClCompile>
+    <ClCompile Include="RuleHelper.cpp">
+      <Filter>Loader</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h">
+      <Filter>Precompiled Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Worker.h">
+      <Filter>Loader</Filter>
+    </ClInclude>
+    <ClInclude Include="RuleHelper.h">
+      <Filter>Loader</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="mmm_loader.rc">
+      <Filter>Scribbles</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

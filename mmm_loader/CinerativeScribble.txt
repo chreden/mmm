@@ -1,0 +1,69 @@
+0001:00248fb0       ??0CineractiveCancelMonitor@@QAE@XZ 00649fb0 f   Cineractive.obj
+0001:00248fe0       ??1CineractiveCancelMonitor@@QAE@XZ 00649fe0 f   Cineractive.obj
+0001:00248ff0       ?Reset@CineractiveCancelMonitor@@QAEXXZ 00649ff0 f   Cineractive.obj
+0001:00249000       ?CancelRequested@CineractiveCancelMonitor@@QAEXH@Z 0064a000 f   Cineractive.obj
+0001:00249010       ?IsCancelled@CineractiveCancelMonitor@@QAE_NXZ 0064a010 f   Cineractive.obj
+0001:00249050       ?CancelRequested@CineractiveCancelMonitor@@QAEXXZ 0064a050 f   Cineractive.obj
+0001:00249060       ?MyCancelPending@CineractiveCancelMonitor@@QAE_NXZ 0064a060 f   Cineractive.obj
+	0001:002490d0       ?CineractiveStart@@YAXPAVscript@@@Z 0064a0d0 f   Cineractive.obj
+	0001:00249160       ?CineractiveCameraOffset@@YAXMMM_N@Z 0064a160 f   Cineractive.obj
+0001:002491d0       ?CineractiveCameraOffset@@YAXPADM_N@Z 0064a1d0 f   Cineractive.obj
+	0001:00249240       ?CineractiveTargetOffset@@YAXMMM_N@Z 0064a240 f   Cineractive.obj
+0001:002492b0       ?CineractiveTargetOffset@@YAXPADM_N@Z 0064a2b0 f   Cineractive.obj
+0001:00249320       ?CineractiveShot@@YAXPADH_N@Z 0064a320 f   Cineractive.obj
+0001:00249440       ?CineractiveShot@@YAXPADH0H@Z 0064a440 f   Cineractive.obj
+0001:002495c0       ?CineractiveShot@@YAXPADHH@Z 0064a5c0 f   Cineractive.obj
+0001:00249730       ?CineractiveShotTrackLeft@@YAXPADH0HH@Z 0064a730 f   Cineractive.obj
+0001:002498f0       ?CineractiveConstantSpeed@@YAX_N@Z 0064a8f0 f   Cineractive.obj
+	0001:00249910       ?SetPathSegmentSpeedModifier@@YAXHM@Z 0064a910 f   Cineractive.obj
+0001:00249950       ?CineractiveShot@@YAXPADH0M@Z 0064a950 f   Cineractive.obj
+0001:00249aa0       ?CineractiveShot@@YAXH_N@Z 0064aaa0 f   Cineractive.obj
+0001:00249bb0       ?CineractiveShot@@YAXHPADH@Z 0064abb0 f   Cineractive.obj
+0001:00249d30       ?CineractiveShot@@YAXHH@Z  0064ad30 f   Cineractive.obj
+0001:00249e90       ?CineractiveShot@@YAXHPADM@Z 0064ae90 f   Cineractive.obj
+0001:00249fe0       ?CineractiveShot@@YAXPADM_N@Z 0064afe0 f   Cineractive.obj
+0001:0024a0e0       ?CineractiveShot@@YAXPADM0H@Z 0064b0e0 f   Cineractive.obj
+0001:0024a230       ?CineractiveShot@@YAXPADMH@Z 0064b230 f   Cineractive.obj
+0001:0024a380       ?CineractiveShot@@YAXPADM0M@Z 0064b380 f   Cineractive.obj
+0001:0024a4b0       ?Update@Cineractive@@QAEXM@Z 0064b4b0 f   Cineractive.obj
+	0001:0024a5d0       ?CineractiveEnd@@YAXXZ     0064b5d0 f   Cineractive.obj
+0001:0024a630       ??0Cineractive@@QAE@PAVscript@@@Z 0064b630 f   Cineractive.obj
+0001:0024a8a0       ??1Cineractive@@QAE@XZ     0064b8a0 f   Cineractive.obj
+	0001:0024aa50       ?LookFrom@Cineractive@@QAEXABVVector3@@@Z 0064ba50 f   Cineractive.obj
+	0001:0024aab0       ?LookFrom@Cineractive@@QAEXPAVGameObject@@@Z 0064bab0 f   Cineractive.obj
+	0001:0024ab30       ?LookFrom@Cineractive@@QAEXPAVAiPath@@@Z 0064bb30 f   Cineractive.obj
+	0001:0024ab80       ?LookAt@Cineractive@@QAEXABVVector3@@@Z 0064bb80 f   Cineractive.obj
+	0001:0024ac00       ?LookAt@Cineractive@@QAEXPAVGameObject@@@Z 0064bc00 f   Cineractive.obj
+0001:0024ac90       ?LookAt@Cineractive@@QAEXPAVGameObject@@ABVVector3@@W4TrackingType@1@@Z 0064bc90 f   Cineractive.obj
+0001:0024ad10       ?LookAt@Cineractive@@QAEXPAVAiPath@@@Z 0064bd10 f   Cineractive.obj
+0001:0024ad60       ?LookAt@Cineractive@@QAEX_N@Z 0064bd60 f   Cineractive.obj
+0001:0024ad80       ?LookFromOffset@Cineractive@@QAEXAAVVector3@@_N@Z 0064bd80 f   Cineractive.obj
+0001:0024ade0       ?LookFromOffset@Cineractive@@QAEXPAVGameObject@@_N@Z 0064bde0 f   Cineractive.obj
+0001:0024ae70       ?LookFromOffset@Cineractive@@QAEXPAVAiPath@@_N@Z 0064be70 f   Cineractive.obj
+0001:0024aed0       ?LookAtOffset@Cineractive@@QAEXAAVVector3@@_N@Z 0064bed0 f   Cineractive.obj
+	0001:0024af30       ?LookAtOffset@Cineractive@@QAEXPAVGameObject@@_N@Z 0064bf30 f   Cineractive.obj
+0001:0024afc0       ?LookAtOffset@Cineractive@@QAEXPAVAiPath@@_N@Z 0064bfc0 f   Cineractive.obj
+0001:0024b020       ?mUpdate@Cineractive@@AAEXXZ 0064c020 f   Cineractive.obj
+	0001:0024b2f0       ?SetPointSpeedModifiers@Cineractive@@QAEXXZ 0064c2f0 f   Cineractive.obj
+	0001:0024b460       ?SetSegmentSpeed@Cineractive@@QAEXHM@Z 0064c460 f   Cineractive.obj
+	0001:0024b4a0       ?mAdvance@Cineractive@@AAEXMMMM@Z 0064c4a0 f   Cineractive.obj
+0001:0024b850       ?Reset@Cineractive@@QAEXXZ 0064c850 f   Cineractive.obj
+0001:0024b900       ?IsDone@Cineractive@@QAE_NXZ 0064c900 f   Cineractive.obj
+0001:0024b940       ?Update@CameraTrack@@IAEXPBVMatrix34@@M@Z 0064c940 f i Cineractive.obj
+0001:0024bce0       ?InterpolatePath@CameraTrack@@IAE?AVVector3@@AAV2@@Z 0064cce0 f i Cineractive.obj
+0001:0024c180       ?SetRelative@CameraTrack@@QAEX_N@Z 0064d180 f i Cineractive.obj
+0001:0024c1b0       ??_GCameraTrack@@UAEPAXI@Z 0064d1b0 f i Cineractive.obj
+0001:0024c1b0       ??_ECameraTrack@@UAEPAXI@Z 0064d1b0 f i Cineractive.obj
+0001:0024c1e0       ?TrackObject@CameraTrack@@IAEXPBVGameObject@@M@Z 0064d1e0 f i Cineractive.obj
+
+ 
+ 
+ 
+ 0003:000c2af4       ?g_pCineractiveCancelMonitor@@3PAVCineractiveCancelMonitor@@A 007aeaf4     Cineractive.obj
+ 
+ 
+ CineractiveCancelMonitor* g_pCineractiveCancelMonitor 0x007aeaf4
+ 
+ 0001:0024a5d0       ?CineractiveEnd@@YAXXZ     0064b5d0 f   Cineractive.obj
+ 
+ 0003:000c2af8       ?g_pCineractiveCamera@@3PAVCineractive@@A 007aeaf8     Cineractive.obj

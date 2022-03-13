@@ -1,0 +1,26 @@
+	// Map Definitions
+
+	// Handle for Sovereign Class (fed_sovereign) object fedship
+	Handle fedship
+
+	// Handle for Starfleet Command (fed_sf_command) object sfc
+	Handle sfc
+
+
+
+
+	// Map Object Initialization
+
+	fedship = GetHandle( "fedship" );
+	sfc = GetHandle( "sfc" );
+
+
+
+	// AI special forces
+
+
+
+	//
+	// PATHS
+	//
+

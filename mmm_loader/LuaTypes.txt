@@ -1,0 +1,11 @@
+Lua Types Filter description
+
+This is used to hold all the types that are used in Lua but are created in C++.
+
+It manages their creation and registration.
+
+
+External is things that are visible to the outside (lua)
+
+Internal is things that are done internally such as mem function business. The internal
+should allow the external to be free of such things.

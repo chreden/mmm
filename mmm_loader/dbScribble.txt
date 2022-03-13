@@ -1,0 +1,33 @@
+0001:0021f210       ?AddAnimationChannel@ST3D_Database@@AAEXPAVST3D_AnimationChannel@@@Z 00620210 f   ST3D_Database.obj
+ 0001:0021f270       ?AddLightingMaterial@ST3D_Database@@AAEXPAVST3D_LightingMaterial@@@Z 00620270 f   ST3D_Database.obj
+ 0001:0021f2d0       ?AddNode@ST3D_Database@@AAEXPAVST3D_Node@@@Z 006202d0 f   ST3D_Database.obj
+ 0001:0021f330       ?AddSprite@ST3D_Database@@AAEXPAVST3D_Sprite@@@Z 00620330 f   ST3D_Database.obj
+ 0001:0021f390       ?AddSpriteNodeData@ST3D_Database@@AAEXPAVST3D_SpriteNodeData@@@Z 00620390 f   ST3D_Database.obj
+ 0001:0021f400       ?AddTextSequence@ST3D_Database@@AAEXPAVST3D_TextSequence@@@Z 00620400 f   ST3D_Database.obj
+ 0001:0021f470       ?AddTexture@ST3D_Database@@AAEXPAVST3D_Texture@@@Z 00620470 f   ST3D_Database.obj
+ 0001:0021f4e0       ?AddTextureMaterial@ST3D_Database@@AAEXPAVST3D_TextureMaterial@@@Z 006204e0 f   ST3D_Database.obj
+ 0001:0021f540       ??0ST3D_Database@@QAE@PBD@Z 00620540 f   ST3D_Database.obj
+ 0001:0021f620       ?DeleteAll@ST3D_Database@@QAEXW4ST3D_Class@@@Z 00620620 f   ST3D_Database.obj
+ 0001:0021f660       ?DeleteAll@ST3D_Database@@QAEXXZ 00620660 f   ST3D_Database.obj
+ 0001:0021f690       ??1ST3D_Database@@QAE@XZ   00620690 f   ST3D_Database.obj
+ 0001:0021f750       ?FindElement@ST3D_Database@@IAEPAVST3D_DatabaseElement@@PBDW4ST3D_Class@@@Z 00620750 f   ST3D_Database.obj
+ 0001:0021f7a0       ?EnableStaticVertexBuffers@ST3D_Database@@QAEX_N@Z 006207a0 f   ST3D_Database.obj
+ 0001:0021f800       ?FindElement@ST3D_Database@@IAEPAVST3D_DatabaseElement@@PBDW4ST3D_Class@@H@Z 00620800 f   ST3D_Database.obj
+ 0001:0021f860       ?FindNode@ST3D_Database@@QAEPAVST3D_Node@@PBDW4ST3D_Type@@@Z 00620860 f   ST3D_Database.obj
+ 0001:0021f8c0       ?CalculateBoundingVolumes@ST3D_Database@@QAEXXZ 006208c0 f   ST3D_Database.obj
+ 0001:0021f940       ??1CBVAutoTimer@?1??CalculateBoundingVolumes@ST3D_Database@@QAEXXZ@QAE@XZ 00620940 f   ST3D_Database.obj
+ 0001:0021f9b0       ?RenderInternal@ST3D_Database@@UAEXABVMatrix34@@@Z 006209b0 f   ST3D_Database.obj
+ 0001:0021fef0       ??_F?$list@PAVST3D_DatabaseElement@@V?$allocator@PAVST3D_DatabaseElement@@@std@@@std@@QAEXXZ 00620ef0 f i ST3D_Database.obj
+ 0001:0021ff20       ??1?$list@PAVST3D_DatabaseElement@@V?$allocator@PAVST3D_DatabaseElement@@@std@@@std@@QAE@XZ 00620f20 f i ST3D_Database.obj
+ 0001:0021ff70       ??0ST3D_DatabaseElement@@QAE@PAVST3D_Database@@PBD@Z 00620f70 f   ST3D_DatabaseElement.obj
+ 0001:0021ffb0       ??1ST3D_DatabaseElement@@UAE@XZ 00620fb0 f   ST3D_DatabaseElement.obj
+ 0001:0021ffd0       ?CompareIdentifier@ST3D_DatabaseElement@@QAE_NPBD@Z 00620fd0 f   ST3D_DatabaseElement.obj
+ 0001:00220000       ?GetNext@ST3D_TextureMaterial@@QAEPAV1@XZ 00621000 f   ST3D_DatabaseElement.obj
+ 0001:00220020       ?GetNext@ST3D_LightingMaterial@@QAEPAV1@XZ 00621020 f   ST3D_DatabaseElement.obj
+ 0001:00220040       ?GetNext@ST3D_Node@@QAEPAV1@XZ 00621040 f   ST3D_DatabaseElement.obj
+ 0001:00220060       ?GetNext@ST3D_Sprite@@QAEPAV1@XZ 00621060 f   ST3D_DatabaseElement.obj
+ 0001:00220080       ?GetNext@ST3D_AnimationChannel@@QAEPAV1@XZ 00621080 f   ST3D_DatabaseElement.obj
+ 0001:002200a0       ?GetNext@ST3D_Texture@@QAEPAV1@XZ 006210a0 f   ST3D_DatabaseElement.obj
+ 0001:002200c0       ?GetPrevious@ST3D_Node@@QAEPAV1@XZ 006210c0 f   ST3D_DatabaseElement.obj
+ 0001:002200e0       ??_EST3D_DatabaseElement@@UAEPAXI@Z 006210e0 f i ST3D_DatabaseElement.obj
+ 0001:002200e0       ??_GST3D_DatabaseElement@@UAEPAXI@Z 006210e0 f i ST3D_DatabaseElement.obj

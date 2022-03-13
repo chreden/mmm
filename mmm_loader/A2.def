@@ -1,0 +1,4 @@
+LIBRARY	"mmm_loader.dll"
+	EXPORTS
+		ScriptInit
+		ScriptExtendInterface

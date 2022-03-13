@@ -1,0 +1,5 @@
+MMM Adventure Game
+
+This mission shows how MMM can be used to create alternate ways of playing the game.
+
+* Explore the region

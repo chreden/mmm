@@ -40,8 +40,8 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>../;C:\Projects\Boost;$(IncludePath)</IncludePath>
+  <PropertyGroup>
+    <IncludePath>$(SolutionDir)\external;$(SolutionDir)\external\lua\src;$(IncludePath)</IncludePath>
     <LibraryPath>./;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -51,7 +51,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(SolutionDir)../external;$(SolutionDir)../external/lua/src;$(SolutionDir)../external/luabind</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)/external;$(SolutionDir)/external/lua/src;$(SolutionDir)/external/luabind</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <LanguageStandard>Default</LanguageStandard>
     </ClCompile>

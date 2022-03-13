@@ -6,8 +6,8 @@
 #include <vector>
 #include <assert.h>
 
-#include <external/zlib/zlib.h>
-#include <external/zlib/contrib/minizip/unzip.h>
-#include <external/zlib/contrib/minizip/zip.h>
+#include <zlib.h>
+#include <contrib/minizip/unzip.h>
+#include <contrib/minizip/zip.h>
 
 #endif

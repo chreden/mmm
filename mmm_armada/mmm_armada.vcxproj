@@ -143,7 +143,7 @@
       <WarningLevel>Level4</WarningLevel>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <ForcedIncludeFiles>pch.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
-      <AdditionalIncludeDirectories>../luabind;../boost;$(SolutionDir)\..;$(SolutionDir)\..\external\zlib;$(SolutionDir)../external/lua/src;$(SolutionDir)../external/luabind;$(SolutionDir)../external/</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)external;$(SolutionDir)external\zlib;$(SolutionDir)external\luabind;$(SolutionDir)external\lua\src</AdditionalIncludeDirectories>
     </ClCompile>
     <Lib>
       <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -163,6 +163,7 @@
       <WarningLevel>Level4</WarningLevel>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <ForcedIncludeFiles>pch.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <AdditionalIncludeDirectories>$(SolutionDir)external;$(SolutionDir)external\zlib;$(SolutionDir)external\luabind;$(SolutionDir)external\lua\src</AdditionalIncludeDirectories>
     </ClCompile>
     <Lib>
       <AdditionalDependencies>mmm_common_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -182,6 +183,7 @@
       <WarningLevel>Level4</WarningLevel>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <ForcedIncludeFiles>pch.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <AdditionalIncludeDirectories>$(SolutionDir)external;$(SolutionDir)external\zlib;$(SolutionDir)external\luabind;$(SolutionDir)external\lua\src</AdditionalIncludeDirectories>
     </ClCompile>
     <Lib>
       <AdditionalDependencies>mmm_common_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -202,10 +204,10 @@
       <DebugInformationFormat>
       </DebugInformationFormat>
       <ForcedIncludeFiles>pch.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
-      <AdditionalIncludeDirectories>../luabind;../lua/include;../boost;$(SolutionDir)\..;$(SolutionDir)\..\external\zlib</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)external;$(SolutionDir)external\zlib;$(SolutionDir)external\luabind;$(SolutionDir)external\lua\src</AdditionalIncludeDirectories>
     </ClCompile>
     <Lib>
-      <AdditionalDependencies>../lua/lib/lua5.1.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <AdditionalLibraryDirectories>../bin;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Lib>
@@ -222,6 +224,7 @@
       <WarningLevel>Level4</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <ForcedIncludeFiles>pch.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <AdditionalIncludeDirectories>$(SolutionDir)external;$(SolutionDir)external\zlib;$(SolutionDir)external\luabind;$(SolutionDir)external\lua\src</AdditionalIncludeDirectories>
     </ClCompile>
     <Lib>
       <AdditionalDependencies>mmm_common.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -241,12 +244,18 @@
       <WarningLevel>Level4</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <ForcedIncludeFiles>pch.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <AdditionalIncludeDirectories>$(SolutionDir)external;$(SolutionDir)external\zlib;$(SolutionDir)external\luabind;$(SolutionDir)external\lua\src</AdditionalIncludeDirectories>
     </ClCompile>
     <Lib>
       <AdditionalDependencies>mmm_common.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>../bin/mmm_armada.lib</OutputFile>
       <AdditionalLibraryDirectories>../bin;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debugger|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)external;$(SolutionDir)external\zlib;$(SolutionDir)external\luabind;$(SolutionDir)external\lua\src</AdditionalIncludeDirectories>
+    </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AntimatterMine.cpp" />

@@ -3,35 +3,20 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{911E67C6-3D85-4FCE-B560-20A9C3E3FF48}") = "fleetops", "fleetops.exe", "{9880F60D-434C-4609-A86A-C2FB602A786C}"
-	ProjectSection(DebuggerProjectSystem) = preProject
-		PortSupplier = 00000000-0000-0000-0000-000000000000
-		Executable = c:\games\fo3.2.3\data\armada2.exe
-		RemoteMachine = CRIPPLE
-		StartingDirectory = c:\games\fo3.2.3\data
-		Arguments = 
-		Environment = Default
-		LaunchingEngine = 00000000-0000-0000-0000-000000000000
-		UseLegacyDebugEngines = No
-		LaunchSQLEngine = No
-		AttachLaunchAction = No
-		IORedirection = Auto
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mmm_loader", "mmm_loader\mmm_loader.vcxproj", "{EDC12CA6-46B1-44F2-B2F5-2B00EEED9723}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mmm_loader", "mmm_loader.vcxproj", "{EDC12CA6-46B1-44F2-B2F5-2B00EEED9723}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mmm_armada", "mmm_armada\mmm_armada.vcxproj", "{3DB607F3-3E96-459C-BCC8-EC17746903EC}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mmm_armada", "..\mmm_armada\mmm_armada.vcxproj", "{3DB607F3-3E96-459C-BCC8-EC17746903EC}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mmm_common", "..\mmm_common\mmm_common.vcxproj", "{87CFC5D8-D3C2-4B66-ABDB-C2E3C593EF01}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mmm_common", "mmm_common\mmm_common.vcxproj", "{87CFC5D8-D3C2-4B66-ABDB-C2E3C593EF01}"
 	ProjectSection(ProjectDependencies) = postProject
 		{4283D7ED-2CFF-4506-B930-19F1C385B3BF} = {4283D7ED-2CFF-4506-B930-19F1C385B3BF}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mmm_database", "..\mmm_database\mmm_database.vcxproj", "{48EFAC08-685D-45B9-B043-020308611494}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mmm_database", "mmm_database\mmm_database.vcxproj", "{48EFAC08-685D-45B9-B043-020308611494}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mmm_luapack", "..\mmm_luapack\mmm_luapack.vcxproj", "{4283D7ED-2CFF-4506-B930-19F1C385B3BF}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mmm_luapack", "mmm_luapack\mmm_luapack.vcxproj", "{4283D7ED-2CFF-4506-B930-19F1C385B3BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mmm_debugger", "..\mmm_debugger\mmm_debugger.csproj", "{BA8819FB-3B0E-44C7-AB4C-446728F751CE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mmm_debugger", "mmm_debugger\mmm_debugger.csproj", "{BA8819FB-3B0E-44C7-AB4C-446728F751CE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Runtime", "Runtime", "{3BED2A76-F280-402C-8054-2ED3EF1FCA15}"
 EndProject
@@ -39,11 +24,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Debugger", "Debugger", "{56
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "External", "External", "{7A3A6270-71BB-461D-8C6E-6487F32CFC31}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "zlibstat", "..\external\zlib\contrib\vstudio\vc14\zlibstat.vcxproj", "{745DEC58-EBB3-47A9-A9B8-4C6627C01BF8}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "zlibstat", "external\zlib\contrib\vstudio\vc14\zlibstat.vcxproj", "{745DEC58-EBB3-47A9-A9B8-4C6627C01BF8}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LuaBind", "..\external\luabind\LuaBind.vcxproj", "{8A6D737F-7D03-4847-9C65-2DC4D6FA3716}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LuaBind", "external\luabind\LuaBind.vcxproj", "{8A6D737F-7D03-4847-9C65-2DC4D6FA3716}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lua", "..\external\lua\lua.vcxproj", "{2A4F1E89-71AC-46C3-A711-1A4D67ACCDF5}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lua", "external\lua\lua.vcxproj", "{2A4F1E89-71AC-46C3-A711-1A4D67ACCDF5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

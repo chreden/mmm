@@ -99,8 +99,9 @@ namespace mmm
 			//Get the app data path where some things may be stored.
 			const std::string appdata = getAppdataPath();
 
+			bool fleetops = INVALID_HANDLE_VALUE != GetModuleHandle(L"FleetOpsHook.dll");
 			//Extra options if we are running in fleet operations.
-			if( common::Storage::instance().fleetops )
+			if( fleetops )
 			{
 				std::string mod = getModName();
 				if( !mod.empty() )

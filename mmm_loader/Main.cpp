@@ -89,7 +89,7 @@ namespace mmm
 			return 51;
 		}
 
-		//SetupReload( param );
+		SetupReload( param );
 
 		mmm::setScriptInterface( param );
 

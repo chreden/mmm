@@ -57,8 +57,8 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <MinimalRebuild>true</MinimalRebuild>
+      <PreprocessorDefinitions>WIN32;_HAS_AUTO_PTR_ETC=1;BOOST_USE_WINDOWS_H;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <PrecompiledHeader>Use</PrecompiledHeader>
@@ -67,6 +67,7 @@
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <ForcedIncludeFiles>pch.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <AdditionalIncludeDirectories>$(SolutionDir)external;$(SolutionDir)external\zlib;$(SolutionDir)external\luabind;$(SolutionDir)external\lua\src</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Lib>
       <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -78,7 +79,7 @@
     <ClCompile>
       <Optimization>MaxSpeed</Optimization>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_HAS_AUTO_PTR_ETC=1;BOOST_USE_WINDOWS_H;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <PrecompiledHeader>Use</PrecompiledHeader>
@@ -88,6 +89,7 @@
       </DebugInformationFormat>
       <ForcedIncludeFiles>pch.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <AdditionalIncludeDirectories>$(SolutionDir)external;$(SolutionDir)external\zlib;$(SolutionDir)external\luabind;$(SolutionDir)external\lua\src</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Lib>
       <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -346,6 +348,7 @@
     <ClInclude Include="CraftProcessType.h" />
     <ClInclude Include="CraftSystem_Internal.h" />
     <ClInclude Include="DebuggerConnection.h" />
+    <ClInclude Include="Entities.h" />
     <ClInclude Include="EntityFinder.h" />
     <ClInclude Include="EntityFinderFilter.h" />
     <ClInclude Include="EntityFinderFilterFunction.h" />
@@ -561,7 +564,7 @@
     <None Include="ListAdapter.inl" />
     <None Include="Load_Internal.inl" />
     <None Include="MemRaider.inl" />
-    <None Include="ScriptErrors.inl" />
+    <None Include="Entities.inl" />
     <None Include="VectorAdapter.inl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

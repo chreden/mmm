@@ -14,7 +14,7 @@ namespace mmm
 	//This is what gets passed in to the dll from Armada 2.
 	struct ScriptInterface
 	{
-		virtual hot_int* ScriptCreate_hot_int(char *) = 0;
+		virtual hot_int* ScriptCreate_hot_int(const char *) = 0;
 		virtual void ScriptDestroy_hot_int(class hot_int *) = 0;
 		virtual void ScriptCreate_dirty_int(char *) = 0;
 		virtual void ScriptDestroy_dirty_int(class dirty_int *) = 0;
@@ -381,10 +381,10 @@ namespace mmm
 		virtual void TransferFlag(int, int) = 0;
 		virtual void ObjectHasFlag(int) = 0;
 
-			virtual void FailMission(float, char *) = 0;
+			virtual void FailMission(float, const char *) = 0;
 
 
-			virtual void SucceedMission(float, char *) = 0;
+			virtual void SucceedMission(float, const char *) = 0;
 
 		virtual void MonitorInputControls(PFUNC) = 0;
 		virtual void GetInputControlPointer(const char *) = 0;

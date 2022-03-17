@@ -1751,6 +1751,7 @@
     <ClInclude Include="Game_Internal.h">
       <Filter>Armada\Armada</Filter>
     </ClInclude>
+    <ClInclude Include="Entities.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="MemRaider.inl">
@@ -1762,9 +1763,6 @@
     <None Include="Load_Internal.inl">
       <Filter>Armada\Load</Filter>
     </None>
-    <None Include="ScriptErrors.inl">
-      <Filter>Armada\ScriptError</Filter>
-    </None>
     <None Include="ListAdapter.inl">
       <Filter>Armada\Conversion</Filter>
     </None>
@@ -1773,6 +1771,9 @@
     </None>
     <None Include="Container.inl">
       <Filter>Armada\Helpers\Container</Filter>
+    </None>
+    <None Include="Entities.inl">
+      <Filter>Armada</Filter>
     </None>
   </ItemGroup>
 </Project>

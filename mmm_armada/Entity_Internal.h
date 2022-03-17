@@ -1,6 +1,7 @@
 #pragma once
 
 #include "EntityReference.h"
+#include "Entities.h"
 
 namespace mmm
 {	

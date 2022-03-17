@@ -89,7 +89,7 @@ namespace mmm
 				
 			if( 0 == ent )
 			{
-				if( !common::Storage::instance().fleetops )
+				if(!common::fleetops_present())
 				{
 					callHook( EntityHook::OnDestroy );
 					state_ = Inactive;

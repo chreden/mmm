@@ -62,24 +62,22 @@ namespace mmm
 
 		character* world = reinterpret_cast<character*>( Address_WorldCharacter );
 
-		IIIE& iiie = (world->*memory_function< IIIE& (character::*)( ) >( Function_GetIIIE ))( );
+		IIIE& iiie = (world->*memory_function<IIIE& (character::*)()>(Function_GetIIIE))();
 
-		rule* wobble = (iiie.*memory_function< rule* (IIIE::*)(fun1, fun2, char*) >( Function_CreateRule ))
-			( loaderFunction, loaderStub, "reloader" );
+		rule* reloader = (iiie.*memory_function<rule* (IIIE::*)(fun1, fun2, const char*)>(Function_CreateRule))(loaderFunction, loaderStub, "reloader");
 
 		//No reason for hot int, just needed any kind of hot type.
 		hot_int* hotint = param->ScriptCreate_hot_int( "loadHot" );
 
-		(hotint->*memory_function< void (hot_int::*)(rule*) >( Function_AddDependentRule ))
-			( wobble );
+		(hotint->*memory_function<void (hot_int::*)(rule*)>(Function_AddDependentRule))(reloader);
 
-		(iiie.*memory_function< void (IIIE::*)(rule*) >( Function_AddRuleToAffectedList ))
-			( wobble );
+		(iiie.*memory_function<void (IIIE::*)(rule*)>(Function_AddRuleToAffectedList))(reloader);
 	}
 
-	//Right, this is called by A2 when it loads the DLL. With the script
-	//interface we can do lots of things, however I haven't yet figured out
-	//how everything works.
+	/// <summary>
+	/// This is called by A2 when it loads the DLL.
+	/// </summary>
+	/// <param name="param">Script interface passed by the game.</param>
 	extern "C" int ScriptExtendInterface( ScriptInterface* param ) 
 	{
 		bool editMode = *(*reinterpret_cast<bool**>( 0x0076B5AC ) + 0x84);

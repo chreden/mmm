@@ -33,23 +33,29 @@ namespace mmm
 			luapack::Pack	missionPack;		//Mission pack loaded.
 			FilePath		path;
 
-			bool			fleetops;
-
 			ModFolder		modFolder;
 
 			lua_State*		mainLuaVM;			//Main Lua VM.
 			static Storage& instance( );
 		};
 
-
-		//String manip.
-		template<typename T>
-		std::string typeToString( const T& value )
+		struct Version
 		{
-			std::stringstream stream;
-			stream << value;
-			return value.str();
-		}
+			int major{ 0 };
+			int minor{ 0 };
+			int patch{ 0 };
+			int revision{ 0 };
+		};
+
+		/// <summary>
+		/// Whether the loader is in a Fleetops game.
+		/// </summary>
+		bool fleetops_present() noexcept;
+
+		/// <summary>
+		/// Get the version of Fleetops present.
+		/// </summary>
+		Version fleetops_version() noexcept;
 	}
 }
 

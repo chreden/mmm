@@ -200,7 +200,7 @@ namespace mmm
 		if( index < 1 || index > objectives_vec.size() )
 		{
 			scriptError("Objective index out of range in Objectives:getObjective" );
-			return false;
+			return std::string();
 		}
 		return objectives_vec[index-1].text;
 	}

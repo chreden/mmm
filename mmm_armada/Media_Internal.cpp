@@ -11,6 +11,13 @@ namespace mmm
 		const std::size_t Address_JukeboxStop = 0x00463660;
 		const std::size_t Address_JukeboxPlay = 0x00463640;
 
+		// FO 4 beta music player
+		constexpr std::size_t Seg_Code = 0x5A801000;
+		constexpr std::size_t Seg_Bss = 0x5AA14000;
+		constexpr std::size_t Address_FO_Jukebox = Seg_Bss + 0x00032A24;
+		constexpr std::size_t Address_FO_Jukebox_Stop = Seg_Code + 0x001D4008;
+		constexpr std::size_t Address_FO_Jukebox_Play = Seg_Code + 0x001D4004;
+
 		std::set<int> audioMessages;
 	}
 
@@ -45,21 +52,34 @@ namespace mmm
 		AudioSound* m_currentTrack;
 	};
 
-	void 
-	Media::playMusic( const std::string& filename )
+	struct FO_Jukebox
 	{
-		Race race( *reinterpret_cast<types::Race**>( Address_MissionRace ) );
-		const std::string oldMusic = race.getSinglePlayerMusic();
+	};
 
-		race.setSinglePlayerMusic( filename );
+	void Media::playMusic( const std::string& filename )
+	{
+		if (common::fleetops_version().major >= 4)
+		{
+			Race race(*reinterpret_cast<types::Race**>(Address_MissionRace));
+			race.setSinglePlayerMusic(filename);
 
+			FO_Jukebox* jukebox = reinterpret_cast<FO_Jukebox*>(Address_FO_Jukebox);
+			(jukebox->*memory_function<void (FO_Jukebox::*)()>(Address_FO_Jukebox_Stop))();
+		}
+		else
+		{
+			Race race(*reinterpret_cast<types::Race**>(Address_MissionRace));
+			const std::string oldMusic = race.getSinglePlayerMusic();
 
-		JukeBox* jukebox = reinterpret_cast<JukeBox*>( Address_Jukebox );
+			race.setSinglePlayerMusic(filename);
 
-		(jukebox->*memory_function< void (JukeBox::*)() >( Address_JukeboxStop ))();
-		(jukebox->*memory_function< void (JukeBox::*)() >( Address_JukeboxPlay ))();
+			JukeBox* jukebox = reinterpret_cast<JukeBox*>(Address_Jukebox);
 
-		race.setSinglePlayerMusic( oldMusic );
+			(jukebox->*memory_function< void (JukeBox::*)() >(Address_JukeboxStop))();
+			(jukebox->*memory_function< void (JukeBox::*)() >(Address_JukeboxPlay))();
+
+			race.setSinglePlayerMusic(oldMusic);
+		}
 	}
 
 	void 
@@ -77,8 +97,19 @@ namespace mmm
 	void
 	Media::stopMusic( )
 	{
-		JukeBox* jukebox = reinterpret_cast<JukeBox*>( Address_Jukebox );
-		(jukebox->*memory_function< void (JukeBox::*)() >( Address_JukeboxStop ))();
+		if (common::fleetops_version().major >= 4)
+		{
+			Race race(*reinterpret_cast<types::Race**>(Address_MissionRace));
+			race.setSinglePlayerMusic("");
+
+			FO_Jukebox* jukebox = reinterpret_cast<FO_Jukebox*>(Address_FO_Jukebox);
+			(jukebox->*memory_function<void (FO_Jukebox::*)()>(Address_FO_Jukebox_Stop))();
+		}
+		else
+		{
+			JukeBox* jukebox = reinterpret_cast<JukeBox*>(Address_Jukebox);
+			(jukebox->*memory_function< void (JukeBox::*)() >(Address_JukeboxStop))();
+		}
 	}
 
 	void

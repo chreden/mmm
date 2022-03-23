@@ -4,10 +4,9 @@
 
 namespace mmm
 {
-	void 
-	scriptError( const std::string& error, bool stop )
+	void scriptError( const std::string& error, bool stop )
 	{
-		PrintMessages::add( error, DebuggerConnection::Type_Error );
+		print::add( error, DebuggerConnection::Type_Error );
 		common::Storage::instance().error = stop;
 	}
 

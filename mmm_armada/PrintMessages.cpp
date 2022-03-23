@@ -1,59 +1,92 @@
 #include "PrintMessages.h"
-#include "Game_Internal.h"
 #include "UI_Internal.h"
-#include "Debug_Internal.h"
 #include "DebuggerConnection.h"
+#include <array>
 
 namespace mmm
 {
-	std::vector<std::pair<int,float>> PrintMessages::messages_( 20, std::make_pair(0,-10) );
-	int								  PrintMessages::currentIndex_;
+    namespace print
+    {
+        namespace
+        {
+            /// <summary>
+            /// A print message slot - may or may not contain a message.
+            /// </summary>
+            struct Message
+            {
+                static constexpr int Invalid = -1;
+                int id = Invalid;
 
-	void
-	PrintMessages::add( const std::string& message, DebuggerConnection::Type type )
-	{
-		//If we have a connection we should send the message on.
-		if( DebuggerConnection::getInstance().connected() )
-		{
-			DebuggerConnection::getInstance().sendMessage( message, type );
-		}
-		else
-		{
-			//Right, we have a number of messages. We add them, and store a time.
-			//When this time expires, the thing becomes available again.
-			std::size_t newIndex = getIndex( );
+                /// <summary>
+                /// Whether the message slot is in use.
+                /// </summary>
+                constexpr bool valid() const noexcept
+                {
+                    return id != Invalid;
+                }
 
-			int id = UI().addMessage( message, 50, 50 + 30 * newIndex, JUSTIFY_TOP_LEFT, ST3D_Colour( 0xffffffff ), false, 1e6 );
+                /// <summary>
+                /// Clear the message slot.
+                /// </summary>
+                void remove()
+                {
+                    if (!valid())
+                    {
+                        return;
+                    }
 
-			if( newIndex == messages_.size( ) )
-			{
-				messages_.push_back( std::make_pair( id, Game().getTime( ) ) );
-			}
-			else
-			{
-				UI().removeMessage( messages_[ newIndex ].first );
-				messages_[ newIndex ] = std::make_pair( id, Game().getTime( ) );
-			}
-		}
-	}
+                    UI().removeMessage(id);
+                    id = Invalid;
+                }
 
-	std::size_t
-	PrintMessages::getIndex( )
-	{
-		float currentTime = Game().getTime( );
+                /// <summary>
+                /// Set the contents of the message slot.
+                /// </summary>
+                /// <param name="message">The message value.</param>
+                /// <param name="index">The index used for placement.</param>
+                void set(const std::string& message, int index)
+                {
+                    id = UI().addMessage(message, 50, 50 + 30 * index, JUSTIFY_TOP_LEFT, ST3D_Colour(0xffffffff), false, 1e6);
+                }
+            };
 
-		if( currentIndex_ == messages_.size( ) - 1)
-		{
-			currentIndex_ = 0;
-			//KILL EVERYTHING?
-			std::for_each( messages_.begin( ), messages_.end( ), 
-				[] (const std::pair<int, float>& o) { UI().removeMessage(o.first); } );
-		}
-		else
-		{
-			++currentIndex_;
-		}
+            std::array<Message, 20> messages;
+            int32_t current_index{ 0 };
 
-		return currentIndex_;
-	}
+            /// <summary>
+            /// Find the next available message slot.
+            /// </summary>
+            std::size_t next_index() noexcept
+            {
+                if (current_index == messages.size())
+                {
+                    clear();
+                }
+                return current_index++;
+            }
+        }
+
+        void add(const std::string& message, DebuggerConnection::Type type)
+        {
+            if (DebuggerConnection::getInstance().connected())
+            {
+                DebuggerConnection::getInstance().sendMessage(message, type);
+            }
+            else
+            {
+                std::size_t newIndex = next_index();
+                if (messages[newIndex].valid())
+                {
+                    messages[newIndex].remove();
+                }
+                messages[newIndex].set(message, newIndex);
+            }
+        }
+
+        void clear()
+        {
+            current_index = 0;
+            std::for_each(messages.begin(), messages.end(), [](auto&& m) { m.remove(); });
+        }
+    }
 }

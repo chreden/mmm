@@ -51,7 +51,7 @@ namespace mmm
             };
 
             std::array<Message, 20> messages;
-            int32_t current_index{ 0 };
+            std::size_t current_index{ 0 };
 
             /// <summary>
             /// Find the next available message slot.
@@ -74,12 +74,12 @@ namespace mmm
             }
             else
             {
-                std::size_t newIndex = next_index();
-                if (messages[newIndex].valid())
+                const std::size_t new_index = next_index();
+                if (messages[new_index].valid())
                 {
-                    messages[newIndex].remove();
+                    messages[new_index].remove();
                 }
-                messages[newIndex].set(message, newIndex);
+                messages[new_index].set(message, new_index);
             }
         }
 

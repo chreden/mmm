@@ -51,7 +51,7 @@ namespace mmm
 			
 			call_function<void>( function_ );
 
-			PrintMessages::add( "Pass:" + name_, DebuggerConnection::Type_Test );
+			print::add( "Pass:" + name_, DebuggerConnection::Type_Test );
 		}
 		catch( const luabind::error& e )
 		{
@@ -65,7 +65,7 @@ namespace mmm
 				actualError = actualError.substr(startIndex + 1, endIndex - startIndex - 1);
 			}
 
-			PrintMessages::add( "Fail:" + name_ + ":" + actualError, DebuggerConnection::Type_Test );
+			print::add( "Fail:" + name_ + ":" + actualError, DebuggerConnection::Type_Test );
 		}
 	}
 }

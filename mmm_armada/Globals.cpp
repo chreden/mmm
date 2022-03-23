@@ -45,20 +45,19 @@ namespace mmm
 		storage.path = oldPath;
 	}
 
-	void
-	globals_print( const std::string& str )
+	void globals_print(const std::string& str)
 	{
-		PrintMessages::add( str, DebuggerConnection::Type_Message );
+		print::add( str, DebuggerConnection::Type_Message );
 	}
 
-	void
-	globals_register( lua_State* state )
+	void globals_register(lua_State* state)
 	{
 		using namespace luabind;
 		module(state)
 		[
 			def( "include", &globals_include ),
-			def( "print", &globals_print )
+			def( "print", &globals_print ),
+			def( "clearPrint", &print::clear )
 		];
 	}
 }

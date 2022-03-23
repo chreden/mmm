@@ -1,6 +1,5 @@
 #include "PrintMessages.h"
 #include "UI_Internal.h"
-#include "DebuggerConnection.h"
 #include <array>
 
 namespace mmm

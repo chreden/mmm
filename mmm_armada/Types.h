@@ -375,9 +375,11 @@ namespace mmm
 
 	struct EntityPointerManager : public GameFeature
 	{
+		static constexpr int MaxEntities = 16384;
+
 		virtual void PostRun( ) = 0;
 
-		EntityPointer m_entity_pointer[ 16384 ];
+		EntityPointer m_entity_pointer[MaxEntities];
 		int m_active_entities;
 		int m_active_entities_highest;
 		EntityPointer* m_first_free;

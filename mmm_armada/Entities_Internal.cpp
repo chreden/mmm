@@ -70,7 +70,7 @@ namespace mmm
 	{
 		EntityPointerManager* epm = GetEntityPointerManager( );
 
-		for( int i = 0, entsFound = 0; i < epm->m_active_entities_highest; ++i )
+		for(int i = 0, entsFound = 0; i < EntityPointerManager::MaxEntities; ++i)
 		{
 			const EntityPointer& entity = epm->m_entity_pointer[ i ];
 
@@ -95,7 +95,7 @@ namespace mmm
 	Entities::getActiveEntities( std::vector<EntityPtr>& results )
 	{
 		const EntityPointerManager* const epm = GetEntityPointerManager();
-		for( int i = 0; i < epm->m_active_entities_highest; ++i )
+		for(int i = 0; i < EntityPointerManager::MaxEntities; ++i)
 		{
 			const EntityPointer& entity = epm->m_entity_pointer[ i ];
 			if( entity.m_id.m_used )

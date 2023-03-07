@@ -166,7 +166,8 @@ namespace mmm
             if (lua_type(L, -1) == LUA_TFUNCTION)
             {
                 lua_pushvalue(L, -2);
-                if (lua_pcall(L, 1, 0, 0))
+                lua_pushboolean(L, forced);
+                if (lua_pcall(L, 2, 0, 0))
                 {
                     scriptError(std::string("Error in cineractiveFinish : ") + lua_tostring(L, -1));
                 }

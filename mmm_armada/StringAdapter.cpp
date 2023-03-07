@@ -4,7 +4,11 @@ namespace mmm
 {
 	StringAdapter::operator std::string() const
 	{
-		return ptr_;
+		if (ptr_)
+		{
+			return ptr_;
+		}
+		return std::string();
 	}
 
 	StringAdapter& 

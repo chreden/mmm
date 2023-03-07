@@ -15,7 +15,7 @@ namespace mmm
 		EntityPtr			findOne( ) const;
 	private:
 		void innerFind( std::vector<EntityPtr>& results, int max = -1 ) const;
-		std::vector<EntityFinderFilterPtr> filters_;
+		std::vector<std::unique_ptr<EntityFinderFilter>> filters_;
 	};
 
 	void entityfinder_register( lua_State* state );

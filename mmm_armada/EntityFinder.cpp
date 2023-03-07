@@ -25,20 +25,19 @@ namespace mmm
 					luabind::object func = (*i)["evaluate"];
 					if( func.is_valid() && luabind::type( func ) == LUA_TFUNCTION )
 					{
-						filters_.push_back( EntityFinderFilterPtr( new EntityFinderFilterObject( *i, func ) ) );
+						filters_.push_back(std::make_unique<EntityFinderFilterObject>( *i, func ));
 					}
 				}
 				else if( LUA_TFUNCTION == luabind::type( *i ) )
 				{
-					filters_.push_back( EntityFinderFilterPtr( new EntityFinderFilterFunction( *i ) ) );
+					filters_.push_back(std::make_unique<EntityFinderFilterFunction>( *i ));
 				}
 			}
 		}
 		else if( LUA_TFUNCTION == luabind::type( filters ) )
 		{
-			//Has to be a function - at least, we will only accept a function
-			//here.
-			filters_.push_back( EntityFinderFilterPtr( new EntityFinderFilterFunction( filters ) ) );
+			//Has to be a function - at least, we will only accept a function here.
+			filters_.push_back(std::make_unique<EntityFinderFilterFunction>(filters));
 		}
 		else if( LUA_TUSERDATA == luabind::type( filters ) )
 		{
@@ -47,7 +46,7 @@ namespace mmm
 			if( eval.is_valid() && luabind::type( eval ) == LUA_TFUNCTION )
 			{
 				//We have an object
-				filters_.push_back( EntityFinderFilterPtr( new EntityFinderFilterObject( filters, eval ) ) );
+				filters_.push_back(std::make_unique<EntityFinderFilterObject>( filters, eval ) );
 			}
 		}
 	}

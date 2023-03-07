@@ -82,8 +82,6 @@ namespace mmm
 	_MMM_DEFINESHAREDPTR(MonitorHook);
 	_MMM_DEFINESHAREDPTR(EntityHook);
 
-	_MMM_DEFINESHAREDPTR(EntityFinderFilter);
-
 	class NoCopy
 	{
 	protected:

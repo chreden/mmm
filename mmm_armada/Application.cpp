@@ -176,9 +176,7 @@ namespace mmm
         cineractive = false;
     }
 
-    
-
-    void application_register( lua_State* L )
+    void application_register(lua_State* L) noexcept
     {
         lua_newtable(L);
         app_table_index = luaL_ref(L, LUA_REGISTRYINDEX);

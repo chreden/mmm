@@ -2,7 +2,7 @@
 
 namespace mmm
 {
-	bool application_isCineractive();
+	bool application_isCineractive() noexcept;
 	void application_setup();
 	void application_update();
 	void application_resume();

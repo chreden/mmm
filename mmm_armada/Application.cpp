@@ -8,6 +8,27 @@ namespace mmm
         int  app_table_index{ 0 };
         bool cineractive;
 
+        struct PreserveStack
+        {
+            explicit PreserveStack(lua_State* L) noexcept
+                : top(lua_gettop(L)), L(L)
+            {
+            }
+
+            ~PreserveStack()
+            {
+                lua_settop(L, top);
+            }
+
+            PreserveStack(const PreserveStack&) = delete;
+            PreserveStack(PreserveStack&&) = delete;
+            PreserveStack& operator=(const PreserveStack&) = delete;
+            PreserveStack& operator=(PreserveStack&&) = delete;
+
+            lua_State* L;
+            int top{ 0 };
+        };
+
         bool get_application(lua_State* L)
         {
             lua_rawgeti(L, LUA_REGISTRYINDEX, app_table_index);
@@ -24,6 +45,7 @@ namespace mmm
         void application_cineractiveUpdate()
         {
             lua_State* L = common::Storage::instance().mainLuaVM;
+            PreserveStack stack{ L };
             if (get_application(L))
             {
                 lua_getfield(L, -1, "cineractiveUpdate");
@@ -35,12 +57,15 @@ namespace mmm
                         scriptError(std::string("Error in cineractiveUpdate : ") + lua_tostring(L, -1));
                     }
                 }
-                else
-                {
-                    lua_pop(L, 1);
-                }
-                lua_pop(L, 1);
             }
+        }
+
+        int application_app_register(lua_State* L) noexcept
+        {
+            lua_rawgeti(L, LUA_REGISTRYINDEX, app_table_index);
+            lua_pushvalue(L, 1);
+            lua_setfield(L, -2, "app");
+            return 0;
         }
     }
 
@@ -52,6 +77,7 @@ namespace mmm
     void application_setup( )
     {
         lua_State* L = common::Storage::instance().mainLuaVM;
+        PreserveStack stack{ L };
         if (get_application(L))
         {
             lua_getfield(L, -1, "setup");
@@ -63,11 +89,6 @@ namespace mmm
                     scriptError(std::string("Error in setup : ") + lua_tostring(L, -1));
                 }
             }
-            else
-            {
-                lua_pop(L, 1);
-            }
-            lua_pop(L, 1);
         }
     }
 
@@ -79,6 +100,7 @@ namespace mmm
         }
 
         lua_State* L = common::Storage::instance().mainLuaVM;
+        PreserveStack stack{ L };
         if( cineractive )
         {
             application_cineractiveUpdate();
@@ -94,17 +116,13 @@ namespace mmm
                     scriptError(std::string("Error in update : ") + lua_tostring(L, -1));
                 }
             }
-            else
-            {
-                lua_pop(L, 1);
-            }
-            lua_pop(L, 1);
         }
     }
 
     void application_resume( )
     {
         lua_State* L = common::Storage::instance().mainLuaVM;
+        PreserveStack stack{ L };
         if (get_application(L))
         {
             lua_getfield(L, -1, "resume");
@@ -116,11 +134,6 @@ namespace mmm
                     scriptError(std::string("Error in resume : ") + lua_tostring(L, -1));
                 }
             }
-            else
-            {
-                lua_pop(L, 1);
-            }
-            lua_pop(L, 1);
         }
     }
 
@@ -128,6 +141,7 @@ namespace mmm
     {
         cineractive = true;
         lua_State* L = common::Storage::instance().mainLuaVM;
+        PreserveStack stack{ L };
         if (get_application(L))
         {
             lua_getfield(L, -1, "cineractiveBegin");
@@ -139,17 +153,13 @@ namespace mmm
                     scriptError(std::string("Error in cineractiveBegin : ") + lua_tostring(L, -1));
                 }
             }
-            else
-            {
-                lua_pop(L, 1);
-            }
-            lua_pop(L, 1);
         }
     }
 
     void application_cineractiveFinish( bool forced )
     {
         lua_State* L = common::Storage::instance().mainLuaVM;
+        PreserveStack stack{ L };
         if (get_application(L))
         {
             lua_getfield(L, -1, "cineractiveFinish");
@@ -161,22 +171,11 @@ namespace mmm
                     scriptError(std::string("Error in cineractiveFinish : ") + lua_tostring(L, -1));
                 }
             }
-            else
-            {
-                lua_pop(L, 1);
-            }
-            lua_pop(L, 1);
         }
         cineractive = false;
     }
 
-    int application_app_register(lua_State* L)
-    {
-        lua_rawgeti(L, LUA_REGISTRYINDEX, app_table_index);
-        lua_pushvalue(L, 1);
-        lua_setfield(L, -2, "app");
-        return 0;
-    }
+    
 
     void application_register( lua_State* L )
     {

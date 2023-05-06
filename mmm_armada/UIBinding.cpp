@@ -180,10 +180,8 @@ UI:addSubtitle(string message, number x, number y, number time, boolean fade)", 
             });
 
         lua_newtable(L);
-        lua_pushcfunction(L, ui_index);
-        lua_setfield(L, -2, "__index");
-        lua_pushcfunction(L, ui_newindex);
-        lua_setfield(L, -2, "__newindex");
+        lua::add_function(L, -1, ui_index, "__index");
+        lua::add_function(L, -1, ui_newindex, "__newindex");
         lua_setmetatable(L, -2);
 
         lua_setglobal(L, "UI");

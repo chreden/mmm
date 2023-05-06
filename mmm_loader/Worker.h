@@ -20,9 +20,7 @@ namespace mmm
 		void Startup( );
 
 		void Resume( );
-	public:
-		void	openLogFile( ) const;
-		
+	public:	
 		bool	inputControlsSet_;
 
 		//Controls for cineractives.

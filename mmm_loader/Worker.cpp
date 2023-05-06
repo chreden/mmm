@@ -16,8 +16,7 @@ namespace mmm
 	{
 		float lastUpdate_;
 
-		void
-		workerUpdate( )
+		void workerUpdate( )
 		{
 			common::Storage& storage = common::Storage::instance();
 
@@ -49,6 +48,64 @@ namespace mmm
 				Cineractive().forceEnd( );
 			}
 		}
+
+		void setupLua()
+		{
+			initLua();
+			std::string maptitle = Game().getMapTitle();
+
+			try
+			{
+				//Try and get the pack file that we have found.
+				common::Storage& storage = common::Storage::instance();
+				std::string packFilePath;
+				if (storage.modFolder.getFile(maptitle + ".mmmpack", packFilePath))
+				{
+					storage.missionPack.load(packFilePath.c_str());
+				}
+			}
+			catch (...)
+			{
+				//Doesn't really matter as we will just attempt to load the script file
+				//from the file instead.
+			}
+
+			globals_include(maptitle + ".lua");
+		}
+
+		constexpr std::size_t Transport_IsInstantAction = 0x005576F0;
+
+		/// <summary>
+		/// If Fleetops is present change the Transport::IsInstantAction function to return 1 at all times as it doesn't seem to work when only single player is set.
+		/// </summary>
+		void enableSaveButtons()
+		{
+			if (common::fleetops_present())
+			{
+				DWORD old_protect = 0;
+				uint8_t* instruction = reinterpret_cast<uint8_t*>(Transport_IsInstantAction);
+				VirtualProtect(instruction, 2, PAGE_READWRITE, &old_protect);
+				instruction[0] = 0xb0;
+				instruction[1] = 0x01;
+				VirtualProtect(instruction, 2, old_protect, &old_protect);
+			}
+		}
+
+		/// <summary>
+		/// Sets the Transport::IsInstantAction function back to the way it was before the loader was loaded.
+		/// </summary>
+		void restoreSaveButtons()
+		{
+			if (common::fleetops_present())
+			{
+				DWORD old_protect = 0;
+				uint8_t* instruction = reinterpret_cast<uint8_t*>(Transport_IsInstantAction);
+				VirtualProtect(instruction, 2, PAGE_READWRITE, &old_protect);
+				instruction[0] = 0x32;
+				instruction[1] = 0xc0;
+				VirtualProtect(instruction, 2, old_protect, &old_protect);
+			}
+		}
 	}
 
 	Worker::Worker( )
@@ -56,12 +113,19 @@ namespace mmm
 	{
 		lastUpdate_ = 0;
 		instance = this;
+
+		enableSaveButtons();
 	}
 
 	Worker::~Worker( )
 	{
 		//Have to unhook ourself.
-		getScriptInterface( )->MonitorInputControls( 0 );
+		auto script_interface = getScriptInterface();
+		if (script_interface)
+		{
+			script_interface->MonitorInputControls(0);
+		}
+		
 		shutdownLua( );
 		FreeConsole( );
 
@@ -69,34 +133,7 @@ namespace mmm
 
 		//Clears the IEEE of all rules (Trash all rules)
 		memory_function<void (*)()>( 0x004067c0 )();
-	}
-
-	namespace
-	{
-		void
-		setupLua()
-		{
-			initLua( );
-			std::string maptitle = Game().getMapTitle( );
-			
-			try
-			{
-				//Try and get the pack file that we have found.
-				common::Storage& storage = common::Storage::instance();
-				std::string packFilePath;
-				if( storage.modFolder.getFile( maptitle + ".mmmpack", packFilePath ) )
-				{
-					storage.missionPack.load( packFilePath.c_str() );
-				}
-			}
-			catch(...)
-			{
-				//Doesn't really matter as we will just attempt to load the script file
-				//from the file instead.
-			}
-
-			globals_include( maptitle + ".lua" );
-		}
+		restoreSaveButtons();
 	}
 
 	void Worker::Startup( )

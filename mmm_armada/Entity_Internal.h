@@ -105,6 +105,8 @@ namespace mmm
 		bool		    unhook( const std::string& id );
 		bool		    unhook( HookPtr hook );
 		luabind::object getHooks() const;
+
+		unsigned long getType() const;
 	protected:
 		explicit Entity( types::Entity* ent );
 		virtual void   allocateReplacement( luabind::detail::object_rep* object );

@@ -31,7 +31,7 @@ namespace mmm
         message.startTime = Game().getTime( );
         message.displayTime = displayTime;
 
-        uiMessages.push_back( message );
+        uiMessages.push_back(message);
 
         return id;
     }
@@ -45,7 +45,7 @@ namespace mmm
         message.id = id;
         message.displayTime = time;
         message.fade = fade;
-        uiMessages.push_back( message );
+        uiMessages.push_back(message);
         return id;
     }
 
@@ -64,7 +64,7 @@ namespace mmm
 
     void UI::removeMessage(const UIMessage& message)
     {
-        switch( message.type )
+        switch(message.type)
         {
         case MessageType_UI:
             {
@@ -97,7 +97,7 @@ namespace mmm
 
     void UI::fadeMessage(const UIMessage& message)
     {
-        switch( message.type )
+        switch(message.type)
         {
         case MessageType_UI:
             {
@@ -172,7 +172,7 @@ namespace mmm
 
     std::string UI::getTeamText() const
     {
-        char* teamText = reinterpret_cast<char*>(Address_TeamText);
+        const char* teamText = reinterpret_cast<const char*>(Address_TeamText);
         if( teamText )
         {
             return std::string(teamText);

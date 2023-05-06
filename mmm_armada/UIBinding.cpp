@@ -56,6 +56,7 @@ UI:showTradesTo(Team team)", lua_gettop(L));
 
             luaL_checktype(L, 2, LUA_TUSERDATA);
 
+            // Luabind TODO: Use non-luabind version of team - will not function until then:
             TeamPtr team;
             ui.showTradesTo(team);
             return 0;

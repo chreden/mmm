@@ -19,6 +19,7 @@ namespace mmm
 				.property( "id", &Entity::getID )
 				.property( "valid", &Entity::isValid )
 				.property( "hooks", &Entity::getHooks )
+				.property( "type", &Entity::getType )
 				.def( "isType", &Entity::isType )
 				.def( "canPlayerSee", &Entity::canTeamSee )
 				.def( "replace", &Entity::replace )

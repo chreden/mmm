@@ -696,4 +696,14 @@ namespace mmm
 	{
 		return entityReference_->getHooks( );
 	}
+
+	unsigned long Entity::getType() const
+	{
+		auto ent = getEntity();
+		if (ent)
+		{
+			return ent->m_entityType;
+		}
+		return 0;
+	}
 }

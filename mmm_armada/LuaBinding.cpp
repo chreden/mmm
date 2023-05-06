@@ -138,8 +138,10 @@ namespace mmm
 	shutdownLua( )
 	{
 		lua_State* state = common::Storage::instance( ).mainLuaVM;
-			
-		lua_close( state );
+		if (state)
+		{
+			lua_close(state);
+		}
 		common::Storage::instance( ).mainLuaVM = 0;
 	}
 

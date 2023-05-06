@@ -23,7 +23,7 @@ UI:addMessage(string message, number x, number y, Justify justify, Color color, 
             luaL_checktype(L, 7, LUA_TBOOLEAN);
             luaL_checktype(L, 8, LUA_TNUMBER);
 
-            ui.addMessage(lua_tostring(L, 2), lua_tonumber(L, 3), lua_tonumber(L, 4), static_cast<mmm::eJustify>(lua_tonumber(L, 5)),
+            ui.addMessage(lua_tostring(L, 2), lua_tointeger(L, 3), lua_tointeger(L, 4), static_cast<mmm::eJustify>(lua_tointeger(L, 5)),
                 to_colour(L, 6), lua_toboolean(L, 7), lua_tonumber(L, 8));
 
             return 0;
@@ -42,7 +42,7 @@ UI:addMinimapMark(Vector message, number radius, number shrinkRate, Color color)
             luaL_checktype(L, 4, LUA_TNUMBER);
             luaL_checktype(L, 5, LUA_TUSERDATA);
 
-            ui.addMinimapMark(to_vector(L, 2), lua_tonumber(L, 3), lua_tonumber(L, 4), to_colour(L, 5));
+            ui.addMinimapMark(to_vector(L, 2), lua_tointeger(L, 3), lua_tonumber(L, 4), to_colour(L, 5));
             return 0;
         }
 
@@ -76,7 +76,7 @@ UI:addTitle(string message, number x, number y, number time, boolean fade)", lua
             luaL_checktype(L, 5, LUA_TNUMBER);
             luaL_checktype(L, 6, LUA_TBOOLEAN);
 
-            ui.addTitle(lua_tostring(L, 2), lua_tonumber(L, 3), lua_tonumber(L, 4), lua_tonumber(L, 5), lua_toboolean(L, 6));
+            ui.addTitle(lua_tostring(L, 2), lua_tointeger(L, 3), lua_tointeger(L, 4), lua_tonumber(L, 5), lua_toboolean(L, 6));
             return 0;
         }
 
@@ -94,7 +94,45 @@ UI:addSubtitle(string message, number x, number y, number time, boolean fade)", 
             luaL_checktype(L, 5, LUA_TNUMBER);
             luaL_checktype(L, 6, LUA_TBOOLEAN);
 
-            ui.addSubtitle(lua_tostring(L, 2), lua_tonumber(L, 3), lua_tonumber(L, 4), lua_tonumber(L, 5), lua_toboolean(L, 6));
+            ui.addSubtitle(lua_tostring(L, 2), lua_tointeger(L, 3), lua_tointeger(L, 4), lua_tonumber(L, 5), lua_toboolean(L, 6));
+        }
+
+        int ui_index(lua_State* L)
+        {
+            const std::string key = lua_tostring(L, 2);
+
+            if (key == "teamText")
+            {
+                lua_pushstring(L, ui.getTeamText().c_str());
+                return 1;
+            }
+            else if (key == "addMessage")
+            {
+                lua_pushcfunction(L, add_message);
+                return 1;
+            }
+            else if (key == "addMinimapMark")
+            {
+                lua_pushcfunction(L, add_minimap_mark);
+                return 1;
+            }
+            else if (key == "showTradesTo")
+            {
+                lua_pushcfunction(L, show_trades_to);
+                return 1;
+            }
+            else if (key == "addTitle")
+            {
+                lua_pushcfunction(L, add_title);
+                return 1;
+            }
+            else if (key == "addSubtitle")
+            {
+                lua_pushcfunction(L, add_subtitle);
+                return 1;
+            }
+
+            return 0;
         }
 
         int ui_newindex(lua_State* L)
@@ -119,17 +157,6 @@ UI:addSubtitle(string message, number x, number y, number time, boolean fade)", 
     void ui_register(lua_State* L)
     {
         lua_newtable(L);
-
-        lua_newtable(L);
-        lua_pushvalue(L, -1);
-        lua_setfield(L, -2, "__index");
-        lua_pushcfunction(L, ui_newindex);
-        lua_setfield(L, -2, "__newindex");
-        lua::add_function(L, -1, add_message, "addMessage");
-        lua::add_function(L, -1, add_minimap_mark, "addMinimapMark");
-        lua::add_function(L, -1, show_trades_to, "showTradesTo");
-        lua::add_function(L, -1, add_title, "addTitle");
-        lua::add_function(L, -1, add_subtitle, "addSubtitle");
         lua::set_enum(L, "Justify", -1,
             {
                 { "TopLeft", JUSTIFY_TOP_LEFT },
@@ -151,6 +178,12 @@ UI:addSubtitle(string message, number x, number y, number time, boolean fade)", 
                 { "CenterRightByLine", JUSTIFY_CENTER_RIGHT_BY_LINE },
                 { "CenterByLine", JUSTIFY_CENTER_BY_LINE }
             });
+
+        lua_newtable(L);
+        lua_pushcfunction(L, ui_index);
+        lua_setfield(L, -2, "__index");
+        lua_pushcfunction(L, ui_newindex);
+        lua_setfield(L, -2, "__newindex");
         lua_setmetatable(L, -2);
 
         lua_setglobal(L, "UI");

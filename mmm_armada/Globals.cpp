@@ -23,6 +23,7 @@ namespace mmm
 
         int global_print(lua_State* L)
         {
+            luaL_checktype(L, -1, LUA_TSTRING);
             print::add(lua_tostring(L, -1));
             return 0;
         }

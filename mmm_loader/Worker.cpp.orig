@@ -70,7 +70,7 @@ namespace mmm
 				//from the file instead.
 			}
 
-			include(maptitle + ".lua");
+			globals_include(maptitle + ".lua");
 		}
 
 		constexpr std::size_t Transport_IsInstantAction = 0x005576F0;
@@ -133,7 +133,38 @@ namespace mmm
 
 		//Clears the IEEE of all rules (Trash all rules)
 		memory_function<void (*)()>( 0x004067c0 )();
+<<<<<<< HEAD
 		restoreSaveButtons();
+=======
+	}
+
+	namespace
+	{
+		void
+		setupLua()
+		{
+			initLua( );
+			std::string maptitle = Game().getMapTitle( );
+			
+			try
+			{
+				//Try and get the pack file that we have found.
+				common::Storage& storage = common::Storage::instance();
+				std::string packFilePath;
+				if( storage.modFolder.getFile( maptitle + ".mmmpack", packFilePath ) )
+				{
+					storage.missionPack.load( packFilePath.c_str() );
+				}
+			}
+			catch(...)
+			{
+				//Doesn't really matter as we will just attempt to load the script file
+				//from the file instead.
+			}
+
+			include( maptitle + ".lua" );
+		}
+>>>>>>> 9038adf (Remove Luabind from globals)
 	}
 
 	void Worker::Startup( )

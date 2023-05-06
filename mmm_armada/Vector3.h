@@ -32,4 +32,5 @@ namespace mmm
 	};
 
 	void vector_register( lua_State* state );
+	Vector3 to_vector(lua_State* L, int index);
 }

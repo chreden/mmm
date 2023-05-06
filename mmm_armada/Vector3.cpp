@@ -93,4 +93,18 @@ namespace mmm
 	{
 		return other.transpose() * *this;
 	}
+
+	Vector3 to_vector(lua_State* L, int index)
+	{
+		const int actual_index = index < 0 ? lua_gettop(L) + index + 1 : index;
+		Vector3 vector;
+		lua_getfield(L, actual_index, "x");
+		vector.x = lua_tonumber(L, -1);
+		lua_getfield(L, actual_index, "y");
+		vector.y = lua_tonumber(L, -1);
+		lua_getfield(L, actual_index, "z");
+		vector.z = lua_tonumber(L, -1);
+		lua_pop(L, 3);
+		return vector;
+	}
 }

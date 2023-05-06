@@ -183,6 +183,7 @@
     <ClCompile Include="LatinumNebulaClass_Internal.cpp" />
     <ClCompile Include="LatinumNebula_Internal.cpp" />
     <ClCompile Include="LoadBinding.cpp" />
+    <ClCompile Include="Lua.cpp" />
     <ClCompile Include="LuaBinding.cpp" />
     <ClCompile Include="MapBinding.cpp" />
     <ClCompile Include="Map_Internal.cpp" />
@@ -371,6 +372,7 @@
     <ClInclude Include="LatinumNebulaClass_Internal.h" />
     <ClInclude Include="LatinumNebula_Internal.h" />
     <ClInclude Include="ListAdapter.h" />
+    <ClInclude Include="Lua.h" />
     <ClInclude Include="LuaBinding.h" />
     <ClInclude Include="MapAdapter.h" />
     <ClInclude Include="Map_Internal.h" />

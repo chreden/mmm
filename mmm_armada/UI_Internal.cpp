@@ -181,8 +181,7 @@ namespace mmm
 		getScriptInterface( )->ShowTradesTo( player->getNumber() );
 	}
 
-	const std::string 
-	UI::getTeamText() const
+	std::string UI::getTeamText() const
 	{
 		char* teamText = reinterpret_cast<char*>( 0x00738df8 );
 		if( teamText )
@@ -196,17 +195,6 @@ namespace mmm
 	UI::setTeamText( const std::string& text )
 	{
 		getScriptInterface( )->SetTeamText( const_cast<char*>( text.c_str( ) ) ); 
-	}
-
-	luabind::object 
-	UI::getJustify() const
-	{
-		if( !justify_.is_valid() )
-		{
-			luabind::object globals  = luabind::globals(common::Storage::instance().mainLuaVM);
-			justify_ = globals["_UI"]["Justify"];
-		}
-		return justify_;
 	}
 }
 

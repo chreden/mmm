@@ -32,5 +32,6 @@ namespace mmm
 	void colour_register( lua_State* state );
 	
 	std::ostream& operator<<( std::ostream& stream, const ST3D_Colour& color );
+	ST3D_Colour to_colour(lua_State* L, int index);
 }
 

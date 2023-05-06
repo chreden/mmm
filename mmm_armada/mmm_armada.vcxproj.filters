@@ -1065,6 +1065,7 @@
     <ClCompile Include="GameBinding.cpp">
       <Filter>Armada\Armada</Filter>
     </ClCompile>
+    <ClCompile Include="Lua.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -1752,6 +1753,7 @@
       <Filter>Armada\Armada</Filter>
     </ClInclude>
     <ClInclude Include="Entities.h" />
+    <ClInclude Include="Lua.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="MemRaider.inl">

@@ -96,5 +96,19 @@ namespace mmm
 		stream << color.r() << "," << color.g() << "," << color.b();
 		return stream;
 	}
+
+	ST3D_Colour to_colour(lua_State* L, int index)
+	{
+		const int actual_index = index < 0 ? lua_gettop(L) + index + 1 : index;
+		ST3D_Colour colour;
+		lua_getfield(L, actual_index, "r");
+		colour.setR(lua_tonumber(L, -1));
+		lua_getfield(L, actual_index, "g");
+		colour.setG(lua_tonumber(L, -1));
+		lua_getfield(L, actual_index, "b");
+		colour.setB(lua_tonumber(L, -1));
+		lua_pop(L, 3);
+		return colour;
+	}
 }
 

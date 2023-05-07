@@ -137,13 +137,13 @@ namespace mmm
             return 0;
         }
 
-        int stop_movie(lua_State* L)
+        int stop_movie(lua_State*)
         {
             stop_movie();
             return 0;
         }
 
-        int stop_music(lua_State* L)
+        int stop_music(lua_State*)
         {
             stop_music();
             return 0;

@@ -28,7 +28,7 @@ namespace mmm
 				UI().update( );
 				textinput_update( );
 				Monitor::update( );
-				Media::update( );
+				media_update( );
 			
 				application_update( );
 

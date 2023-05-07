@@ -549,9 +549,6 @@
     <ClCompile Include="RaceBinding.cpp">
       <Filter>Armada\Race</Filter>
     </ClCompile>
-    <ClCompile Include="MediaBinding.cpp">
-      <Filter>Armada\Media</Filter>
-    </ClCompile>
     <ClCompile Include="CameraBinding.cpp">
       <Filter>Armada\Camera</Filter>
     </ClCompile>

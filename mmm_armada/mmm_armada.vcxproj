@@ -189,7 +189,6 @@
     <ClCompile Include="Map_Internal.cpp" />
     <ClCompile Include="Matrix.cpp" />
     <ClCompile Include="MatrixBinding.cpp" />
-    <ClCompile Include="MediaBinding.cpp" />
     <ClCompile Include="MemRaider.cpp" />
     <ClCompile Include="Mine.cpp" />
     <ClCompile Include="MineArray.cpp" />

@@ -33,5 +33,6 @@ namespace mmm
 	
 	std::ostream& operator<<( std::ostream& stream, const ST3D_Colour& color );
 	ST3D_Colour to_colour(lua_State* L, int index);
+	int create_colour(lua_State* L, const ST3D_Colour& colour);
 }
 

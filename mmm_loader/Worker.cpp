@@ -74,6 +74,7 @@ namespace mmm
 		}
 
 		constexpr std::size_t Transport_IsInstantAction = 0x005576F0;
+		constexpr std::size_t Address_TrashAllRules = 0x004067c0;
 
 		/// <summary>
 		/// If Fleetops is present change the Transport::IsInstantAction function to return 1 at all times as it doesn't seem to work when only single player is set.
@@ -119,21 +120,7 @@ namespace mmm
 
 	Worker::~Worker( )
 	{
-		//Have to unhook ourself.
-		auto script_interface = getScriptInterface();
-		if (script_interface)
-		{
-			script_interface->MonitorInputControls(0);
-		}
 		
-		shutdownLua( );
-		FreeConsole( );
-
-		Debug().disconnect();
-
-		//Clears the IEEE of all rules (Trash all rules)
-		memory_function<void (*)()>( 0x004067c0 )();
-		restoreSaveButtons();
 	}
 
 	void Worker::Startup( )
@@ -154,5 +141,24 @@ namespace mmm
 			application_resume( );
 		}
 		workerRule_.activate( workerUpdate );
+	}
+
+	void Worker::Shutdown()
+	{
+		//Have to unhook ourself.
+		auto script_interface = getScriptInterface();
+		if (script_interface)
+		{
+			script_interface->MonitorInputControls(0);
+		}
+
+		shutdownLua();
+		FreeConsole();
+
+		Debug().disconnect();
+
+		//Clears the IEEE of all rules (Trash all rules)
+		memory_function<void (*)()>(Address_TrashAllRules)();
+		restoreSaveButtons();
 	}
 }

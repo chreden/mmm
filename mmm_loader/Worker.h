@@ -18,8 +18,8 @@ namespace mmm
 		//Calls initial lua function. If this is a savegame, then
 		//it will call resume, else it will call init.
 		void Startup( );
-
 		void Resume( );
+		void Shutdown();
 	public:	
 		bool	inputControlsSet_;
 

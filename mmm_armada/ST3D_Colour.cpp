@@ -110,5 +110,18 @@ namespace mmm
 		lua_pop(L, 3);
 		return colour;
 	}
+
+	int create_colour(lua_State* L, const ST3D_Colour& colour)
+	{
+		// TODO: Make this the new version of Color
+		lua_newtable(L);
+		lua_pushnumber(L, colour.r());
+		lua_setfield(L, -2, "r");
+		lua_pushnumber(L, colour.g());
+		lua_setfield(L, -2, "g");
+		lua_pushnumber(L, colour.b());
+		lua_setfield(L, -2, "b");
+		return 1;
+	}
 }
 

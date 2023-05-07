@@ -95,6 +95,7 @@ UI:addSubtitle(string message, number x, number y, number time, boolean fade)", 
             luaL_checktype(L, 6, LUA_TBOOLEAN);
 
             ui.addSubtitle(lua_tostring(L, 2), lua_tointeger(L, 3), lua_tointeger(L, 4), lua_tonumber(L, 5), lua_toboolean(L, 6));
+            return 0;
         }
 
         int ui_index(lua_State* L)

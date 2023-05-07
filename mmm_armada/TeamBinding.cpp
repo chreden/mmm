@@ -126,7 +126,7 @@ namespace mmm
             }
             else if (key == "race")
             {
-                // TODO
+                return race_create(L, self->getRace());
             }
             else if (key == "resources")
             {
@@ -345,6 +345,12 @@ namespace mmm
 
     int team_create(lua_State* L, const std::shared_ptr<Team>& team)
     {
+        if (team == nullptr)
+        {
+            lua_pushnil(L);
+            return 1;
+        }
+
         Team** userdata = static_cast<Team**>(lua_newuserdata(L, sizeof(team.get())));
         *userdata = team.get();
         teams[userdata] = team;

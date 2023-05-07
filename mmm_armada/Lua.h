@@ -15,5 +15,12 @@ namespace mmm
         void set_integer(lua_State* L, int index, const std::string& name, int value);
         void create_enum(lua_State* L, const std::vector<EnumValue>& values);
         void set_enum(lua_State* L, const std::string& name, int index, const std::vector<EnumValue>& values);
+
+        template <typename T>
+        inline T* get_self(lua_State* L)
+        {
+            luaL_checktype(L, 1, LUA_TUSERDATA);
+            return *static_cast<T**>(lua_touserdata(L, 1));
+        }
     };
 }

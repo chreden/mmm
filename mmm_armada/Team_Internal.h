@@ -25,7 +25,7 @@ namespace mmm
         int           getNumber() const;
         float         getAmountTraded(eResource resource, eTradeDirection direction, const std::shared_ptr<Team>& other) const;
         eSlotType     getSlotType() const;
-        RacePtr       getRace() const;
+        std::shared_ptr<Race> getRace() const;
         bool          getIsAI() const;
         void          setColor(const ST3D_Colour& color);
         void          setRelation(const std::shared_ptr<Team>& other, eTeamRelation relation);

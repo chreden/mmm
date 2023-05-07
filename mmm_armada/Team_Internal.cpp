@@ -64,9 +64,9 @@ namespace mmm
         return _team->m_currentCrewCapacity;
     }
 
-    RacePtr Team::getRace() const
+    std::shared_ptr<Race> Team::getRace() const
     {
-        return RacePtr(new Race(_team->m_race));
+        return std::make_shared<Race>(_team->m_race);
     }
 
     void Team::setMaxOfficers(int value)

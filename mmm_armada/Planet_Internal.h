@@ -18,7 +18,7 @@ namespace mmm
 		eCivPopulationLevel getPopulationLevel() const;
 		float	 getPopulation() const;
 		float	 getMaxPopulation() const;
-		RacePtr	 getOldRace() const;
+		std::shared_ptr<Race> getOldRace() const;
 		bool	 getHasShields() const;
 		void	 setPopulation( float value );
 	protected:

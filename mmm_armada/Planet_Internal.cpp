@@ -65,7 +65,7 @@ namespace mmm
 		return getPlanet()->m_populationLevel;
 	}
 
-	RacePtr	 
+	std::shared_ptr<Race>
 	Planet::getOldRace() const
 	{
 		return Race::create( getPlanet()->m_pOldRace );

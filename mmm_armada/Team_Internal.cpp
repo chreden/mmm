@@ -233,4 +233,12 @@ namespace mmm
 	{
 		return resources_;
 	}
+
+	void Team::setRace(RacePtr race)
+	{
+		// team_->m_race = race->getRace();
+		*reinterpret_cast<types::Race**>(0x737cc0) = race->getRace();
+		memory_function<void (*)()>(0x0051a640)();
+		//memory_function< void (*)() >(Address_IsBuildListEmpty))();
+	}
 }

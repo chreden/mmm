@@ -18,7 +18,7 @@ namespace mmm
 				.property( "maxOfficers", &Team::getMaxOfficers, &Team::setMaxOfficers )
 				.property( "name", &Team::getName, &Team::setName )
 				.property( "number", &Team::getNumber )
-				.property( "race", &Team::getRace )
+				.property( "race", &Team::getRace, &Team::setRace )
 				.scope
 				[
 					class_<Team::Resources, Team::ResourcesPtr>( "Resources" )

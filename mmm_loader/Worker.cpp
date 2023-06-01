@@ -7,6 +7,9 @@
 #include "../mmm_armada/Debug_Internal.h"
 #include "../mmm_armada/Media_Internal.h"
 #include "../mmm_armada/Game_Internal.h"
+#include "../mmm_armada/Entities_Internal.h"
+#include "../mmm_armada/Nebula_Internal.h"
+#include "../mmm_armada/Type_Nebula.h"
 
 namespace mmm
 {
@@ -106,6 +109,26 @@ namespace mmm
 				VirtualProtect(instruction, 2, old_protect, &old_protect);
 			}
 		}
+
+		/// <summary>
+		/// Stop all nebula rotation by default as they already rotate in animation - this
+		/// extra rotation makes them go too fast.
+		/// </summary>
+		void stopNebulas()
+		{
+			const EntityPointerManager* const epm = GetEntityPointerManager();
+			for (int i = 0; i < EntityPointerManager::MaxEntities; ++i)
+			{
+				const EntityPointer& entity = epm->m_entity_pointer[i];
+				if (entity.m_id.m_used && types::isNebula(entity.m_entity))
+				{
+					auto nebula = static_cast<types::Nebula*>(entity.m_entity);
+					nebula->delta_yaw = 0.0f;
+					nebula->delta_pitch = 0.0f;
+					nebula->delta_roll = 0.0f;
+				}
+			}
+		}
 	}
 
 	Worker::Worker( )
@@ -115,6 +138,7 @@ namespace mmm
 		instance = this;
 
 		enableSaveButtons();
+		stopNebulas();
 	}
 
 	Worker::~Worker( )

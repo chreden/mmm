@@ -40,6 +40,11 @@ namespace mmm
 		void		setAllowWarp( bool value );
 		void		setUpdateTime( float interval );
 		void		setGameSpeed( int value );
+		void setFerengiCanSteal(bool value);
+		void setFerengiCanTrade(bool value);
+		bool getFerengiCanSteal() const;
+		bool getFerengiCanTrade() const;
+
 		/**
 			Get the active window for the game.
 			@return The game window.

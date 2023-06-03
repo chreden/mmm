@@ -21,6 +21,7 @@ namespace mmm
         constexpr std::size_t Address_s_missionRace = 0x00737cc0;
         constexpr std::size_t Address_gCameraManager = 0x00763370;
         constexpr std::size_t Address_DisplayInterface_Cleanup = 0x0051a8c0;
+        constexpr std::size_t Address_DisplayInterface_InitAll = 0x0051a640;
         constexpr std::size_t Address_DisplayInterface_PostLoadAll = 0x0051a6e0;
 
         struct GameCamera
@@ -48,6 +49,11 @@ namespace mmm
         void DisplayInterface_Cleanup()
         {
             memory_function<void(__cdecl*)()>(Address_DisplayInterface_Cleanup)();
+        }
+
+        void DisplayInterface_InitAll()
+        {
+            memory_function<void(__cdecl*)()>(Address_DisplayInterface_InitAll)();
         }
 
         void DisplayInterface_PostLoadAll()
@@ -263,6 +269,7 @@ namespace mmm
             SetMissionRace(race->getRace());
             const auto interest = GetCameraInterest();
             DisplayInterface_Cleanup();
+            DisplayInterface_InitAll();
             DisplayInterface_PostLoadAll();
             SetCameraInterest(interest);
         }

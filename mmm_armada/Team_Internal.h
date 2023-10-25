@@ -39,6 +39,7 @@ namespace mmm
 
 		const std::string getName() const;
 		void			  setName( const std::string& name );
+		void			  setRace(RacePtr race);
 
 		bool			 isValid() const;
 

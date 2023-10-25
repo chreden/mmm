@@ -23,6 +23,8 @@ namespace mmm
 				.property( "seed", &Game::getSeed )
 				.property( "localSlot", &Game::getLocalSlot )
 				.property( "gameSpeed", &Game::getGameSpeed, &Game::setGameSpeed )
+				.property("ferengiCanSteal", &Game::getFerengiCanSteal, &Game::setFerengiCanSteal)
+				.property("ferengiCanTrade", &Game::getFerengiCanTrade, &Game::setFerengiCanTrade)
 		];
 
 		globals(state)["Game"] = &game;

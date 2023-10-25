@@ -8,16 +8,39 @@ namespace mmm
 {
 	namespace
 	{
-		const std::size_t Address_GetTime		= 0x0065f740;
-		const std::size_t Address_AllowWarp		= 0x006f4de0;
-		const std::size_t Address_GTransport	= 0x0076b8d4;
-		const std::size_t Address_GetGameSetup	= 0x00557930;
-		const std::size_t Address_GetMapTitle	= 0x00546240;
-		const std::size_t Address_IsHost		= 0x00546de0;
-		const std::size_t Address_Transport		= 0x0076b8d4;
-		const std::size_t Address_GetLocalSlot	= 0x00547470;
-		const std::size_t Address_GetGameSpeed	= 0x00558c70;
-		const std::size_t Address_SetGameSpeed	= 0x00558c60;
+		constexpr std::size_t Address_GetTime		= 0x0065f740;
+		constexpr std::size_t Address_AllowWarp		= 0x006f4de0;
+		constexpr std::size_t Address_GTransport	= 0x0076b8d4;
+		constexpr std::size_t Address_GetGameSetup	= 0x00557930;
+		constexpr std::size_t Address_GetMapTitle	= 0x00546240;
+		constexpr std::size_t Address_IsHost		= 0x00546de0;
+		constexpr std::size_t Address_Transport		= 0x0076b8d4;
+		constexpr std::size_t Address_GetLocalSlot	= 0x00547470;
+		constexpr std::size_t Address_GetGameSpeed	= 0x00558c70;
+		constexpr std::size_t Address_SetGameSpeed	= 0x00558c60;
+		constexpr std::size_t Address_g_ferengiTraders = 0x00735bf4;
+
+		struct AIFerengi
+		{
+			float m_timeBetweenChecks;
+			float m_timeUntilNextCheck;
+			int m_numberFerengiOnMap;
+			int m_marauderPool;
+			bool m_ferengiCanTrade;
+			bool m_maraudersCanSteal;
+		};
+
+		bool ferengi_can_steal() noexcept
+		{
+			const AIFerengi* const g_ferengiTraders = *reinterpret_cast<const AIFerengi**>(Address_g_ferengiTraders);
+			return g_ferengiTraders->m_maraudersCanSteal;
+		}
+
+		bool ferengi_can_trade() noexcept
+		{
+			const AIFerengi* const g_ferengiTraders = *reinterpret_cast<const AIFerengi**>(Address_g_ferengiTraders);
+			return g_ferengiTraders->m_ferengiCanTrade;
+		}
 	}
 
 	float 
@@ -125,6 +148,26 @@ namespace mmm
 	Game::setUpdateTime( float interval )
 	{
 		common::Storage::instance( ).updateTime = interval;
+	}
+
+	void Game::setFerengiCanSteal(bool value)
+	{
+		getScriptInterface()->FerengiCanSteal(value);
+	}
+
+	void Game::setFerengiCanTrade(bool value)
+	{
+		getScriptInterface()->FerengiCanTrade(value);
+	}
+
+	bool Game::getFerengiCanSteal() const
+	{
+		return ferengi_can_steal();
+	}
+
+	bool Game::getFerengiCanTrade() const
+	{
+		return ferengi_can_trade();
 	}
 
 	HWND		

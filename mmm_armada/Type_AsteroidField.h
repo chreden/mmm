@@ -29,8 +29,8 @@ namespace mmm
 			BBOX			m_bounding_box;
 			float			m_bounding_radius;
 			float			m_rotation_speed;
-			const double	m_speed;
-			const double	m_repulsion_distance;
+			double			m_speed;
+			double			m_repulsion_distance;
 			double			m_maximum_distance_sqr;
 			const double	m_forcefield_strength;
 			int				m_number_of_asteroids;

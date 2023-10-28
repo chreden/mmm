@@ -3,20 +3,19 @@
 
 namespace mmm
 {
-    AsteroidFieldPtr AsteroidField::create( types::Entity* entity )
+    AsteroidFieldPtr AsteroidField::create(types::Entity* entity)
     {
-        return AsteroidFieldPtr( new AsteroidField( static_cast<types::AsteroidField*>( entity ) ) );
+        return AsteroidFieldPtr(new AsteroidField(static_cast<types::AsteroidField*>(entity)));
     }
 
-    AsteroidField::AsteroidField( types::AsteroidField* asteroid )
-        : TerrainObject( asteroid )
+    AsteroidField::AsteroidField(types::AsteroidField* asteroid)
+        : TerrainObject(asteroid)
     {
-
     }
 
-    float AsteroidField::getBoundingRadius() const
+    float AsteroidField::getAsteroidBeltSpeedCoefficient() const
     {
-        return getAsteroidField()->m_bounding_radius;
+        return getAsteroidField()->m_asteroid_belt_speed_coefficient;
     }
 
     float AsteroidField::getAsteroidBeltTime() const
@@ -24,9 +23,19 @@ namespace mmm
         return getAsteroidField()->m_asteroid_belt_time;
     }
 
-    void AsteroidField::setBoundingRadius(float value)
+    float AsteroidField::getBoundingRadius() const
     {
-        getAsteroidField()->m_bounding_radius = value;
+        return getAsteroidField()->m_bounding_radius;
+    }
+
+    float AsteroidField::getSpeed() const
+    {
+        return getAsteroidField()->m_speed;
+    }
+
+    void AsteroidField::setAsteroidBeltSpeedCoefficient(float value)
+    {
+        getAsteroidField()->m_asteroid_belt_speed_coefficient = value;
     }
 
     void AsteroidField::setAsteroidBeltTime(float value)
@@ -34,13 +43,23 @@ namespace mmm
         getAsteroidField()->m_asteroid_belt_time = value;
     }
 
-    types::AsteroidField* AsteroidField::getAsteroidField() const
+    void AsteroidField::setBoundingRadius(float value)
     {
-        return static_cast<types::AsteroidField*>( getEntity() );
+        getAsteroidField()->m_bounding_radius = value;
     }
 
-    void AsteroidField::allocateReplacement( luabind::detail::object_rep* object )
+    void AsteroidField::setSpeed(float value)
     {
-        entity_allocate_replacement<AsteroidField>( object, boost::static_pointer_cast<AsteroidField>( shared_from_this() ) );
+        getAsteroidField()->m_speed = value;
+    }
+
+    types::AsteroidField* AsteroidField::getAsteroidField() const
+    {
+        return static_cast<types::AsteroidField*>(getEntity());
+    }
+
+    void AsteroidField::allocateReplacement(luabind::detail::object_rep* object)
+    {
+        entity_allocate_replacement<AsteroidField>(object, boost::static_pointer_cast<AsteroidField>(shared_from_this()));
     }
 }

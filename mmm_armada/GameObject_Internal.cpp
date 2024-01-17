@@ -350,6 +350,36 @@ namespace mmm
 		return ResourceInterface( *this );
 	}
 
+	Vector3 GameObject::getAlpha() const
+	{
+		return getGameObject()->m_euler.alpha;
+	}
+
+	Vector3 GameObject::getOmega() const
+	{
+		return getGameObject()->m_euler.omega;
+	}
+
+	Vector3 GameObject::getAccel() const
+	{
+		return getGameObject()->m_euler.accel;
+	}
+
+	void GameObject::setAlpha(const Vector3& alpha)
+	{
+		getGameObject()->m_euler.alpha = alpha;
+	}
+
+	void GameObject::setOmega(const Vector3& omega)
+	{
+		getGameObject()->m_euler.omega = omega;
+	}
+
+	void GameObject::setAccel(const Vector3& accel)
+	{
+		getGameObject()->m_euler.accel = accel;
+	}
+
 	void 
 	GameObject::allocateReplacement( luabind::detail::object_rep* obj )
 	{

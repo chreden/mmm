@@ -60,6 +60,13 @@ namespace mmm
 		void				addWeapon( const std::string& weapon );
 		types::GameObject*	getGameObject() const;
 		ResourceInterface	getResourceInterface() const;
+
+		Vector3 getAlpha() const;
+		Vector3 getOmega() const;
+		Vector3 getAccel() const;
+		void setAlpha(const Vector3& alpha);
+		void setOmega(const Vector3& omega);
+		void setAccel(const Vector3& accel);
 	protected:
 		explicit			GameObject( types::GameObject* entity );
 		virtual void allocateReplacement( luabind::detail::object_rep* obj );

@@ -57,6 +57,7 @@ namespace mmm
 				]
 				.property( "resources", &Team::getResources )
 				.property( "slotType", &Team::getSlotType )
+				.property("useWormholes", &Team::getUseWormholes, &Team::setUseWormholes)
 				.def( "getAmountTraded", &Team::getAmountTraded )
 				.def( "getRelation", &Team::getRelation )
 				.def( "loadAIP", &Team::loadAIP )

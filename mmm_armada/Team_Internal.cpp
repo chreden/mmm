@@ -274,4 +274,16 @@ namespace mmm
             SetCameraInterest(interest);
         }
     }
+
+    bool Team::getUseWormholes() const
+    {
+        types::AI* ai = *reinterpret_cast<types::AI**>(0x00735bc4);
+        return ai->m_team[team_->m_teamNumber].m_useWormholes;
+    }
+
+    void Team::setUseWormholes(bool enabled)
+    {
+        types::AI* ai = *reinterpret_cast<types::AI**>(0x00735bc4);
+        ai->m_team[team_->m_teamNumber].m_useWormholes = enabled;
+    }
 }

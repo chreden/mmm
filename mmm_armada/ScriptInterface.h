@@ -80,7 +80,7 @@ namespace mmm
 		virtual void GetPerceivedTeam(int) = 0;
 		virtual void SetWormholeTeam(int, int) = 0;
 		virtual void StuffIntoWormhole(int, int) = 0;
-		virtual void EnableWormholeTravel(int, unsigned char) = 0;
+			virtual void EnableWormholeTravel(int teamId, unsigned char enabled) = 0;
 		virtual void SetWormholeDeleteOnTransport(int, unsigned char) = 0;
 		virtual void SetWormholeExpireOnClose(int, unsigned char) = 0;
 		virtual void GetAllyShipAttacks(int, int) = 0;

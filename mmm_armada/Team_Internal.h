@@ -28,6 +28,7 @@ namespace mmm
 		eSlotType	  getSlotType( ) const;
 		RacePtr		  getRace( ) const;
 		bool		  getIsAI( ) const;
+		bool		  getUseWormholes() const;
 
 		void		  setColor( const ST3D_Colour& color );
 		void		  setResource( eResource resource, float amount, bool relative );
@@ -40,6 +41,7 @@ namespace mmm
 		const std::string getName() const;
 		void			  setName( const std::string& name );
 		void			  setRace(RacePtr race);
+		void			  setUseWormholes(bool value);
 
 		bool			 isValid() const;
 

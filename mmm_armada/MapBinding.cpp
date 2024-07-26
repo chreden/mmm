@@ -18,6 +18,7 @@ namespace mmm
 				.property( "min", &Map::getMin, &Map::setMin )
 				.property( "max", &Map::getMax, &Map::setMax )
                 .def( "getVisibility", &Map::getVisibility )
+				.def("loadStarfield", &Map::loadStarfield)
                 .property( "Visibility", &Map::getVisibilityEnum )
                 .scope
                 [

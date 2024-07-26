@@ -3,11 +3,13 @@
 #include "Type_Entity.h"
 #include "Type_GameObject.h"
 #include "Type_AI.h"
+#include "Type_DebriefingData.h"
 
 #include "Race_Internal.h"
 #include "Entity_Internal.h"
 #include "GameObject_Internal.h"
 #include "Entities_Internal.h"
+
 
 namespace mmm
 {
@@ -249,6 +251,7 @@ namespace mmm
     void Team::setName(const std::string& name)
     {
         team_->m_name_string = name;
+        types::get_debriefing_data()->m_team_data[team_->m_teamNumber]->m_name = name;
     }
 
     Team::ResourcesPtr Team::getResources() const
@@ -264,6 +267,11 @@ namespace mmm
         }
 
         team_->m_race = race->getRace();
+
+        auto debriefing = types::get_debriefing_data();
+        debriefing->m_team_data[team_->m_teamNumber]->m_race = race->getName();
+        debriefing->m_team_data[team_->m_teamNumber]->m_actualRace = race->getName();
+
         if (!team_->m_is_ai)
         {
             SetMissionRace(race->getRace());

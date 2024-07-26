@@ -248,7 +248,7 @@ namespace mmm
 
 		virtual void GridVisible( bool visible ) = 0;
 
-		virtual void Starfield_Load_Background_Geometry(char *) = 0;
+			virtual void Starfield_Load_Background_Geometry(const char *) = 0;
 			//Center the camera on a path.
 			virtual void CenterCamera( const char* pathName, int index ) = 0;
 			//Center the camera on the specified position
@@ -511,7 +511,7 @@ namespace mmm
 		virtual void CreateNewDefendFleet(void) = 0;
 		virtual void RandomGetUnsigned(unsigned int) = 0;
 			virtual unsigned char IsShipAliveAndOffMap(int) = 0;
-		virtual void Starfield_Load_New_Background_Geometry(char *, char *) = 0;
+			virtual void Starfield_Load_New_Background_Geometry(const char *, const char *) = 0;
 			//Find out if the craft with the specified craftid
 			//is a station. Returns true if it is.
 			virtual bool IsStation( int craftId ) = 0;

@@ -415,6 +415,9 @@
     <Filter Include="Armada\Memory">
       <UniqueIdentifier>{656a55ab-e411-4dc0-8fcf-6bd2fc6d3369}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Armada\DebriefingData">
+      <UniqueIdentifier>{69d18904-95b8-483e-b6bb-9df0901a1ddc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -1064,6 +1067,9 @@
     </ClCompile>
     <ClCompile Include="GameBinding.cpp">
       <Filter>Armada\Armada</Filter>
+    </ClCompile>
+    <ClCompile Include="Type_DebriefingData.cpp">
+      <Filter>Armada\DebriefingData</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -1752,6 +1758,9 @@
       <Filter>Armada\Armada</Filter>
     </ClInclude>
     <ClInclude Include="Entities.h" />
+    <ClInclude Include="Type_DebriefingData.h">
+      <Filter>Armada\DebriefingData</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="MemRaider.inl">

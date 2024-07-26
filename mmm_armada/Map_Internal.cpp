@@ -182,4 +182,16 @@ namespace mmm
 		terrain.m_max_z = vec.z;
 		updateMapSize();
 	}
+
+	void Map::loadStarfield(const std::string& sod, const std::string& odf)
+	{
+		if (odf.empty())
+		{
+			getScriptInterface()->Starfield_Load_Background_Geometry(sod.c_str());
+		}
+		else
+		{
+			getScriptInterface()->Starfield_Load_New_Background_Geometry(sod.c_str(), odf.c_str());
+		}
+	}
 }

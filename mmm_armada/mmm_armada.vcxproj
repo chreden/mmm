@@ -288,6 +288,7 @@
     <ClCompile Include="TradingStationClassBinding.cpp" />
     <ClCompile Include="TradingStationClass_Internal.cpp" />
     <ClCompile Include="TradingStation.cpp" />
+    <ClCompile Include="Type_DebriefingData.cpp" />
     <ClCompile Include="Type_Entity.cpp" />
     <ClCompile Include="Cineractive_Internal.cpp" />
     <ClCompile Include="Craft_Internal.cpp" />
@@ -454,6 +455,7 @@
     <ClInclude Include="Type_ConstructionRig.h" />
     <ClInclude Include="Type_CraftClass.h" />
     <ClInclude Include="Type_CraftSystem.h" />
+    <ClInclude Include="Type_DebriefingData.h" />
     <ClInclude Include="Type_Evolver.h" />
     <ClInclude Include="Type_EvolverClass.h" />
     <ClInclude Include="Type_Explosion.h" />

@@ -28,6 +28,8 @@ namespace mmm
 
 
 		static void resize( float x, float y );
+
+        void loadStarfield(const std::string& sod, const std::string& odf);
 	private:
 		static void updateMapSize();
 

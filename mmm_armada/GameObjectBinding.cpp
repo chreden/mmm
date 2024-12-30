@@ -33,7 +33,7 @@ namespace mmm
 				.property( "perceivedTeam", &GameObject::getPerceivedTeam, &GameObject::setPerceivedTeam )
 				.property( "aiControlled", &GameObject::isAiControlled )
 				.property( "class", &GameObject::getClass )
-				.property( "race", &GameObject::getRace )
+				.property( "race", &GameObject::getRace, &GameObject::setRace )
 				.property("alpha", &GameObject::getAlpha, &GameObject::setAlpha)
 				.property("omega", &GameObject::getOmega, &GameObject::setOmega)
 				.property("accel", &GameObject::getAccel, &GameObject::setAccel)

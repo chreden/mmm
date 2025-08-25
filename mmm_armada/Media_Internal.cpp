@@ -63,8 +63,8 @@ namespace mmm
 			Race race(*reinterpret_cast<types::Race**>(Address_MissionRace));
 			race.setSinglePlayerMusic(filename);
 
-			FO_Jukebox* jukebox = reinterpret_cast<FO_Jukebox*>(Address_FO_Jukebox);
-			(jukebox->*memory_function<void (FO_Jukebox::*)()>(Address_FO_Jukebox_Stop))();
+			JukeBox* jukebox = reinterpret_cast<JukeBox*>(Address_Jukebox);
+			(jukebox->*memory_function< void (JukeBox::*)() >(Address_JukeboxStop))();
 		}
 		else
 		{
@@ -102,8 +102,8 @@ namespace mmm
 			Race race(*reinterpret_cast<types::Race**>(Address_MissionRace));
 			race.setSinglePlayerMusic("");
 
-			FO_Jukebox* jukebox = reinterpret_cast<FO_Jukebox*>(Address_FO_Jukebox);
-			(jukebox->*memory_function<void (FO_Jukebox::*)()>(Address_FO_Jukebox_Stop))();
+			JukeBox* jukebox = reinterpret_cast<JukeBox*>(Address_Jukebox);
+			(jukebox->*memory_function< void (JukeBox::*)() >(Address_JukeboxStop))();
 		}
 		else
 		{

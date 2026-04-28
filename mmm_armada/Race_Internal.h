@@ -20,7 +20,7 @@ namespace mmm
 		float			  getRepairStrength( ) const;
 		const std::string getSinglePlayerMusic( ) const;
 		int				  getNumber() const;
-
+		int				  getinstantActionSlot() const;
 		bool			  isValid() const;
 
 		void			  setSinglePlayerMusic( const std::string& music );

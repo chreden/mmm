@@ -15,6 +15,7 @@ namespace mmm
 				.property( "name", &Race::getName )	
 				.property( "repairStrength", &Race::getRepairStrength )
 				.property( "number", &Race::getNumber )
+				.property( "instantActionSlot", &Race::getinstantActionSlot )
 				.scope
 				[
 					def( "find", (RacePtr (*)(int))&Race::find ),

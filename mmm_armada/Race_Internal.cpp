@@ -65,6 +65,12 @@ namespace mmm
 		return race_->m_raceNumber;
 	}
 
+	int
+	Race::getinstantActionSlot() const
+	{
+		return race_->m_instantActionSlot;
+	}
+
 	luabind::object 
 	Race::getAll()
 	{

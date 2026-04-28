@@ -18,8 +18,8 @@ namespace mmm
         constexpr std::size_t Address_SetRelation	= 0x004971d0;
         constexpr std::size_t Address_GetTeam		= 0x00496340;
         constexpr std::size_t Address_GTransport	= 0x0076b8d4;
-        constexpr std::size_t Address_GetGameSetup	= 0x00557930;
-
+        constexpr std::size_t Address_GetGameSetup = 0x00557930;
+        constexpr std::size_t Address_ForceRace = 0x00545380;
         constexpr std::size_t Address_s_missionRace = 0x00737cc0;
         constexpr std::size_t Address_gCameraManager = 0x00763370;
         constexpr std::size_t Address_DisplayInterface_Cleanup = 0x0051a8c0;
@@ -61,6 +61,11 @@ namespace mmm
         void DisplayInterface_PostLoadAll()
         {
             memory_function<void(__cdecl*)()>(Address_DisplayInterface_PostLoadAll)();
+        }
+
+        void ForceRace(types::GameSetup& gamesetup, int slot, int race)
+        {
+            return (gamesetup.*memory_function< void (types::GameSetup::*)(int, int) const >(Address_ForceRace))(slot, race);
         }
 
         void SetCameraInterest(const Vector3& interest)
@@ -272,14 +277,43 @@ namespace mmm
         debriefing->m_team_data[team_->m_teamNumber]->m_race = race->getName();
         debriefing->m_team_data[team_->m_teamNumber]->m_actualRace = race->getName();
 
+        types::Transport* transport = LoadMemPointer<types::Transport>(Address_GTransport);
+
+        types::GameSetup& setup = (transport->*memory_function<types::GameSetup & (types::Transport::*)()>(Address_GetGameSetup))();
+
         if (!team_->m_is_ai)
         {
             SetMissionRace(race->getRace());
+            ForceRace(setup, 0, race->getinstantActionSlot());
             const auto interest = GetCameraInterest();
             DisplayInterface_Cleanup();
             DisplayInterface_InitAll();
             DisplayInterface_PostLoadAll();
             SetCameraInterest(interest);
+        }
+    }
+
+    void Team::setRacePostLoad(RacePtr race)
+    {
+        if (!race->getRace())
+        {
+            return;
+        }
+
+        team_->m_race = race->getRace();
+
+        auto debriefing = types::get_debriefing_data();
+        debriefing->m_team_data[team_->m_teamNumber]->m_race = race->getName();
+        debriefing->m_team_data[team_->m_teamNumber]->m_actualRace = race->getName();
+
+        types::Transport* transport = LoadMemPointer<types::Transport>(Address_GTransport);
+
+        types::GameSetup& setup = (transport->*memory_function<types::GameSetup & (types::Transport::*)()>(Address_GetGameSetup))();
+
+        if (!team_->m_is_ai)
+        {
+            SetMissionRace(race->getRace());
+            ForceRace(setup, 0, race->getinstantActionSlot());
         }
     }
 

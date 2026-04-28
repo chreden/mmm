@@ -45,7 +45,7 @@ namespace mmm
 			float planetCrewAccumulationModifier;
 			StringAdapter startingUnitsName[0x9][0x3];
 			int m_raceNumber;									//Done
-			long m_instantActionSlot;
+			int m_instantActionSlot; 
 			unsigned char m_transportToFriendsOnNotEasy;
 			unsigned char m_transportToEnemyOnHard;
 			char m_cityTextureName[0x8];

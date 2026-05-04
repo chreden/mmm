@@ -2,6 +2,7 @@
 
 #include "ST3D_Colour.h"
 #include "Vector3.h"
+#include "Functions.h"
 
 namespace mmm
 {

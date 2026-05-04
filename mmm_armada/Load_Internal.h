@@ -2,37 +2,38 @@
 
 namespace mmm
 {
-	class Load
-	{
-	public:
-		explicit Load( );
-		void				doLoad( );
-		int				  getLength( );
-		void			  setRead( int position );
-		template<typename T>
-		T read();
-	private:
-		static bool isLoadOdf( EntityPtr ent, void* arguments ); 
-		void loadHolders( const std::vector< EntityPtr >& objects );
-		void loadMappers( const std::vector< EntityPtr >& objects );
-			
-		//Constants. These are shared by save.
-		static const unsigned char ZeroChar = '-';
-		static const unsigned char IsZeroChar = '+';
-		static const unsigned char IsNonZeroChar = '-';
+    class Entity;
+    class Load
+    {
+    public:
+        explicit Load();
+        void doLoad();
+        int getLength();
+        void setRead(int position);
+        template<typename T>
+        T read();
+    private:
+        static bool isLoadOdf(const std::shared_ptr<Entity>& ent, void* arguments); 
+        void loadHolders(const std::vector<std::shared_ptr<Entity>>& objects);
+        void loadMappers(const std::vector<std::shared_ptr<Entity>>& objects);
 
-		static const int MaxPackets = 255;
-		static const int BytesPerPacket = 125;
-		static const int MaxBytes = MaxPackets * BytesPerPacket;
+        //Constants. These are shared by save.
+        static const unsigned char ZeroChar = '-';
+        static const unsigned char IsZeroChar = '+';
+        static const unsigned char IsNonZeroChar = '-';
 
-		friend class Save;
+        static const int MaxPackets = 255;
+        static const int BytesPerPacket = 125;
+        static const int MaxBytes = MaxPackets * BytesPerPacket;
 
-		//Some data for loading.
-		int position_;
-		unsigned char buffer_[ MaxBytes ];
-	};
+        friend class Save;
 
-	void load_register( lua_State* state );
+        //Some data for loading.
+        int position_;
+        unsigned char buffer_[ MaxBytes ];
+    };
+
+    void load_register(lua_State* L);
 }
 
 #include "Load_Internal.inl"

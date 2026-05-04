@@ -3,15 +3,13 @@
 
 namespace mmm
 {
-	TradingStationClass::TradingStationClass( types::TradingStationClass* station )
-		: MiningStationClass( station )
-	{
+    TradingStationClass::TradingStationClass(types::TradingStationClass* station)
+        : MiningStationClass(station)
+    {
+    }
 
-	}
-
-	types::TradingStationClass* 
-	TradingStationClass::getTradingStationClass() const
-	{
-		return static_cast<types::TradingStationClass*>( getClass() );
-	}
+    types::TradingStationClass* TradingStationClass::getTradingStationClass() const
+    {
+        return static_cast<types::TradingStationClass*>(getClass());
+    }
 }

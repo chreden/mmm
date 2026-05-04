@@ -4,24 +4,22 @@
 
 namespace mmm
 {
-	namespace types
-	{
-		struct RepairShip;
-	}
+    namespace types
+    {
+        struct RepairShip;
+    }
 
-	class RepairShip
-		: public Craft
-	{
-	public:
-		static RepairShipPtr create( types::Entity* entity );
-		EntityPtr getRepairTarget( ) const;
-		void	 setRepairTarget( EntityPtr ent );
-	protected:
-		explicit	 RepairShip( types::RepairShip* ship );
-		virtual void allocateReplacement( luabind::detail::object_rep* obj );
-	private:
-		types::RepairShip* getRepairShip() const;
-	};
-
-	void repairship_register( lua_State* state );
+    class RepairShip : public Craft
+    {
+    public:
+        static RepairShipPtr create(types::Entity* entity);
+        std::shared_ptr<Entity> getRepairTarget() const;
+        void setRepairTarget(const std::shared_ptr<Entity>& ent);
+        int index(lua_State* L, const std::string& key) const override;
+        int newindex(lua_State* L, const std::string& key) override;
+    protected:
+        explicit RepairShip(types::RepairShip* ship);
+    private:
+        types::RepairShip* getRepairShip() const;
+    };
 }

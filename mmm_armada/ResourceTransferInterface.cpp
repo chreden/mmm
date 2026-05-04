@@ -10,93 +10,107 @@
 
 namespace mmm
 {
-	namespace 
-	{
-		const std::size_t Address_IsShipDocked				   = 0x004d7020;
-		const std::size_t Address_GetResourceTransferInterface = 0x0049fda0;
+    namespace 
+    {
+        const std::size_t Address_IsShipDocked  = 0x004d7020;
+        const std::size_t Address_GetResourceTransferInterface = 0x0049fda0;
 
-		class ResourceTransferInterfaceCallback
-			: public Container::Callback
-		{
-		public:
-			explicit ResourceTransferInterfaceCallback( ResourceTransferInterface* iface )
-				: interface_( iface )
-			{
-			}
+        class ResourceTransferInterfaceCallback : public Container::Callback
+        {
+        public:
+            explicit ResourceTransferInterfaceCallback(ResourceTransferInterface* iface)
+                : interface_(iface)
+            {
+            }
 
-			virtual ~ResourceTransferInterfaceCallback( )
-			{
-			}
+            virtual ~ResourceTransferInterfaceCallback()
+            {
+            }
 
-			virtual float get( eResource resource ) const
-			{
-				return interface_->getResourceRate( resource );
-			}
+            virtual float get(eResource resource) const
+            {
+                return interface_->getResourceRate(resource);
+            }
 
-			virtual void set( eResource resource, float rate )
-			{
-				interface_->setResourceRate( resource, rate );
-			}
-		private:
-			ResourceTransferInterface* interface_;
-		};
-	}
+            virtual void set(eResource resource, float rate)
+            {
+                interface_->setResourceRate(resource, rate);
+            }
+        private:
+            ResourceTransferInterface* interface_;
+        };
+    }
 
-	ResourceTransferInterface::ResourceTransferInterface( types::GameObject* object )
-		: object_( object )
-	{
+    ResourceTransferInterface::ResourceTransferInterface(types::GameObject* object)
+        : object_(object)
+    {
 
-	}
+    }
 
-	bool
-	ResourceTransferInterface::isShipDocked() const
-	{
-		types::ResourceTransferInterface* const iface = getResourceTransferInterface();
-		return (iface->*memory_function< bool (types::ResourceTransferInterface::*)()>( Address_IsShipDocked ))();
-	}
+    bool ResourceTransferInterface::isShipDocked() const
+    {
+        types::ResourceTransferInterface* const iface = getResourceTransferInterface();
+        return (iface->*memory_function< bool (types::ResourceTransferInterface::*)()>(Address_IsShipDocked))();
+    }
 
-	EntityPtr 
-	ResourceTransferInterface::getDockedShip() const
-	{
-		return createEntityPtr( GetEntity<types::Entity>( getResourceTransferInterface()->m_dockedShip ) );
-	}
+    std::shared_ptr<Entity> ResourceTransferInterface::getDockedShip() const
+    {
+        return createEntityPtr(GetEntity<types::Entity>(getResourceTransferInterface()->m_dockedShip));
+    }
 
-	types::ResourceTransferInterface* 
-	ResourceTransferInterface::getResourceTransferInterface() const
-	{
-		if( types::isMiningStation( object_ ) )
-		{
-			return static_cast<types::MiningStation*>( object_ )->m_pResourceTransferInterface;
-		}
-		else if( types::isStarbase( object_ ) )
-		{
-			return static_cast<types::Starbase*>( object_ )->m_pResourceTransferInterface;
-		}
-		return 0;
-	}
+    types::ResourceTransferInterface* ResourceTransferInterface::getResourceTransferInterface() const
+    {
+        if(types::isMiningStation(object_))
+        {
+            return static_cast<types::MiningStation*>(object_)->m_pResourceTransferInterface;
+        }
+        else if(types::isStarbase(object_))
+        {
+            return static_cast<types::Starbase*>(object_)->m_pResourceTransferInterface;
+        }
+        return 0;
+    }
 
-	Container
-	ResourceTransferInterface::getResourceRates() const
-	{
-		return Container( std::shared_ptr<Container::Callback>( new ResourceTransferInterfaceCallback( const_cast<ResourceTransferInterface*>(this)) ) );
-	}
+    Container ResourceTransferInterface::getResourceRates() const
+    {
+        return Container(std::shared_ptr<Container::Callback>(new ResourceTransferInterfaceCallback(const_cast<ResourceTransferInterface*>(this))));
+    }
 
 
-	float	  
-	ResourceTransferInterface::getResourceRate( eResource res ) const
-	{
-		return getResourceTransferInterface()->m_pTransferData->m_transferRates[res];
-	}
+    float ResourceTransferInterface::getResourceRate(eResource res) const
+    {
+        return getResourceTransferInterface()->m_pTransferData->m_transferRates[res];
+    }
 
-	void	  
-	ResourceTransferInterface::setResourceRate( eResource res, float value )
-	{
-		getResourceTransferInterface()->m_pTransferData->m_transferRates[res] = value;
-	}
+    void ResourceTransferInterface::setResourceRate(eResource res, float value)
+    {
+        getResourceTransferInterface()->m_pTransferData->m_transferRates[res] = value;
+    }
 
-	OrientedQueuePtr 
-	ResourceTransferInterface::getMiningQueue() const
-	{
-		return OrientedQueue::create( getResourceTransferInterface()->m_mining_queue );
-	}
+    std::shared_ptr<OrientedQueue> ResourceTransferInterface::getMiningQueue() const
+    {
+        return OrientedQueue::create(getResourceTransferInterface()->m_mining_queue);
+    }
+
+    int ResourceTransferInterface::index(lua_State* L, const std::string& key) const
+    {
+        if (key == "dockedShip")
+        {
+            return entity_new(L, getDockedShip());
+        }
+        else if (key == "isShipDocked")
+        {
+            lua_pushboolean(L, isShipDocked());
+            return 1;
+        }
+        else if (key == "miningQueue")
+        {
+            return queue_new(L, getMiningQueue());
+        }
+        else if (key == "transferRates")
+        {
+            return container_new(L, getResourceRates());
+        }
+        return 0;
+    }
 }

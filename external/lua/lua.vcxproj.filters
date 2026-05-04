@@ -5,6 +5,8 @@
     <ClCompile Include="src\lauxlib.c" />
     <ClCompile Include="src\lbaselib.c" />
     <ClCompile Include="src\lcode.c" />
+    <ClCompile Include="src\lcorolib.c" />
+    <ClCompile Include="src\lctype.c" />
     <ClCompile Include="src\ldblib.c" />
     <ClCompile Include="src\ldebug.c" />
     <ClCompile Include="src\ldo.c" />
@@ -30,6 +32,7 @@
     <ClCompile Include="src\lua.c" />
     <ClCompile Include="src\luac.c" />
     <ClCompile Include="src\lundump.c" />
+    <ClCompile Include="src\lutf8lib.c" />
     <ClCompile Include="src\lvm.c" />
     <ClCompile Include="src\lzio.c" />
   </ItemGroup>
@@ -37,21 +40,26 @@
     <ClInclude Include="src\lapi.h" />
     <ClInclude Include="src\lauxlib.h" />
     <ClInclude Include="src\lcode.h" />
+    <ClInclude Include="src\lctype.h" />
     <ClInclude Include="src\ldebug.h" />
     <ClInclude Include="src\ldo.h" />
     <ClInclude Include="src\lfunc.h" />
     <ClInclude Include="src\lgc.h" />
+    <ClInclude Include="src\ljumptab.h" />
     <ClInclude Include="src\llex.h" />
     <ClInclude Include="src\llimits.h" />
     <ClInclude Include="src\lmem.h" />
     <ClInclude Include="src\lobject.h" />
     <ClInclude Include="src\lopcodes.h" />
+    <ClInclude Include="src\lopnames.h" />
     <ClInclude Include="src\lparser.h" />
+    <ClInclude Include="src\lprefix.h" />
     <ClInclude Include="src\lstate.h" />
     <ClInclude Include="src\lstring.h" />
     <ClInclude Include="src\ltable.h" />
     <ClInclude Include="src\ltm.h" />
     <ClInclude Include="src\lua.h" />
+    <ClInclude Include="src\lua.hpp" />
     <ClInclude Include="src\luaconf.h" />
     <ClInclude Include="src\lualib.h" />
     <ClInclude Include="src\lundump.h" />

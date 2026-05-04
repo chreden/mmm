@@ -3,9 +3,8 @@
 
 namespace mmm
 {
-	EvolverClass::EvolverClass( types::EvolverClass* evolver )
-		: ProducerClass( evolver )
-	{
-
-	}
+    EvolverClass::EvolverClass(types::EvolverClass* evolver)
+        : ProducerClass(evolver)
+    {
+    }
 }

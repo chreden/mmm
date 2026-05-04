@@ -1,53 +1,69 @@
 #include "BeamToggle.h"
 #include "Type_BeamToggle.h"
+#include "LuaBinding.h"
 
 namespace mmm
 {
-	BeamTogglePtr
-	BeamToggle::create( types::Entity* entity )
-	{
-		return BeamTogglePtr( new BeamToggle( static_cast<types::BeamToggle*>( entity ) ) );
-	}
+    std::shared_ptr<BeamToggle> BeamToggle::create(types::Entity* entity)
+    {
+        return std::shared_ptr<BeamToggle>(new BeamToggle(static_cast<types::BeamToggle*>(entity)));
+    }
 
-	BeamToggle::BeamToggle( types::BeamToggle* beamToggle )
-		: Ordnance( beamToggle )
-	{
+    BeamToggle::BeamToggle(types::BeamToggle* beamToggle)
+        : Ordnance(beamToggle)
+    {
+    }
 
-	}
+    types::BeamToggle* BeamToggle::getBeamToggle() const
+    {
+        return static_cast<types::BeamToggle*>(getEntity());
+    }
 
-	void
-	BeamToggle::allocateReplacement( luabind::detail::object_rep* obj )
-	{
-		entity_allocate_replacement<BeamToggle>( obj, boost::static_pointer_cast<BeamToggle>( shared_from_this() ) );
-	}
+    Vector3 BeamToggle::getStartPosition() const
+    {
+        return getBeamToggle()->startPos;
+    }
 
-	types::BeamToggle*
-	BeamToggle::getBeamToggle() const
-	{
-		return static_cast<types::BeamToggle*>( getEntity() );
-	}
+    Vector3 BeamToggle::getEndPosition() const
+    {
+        return getBeamToggle()->endPos;
+    }
 
-	Vector3
-	BeamToggle::getStartPosition() const
-	{
-		return getBeamToggle()->startPos;
-	}
+    void BeamToggle::setStartPosition(const Vector3& position)
+    {
+        getBeamToggle()->startPos = position;
+    }
 
-	Vector3
-	BeamToggle::getEndPosition() const
-	{
-		return getBeamToggle()->endPos;
-	}
+    void BeamToggle::setEndPosition(const Vector3& position)
+    {
+        getBeamToggle()->endPos = position;
+    }
 
-	void
-	BeamToggle::setStartPosition( const Vector3& position )
-	{
-		getBeamToggle()->startPos = position;
-	}
+    int BeamToggle::index(lua_State* L, const std::string& key) const
+    {
+        if (key == "endPosition")
+        {
+            return vector_new(L, getEndPosition());
+        }
+        else if (key == "startPosition")
+        {
+            return vector_new(L, getStartPosition());
+        }
+        return Ordnance::index(L, key);
+    }
 
-	void
-	BeamToggle::setEndPosition( const Vector3& position )
-	{
-		getBeamToggle()->endPos = position;
-	}
+    int BeamToggle::newindex(lua_State* L, const std::string& key)
+    {
+        if (key == "endPosition")
+        {
+            setEndPosition(get_userdata<Vector3>(L, 3));
+            return 0;
+        }
+        else if (key == "startPosition")
+        {
+            setStartPosition(get_userdata<Vector3>(L, 3));
+            return 0;
+        }
+        return Ordnance::newindex(L, key);
+    }
 }

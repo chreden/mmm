@@ -3,21 +3,18 @@
 
 namespace mmm
 {
-	CraftClassPtr 
-	CraftClass::create( types::GameObjectClass* ptr )
-	{
-		return CraftClassPtr( new CraftClass( static_cast<types::CraftClass*>( ptr ) ) );
-	}
+    CraftClassPtr CraftClass::create(types::GameObjectClass* ptr)
+    {
+        return CraftClassPtr(new CraftClass(static_cast<types::CraftClass*>(ptr)));
+    }
 
-	CraftClass::CraftClass( types::CraftClass* craftClass )
-		: GameObjectClass( craftClass )
-	{
+    CraftClass::CraftClass(types::CraftClass* craftClass)
+        : GameObjectClass(craftClass)
+    {
+    }
 
-	}
-
-	types::CraftClass* 
-	CraftClass::getCraftClass() const
-	{
-		return static_cast<types::CraftClass*>( getClass() );
-	}
+    types::CraftClass* CraftClass::getCraftClass() const
+    {
+        return static_cast<types::CraftClass*>(getClass());
+    }
 }

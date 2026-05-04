@@ -7,44 +7,49 @@
 
 namespace mmm
 {
-	MiningStationPtr 
-	MiningStation::create( types::Entity* entity )
-	{
-		return MiningStationPtr( new MiningStation( static_cast<types::MiningStation*>( entity ) ) );
-	}
+    MiningStationPtr MiningStation::create(types::Entity* entity)
+    {
+        return MiningStationPtr(new MiningStation(static_cast<types::MiningStation*>(entity)));
+    }
 
-	MiningStation::MiningStation( types::MiningStation* station )
-		: Producer( station ), ResourceTransferInterface( station )
-	{
+    MiningStation::MiningStation(types::MiningStation* station)
+        : Producer(station), ResourceTransferInterface(station)
+    {
 
-	}
+    }
 
-	types::MiningStation*
-	MiningStation::getMiningStation( ) const
-	{
-		return static_cast<types::MiningStation*>( getEntity() );
-	}
+    types::MiningStation* MiningStation::getMiningStation() const
+    {
+        return static_cast<types::MiningStation*>(getEntity());
+    }
 
-	FreighterPtr
-	MiningStation::buildFreighter( )
-	{
-		types::Freighter* freighter = (getMiningStation()->*memory_function< types::Freighter* (types::MiningStation::*)()>( Address_BuildFreighter ))();
-		if( freighter ) 
-		{
-			return Freighter::create( freighter );
-		}
-		return FreighterPtr();
-	}
+    std::shared_ptr<Freighter> MiningStation::buildFreighter() const
+    {
+        types::Freighter* freighter = (getMiningStation()->*memory_function< types::Freighter* (types::MiningStation::*)()>(Address_BuildFreighter))();
+        if(freighter) 
+        {
+            return Freighter::create(freighter);
+        }
+        return {};
+    }
 
-	GameObjectClassPtr 
-	MiningStation::getClass() const
-	{
-		return GameObjectClassPtr( new MiningStationClass( static_cast<types::MiningStationClass*>( getMiningStation()->m_class ) ) );
-	}
+    std::shared_ptr<GameObjectClass> MiningStation::getClass() const
+    {
+        return std::shared_ptr<GameObjectClass>(new MiningStationClass(static_cast<types::MiningStationClass*>(getMiningStation()->m_class)));
+    }
 
-	void
-	MiningStation::allocateReplacement( luabind::detail::object_rep* obj )
-	{
-		entity_allocate_replacement<MiningStation>( obj, boost::static_pointer_cast<MiningStation>( shared_from_this() ) );
-	}
+    int MiningStation::index(lua_State* L, const std::string& key) const
+    {
+        if (key == "buildFreighter")
+        {
+            return entity_new(L, buildFreighter());
+        }
+
+        const int rti = ResourceTransferInterface::index(L, key);
+        if (rti)
+        {
+            return rti;
+        }
+        return Producer::index(L, key);
+    }
 }

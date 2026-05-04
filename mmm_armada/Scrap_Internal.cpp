@@ -5,27 +5,18 @@
 
 namespace mmm
 {
-	ScrapPtr
-	Scrap::create( types::Entity* entity )
-	{
-		return ScrapPtr( new Scrap( static_cast<types::Scrap*>( entity ) ) );
-	}
+    std::shared_ptr<Scrap> Scrap::create(types::Entity* entity)
+    {
+        return std::shared_ptr<Scrap>(new Scrap(static_cast<types::Scrap*>(entity)));
+    }
 
-	Scrap::Scrap( types::Scrap* scrap )
-		: TerrainObject( scrap )
-	{
+    Scrap::Scrap(types::Scrap* scrap)
+        : TerrainObject(scrap)
+    {
+    }
 
-	}
-
-	GameObjectClassPtr 
-	Scrap::getClass() const
-	{
-		return GameObjectClassPtr( new ScrapClass( static_cast<types::ScrapClass*>( getGameObject()->m_class ) ) );
-	}
-
-	void
-	Scrap::allocateReplacement( luabind::detail::object_rep* obj )
-	{
-		entity_allocate_replacement<Scrap>( obj, boost::static_pointer_cast<Scrap>( shared_from_this() ) );
-	}
+    std::shared_ptr<GameObjectClass> Scrap::getClass() const
+    {
+        return std::shared_ptr<GameObjectClass>(new ScrapClass(static_cast<types::ScrapClass*>(getGameObject()->m_class)));
+    }
 }

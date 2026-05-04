@@ -4,33 +4,31 @@
 
 namespace mmm
 {
-	namespace types
-	{
-		class Freighter;
-	} 
+    namespace types
+    {
+        class Freighter;
+    } 
 
-	class Freighter :
-		public Craft
-	{
-	public:
-		static FreighterPtr create( types::Entity* entity );
-		eResource getResourceCarried( ) const;
-		float	  getSpaceRemaining() const;
-		float	  getAmountCarried() const;
-		bool	  getDroppingOff() const;
-		float	  getMaxAmount( eResource resource ) const;
-		float	  getMaxAmountCurrent( ) const;
-		EntityPtr getResourceSource() const;
-		EntityPtr getStation() const;
-			
-		void	  setResourceCarried( eResource resource );
-		void	  setAmountCarried( float amount );
-	protected:
-		explicit Freighter( types::Freighter* freighter );
-		virtual void allocateReplacement( luabind::detail::object_rep* obj );
-	private:
-		types::Freighter* getFreighter() const;
-	};
+    class Freighter : public Craft
+    {
+    public:
+        static std::shared_ptr<Freighter> create(types::Entity* entity);
+        eResource getResourceCarried() const;
+        float getSpaceRemaining() const;
+        float getAmountCarried() const;
+        bool getDroppingOff() const;
+        float getMaxAmount(eResource resource) const;
+        float getMaxAmountCurrent() const;
+        std::shared_ptr<Entity> getResourceSource() const;
+        std::shared_ptr<Entity> getStation() const;
+        void setResourceCarried(eResource resource);
+        void setAmountCarried(float amount);
 
-	void freighter_register( lua_State* state );
+        int index(lua_State* L, const std::string& key) const override;
+        int newindex(lua_State* L, const std::string& key) override;
+    protected:
+        explicit Freighter(types::Freighter* freighter);
+    private:
+        types::Freighter* getFreighter() const;
+    };
 }

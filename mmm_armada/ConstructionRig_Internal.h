@@ -4,27 +4,22 @@
 
 namespace mmm
 {
-	namespace types
-	{
-		struct ConstructionRig;
-	}
+    namespace types
+    {
+        struct ConstructionRig;
+    }
 
-	class ConstructionRig 
-		: public Producer
-	{
-	public:
-		static ConstructionRigPtr create( types::Entity* entity );
-
-		int		  getBeesOnboard() const;
-		EntityPtr getConstructionObject() const;
-
-		void	  setBeesOnboard( int value );
-	protected:
-		explicit ConstructionRig( types::ConstructionRig* producer );
-		virtual void allocateReplacement( luabind::detail::object_rep* object );
-	private:
-		types::ConstructionRig* getConstructionRig() const;
-	};
-
-	void constructionrig_register( lua_State* state );
+    class ConstructionRig : public Producer
+    {
+    public:
+        static ConstructionRigPtr create(types::Entity* entity);
+        int getBeesOnboard() const;
+        std::shared_ptr<Entity> getConstructionObject() const;
+        void setBeesOnboard(int value);
+        int index(lua_State* L, const std::string& key) const override;
+    protected:
+        explicit ConstructionRig(types::ConstructionRig* producer);
+    private:
+        types::ConstructionRig* getConstructionRig() const;
+    };
 }

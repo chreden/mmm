@@ -3,17 +3,17 @@
 namespace mmm
 {
     class Path;
-
+    class Entity;
     class Camera
     {
     public:
         void center(const Vector3& position);
-        void center(EntityPtr entity);
+        void center(const std::shared_ptr<Entity>& entity);
         void center(const Path& path, int index);
         void zoom(float value);
         Vector3 project(const Vector3& position);
         Vector3 getTarget() const;
     };
 
-    void camera_register(lua_State* state);
+    void camera_register(lua_State* L);
 }

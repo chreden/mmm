@@ -5,41 +5,43 @@
 
 namespace mmm
 {
-	//0001:000a2480       ?SetBuildClass@ConstructionObject@@QAEXPBVCraftClass@@@Z 004a3480 f   ConstructionObject.obj
+    //0001:000a2480       ?SetBuildClass@ConstructionObject@@QAEXPBVCraftClass@@@Z 004a3480 f   ConstructionObject.obj
 
-	ConstructionObjectPtr 
-	ConstructionObject::create( types::Entity* entity )
-	{
-		return ConstructionObjectPtr( new ConstructionObject( static_cast<types::ConstructionObject*>( entity ) ) );
-	}
+    std::shared_ptr<ConstructionObject> ConstructionObject::create( types::Entity* entity )
+    {
+        return std::shared_ptr<ConstructionObject>(new ConstructionObject(static_cast<types::ConstructionObject*>(entity)));
+    }
 
-	ConstructionObject::ConstructionObject( types::ConstructionObject* object )
-		: GameObject( object )
-	{
+    ConstructionObject::ConstructionObject(types::ConstructionObject* object)
+        : GameObject(object)
+    {
+    }
 
-	}
+    types::ConstructionObject* ConstructionObject::getConstructionObject() const
+    {
+        return static_cast<types::ConstructionObject*>(getEntity());
+    }
 
-	types::ConstructionObject* 
-	ConstructionObject::getConstructionObject() const
-	{
-		return static_cast<types::ConstructionObject*>( getEntity() );
-	}
+    std::shared_ptr<Entity> ConstructionObject::getBuilder() const
+    {
+        return createEntityPtr(GetEntity<types::GameObject>(getConstructionObject()->m_rigHandle));
+    }
 
-	void
-	ConstructionObject::allocateReplacement( luabind::detail::object_rep* obj )
-	{
-		entity_allocate_replacement<ConstructionObject>( obj, boost::static_pointer_cast<ConstructionObject>( shared_from_this() ) );
-	}
+    std::shared_ptr<GameObjectClass> ConstructionObject::getBuildClass() const
+    {
+        return createGameObjectClassPtr(getConstructionObject()->m_pBuildClass);
+    }
 
-	EntityPtr 
-	ConstructionObject::getBuilder() const
-	{
-		return createEntityPtr( GetEntity<types::GameObject>( getConstructionObject()->m_rigHandle ) );
-	}
-
-	GameObjectClassPtr 
-	ConstructionObject::getBuildClass() const
-	{
-		return createGameObjectClassPtr( getConstructionObject()->m_pBuildClass );
-	}
+    int ConstructionObject::index(lua_State* L, const std::string& key) const
+    {
+        if (key == "builder")
+        {
+            return entity_new(L, getBuilder());
+        }
+        else if (key == "buildClass")
+        {
+            return gameobjectclass_new(L, getBuildClass());
+        }
+        return GameObject::index(L, key);
+    }
 }

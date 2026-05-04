@@ -4,21 +4,17 @@
 
 namespace mmm
 {
-	namespace types
-	{
-		struct AreaEffectObject;
-	}
+    namespace types
+    {
+        struct AreaEffectObject;
+    }
 
-	class AreaEffectObject 
-		: public TerrainObject
-	{
-	public:
-		static AreaEffectObjectPtr create( types::Entity* entity );
-		virtual GameObjectClassPtr getClass() const;
-	protected:
-		explicit	   AreaEffectObject( types::AreaEffectObject* object );
-		virtual void   allocateReplacement( luabind::detail::object_rep* object );
-	};
-
-	void areaeffectobject_register( lua_State* state );
+    class AreaEffectObject  : public TerrainObject
+    {
+    public:
+        static AreaEffectObjectPtr create(types::Entity* entity);
+        virtual std::shared_ptr<GameObjectClass> getClass() const;
+    protected:
+        explicit AreaEffectObject(types::AreaEffectObject* object);
+    };
 }

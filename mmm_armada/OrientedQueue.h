@@ -4,19 +4,18 @@
 
 namespace mmm
 {
-	namespace types { struct OrientedQueue; }
+    namespace types { struct OrientedQueue; }
 
-	class OrientedQueue
-		: public SplineQueue
-	{
-	public:
-		static OrientedQueuePtr create( types::OrientedQueue* queue );
-		const Vector3 getEndOffset() const;
-		const Vector3 getDirection() const;
-	private:
-		explicit OrientedQueue( types::OrientedQueue* queue );
-		types::OrientedQueue* getOrientedQueue() const;
-	};
-
-	void orientedqueue_register( lua_State* state );
+    class OrientedQueue
+        : public SplineQueue
+    {
+    public:
+        static std::shared_ptr<OrientedQueue> create(types::OrientedQueue* queue);
+        Vector3 getEndOffset() const;
+        Vector3 getDirection() const;
+        int index(lua_State* L, const std::string& key) const override;
+    private:
+        explicit OrientedQueue(types::OrientedQueue* queue);
+        types::OrientedQueue* getOrientedQueue() const;
+    };
 }

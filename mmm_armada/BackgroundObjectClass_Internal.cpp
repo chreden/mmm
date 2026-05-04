@@ -3,9 +3,8 @@
 
 namespace mmm
 {
-	BackgroundObjectClass::BackgroundObjectClass( types::BackgroundObjectClass* object )
-		: TerrainObjectClass( object )
-	{
-
-	}
+    BackgroundObjectClass::BackgroundObjectClass(types::BackgroundObjectClass* object)
+        : TerrainObjectClass(object)
+    {
+    }
 }

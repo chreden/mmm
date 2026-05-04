@@ -137,11 +137,8 @@
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\external\luabind\LuaBind.vcxproj">
-      <Project>{8a6d737f-7d03-4847-9c65-2dc4d6fa3716}</Project>
-    </ProjectReference>
     <ProjectReference Include="..\external\lua\lua.vcxproj">
-      <Project>{2a4f1e89-71ac-46c3-a711-1a4d67accdf5}</Project>
+      <Project>{37126438-21c3-4711-bc51-abc5fac656c7}</Project>
     </ProjectReference>
     <ProjectReference Include="..\mmm_armada\mmm_armada.vcxproj">
       <Project>{3db607f3-3e96-459c-bcc8-ec17746903ec}</Project>

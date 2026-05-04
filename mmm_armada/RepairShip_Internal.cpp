@@ -11,50 +11,51 @@
 
 namespace mmm
 {
-	namespace
-	{
+    RepairShipPtr RepairShip::create(types::Entity* entity)
+    {
+        return RepairShipPtr(new RepairShip(static_cast<types::RepairShip*>(entity)));
+    }
 
-	}
+    RepairShip::RepairShip(types::RepairShip* ship)
+        : Craft(ship)
+    {
+    }
 
-	RepairShipPtr 
-	RepairShip::create( types::Entity* entity )
-	{
-		return RepairShipPtr( new RepairShip( static_cast<types::RepairShip*>( entity ) ) );
-	}
+    types::RepairShip* RepairShip::getRepairShip() const
+    {
+        return static_cast<types::RepairShip*>(getEntity());
+    }
 
-	RepairShip::RepairShip( types::RepairShip* ship )
-		: Craft( ship )
-	{
+    std::shared_ptr<Entity> RepairShip::getRepairTarget() const
+    {
+        const types::RepairShip* const ship = getRepairShip();
+        return createEntityPtr( GetEntity<types::Entity>( memraider::MrNode( ship->aiProcess ).get<int>( 0x1ac ) ) );
+    }
 
-	}
+    void RepairShip::setRepairTarget(const std::shared_ptr<Entity>& ent)
+    {
+        if (ent->isType(Entity_Craft))
+        {
+            getRepairShip()->m_pCraft = static_cast<types::Craft*>(ent->getEntity());
+        }
+    }
 
-	types::RepairShip*
-	RepairShip::getRepairShip() const
-	{
-		return static_cast<types::RepairShip*>( getEntity() );
-	}
+    int RepairShip::index(lua_State* L, const std::string& key) const
+    {
+        if (key == "repairTarget")
+        {
+            return entity_new(L, getRepairTarget());
+        }
+        return Craft::index(L, key);
+    }
 
-	EntityPtr 
-	RepairShip::getRepairTarget( ) const
-	{
-		//Extracts the target from the repair ship process - this will eventually use the actual
-		//process but for now just uses mem raider.
-		const types::RepairShip* const ship = getRepairShip();
-		return createEntityPtr( GetEntity<types::Entity>( memraider::MrNode( ship->aiProcess ).get<int>( 0x1ac ) ) );
-	}
-
-	void	 
-	RepairShip::setRepairTarget( EntityPtr ent )
-	{
-		if( ent->isType( Entity_Craft ) )
-		{
-			getRepairShip()->m_pCraft = static_cast<types::Craft*>( ent->getEntity() );
-		}
-	}
-
-	void
-	RepairShip::allocateReplacement( luabind::detail::object_rep* obj )
-	{
-		entity_allocate_replacement<RepairShip>( obj, boost::static_pointer_cast<RepairShip>( shared_from_this() ) );
-	}
+    int RepairShip::newindex(lua_State* L, const std::string& key)
+    {
+        if (key == "repairTarget")
+        {
+            setRepairTarget(get_entity<Entity>(L, 2));
+            return 0;
+        }
+        return Craft::newindex(L, key);
+    }
 }

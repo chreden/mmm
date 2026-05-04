@@ -1,152 +1,212 @@
 #include "EntityFinder.h"
 #include "ScriptErrors.h"
 #include "Entities_Internal.h"
-
 #include "EntityFinderFilterFunction.h"
 #include "EntityFinderFilterObject.h"
+#include "LuaBinding.h"
 
 namespace mmm
 {
-	EntityFinder::EntityFinder( )
-	{
+    namespace
+    {
+        int finder_gc(lua_State* L)
+        {
+            cleanup_userdata<std::shared_ptr<EntityFinder>>(L);
+            return 0;
+        }
 
-	}
+        int finder_find(lua_State* L)
+        {
+            auto self = get_userdata<std::shared_ptr<EntityFinder>>(L, 1);
+            if (lua_gettop(L) == 2 && lua_type(L, 2) == LUA_TNUMBER)
+            {
+                return self->find(lua_tonumber(L, 2));
+            }
+            return self->find();
+        }
 
-	EntityFinder::EntityFinder( luabind::object filters )
-	{
-		if( LUA_TTABLE == luabind::type( filters ) )
-		{
-			for( luabind::raw_iterator i( filters ), end; 
-					i != end;
-					++i )
-			{
-				if( LUA_TUSERDATA == luabind::type( *i ) )
-				{
-					luabind::object func = (*i)["evaluate"];
-					if( func.is_valid() && luabind::type( func ) == LUA_TFUNCTION )
-					{
-						filters_.push_back( EntityFinderFilterPtr( new EntityFinderFilterObject( *i, func ) ) );
-					}
-				}
-				else if( LUA_TFUNCTION == luabind::type( *i ) )
-				{
-					filters_.push_back( EntityFinderFilterPtr( new EntityFinderFilterFunction( *i ) ) );
-				}
-			}
-		}
-		else if( LUA_TFUNCTION == luabind::type( filters ) )
-		{
-			//Has to be a function - at least, we will only accept a function
-			//here.
-			filters_.push_back( EntityFinderFilterPtr( new EntityFinderFilterFunction( filters ) ) );
-		}
-		else if( LUA_TUSERDATA == luabind::type( filters ) )
-		{
-			//For each thing we must check to see what it is.
-			luabind::object eval = filters["evaluate"];
-			if( eval.is_valid() && luabind::type( eval ) == LUA_TFUNCTION )
-			{
-				//We have an object
-				filters_.push_back( EntityFinderFilterPtr( new EntityFinderFilterObject( filters, eval ) ) );
-			}
-		}
-	}
+        int finder_find_one(lua_State* L)
+        {
+            auto self = get_userdata<std::shared_ptr<EntityFinder>>(L, 1);
+            return self->find_one();
+        }
 
-	luabind::object 
-	EntityFinder::find( ) const
-	{
-		std::vector<EntityPtr> results;
-		innerFind( results );
+        int finder_index(lua_State* L)
+        {
+            const auto team = get_userdata<std::shared_ptr<EntityFinder>>(L, 1);
+            const std::string key = lua_tostring(L, 2);
 
-		luabind::object luaResults = luabind::newtable( common::Storage::instance().mainLuaVM );
-			
-		const std::size_t Count = results.size();
-		for( std::size_t e = 0;
-				e < Count;
-				++e )
-		{
-			luaResults[e+1] = results[e];
-		}
+            if (key == "find")
+            {
+                lua_pushcfunction(L, finder_find);
+                return 1;
+            }
+            else if (key == "findOne")
+            {
+                lua_pushcfunction(L, finder_find_one);
+                return 1;
+            }
 
-		return luaResults;
-	}
-	
-	luabind::object		
-	EntityFinder::find( int max ) const
-	{
-		std::vector<EntityPtr> results;
-		innerFind( results, max );
-		luabind::object luaResults = luabind::newtable( common::Storage::instance().mainLuaVM );
-		const std::size_t Count = results.size();
-		for( std::size_t e = 0;
-				e < Count;
-				++e )
-		{
-			luaResults[e+1] = results[e];
-		}
-		return luaResults;
-	}
+            return 0;
+        }
 
-	EntityPtr
-	EntityFinder::findOne( ) const
-	{
-		std::vector<EntityPtr> results;
-		innerFind( results, 1 );
-		if( results.empty() )
-		{
-			return EntityPtr();
-		}
-		return results[0];
-	}
+        int entityfinder_call(lua_State* L)
+        {
+            auto finder_ptr = std::make_shared<EntityFinder>(L, 2);
+            create_userdata(L, finder_ptr);
+            create_metatable(L,
+                {
+                    { "__index", finder_index },
+                    { "__gc", finder_gc }
+                });
+            return 1;
+        }
+    }
 
-	void 
-	EntityFinder::innerFind( std::vector<EntityPtr>& results, int max ) const
-	{
-		lua_State* state = common::Storage::instance().mainLuaVM;
+    EntityFinder::EntityFinder(lua_State* L)
+        : _L(L)
+    {
+    }
 
-		std::vector<EntityPtr> entities;
-		Entities::getActiveEntities( entities );
+    EntityFinder::EntityFinder(lua_State* L, int index)
+        : _L(L)
+    {
+        lua_pushvalue(L, index);
+        const int table_index = luaL_ref(L, LUA_REGISTRYINDEX);
 
+        switch (lua_type(L, index))
+        {
+        case LUA_TTABLE:
+            {
+                // Class with evaluate 
+                lua_getfield(L, index, "evaluate");
+                if (lua_type(L, -1) == LUA_TFUNCTION)
+                {
+                    const int func = luaL_ref(L, LUA_REGISTRYINDEX);
+                    const int table = luaL_ref(L, LUA_REGISTRYINDEX);
+                    _filters.push_back(std::make_shared<EntityFinderFilterObject>(L, table, func));
+                    break;
+                }
+                lua_pop(L, 1);
 
-		const std::size_t Count = entities.size();
-		const std::size_t FilterCount = filters_.size();
-		for( int e = 0; e < Count; ++e )
-		{
-			EntityPtr entity = entities[e];
+                // List of things:
+                const int source = lua_gettop(L);
+                lua_pushnil(L);
+                while (lua_next(L, source) != 0)
+                {
+                    if (lua_type(L, -1) == LUA_TUSERDATA)
+                    {
+                        lua_getfield(L, index, "evaluate");
+                        if (lua_type(L, -1) == LUA_TFUNCTION)
+                        {
+                            const int func = luaL_ref(L, LUA_REGISTRYINDEX);
+                            const int table = luaL_ref(L, LUA_REGISTRYINDEX);
+                            _filters.push_back(std::make_shared<EntityFinderFilterObject>(L, table, func));
+                        }
+                    }
+                    else if (lua_type(L, -1) == LUA_TFUNCTION)
+                    {
+                        _filters.push_back(std::make_shared<EntityFinderFilterFunction>(L, luaL_ref(L, LUA_REGISTRYINDEX)));
+                    }
+                }
+                break;
+            }
+        case LUA_TFUNCTION:
+            {
+                _filters.push_back(std::make_shared<EntityFinderFilterFunction>(L, table_index));
+                break;
+            }
+        case LUA_TUSERDATA:
+            {
+                lua_getfield(L, index, "evaluate");
+                if (lua_type(L, -1) == LUA_TFUNCTION)
+                {
+                    _filters.push_back(std::make_shared<EntityFinderFilterObject>(L, table_index, luaL_ref(L, LUA_REGISTRYINDEX)));
+                }
+            }
+            break;
+        }
+    }
 
-			//Don't use expired things because it causes trouble.
-			if( entity->expired() )
-			{
-				continue;
-			}
+    int EntityFinder::find() const
+    {
+        return find(-1);
+    }
 
-			bool passes = true;
+    int EntityFinder::find(int max) const
+    {
+        std::vector<std::shared_ptr<Entity>> results;
+        inner_find(results, max);
 
-			//Check all filters.
-			for( std::size_t f = 0; f < FilterCount; ++f )
-			{
-				try
-				{
-					if( !filters_[f]->call(entity) )
-					{
-						passes = false;
-						break;
-					}
-				}
-				catch( const luabind::error& )
-				{
-					scriptError( std::string("Error in evaluate : ") + lua_tostring( state, -1 ) );
-				}
-			}
+        lua_newtable(_L);
+        const std::size_t Count = results.size();
+        for (std::size_t e = 0; e < Count; ++e)
+        {
+            entity_new(_L, results[e]);
+            lua_rawseti(_L, -2, e + 1);
+        }
+        return 1;
+    }
 
-			if( passes )
-			{
-				results.push_back( entity );
-				if( max != -1 && results.size() == static_cast<std::size_t>( max ) )
-				{
-					return;
-				}
-			}
-		}
-	}
+    int EntityFinder::find_one() const
+    {
+        std::vector<std::shared_ptr<Entity>> results;
+        inner_find(results, 1);
+        if (results.empty())
+        {
+            lua_pushnil(_L);
+            return 1;
+        }
+        return entity_new(_L, results[0]);
+    }
+
+    void EntityFinder::inner_find(std::vector<std::shared_ptr<Entity>>& results, int max) const
+    {
+        std::vector<std::shared_ptr<Entity>> entities;
+        Entities::getActiveEntities(entities);
+
+        const std::size_t Count = entities.size();
+        const std::size_t FilterCount = _filters.size();
+        for (int e = 0; e < Count; ++e)
+        {
+            auto entity = entities[e];
+
+            // Don't use expired things because it causes trouble.
+            if (entity->expired() || !entity->getEntity())
+            {
+                continue;
+            }
+
+            bool passes = true;
+
+            //Check all filters.
+            for (std::size_t f = 0; f < FilterCount; ++f)
+            {
+                if (!_filters[f]->call(entity))
+                {
+                    passes = false;
+                    break;
+                }
+            }
+
+            if (passes)
+            {
+                results.push_back(entity);
+                if (max != -1 && results.size() == static_cast<std::size_t>(max))
+                {
+                    return;
+                }
+            }
+        }
+    }
+
+    void entityfinder_register(lua_State* L)
+    {
+        lua_newtable(L);
+        create_metatable(L,
+            {
+                { "__call", entityfinder_call }
+            });
+        lua_setglobal(L, "EntityFinder");
+    }
 }

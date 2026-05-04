@@ -4,12 +4,10 @@
 
 namespace mmm
 {
-	namespace types
-	{
-		struct SplineQueue
-			: public Queue
-		{
-
-		};
-	}
+    namespace types
+    {
+        struct SplineQueue : public Queue
+        {
+        };
+    }
 }

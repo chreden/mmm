@@ -99,7 +99,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Externals.h" />
-    <ClInclude Include="Hash.h" />
     <ClInclude Include="mmm_common.h" />
     <ClInclude Include="FilePath.h" />
     <ClInclude Include="ModFolder.h" />
@@ -107,7 +106,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FilePath.cpp" />
-    <ClCompile Include="Hash.cpp" />
     <ClCompile Include="mmm_common.cpp" />
     <ClCompile Include="ModFolder.cpp" />
     <ClCompile Include="pch.cpp">

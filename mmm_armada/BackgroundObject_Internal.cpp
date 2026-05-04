@@ -5,27 +5,19 @@
 
 namespace mmm
 {
-	BackgroundObjectPtr 
-	BackgroundObject::create( types::Entity* entity )
-	{
-		return BackgroundObjectPtr( new BackgroundObject( static_cast<types::BackgroundObject*>( entity ) ) );
-	}
+    BackgroundObjectPtr BackgroundObject::create(types::Entity* entity)
+    {
+        return BackgroundObjectPtr(new BackgroundObject(static_cast<types::BackgroundObject*>(entity)));
+    }
 
-	BackgroundObject::BackgroundObject( types::BackgroundObject* object )
-		: TerrainObject( object )
-	{
+    BackgroundObject::BackgroundObject(types::BackgroundObject* object)
+        : TerrainObject(object)
+    {
 
-	}
+    }
 
-	GameObjectClassPtr 
-	BackgroundObject::getClass() const
-	{
-		return GameObjectClassPtr( new BackgroundObjectClass( static_cast<types::BackgroundObjectClass*>( getGameObject()->m_class ) ) );
-	}
-
-	void 
-	BackgroundObject::allocateReplacement( luabind::detail::object_rep* object )
-	{
-		entity_allocate_replacement<BackgroundObject>( object, boost::static_pointer_cast<BackgroundObject>( shared_from_this() ) );
-	}
+    std::shared_ptr<GameObjectClass> BackgroundObject::getClass() const
+    {
+        return std::shared_ptr<GameObjectClass>(new BackgroundObjectClass(static_cast<types::BackgroundObjectClass*>(getGameObject()->m_class)));
+    }
 }

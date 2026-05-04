@@ -1,178 +1,163 @@
 #include "Application.h"
 #include "ScriptErrors.h"
+#include <format>
 
 namespace mmm
 {
-	namespace
-	{
-		struct MMMApp
-		{
+    namespace
+    {
+        struct MMMApp
+        {
 
-		};
-		luabind::object appRef;
-		bool			cineractive;
+        };
+        int  app_ref{ -2 };
+        bool cineractive{ false };
+        lua_State* lua_state{ nullptr };
 
-		void application_cineractiveUpdate()
-		{
-			if( appRef.is_valid() )
-			{
-				try
-				{
-					luabind::object function = appRef["cineractiveUpdate"];
-					if( function && luabind::type(function) == LUA_TFUNCTION )
-					{
-						luabind::call_function<void>( function, appRef );
-					}
-				}
-				catch( const luabind::error& )
-				{
-					scriptError( std::string("Error in cineractiveUpdate : ") + 
-									lua_tostring(common::Storage::instance().mainLuaVM, -1 ) );
-				}
-			}
-		}
-	}
+        void application_cineractiveUpdate()
+        {
+            if (app_ref != -2)
+            {
+                lua_rawgeti(lua_state, LUA_REGISTRYINDEX, app_ref);
+                lua_getfield(lua_state, -1, "cineractiveUpdate");
+                if (lua_isnil(lua_state, -1))
+                {
+                    lua_pop(lua_state, 2);
+                    return;
+                }
+                lua_rawgeti(lua_state, LUA_REGISTRYINDEX, app_ref);
+                if (LUA_OK != lua_pcall(lua_state, 1, 0, 0))
+                {
+                    scriptError(std::format("Error in cineractiveUpdate: {}", lua_tostring(lua_state, -1)));
+                }
+            }
+        }
 
-	bool 
-	application_isCineractive()
-	{
-		return cineractive;
-	}
+        int application_app_register(lua_State* L)
+        {
+            app_ref = luaL_ref(L, LUA_REGISTRYINDEX);
+            return 0;
+        }
+    }
 
-	void 
-	application_setup( )
-	{
-		if( appRef.is_valid() )
-		{
-			try
-			{
-				luabind::object function = appRef["setup"];
-				if( function && luabind::type(function) == LUA_TFUNCTION )
-				{
-					luabind::call_function<void>( function, appRef );
-				}
-			}
-			catch( const luabind::error& )
-			{
-				scriptError( std::string( "Error in setup : ") + 
-								lua_tostring( common::Storage::instance().mainLuaVM, -1  ) );
-			}
-		}
-	}
+    bool application_isCineractive()
+    {
+        return cineractive;
+    }
 
-	void 
-	application_update( )
-	{
-		if( common::Storage::instance().error )
-		{
-			return;
-		}
+    void application_setup( )
+    {
+        if (app_ref != -2)
+        {
+            lua_rawgeti(lua_state, LUA_REGISTRYINDEX, app_ref);
+            lua_getfield(lua_state, -1, "setup");
+            if (lua_isnil(lua_state, -1))
+            {
+                lua_pop(lua_state, 2);
+                return;
+            }
+            lua_rawgeti(lua_state, LUA_REGISTRYINDEX, app_ref);
+            if (LUA_OK != lua_pcall(lua_state, 1, 0, 0))
+            {
+                scriptError(std::format("Error in setup: {}", lua_tostring(lua_state, -1)));
+            }
+        }
+    }
 
-		if( cineractive )
-		{
-			application_cineractiveUpdate();
-		}
-		else if( appRef.is_valid( ) )
-		{
-			try
-			{
-				luabind::object function = appRef["update"];
-				if( function && luabind::type(function) == LUA_TFUNCTION )
-				{
-					luabind::call_function<void>( function, appRef );
-				}
-			}
-			catch( const luabind::error& )
-			{
-				scriptError( std::string("Error in update : ") + 
-								lua_tostring(common::Storage::instance().mainLuaVM, -1 ) );
-			}
-		}
-	}
+    void application_update( )
+    {
+        if( common::Storage::instance().error )
+        {
+            return;
+        }
 
-	void
-	application_resume( )
-	{
-		if( appRef.is_valid() )
-		{
-			try
-			{
-				luabind::object function = appRef["resume"];
-				if( function && luabind::type(function) == LUA_TFUNCTION )
-				{
-					luabind::call_function<void>( function, appRef );
-				}
-			}
-			catch( const luabind::error& )
-			{
-				scriptError( std::string("Error in resume : ") + 
-								lua_tostring(common::Storage::instance().mainLuaVM, -1 ) );
-			}
-		}
-	}
+        if( cineractive )
+        {
+            application_cineractiveUpdate();
+        }
+        else if (app_ref != -2)
+        {
+            lua_rawgeti(lua_state, LUA_REGISTRYINDEX, app_ref);
+            lua_getfield(lua_state, -1, "update");
+            if (lua_isnil(lua_state, -1))
+            {
+                lua_pop(lua_state, 2);
+                return;
+            }
+            lua_rawgeti(lua_state, LUA_REGISTRYINDEX, app_ref);
+            if (LUA_OK != lua_pcall(lua_state, 1, 0, 0))
+            {
+                scriptError(std::format("Error in update: {}", lua_tostring(lua_state, -1)));
+            }
+        }
+    }
 
-	void 
-	application_cineractiveBegin( )
-	{
-		cineractive = true;
-		if( appRef.is_valid() )
-		{
-			try
-			{
-				luabind::object function = appRef["cineractiveBegin"];
-				if( function && luabind::type(function) == LUA_TFUNCTION )
-				{
-					luabind::call_function<void>( function, appRef );
-				}
-			}
-			catch( const luabind::error& )
-			{
-				scriptError( std::string("Error in cineractiveBegin : ") + 
-								lua_tostring(common::Storage::instance().mainLuaVM, -1 ) );
-			}
-		}
-	}
+    void application_resume( )
+    {
+        if (app_ref != -2)
+        {
+            lua_rawgeti(lua_state, LUA_REGISTRYINDEX, app_ref);
+            lua_getfield(lua_state, -1, "resume");
+            if (lua_isnil(lua_state, -1))
+            {
+                lua_pop(lua_state, 2);
+                return;
+            }
+            lua_rawgeti(lua_state, LUA_REGISTRYINDEX, app_ref);
+            if (LUA_OK != lua_pcall(lua_state, 1, 0, 0))
+            {
+                scriptError(std::format("Error in resume: {}", lua_tostring(lua_state, -1)));
+            }
+        }
+    }
 
-	void 
-	application_cineractiveFinish( bool forced )
-	{
-		if( appRef.is_valid() )
-		{
-			try
-			{
-				luabind::object function = appRef["cineractiveFinish"];
-				if( function && luabind::type(function) == LUA_TFUNCTION )
-				{
-					luabind::call_function<void>( function, appRef, forced );
-				}
-			}
-			catch( const luabind::error& )
-			{
-				scriptError( std::string("Error in cineractiveFinish : ") + 
-								lua_tostring(common::Storage::instance().mainLuaVM, -1 ) );
-			}
-		}
-		cineractive = false;
-	}
+    void application_cineractiveBegin( )
+    {
+        cineractive = true;
+        if (app_ref != -2)
+        {
+            lua_rawgeti(lua_state, LUA_REGISTRYINDEX, app_ref);
+            lua_getfield(lua_state, -1, "cineractiveBegin");
+            if (lua_isnil(lua_state, -1))
+            {
+                lua_pop(lua_state, 2);
+                return;
+            }
+            lua_rawgeti(lua_state, LUA_REGISTRYINDEX, app_ref);
+            if (LUA_OK != lua_pcall(lua_state, 1, 0, 0))
+            {
+                scriptError(std::format("Error in cineractiveBegin: {}", lua_tostring(lua_state, -1)));
+            }
+        }
+    }
 
-	void
-	application_appRegister( luabind::object object )
-	{
-		appRef = object;
-	}
+    void application_cineractiveFinish( bool forced )
+    {
+        if (app_ref != -2)
+        {
+            lua_rawgeti(lua_state, LUA_REGISTRYINDEX, app_ref);
+            lua_getfield(lua_state, -1, "cineractiveFinish");
+            if (lua_isnil(lua_state, -1))
+            {
+                lua_pop(lua_state, 2);
+                return;
+            }
+            lua_rawgeti(lua_state, LUA_REGISTRYINDEX, app_ref);
+            if (LUA_OK != lua_pcall(lua_state, 1, 0, 0))
+            {
+                scriptError(std::format("Error in cineractiveFinish: {}", lua_tostring(lua_state, -1)));
+            }
+        }
+        cineractive = false;
+    }
 
-	void
-	application_register( lua_State* state )
-	{
-		using namespace luabind;
+    void application_register(lua_State* L)
+    {
+        lua_newtable(L);
+        lua_pushcfunction(L, application_app_register);
+        lua_setfield(L, -2, "register");
+        lua_setglobal(L, "MMM");
 
-		module(state)
-		[
-			class_<MMMApp>("MMM")
-				.scope
-				[
-					def("register", &application_appRegister )
-				]
-		];
-	}
+        lua_state = L;
+    }
 }

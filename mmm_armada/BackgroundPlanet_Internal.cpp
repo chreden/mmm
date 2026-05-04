@@ -5,27 +5,19 @@
 
 namespace mmm
 {
-	BackgroundPlanetPtr 
-	BackgroundPlanet::create( types::Entity* entity )
-	{
-		return BackgroundPlanetPtr( new BackgroundPlanet( static_cast<types::BackgroundPlanet*>( entity ) ) );
-	}
+    BackgroundPlanetPtr BackgroundPlanet::create(types::Entity* entity)
+    {
+        return BackgroundPlanetPtr(new BackgroundPlanet(static_cast<types::BackgroundPlanet*>(entity)));
+    }
 
-	BackgroundPlanet::BackgroundPlanet( types::BackgroundPlanet* planet )
-		: BackgroundObject( planet )
-	{
+    BackgroundPlanet::BackgroundPlanet(types::BackgroundPlanet* planet)
+        : BackgroundObject(planet)
+    {
 
-	}
+    }
 
-	GameObjectClassPtr 
-	BackgroundPlanet::getClass() const
-	{
-		return GameObjectClassPtr( new BackgroundPlanetClass( static_cast<types::BackgroundPlanetClass*>( getGameObject()->m_class ) ) );
-	}
-
-	void 
-	BackgroundPlanet::allocateReplacement( luabind::detail::object_rep* object )
-	{
-		entity_allocate_replacement<BackgroundPlanet>( object, boost::static_pointer_cast<BackgroundPlanet>( shared_from_this() ) );
-	}
+    std::shared_ptr<GameObjectClass> BackgroundPlanet::getClass() const
+    {
+        return std::shared_ptr<GameObjectClass>(new BackgroundPlanetClass(static_cast<types::BackgroundPlanetClass*>(getGameObject()->m_class)));
+    }
 }

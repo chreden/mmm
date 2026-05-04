@@ -4,13 +4,12 @@
 
 namespace mmm
 {
-	namespace types
-	{
-		struct BeamToggle
-			: public Ordnance
-		{
-			Vector3 startPos;
-			Vector3 endPos;
-		};
-	}
+    namespace types
+    {
+        struct BeamToggle : public Ordnance
+        {
+            Vector3 startPos;
+            Vector3 endPos;
+        };
+    }
 }

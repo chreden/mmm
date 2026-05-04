@@ -4,13 +4,9 @@
 
 namespace mmm
 {
-	class TimerHook
-		: public Hook
-	{
-	public:
-		explicit TimerHook( const std::string& id, luabind::object table, 
-			luabind::object function, luabind::object argument );
-	};
-
-	void timerhook_register( lua_State* state );
+    class TimerHook : public Hook
+    {
+    public:
+        explicit TimerHook(const std::string& id, int table, int function, int argument);
+    };
 }

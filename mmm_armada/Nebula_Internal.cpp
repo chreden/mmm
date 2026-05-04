@@ -3,9 +3,9 @@
 
 namespace mmm
 {
-    NebulaPtr Nebula::create(types::Entity* entity)
+    std::shared_ptr<Nebula> Nebula::create(types::Entity* entity)
     {
-        return NebulaPtr(new Nebula(static_cast<types::Nebula*>( entity )));
+        return std::shared_ptr<Nebula>(new Nebula(static_cast<types::Nebula*>( entity )));
     }
 
     Nebula::Nebula(types::Nebula* nebula)
@@ -58,8 +58,53 @@ namespace mmm
         return static_cast<types::Nebula*>(getEntity());
     }
 
-    void Nebula::allocateReplacement(luabind::detail::object_rep* obj)
+    int Nebula::index(lua_State* L, const std::string& key) const
     {
-        entity_allocate_replacement<Nebula>(obj, boost::static_pointer_cast<Nebula>(shared_from_this()));
+        if (key == "allowConstruction")
+        {
+            lua_pushboolean(L, getCanBuildInNebula());
+            return 1;
+        }
+        else if (key == "deltaRoll")
+        {
+            lua_pushnumber(L, getDeltaRoll());
+            return 1;
+        }
+        else if (key == "deltaYaw")
+        {
+            lua_pushnumber(L, getDeltaYaw());
+            return 1;
+        }
+        else if (key == "deltaPitch")
+        {
+            lua_pushnumber(L, getDeltaPitch());
+            return 1;
+        }
+        return AreaEffectObject::index(L, key);
+    }
+
+    int Nebula::newindex(lua_State* L, const std::string& key)
+    {
+        if (key == "allowConstruction")
+        {
+            setCanBuildInNebula(lua_toboolean(L, 3));
+            return 0;
+        }
+        else if (key == "deltaRoll")
+        {
+            setDeltaRoll(lua_tonumber(L, 3));
+            return 0;
+        }
+        else if (key == "deltaYaw")
+        {
+            setDeltaYaw(lua_tonumber(L, 3));
+            return 0;
+        }
+        else if (key == "deltaPitch")
+        {
+            setDeltaPitch(lua_tonumber(L, 3));
+            return 0;
+        }
+        return AreaEffectObject::newindex(L, key);
     }
 }

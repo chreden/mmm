@@ -9,52 +9,59 @@
 
 namespace mmm
 {
-	namespace
-	{
-		const std::size_t Address_GetBuildObjectTime = 0x004b7cd0;
-	}
+    namespace
+    {
+        const std::size_t Address_GetBuildObjectTime = 0x004b7cd0;
+    }
 
-	ProducerPtr 
-	Producer::create( types::Entity* entity )
-	{
-		return ProducerPtr( new Producer( static_cast<types::Producer*>( entity ) ) );
-	}
+    ProducerPtr Producer::create(types::Entity* entity)
+    {
+        return ProducerPtr(new Producer(static_cast<types::Producer*>(entity)));
+    }
 
-	Producer::Producer( types::Producer* producer )
-		: Craft( producer )
-	{
+    Producer::Producer(types::Producer* producer)
+        : Craft(producer)
+    {
 
-	}
+    }
 
-	types::Producer*
-	Producer::getProducer( ) const
-	{
-		return static_cast<types::Producer*>( getEntity() );
-	}
+    types::Producer* Producer::getProducer() const
+    {
+        return static_cast<types::Producer*>(getEntity());
+    }
 
-	BuildQueuePtr
-	Producer::getBuildQueue() const
-	{
-		return BuildQueue::create( boost::static_pointer_cast<Producer>( boost::const_pointer_cast<Entity>( shared_from_this() ) ) );
-	}
+    BuildQueuePtr Producer::getBuildQueue() const
+    {
+        return BuildQueue::create(std::static_pointer_cast<Producer>(std::const_pointer_cast<Entity>(shared_from_this())));
+    }
 
-	EntityPtr
-	Producer::getLastBuilt( ) const
-	{
-		return createEntityPtr( GetEntity<types::Entity>( getProducer()->m_previousShipBuilt ) );
-	} 
+    std::shared_ptr<Entity> Producer::getLastBuilt() const
+    {
+        return createEntityPtr(GetEntity<types::Entity>(getProducer()->m_previousShipBuilt));
+    } 
 
-	float 
-	Producer::getBuildObjectTime( ) const
-	{
-		typedef float (types::Producer::*MemFunction) ( );
-		MemFunction function = memory_function< MemFunction >( Address_GetBuildObjectTime );
-		return (getProducer()->*function)( );
-	}
+    float Producer::getBuildObjectTime() const
+    {
+        typedef float (types::Producer::*MemFunction) ();
+        MemFunction function = memory_function< MemFunction >(Address_GetBuildObjectTime);
+        return (getProducer()->*function)();
+    }
 
-	void 
-	Producer::allocateReplacement( luabind::detail::object_rep* obj )
-	{
-		entity_allocate_replacement<Producer>( obj, boost::static_pointer_cast<Producer>(shared_from_this()) );	
-	}
+    int Producer::index(lua_State* L, const std::string& key) const
+    {
+        if (key == "buildObjectTime")
+        {
+            lua_pushnumber(L, getBuildObjectTime());
+            return 1;
+        }
+        else if (key == "buildQueue")
+        {
+            return buildqueue_new(L, getBuildQueue());
+        }
+        else if (key == "lastBuilt")
+        {
+            return entity_new(L, getLastBuilt());
+        }
+        return Craft::index(L, key);
+    }
 }

@@ -1,57 +1,33 @@
 #pragma once
 
+#include <string>
+
 namespace mmm
 {
-	/**
-		Base call for all hooks. Hosts common functionality
-		for Hooks, such as identifiers and the like.
-	*/
-	class Hook
-	{
-	public:
-		/**
-			Get the id of the hook.
-			@return The id.
-		*/
-		const std::string& getId( ) const;
-		/**
-			Get the current argument for the hook.
-			@return The current argument.
-		*/
-		luabind::object getArgument( ) const;
-		/**
-			Get the table for the hook call.
-			@return The current table.
-		*/
-		luabind::object getTable( ) const;
-		/**
-			Get the function for the hook call.
-			@return The current function.
-		*/
-		luabind::object getFunction( ) const;
-		/**
-			Set the argument for the hook.
-			@param argument The argument to use.
-		*/
-		void			setArgument( luabind::object argument );
-		/**
-			Call the hook function.
-		*/
-		template < typename ReturnType >
-		void			call( );
-	protected:
-		/**
-			Create a new hook with the specified identifier.
-			@param id The identifier for the new hook.
-		*/
-		explicit Hook( const std::string& id, luabind::object table, 
-			luabind::object function, luabind::object argument );
-	private:
-		std::string		id_;
-		luabind::object table_;
-		luabind::object function_;
-		luabind::object argument_;
-	};
+    class Hook
+    {
+    public:
+        virtual ~Hook();
 
-	void hook_register( lua_State* state );
+        std::string id() const;
+        int argument() const;
+        int table() const;
+        int function() const;
+        void set_argument(int argument);
+        template <typename ReturnType>
+        void call();
+
+        virtual int index(lua_State* L, const std::string& key) const;
+        virtual int newindex(lua_State* L, const std::string& key);
+    protected:
+        explicit Hook(const std::string& id, int table, int function, int argument);
+    private:
+        std::string _id;
+        int _table;
+        int _function;
+        int _argument;
+    };
+
+    int hook_new(lua_State* L, const std::shared_ptr<Hook>& hook);
+    void hook_register(lua_State* L);
 }

@@ -4,22 +4,22 @@
 
 namespace mmm
 {
-	namespace types
-	{
-		struct AreaEffectObjectClass;
-	}
+    namespace types
+    {
+        struct AreaEffectObjectClass;
+    }
 
-	class AreaEffectObjectClass
-		: public TerrainObjectClass
-	{
-	public:
-		explicit AreaEffectObjectClass( types::AreaEffectObjectClass* type );
+    class AreaEffectObjectClass : public TerrainObjectClass
+    {
+    public:
+        explicit AreaEffectObjectClass(types::AreaEffectObjectClass* type);
 
-		float getRadius() const;
-		void  setRadius( float value );
-	private:
-		types::AreaEffectObjectClass* getAreaEffectObjectClass() const;
-	};
+        float getRadius() const;
+        void  setRadius(float value);
 
-	void areaeffectobjectclass_register( lua_State* state );
+        int index(lua_State* L, const std::string& key) const override;
+        int newindex(lua_State* L, const std::string& key) override;
+    private:
+        types::AreaEffectObjectClass* getAreaEffectObjectClass() const;
+    };
 }

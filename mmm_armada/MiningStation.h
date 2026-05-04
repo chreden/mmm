@@ -5,25 +5,22 @@
 
 namespace mmm
 {
-	namespace types { struct MiningStation; }
+    namespace types { struct MiningStation; }
 
-	class MiningStation
-		: public Producer, public ResourceTransferInterface
-	{
-	public:
-		static MiningStationPtr create( types::Entity* entity );
+    class Freighter;
+    class MiningStation : public Producer, public ResourceTransferInterface
+    {
+    public:
+        static MiningStationPtr create(types::Entity* entity);
+        std::shared_ptr<Freighter> buildFreighter() const;
+        virtual std::shared_ptr<GameObjectClass> getClass() const;
 
-		FreighterPtr buildFreighter( );
+        int index(lua_State* L, const std::string& key) const override;
+    protected:
+        explicit  MiningStation(types::MiningStation* station);
+    private:
+        types::MiningStation* getMiningStation() const;
 
-		virtual GameObjectClassPtr getClass() const;
-	protected:
-		explicit	   MiningStation( types::MiningStation* station );
-		virtual void   allocateReplacement( luabind::detail::object_rep* object );
-	private:
-		types::MiningStation* getMiningStation() const;
-
-		static const std::size_t Address_BuildFreighter = 0x004b4500;
-	};
-
-	void miningstation_register( lua_State* state );
+        static const std::size_t Address_BuildFreighter = 0x004b4500;
+    };
 }

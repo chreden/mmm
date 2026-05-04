@@ -3,7 +3,6 @@
 
 #include "Externals.h"
 
-#include "Hash.h"
 #include "FilePath.h"
 #include "ModFolder.h"
 

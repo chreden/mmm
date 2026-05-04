@@ -5,18 +5,21 @@
 
 namespace mmm
 {
-	class EntityFinder
-	{
-	public:
-		explicit			EntityFinder( );
-		explicit			EntityFinder( luabind::object filters );
-		luabind::object		find( ) const;
-		luabind::object		find( int max ) const;
-		EntityPtr			findOne( ) const;
-	private:
-		void innerFind( std::vector<EntityPtr>& results, int max = -1 ) const;
-		std::vector<EntityFinderFilterPtr> filters_;
-	};
+    class Entity;
+    class EntityFinder final
+    {
+    public:
+        explicit EntityFinder(lua_State* L);
+        explicit EntityFinder(lua_State* L, int index);
+        int find() const;
+        int find(int max) const;
+        int find_one() const;
+    private:
+        void inner_find(std::vector<std::shared_ptr<Entity>>& results, int max = -1) const;
 
-	void entityfinder_register( lua_State* state );
+        std::vector<EntityFinderFilterPtr> _filters;
+        lua_State* _L{ nullptr };
+    };
+
+    void entityfinder_register(lua_State* L);
 }

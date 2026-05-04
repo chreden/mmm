@@ -4,17 +4,14 @@
 
 namespace mmm
 {
-	namespace types
-	{
-		struct EvolverClass;
-	}
+    namespace types
+    {
+        struct EvolverClass;
+    }
 
-	class EvolverClass
-		: public ProducerClass
-	{
-	public:
-		explicit EvolverClass( types::EvolverClass* evolver );
-	};
-
-	void evolverclass_register( lua_State* state );
+    class EvolverClass : public ProducerClass
+    {
+    public:
+        explicit EvolverClass(types::EvolverClass* evolver);
+    };
 }

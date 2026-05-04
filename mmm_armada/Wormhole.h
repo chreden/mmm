@@ -4,37 +4,39 @@
 
 namespace mmm
 {
-	namespace types
-	{
-		struct Wormhole;
-	}
+    namespace types
+    {
+        struct Wormhole;
+    }
 
-	class Wormhole
-		: public AreaEffectObject
-	{
-	public:
-		static WormholePtr create( types::Entity* entity );
+    class Shipyard;
+    class Wormhole final : public AreaEffectObject
+    {
+    public:
+        static std::shared_ptr<Wormhole> create(types::Entity* entity);
 
-		WormholePtr			getPartner( ) const;
-		GateStatus			getStatus( ) const;
-		const std::string	getName( ) const;
-		TeamPtr				getOwner( ) const;
+        std::shared_ptr<Wormhole> getPartner() const;
+        GateStatus getStatus() const;
+        std::string getName() const;
+        std::shared_ptr<Team> getOwner() const;
 
-		bool getExpireOnClose() const;
-		bool getDeleteOnTransport() const;
+        bool getExpireOnClose() const;
+        bool getDeleteOnTransport() const;
 
-		bool setPartner( EntityPtr other );
-		void setExpireOnClose( bool value );
-		void setDeleteOnTransport( bool value );
-		void setName( const std::string& name );
-		void setStatus( GateStatus status );
-		void setOwner( TeamPtr owner );
-		void setShipyard( ShipyardPtr shipyard );
-		types::Wormhole* getWormhole() const;
-	protected:
-		explicit Wormhole( types::Wormhole* wormhole );
-		virtual void   allocateReplacement( luabind::detail::object_rep* object );
-	};
+        bool setPartner(const std::shared_ptr<Entity>& other);
+        void setExpireOnClose(bool value);
+        void setDeleteOnTransport(bool value);
+        void setName(const std::string& name);
+        void setStatus(GateStatus status);
+        void setOwner(const std::shared_ptr<Team>& owner);
+        void setShipyard(const std::shared_ptr<Shipyard>& shipyard);
+        types::Wormhole* getWormhole() const;
 
-	void wormhole_register( lua_State* state );
+        int index(lua_State* L, const std::string& key) const override;
+        int newindex(lua_State* L, const std::string& key) override;
+    protected:
+        explicit Wormhole(types::Wormhole* wormhole);
+    };
+
+    void wormhole_register(lua_State* L);
 }

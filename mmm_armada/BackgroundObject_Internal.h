@@ -4,21 +4,17 @@
 
 namespace mmm
 {
-	namespace types
-	{
-		struct BackgroundObject;
-	}
+    namespace types
+    {
+        struct BackgroundObject;
+    }
 
-	class BackgroundObject
-		: public TerrainObject
-	{
-	public:
-		static BackgroundObjectPtr create( types::Entity* entity );
-		virtual GameObjectClassPtr getClass() const;
-	protected:
-		explicit	 BackgroundObject( types::BackgroundObject* object );
-		virtual void allocateReplacement( luabind::detail::object_rep* object );
-	};
-
-	void backgroundobject_register( lua_State* state );
+    class BackgroundObject : public TerrainObject
+    {
+    public:
+        static BackgroundObjectPtr create(types::Entity* entity);
+        std::shared_ptr<GameObjectClass> getClass() const override;
+    protected:
+        explicit BackgroundObject(types::BackgroundObject* object);
+    };
 }

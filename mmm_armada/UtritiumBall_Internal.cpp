@@ -5,51 +5,63 @@
 
 namespace mmm
 {
-	UtritiumBallPtr 
-	UtritiumBall::create( types::Entity* ent )
-	{
-		return UtritiumBallPtr( new UtritiumBall( static_cast<types::UtritiumBall*>( ent ) ) );
-	}
+    UtritiumBallPtr UtritiumBall::create(types::Entity* ent)
+    {
+        return UtritiumBallPtr(new UtritiumBall(static_cast<types::UtritiumBall*>(ent)));
+    }
 
-	UtritiumBall::UtritiumBall( types::UtritiumBall* type )
-		: TerrainObject( type )
-	{
+    UtritiumBall::UtritiumBall(types::UtritiumBall* type)
+        : TerrainObject(type)
+    {
 
-	}
+    }
 
-	GameObjectClassPtr 
-	UtritiumBall::getClass() const
-	{
-		return GameObjectClassPtr( new UtritiumBallClass( static_cast<types::UtritiumBallClass*>( getGameObject()->m_class ) ) );
-	}
+    std::shared_ptr<GameObjectClass> UtritiumBall::getClass() const
+    {
+        return std::shared_ptr<GameObjectClass>(new UtritiumBallClass(static_cast<types::UtritiumBallClass*>(getGameObject()->m_class)));
+    }
 
-	types::UtritiumBall*
-	UtritiumBall::getUtritiumBall() const
-	{
-		return static_cast<types::UtritiumBall*>( getEntity() );
-	}
+    types::UtritiumBall* UtritiumBall::getUtritiumBall() const
+    {
+        return static_cast<types::UtritiumBall*>(getEntity());
+    }
 
-	float 
-	UtritiumBall::getTimeLeft() const
-	{
-		return getUtritiumBall()->m_time_left;
-	}
+    float UtritiumBall::getTimeLeft() const
+    {
+        return getUtritiumBall()->m_time_left;
+    }
 
-	EntityPtr
-	UtritiumBall::getOwner() const
-	{
-		return createEntityPtr( GetEntity<types::Entity>( getUtritiumBall()->m_ownerHandle ) );
-	}
+    std::shared_ptr<Entity> UtritiumBall::getOwner() const
+    {
+        return createEntityPtr(GetEntity<types::Entity>(getUtritiumBall()->m_ownerHandle));
+    }
 
-	void 
-	UtritiumBall::setTimeLeft( float value )
-	{
-		getUtritiumBall()->m_time_left = value;
-	}
+    void UtritiumBall::setTimeLeft(float value)
+    {
+        getUtritiumBall()->m_time_left = value;
+    }
 
-	void
-	UtritiumBall::allocateReplacement( luabind::detail::object_rep* obj )
-	{
-		entity_allocate_replacement<UtritiumBall>( obj, boost::static_pointer_cast<UtritiumBall>( shared_from_this() ) );
-	}
+    int UtritiumBall::index(lua_State* L, const std::string& key) const
+    {
+        if (key == "owner")
+        {
+            return entity_new(L, getOwner());
+        }
+        else if (key == "timeLeft")
+        {
+            lua_pushnumber(L, getTimeLeft());
+            return 1;
+        }
+        return TerrainObject::index(L, key);
+    }
+
+    int UtritiumBall::newindex(lua_State* L, const std::string& key)
+    {
+        if (key == "timeLeft")
+        {
+            setTimeLeft(lua_tonumber(L, 3));
+            return 0;
+        }
+        return TerrainObject::newindex(L, key);
+    }
 }

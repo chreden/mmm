@@ -3,39 +3,40 @@
 
 namespace mmm
 {
-	ResearchStationPtr
-	ResearchStation::create( types::Entity* entity )
-	{
-		return ResearchStationPtr( new ResearchStation( static_cast<types::ResearchStation*>( entity ) ) );
-	}
+    ResearchStationPtr ResearchStation::create(types::Entity* entity)
+    {
+        return ResearchStationPtr(new ResearchStation(static_cast<types::ResearchStation*>(entity)));
+    }
 
-	ResearchStation::ResearchStation( types::ResearchStation* station )
-		: Producer( station )
-	{
+    ResearchStation::ResearchStation(types::ResearchStation* station)
+        : Producer(station)
+    {
 
-	}
+    }
 
-	void
-	ResearchStation::allocateReplacement( luabind::detail::object_rep* object )
-	{
-		entity_allocate_replacement<ResearchStation>( object, boost::static_pointer_cast<ResearchStation>( shared_from_this() ) );
-	}
+    types::ResearchStation* ResearchStation::getResearchStation() const
+    {
+        return static_cast<types::ResearchStation*>(getEntity());
+    }
 
-	types::ResearchStation* 
-	ResearchStation::getResearchStation() const
-	{
-		return static_cast<types::ResearchStation*>( getEntity() );
-	}
+    int ResearchStation::getPods(lua_State* L) const
+    {
+        lua_newtable(L);
+        const types::ResearchStation* const station = getResearchStation();
+        for (int i = 0; i < station->m_numberOfPods; ++i)
+        {
+            entity_new(L, createEntityPtr(station->m_ppPods[i]));
+            lua_rawseti(L, -2, i + 1);
+        }
+        return 1;
+    }
 
-	luabind::object 
-	ResearchStation::getPods() const
-	{
-		luabind::object			resultsTable = luabind::newtable( common::Storage::instance().mainLuaVM );
-		types::ResearchStation* station		 = getResearchStation();
-		for( int i = 0; i < station->m_numberOfPods; ++i )
-		{
-			resultsTable[ i + 1 ] = createEntityPtr( station->m_ppPods[i] );
-		}
-		return resultsTable;
-	}
+    int ResearchStation::index(lua_State* L, const std::string& key) const
+    {
+        if (key == "pods")
+        {
+            return getPods(L);
+        }
+        return Producer::index(L, key);
+    }
 }

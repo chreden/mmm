@@ -4,33 +4,33 @@
 
 namespace mmm
 {
-	namespace types
-	{
-		struct UtritiumBallClass;
-	}
+    namespace types
+    {
+        struct UtritiumBallClass;
+    }
 
-	class UtritiumBallClass
-		: public TerrainObjectClass
-	{
-	public:
-		explicit UtritiumBallClass( types::UtritiumBallClass* type );
+    class UtritiumBallClass : public TerrainObjectClass
+    {
+    public:
+        explicit UtritiumBallClass(types::UtritiumBallClass* type);
 
-		float getDamage() const;
-		float getRadius() const;
-		float getRotation() const;
-		float getLifetime() const;
-		float getScalingCount() const;
-		float getScalingStepSize() const;
+        float getDamage() const;
+        float getRadius() const;
+        float getRotation() const;
+        float getLifetime() const;
+        float getScalingCount() const;
+        float getScalingStepSize() const;
 
-		void setDamage( float value );
-		void setRadius( float value );
-		void setRotation( float value );
-		void setLifetime( float value );
-		void setScalingCount( float value );
-		void setScalingStepSize( float value );
-	private:
-		types::UtritiumBallClass* getUtritiumBallClass() const;
-	};
+        void setDamage(float value);
+        void setRadius(float value);
+        void setRotation(float value);
+        void setLifetime(float value);
+        void setScalingCount(float value);
+        void setScalingStepSize(float value);
 
-	void utritiumballclass_register( lua_State* state );
+        int index(lua_State* L, const std::string& key) const override;
+        int newindex(lua_State* L, const std::string& key) override;
+    private:
+        types::UtritiumBallClass* getUtritiumBallClass() const;
+    };
 }

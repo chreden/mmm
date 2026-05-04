@@ -2,10 +2,11 @@
 
 namespace mmm
 {
-	class EntityFinderFilter
-	{
-	public:
-		virtual ~EntityFinderFilter( );
-		virtual bool call( EntityPtr entity ) = 0;
-	};
+    class Entity;
+    class EntityFinderFilter
+    {
+    public:
+        virtual ~EntityFinderFilter( );
+        virtual bool call(const std::shared_ptr<Entity>& entity) = 0;
+    };
 }

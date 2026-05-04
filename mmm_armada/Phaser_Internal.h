@@ -4,23 +4,19 @@
 
 namespace mmm
 {
-	namespace types { struct Phaser; }
+    namespace types { struct Phaser; }
 
-	class Phaser
-		: public Beam
-	{
-	public:
-		static PhaserPtr create( types::Entity* entity );
-		ST3D_Colour getPhaserColour() const;
-		void		setPhaserColour( const ST3D_Colour& colour );
-
-	protected:
-		explicit Phaser( types::Phaser* phaser );
-
-		virtual void   allocateReplacement( luabind::detail::object_rep* object );
-	private:
-		types::Phaser* getPhaser() const;
-	};
-
-	void phaser_register( lua_State* state );
+    class Phaser : public Beam
+    {
+    public:
+        static std::shared_ptr<Phaser> create(types::Entity* entity);
+        ST3D_Colour getPhaserColour() const;
+        void setPhaserColour(const ST3D_Colour& colour);
+        int index(lua_State* L, const std::string& key) const override;
+        int newindex(lua_State* L, const std::string& key) override;
+    protected:
+        explicit Phaser(types::Phaser* phaser);
+    private:
+        types::Phaser* getPhaser() const;
+    };
 }

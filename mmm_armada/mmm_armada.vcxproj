@@ -99,193 +99,154 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AntimatterMine.cpp" />
-    <ClCompile Include="AntimatterMineBinding.cpp" />
     <ClCompile Include="Application.cpp" />
     <ClCompile Include="AreaEffectObject_Internal.cpp" />
-    <ClCompile Include="AreaEffectObjectBinding.cpp" />
-    <ClCompile Include="AreaEffectObjectClassBinding.cpp" />
     <ClCompile Include="AreaEffectObjectClass_Internal.cpp" />
     <ClCompile Include="Artillery.cpp" />
-    <ClCompile Include="ArtilleryBinding.cpp" />
     <ClCompile Include="AsteroidField.cpp" />
-    <ClCompile Include="AsteroidFieldBinding.cpp" />
-    <ClCompile Include="BackgroundObjectBinding.cpp" />
-    <ClCompile Include="BackgroundObjectClassBinding.cpp" />
     <ClCompile Include="BackgroundObjectClass_Internal.cpp" />
     <ClCompile Include="BackgroundObject_Internal.cpp" />
-    <ClCompile Include="BackgroundPlanetBinding.cpp" />
-    <ClCompile Include="BackgroundPlanetClassBinding.cpp" />
     <ClCompile Include="BackgroundPlanetClass_Internal.cpp" />
     <ClCompile Include="BackgroundPlanet_Internal.cpp" />
-    <ClCompile Include="BeamBinding.cpp" />
     <ClCompile Include="BeamToggle.cpp" />
-    <ClCompile Include="BeamToggleBinding.cpp" />
     <ClCompile Include="Beam_Internal.cpp" />
-    <ClCompile Include="BlackHoleBinding.cpp" />
-    <ClCompile Include="BlackHoleClassBinding.cpp" />
     <ClCompile Include="BlackHoleClass_Internal.cpp" />
     <ClCompile Include="BlackHole_Internal.cpp" />
     <ClCompile Include="BuildQueue.cpp" />
-    <ClCompile Include="BuildQueueBinding.cpp" />
-    <ClCompile Include="BulletBinding.cpp" />
     <ClCompile Include="Bullet.cpp" />
-    <ClCompile Include="CameraBinding.cpp" />
-    <ClCompile Include="Camera_Internal.cpp" />
-    <ClCompile Include="CargoShipBinding.cpp" />
+    <ClCompile Include="Camera_Internal.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="CargoShip_Internal.cpp" />
-    <ClCompile Include="CineractiveBinding.cpp" />
-    <ClCompile Include="ColonyBinding.cpp" />
-    <ClCompile Include="ColonyClassBinding.cpp" />
     <ClCompile Include="ColonyClass_Internal.cpp" />
     <ClCompile Include="Colony_Internal.cpp" />
-    <ClCompile Include="ConstructionObjectBinding.cpp" />
     <ClCompile Include="ConstructionObject_Internal.cpp" />
-    <ClCompile Include="ConstructionRigBinding.cpp" />
     <ClCompile Include="ConstructionRig_Internal.cpp" />
     <ClCompile Include="Container.cpp" />
-    <ClCompile Include="CraftBinding.cpp" />
-    <ClCompile Include="CraftClassBinding.cpp" />
     <ClCompile Include="CraftClass_Internal.cpp" />
-    <ClCompile Include="CraftSystem_Internal.cpp" />
-    <ClCompile Include="CraftSystemBinding.cpp" />
-    <ClCompile Include="DebugBinding.cpp" />
+    <ClCompile Include="CraftSystem_Internal.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="DebuggerConnection.cpp" />
-    <ClCompile Include="EntityBinding.cpp" />
     <ClCompile Include="EntityFinder.cpp" />
-    <ClCompile Include="EntityFinderBinding.cpp" />
     <ClCompile Include="EntityFinderFilter.cpp" />
     <ClCompile Include="EntityFinderFilterFunction.cpp" />
     <ClCompile Include="EntityFinderFilterObject.cpp" />
     <ClCompile Include="EntityReference.cpp" />
     <ClCompile Include="EntityHook.cpp" />
-    <ClCompile Include="EvolverBinding.cpp" />
-    <ClCompile Include="EvolverClassBinding.cpp" />
     <ClCompile Include="EvolverClass_Internal.cpp" />
     <ClCompile Include="Evolver_Internal.cpp" />
-    <ClCompile Include="ExplosionBinding.cpp" />
-    <ClCompile Include="Explosion_Internal.cpp" />
-    <ClCompile Include="FreighterBinding.cpp" />
+    <ClCompile Include="Explosion_Internal.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="Freighter_Internal.cpp" />
-    <ClCompile Include="GameBinding.cpp" />
-    <ClCompile Include="GameObjectBinding.cpp" />
-    <ClCompile Include="GameObjectClassBinding.cpp" />
     <ClCompile Include="GameObjectClass_Internal.cpp" />
     <ClCompile Include="Game_Internal.cpp" />
     <ClCompile Include="Globals.cpp" />
     <ClCompile Include="GravityMine.cpp" />
-    <ClCompile Include="GravityMineBinding.cpp" />
     <ClCompile Include="Hook.cpp" />
-    <ClCompile Include="IonStormBinding.cpp" />
     <ClCompile Include="IonStorm_Internal.cpp" />
-    <ClCompile Include="Functions_ItemCache.cpp" />
-    <ClCompile Include="LatinumNebulaBinding.cpp" />
-    <ClCompile Include="LatinumNebulaClassBinding.cpp" />
+    <ClCompile Include="Functions_ItemCache.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="LatinumNebulaClass_Internal.cpp" />
     <ClCompile Include="LatinumNebula_Internal.cpp" />
-    <ClCompile Include="LoadBinding.cpp" />
     <ClCompile Include="LuaBinding.cpp" />
-    <ClCompile Include="MapBinding.cpp" />
-    <ClCompile Include="Map_Internal.cpp" />
+    <ClCompile Include="Map_Internal.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="Matrix.cpp" />
-    <ClCompile Include="MatrixBinding.cpp" />
-    <ClCompile Include="MediaBinding.cpp" />
     <ClCompile Include="MemRaider.cpp" />
     <ClCompile Include="Mine.cpp" />
     <ClCompile Include="MineArray.cpp" />
-    <ClCompile Include="MineArrayBinding.cpp" />
-    <ClCompile Include="MineBinding.cpp" />
-    <ClCompile Include="MiningStationBinding.cpp" />
-    <ClCompile Include="MiningStationClassBinding.cpp" />
     <ClCompile Include="MiningStationClass_Internal.cpp" />
     <ClCompile Include="MiningStation.cpp" />
-    <ClCompile Include="MissileBinding.cpp" />
     <ClCompile Include="Missile_Internal.cpp" />
-    <ClCompile Include="MissionBinding.cpp" />
     <ClCompile Include="Monitor.cpp" />
     <ClCompile Include="MonitorHook.cpp" />
-    <ClCompile Include="MonitorWrapper.cpp" />
-    <ClCompile Include="MonitorWrapperBinding.cpp" />
-    <ClCompile Include="Objective.cpp" />
+    <ClCompile Include="Objective.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="OrdnanceDamage.cpp" />
-    <ClCompile Include="OrdnanceDamageBinding.cpp" />
     <ClCompile Include="OrientedQueue.cpp" />
-    <ClCompile Include="OrientedQueueBinding.cpp" />
     <ClCompile Include="PlanetMiningBase.cpp" />
-    <ClCompile Include="PlanetMiningBaseBinding.cpp" />
     <ClCompile Include="Queue.cpp" />
-    <ClCompile Include="QueueBinding.cpp" />
-    <ClCompile Include="RepairShipBinding.cpp" />
-    <ClCompile Include="RepairShipClassBinding.cpp" />
     <ClCompile Include="RepairShipClass_Internal.cpp" />
     <ClCompile Include="RepairShip_Internal.cpp" />
-    <ClCompile Include="ResearchPodBinding.cpp" />
     <ClCompile Include="ResearchPod_Internal.cpp" />
-    <ClCompile Include="ResearchStationBinding.cpp" />
     <ClCompile Include="ResearchStation.cpp" />
     <ClCompile Include="Scavenger.cpp" />
-    <ClCompile Include="ScavengerBinding.cpp" />
-    <ClCompile Include="ScrapBinding.cpp" />
     <ClCompile Include="Scrap_Internal.cpp" />
-    <ClCompile Include="NebulaBinding.cpp" />
     <ClCompile Include="Nebula_Internal.cpp" />
-    <ClCompile Include="ObjectivesBinding.cpp" />
-    <ClCompile Include="Objectives_Internal.cpp" />
-    <ClCompile Include="OrdnanceBinding.cpp" />
+    <ClCompile Include="Objectives_Internal.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="Ordnance.cpp" />
-    <ClCompile Include="PathBinding.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="mmm_armada.cpp" />
-    <ClCompile Include="PhaserBinding.cpp" />
     <ClCompile Include="Phaser_Internal.cpp" />
-    <ClCompile Include="PhotonTorpedoBinding.cpp" />
     <ClCompile Include="PhotonTorpedo_Internal.cpp" />
-    <ClCompile Include="PlanetBinding.cpp" />
     <ClCompile Include="PrintMessages.cpp" />
-    <ClCompile Include="ProducerBinding.cpp" />
-    <ClCompile Include="ProducerClassBinding.cpp" />
     <ClCompile Include="ProducerClass_Internal.cpp" />
-    <ClCompile Include="PulsePhaserBinding.cpp" />
     <ClCompile Include="PulsePhaser_Internal.cpp" />
-    <ClCompile Include="RaceBinding.cpp" />
     <ClCompile Include="Race_Internal.cpp" />
-    <ClCompile Include="ResourceInterfaceBinding.cpp" />
     <ClCompile Include="ResourceInterface_Internal.cpp" />
-    <ClCompile Include="ResourceTransferInterfaceBinding.cpp" />
     <ClCompile Include="ResourceTransferInterface.cpp" />
-    <ClCompile Include="SaveBinding.cpp" />
-    <ClCompile Include="ScrapClassBinding.cpp" />
     <ClCompile Include="ScrapClass_Internal.cpp" />
     <ClCompile Include="ScriptErrors.cpp" />
+    <ClCompile Include="ScriptInterface.cpp" />
     <ClCompile Include="SensorArray.cpp" />
-    <ClCompile Include="SensorArrayBinding.cpp" />
-    <ClCompile Include="ShipyardBinding.cpp" />
     <ClCompile Include="Shipyard_Internal.cpp" />
     <ClCompile Include="SplineQueue.cpp" />
-    <ClCompile Include="SplineQueueBinding.cpp" />
     <ClCompile Include="ST3D_Colour.cpp" />
-    <ClCompile Include="ST3D_ColourBinding.cpp" />
-    <ClCompile Include="StarbaseBinding.cpp" />
     <ClCompile Include="Starbase_Internal.cpp" />
     <ClCompile Include="StringAdapter.cpp" />
-    <ClCompile Include="TeamBinding.cpp" />
     <ClCompile Include="Team_Resources.cpp" />
     <ClCompile Include="TerrainObject_Internal.cpp" />
-    <ClCompile Include="TerrainObjectBinding.cpp" />
-    <ClCompile Include="TerrainObjectClassBinding.cpp" />
     <ClCompile Include="TerrainObjectClass_Internal.cpp" />
-    <ClCompile Include="Test.cpp" />
-    <ClCompile Include="TestBinding.cpp" />
-    <ClCompile Include="TextInput.cpp" />
-    <ClCompile Include="TextInputHook.cpp" />
+    <ClCompile Include="Test.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="TextInput.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="TextInputHook.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="Timer.cpp" />
     <ClCompile Include="TimerHook.cpp" />
-    <ClCompile Include="TimerWrapper.cpp" />
-    <ClCompile Include="TimerWrapperBinding.cpp" />
-    <ClCompile Include="TradingStationBinding.cpp" />
-    <ClCompile Include="TradingStationClassBinding.cpp" />
     <ClCompile Include="TradingStationClass_Internal.cpp" />
     <ClCompile Include="TradingStation.cpp" />
     <ClCompile Include="Type_DebriefingData.cpp" />
@@ -296,26 +257,41 @@
     <ClCompile Include="Entities_Internal.cpp" />
     <ClCompile Include="Entity_Internal.cpp" />
     <ClCompile Include="GameObject_Internal.cpp" />
-    <ClCompile Include="Load_Internal.cpp" />
-    <ClCompile Include="Mission_Internal.cpp" />
+    <ClCompile Include="Load_Internal.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Mission_Internal.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="Path_Internal.cpp" />
     <ClCompile Include="Team_Internal.cpp" />
     <ClCompile Include="Producer.cpp" />
-    <ClCompile Include="Save_Internal.cpp" />
+    <ClCompile Include="Save_Internal.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="Planet_Internal.cpp" />
     <ClCompile Include="Type_GameObjectClass.cpp" />
-    <ClCompile Include="Type_ObjectivesText.cpp" />
+    <ClCompile Include="Type_ObjectivesText.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="Type_ST3D_Camera.cpp" />
     <ClCompile Include="Type_ST3D_GraphicsEngine.cpp" />
-    <ClCompile Include="UIBinding.cpp" />
     <ClCompile Include="UI_Internal.cpp" />
-    <ClCompile Include="UtritiumBallBinding.cpp" />
-    <ClCompile Include="UtritiumBallClassBinding.cpp" />
     <ClCompile Include="UtritiumBallClass_Internal.cpp" />
     <ClCompile Include="UtritiumBall_Internal.cpp" />
     <ClCompile Include="Vector3.cpp" />
-    <ClCompile Include="Vector3Binding.cpp" />
-    <ClCompile Include="WormholeBinding.cpp" />
     <ClCompile Include="Wormhole.cpp" />
     <ClCompile Include="Media_Internal.cpp" />
   </ItemGroup>
@@ -386,7 +362,6 @@
     <ClInclude Include="Missile_Internal.h" />
     <ClInclude Include="Monitor.h" />
     <ClInclude Include="MonitorHook.h" />
-    <ClInclude Include="MonitorWrapper.h" />
     <ClInclude Include="Objective.h" />
     <ClInclude Include="OrdnanceDamage.h" />
     <ClInclude Include="OrientedQueue.h" />
@@ -430,7 +405,6 @@
     <ClInclude Include="TextInputHook.h" />
     <ClInclude Include="Timer.h" />
     <ClInclude Include="TimerHook.h" />
-    <ClInclude Include="TimerWrapper.h" />
     <ClInclude Include="TradingStationClass_Internal.h" />
     <ClInclude Include="TradingStation.h" />
     <ClInclude Include="TypeDeclarations.h" />
@@ -552,9 +526,6 @@
     <ClInclude Include="Media_Internal.h" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\external\luabind\LuaBind.vcxproj">
-      <Project>{8a6d737f-7d03-4847-9c65-2dc4d6fa3716}</Project>
-    </ProjectReference>
     <ProjectReference Include="..\mmm_common\mmm_common.vcxproj">
       <Project>{87cfc5d8-d3c2-4b66-abdb-c2e3c593ef01}</Project>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
@@ -565,6 +536,7 @@
     <None Include="Entity_Internal.inl" />
     <None Include="ListAdapter.inl" />
     <None Include="Load_Internal.inl" />
+    <None Include="LuaBinding.inl" />
     <None Include="MemRaider.inl" />
     <None Include="Entities.inl" />
     <None Include="VectorAdapter.inl" />

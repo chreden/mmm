@@ -3,15 +3,13 @@
 
 namespace mmm
 {
-	MiningStationClass::MiningStationClass( types::MiningStationClass* station )
-		: ProducerClass( station )
-	{
+    MiningStationClass::MiningStationClass(types::MiningStationClass* station)
+        : ProducerClass(station)
+    {
+    }
 
-	}
-
-	types::MiningStationClass*
-	MiningStationClass::getMiningStationClass() const
-	{
-		return static_cast<types::MiningStationClass*>( getClass() );
-	}
+    types::MiningStationClass* MiningStationClass::getMiningStationClass() const
+    {
+        return static_cast<types::MiningStationClass*>(getClass());
+    }
 }

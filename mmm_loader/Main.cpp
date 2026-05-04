@@ -3,6 +3,7 @@
 #include "../mmm_armada/ScriptInterface.h"
 #include "../mmm_armada/Types.h"
 #include "../mmm_armada/Game_Internal.h"
+#include "../mmm_armada/Functions.h"
 
 namespace mmm
 {

@@ -4,24 +4,21 @@
 
 namespace mmm
 {
-	namespace types
-	{
-		struct ConstructionObject;
-	}
+    namespace types
+    {
+        struct ConstructionObject;
+    }
 
-	class ConstructionObject
-		: public GameObject
-	{
-	public:
-		static ConstructionObjectPtr create( types::Entity* entity );
-		types::ConstructionObject* getConstructionObject() const;
-
-		EntityPtr			getBuilder() const;
-		GameObjectClassPtr  getBuildClass() const;
-	protected:
-		explicit	   ConstructionObject( types::ConstructionObject* object );
-		virtual void   allocateReplacement( luabind::detail::object_rep* object );			
-	};
-
-	void constructionobject_register( lua_State* state );
+    class GameObjectClass;
+    class ConstructionObject : public GameObject
+    {
+    public:
+        static std::shared_ptr<ConstructionObject> create(types::Entity* entity);
+        types::ConstructionObject* getConstructionObject() const;
+        std::shared_ptr<Entity> getBuilder() const;
+        std::shared_ptr<GameObjectClass> getBuildClass() const;
+        int index(lua_State* L, const std::string& key) const override;
+    protected:
+        explicit ConstructionObject(types::ConstructionObject* object);
+    };
 }

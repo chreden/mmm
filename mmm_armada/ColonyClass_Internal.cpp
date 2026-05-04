@@ -3,15 +3,13 @@
 
 namespace mmm
 {
-	ColonyClassPtr 
-	ColonyClass::create( types::GameObjectClass* ptr )
-	{
-		return ColonyClassPtr( new ColonyClass( static_cast<types::ColonyClass*>( ptr ) ) );
-	}
+    ColonyClassPtr ColonyClass::create(types::GameObjectClass* ptr)
+    {
+        return ColonyClassPtr(new ColonyClass(static_cast<types::ColonyClass*>(ptr)));
+    }
 
-	ColonyClass::ColonyClass( types::ColonyClass* colony )
-		: CraftClass( colony )
-	{
-
-	}
+    ColonyClass::ColonyClass(types::ColonyClass* colony)
+        : CraftClass(colony)
+    {
+    }
 }

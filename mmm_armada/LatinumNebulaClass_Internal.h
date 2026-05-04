@@ -4,22 +4,20 @@
 
 namespace mmm
 {
-	namespace types
-	{
-		struct LatinumNebulaClass;
-	}
+    namespace types
+    {
+        struct LatinumNebulaClass;
+    }
 
-	class LatinumNebulaClass
-		: public TerrainObjectClass
-	{
-	public:
-		explicit LatinumNebulaClass( types::LatinumNebulaClass* nebula );
-
-		float getRotationSpeed() const;
-		void  setRotationSpeed( float value );
-	private:
-		types::LatinumNebulaClass* getLatinumNebula() const;
-	};
-
-	void latinumnebulaclass_register( lua_State* state );
+    class LatinumNebulaClass : public TerrainObjectClass
+    {
+    public:
+        explicit LatinumNebulaClass(types::LatinumNebulaClass* nebula);
+        float getRotationSpeed() const;
+        void  setRotationSpeed(float value);
+        int index(lua_State* L, const std::string& key) const override;
+        int newindex(lua_State* L, const std::string& key) override;
+    private:
+        types::LatinumNebulaClass* getLatinumNebula() const;
+    };
 }

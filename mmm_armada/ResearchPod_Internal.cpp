@@ -5,33 +5,33 @@
 
 namespace mmm
 {
-	ResearchPodPtr 
-	ResearchPod::create( types::Entity* entity )
-	{
-		return ResearchPodPtr( new ResearchPod( static_cast<types::ResearchPod*>( entity ) ) );
-	}
+    ResearchPodPtr ResearchPod::create(types::Entity* entity)
+    {
+        return ResearchPodPtr(new ResearchPod(static_cast<types::ResearchPod*>(entity)));
+    }
 
-	ResearchPod::ResearchPod( types::ResearchPod* pod )
-		: Craft( pod )
-	{
+    ResearchPod::ResearchPod(types::ResearchPod* pod)
+        : Craft(pod)
+    {
 
-	}
+    }
 
-	void
-	ResearchPod::allocateReplacement( luabind::detail::object_rep* obj )
-	{
-		entity_allocate_replacement<Craft>( obj, boost::static_pointer_cast<Craft>( shared_from_this() ) );
-	}
+    std::shared_ptr<Entity> ResearchPod::getStation() const
+    {
+        return createEntityPtr(getResearchPod()->researchStation);
+    }
 
-	EntityPtr	
-	ResearchPod::getStation() const
-	{
-		return createEntityPtr( getResearchPod()->researchStation );
-	}
+    types::ResearchPod* ResearchPod::getResearchPod() const
+    {
+        return static_cast<types::ResearchPod*>(getEntity());
+    }
 
-	types::ResearchPod* 
-	ResearchPod::getResearchPod() const
-	{
-		return static_cast<types::ResearchPod*>( getEntity() );
-	}
+    int ResearchPod::index(lua_State* L, const std::string& key) const
+    {
+        if (key == "station")
+        {
+            return entity_new(L, getStation());
+        }
+        return Craft::index(L, key);
+    }
 }

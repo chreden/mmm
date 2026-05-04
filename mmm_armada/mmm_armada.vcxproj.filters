@@ -166,9 +166,6 @@
     <Filter Include="Armada\Entity\Ordnance\Mine\GravityMine">
       <UniqueIdentifier>{806f17b8-6860-467c-9103-809428ea7de3}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Armada\Entity\Ordnance\BeamToggle">
-      <UniqueIdentifier>{44941316-fcaa-4c2d-8528-84d02eca7b7e}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Armada\Load">
       <UniqueIdentifier>{60f72d93-ce22-498b-8fe6-6569d33c571d}</UniqueIdentifier>
     </Filter>
@@ -340,9 +337,6 @@
     <Filter Include="Armada\Entity\Ordnance\Bullet\PulsePhaser\Class">
       <UniqueIdentifier>{fac9b404-ae71-4592-9a1e-1f404014cbf1}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Armada\Entity\Ordnance\BeamToggle\Class">
-      <UniqueIdentifier>{dea1febc-0986-4a85-b5ed-7e2dfd29883f}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Armada\Test">
       <UniqueIdentifier>{97244319-23b3-4364-bd8a-46f3d31554b8}</UniqueIdentifier>
     </Filter>
@@ -418,13 +412,16 @@
     <Filter Include="Armada\DebriefingData">
       <UniqueIdentifier>{69d18904-95b8-483e-b6bb-9df0901a1ddc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Armada\Entity\Ordnance\BeamToggle">
+      <UniqueIdentifier>{44941316-fcaa-4c2d-8528-84d02eca7b7e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Armada\Entity\Ordnance\BeamToggle\Class">
+      <UniqueIdentifier>{dea1febc-0986-4a85-b5ed-7e2dfd29883f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
       <Filter>Precompiled Header</Filter>
-    </ClCompile>
-    <ClCompile Include="mmm_armada.cpp">
-      <Filter>Armada</Filter>
     </ClCompile>
     <ClCompile Include="Cineractive_Internal.cpp">
       <Filter>Armada\Cineractive</Filter>
@@ -537,130 +534,13 @@
     <ClCompile Include="Camera_Internal.cpp">
       <Filter>Armada\Camera</Filter>
     </ClCompile>
-    <ClCompile Include="Vector3Binding.cpp">
-      <Filter>Armada\Vector</Filter>
-    </ClCompile>
-    <ClCompile Include="ST3D_ColourBinding.cpp">
-      <Filter>Armada\Colour</Filter>
-    </ClCompile>
-    <ClCompile Include="UIBinding.cpp">
-      <Filter>Armada\UI</Filter>
-    </ClCompile>
-    <ClCompile Include="MapBinding.cpp">
-      <Filter>Armada\Map</Filter>
-    </ClCompile>
-    <ClCompile Include="RaceBinding.cpp">
-      <Filter>Armada\Race</Filter>
-    </ClCompile>
-    <ClCompile Include="MediaBinding.cpp">
-      <Filter>Armada\Media</Filter>
-    </ClCompile>
-    <ClCompile Include="CameraBinding.cpp">
-      <Filter>Armada\Camera</Filter>
-    </ClCompile>
-    <ClCompile Include="CineractiveBinding.cpp">
-      <Filter>Armada\Cineractive</Filter>
-    </ClCompile>
-    <ClCompile Include="EntityBinding.cpp">
-      <Filter>Armada\Entity</Filter>
-    </ClCompile>
-    <ClCompile Include="MissionBinding.cpp">
-      <Filter>Armada\Mission</Filter>
-    </ClCompile>
-    <ClCompile Include="DebugBinding.cpp">
-      <Filter>Armada\Debug</Filter>
-    </ClCompile>
-    <ClCompile Include="SaveBinding.cpp">
-      <Filter>Armada\Save</Filter>
-    </ClCompile>
-    <ClCompile Include="LoadBinding.cpp">
-      <Filter>Armada\Load</Filter>
-    </ClCompile>
-    <ClCompile Include="ObjectivesBinding.cpp">
-      <Filter>Armada\Objectives</Filter>
-    </ClCompile>
-    <ClCompile Include="ProducerBinding.cpp">
-      <Filter>Armada\Entity\Game Object\Craft\Producer</Filter>
-    </ClCompile>
-    <ClCompile Include="PlanetBinding.cpp">
-      <Filter>Armada\Entity\Game Object\Craft\Producer\Planet</Filter>
-    </ClCompile>
-    <ClCompile Include="MiningStationBinding.cpp">
-      <Filter>Armada\Entity\Game Object\Craft\Producer\MiningStation</Filter>
-    </ClCompile>
-    <ClCompile Include="ShipyardBinding.cpp">
-      <Filter>Armada\Entity\Game Object\Craft\Producer\Shipyard</Filter>
-    </ClCompile>
-    <ClCompile Include="NebulaBinding.cpp">
-      <Filter>Armada\Entity\Game Object\TerrainObject\AreaEffectObject\Nebula</Filter>
-    </ClCompile>
-    <ClCompile Include="WormholeBinding.cpp">
-      <Filter>Armada\Entity\Game Object\TerrainObject\AreaEffectObject\Wormhole</Filter>
-    </ClCompile>
-    <ClCompile Include="OrdnanceBinding.cpp">
-      <Filter>Armada\Entity\Ordnance</Filter>
-    </ClCompile>
-    <ClCompile Include="BeamBinding.cpp">
-      <Filter>Armada\Entity\Ordnance\Beam</Filter>
-    </ClCompile>
-    <ClCompile Include="PhaserBinding.cpp">
-      <Filter>Armada\Entity\Ordnance\Beam\Phaser</Filter>
-    </ClCompile>
-    <ClCompile Include="BulletBinding.cpp">
-      <Filter>Armada\Entity\Ordnance\Bullet</Filter>
-    </ClCompile>
-    <ClCompile Include="PulsePhaserBinding.cpp">
-      <Filter>Armada\Entity\Ordnance\Bullet\PulsePhaser</Filter>
-    </ClCompile>
-    <ClCompile Include="MissileBinding.cpp">
-      <Filter>Armada\Entity\Ordnance\Missile</Filter>
-    </ClCompile>
-    <ClCompile Include="PhotonTorpedoBinding.cpp">
-      <Filter>Armada\Entity\Ordnance\Missile\PhotonTorpedo</Filter>
-    </ClCompile>
-    <ClCompile Include="ExplosionBinding.cpp">
-      <Filter>Armada\Entity\Explosion</Filter>
-    </ClCompile>
-    <ClCompile Include="FreighterBinding.cpp">
-      <Filter>Armada\Entity\Game Object\Craft\Freighter</Filter>
-    </ClCompile>
-    <ClCompile Include="AreaEffectObjectBinding.cpp">
-      <Filter>Armada\Entity\Game Object\TerrainObject\AreaEffectObject</Filter>
-    </ClCompile>
-    <ClCompile Include="IonStormBinding.cpp">
-      <Filter>Armada\Entity\Game Object\TerrainObject\AreaEffectObject\IonStorm</Filter>
-    </ClCompile>
-    <ClCompile Include="TerrainObjectBinding.cpp">
-      <Filter>Armada\Entity\Game Object\TerrainObject</Filter>
-    </ClCompile>
-    <ClCompile Include="ResourceTransferInterfaceBinding.cpp">
-      <Filter>Armada\Entity\Game Object\Craft\Producer\Resource Transfer Interface</Filter>
-    </ClCompile>
-    <ClCompile Include="ConstructionObjectBinding.cpp">
-      <Filter>Armada\Entity\Game Object\ConstructionObject</Filter>
-    </ClCompile>
-    <ClCompile Include="GameObjectBinding.cpp">
-      <Filter>Armada\Entity\Game Object</Filter>
-    </ClCompile>
-    <ClCompile Include="CraftSystemBinding.cpp">
-      <Filter>Armada\Entity\Game Object\Craft\CraftSystem</Filter>
-    </ClCompile>
     <ClCompile Include="CraftSystem_Internal.cpp">
       <Filter>Armada\Entity\Game Object\Craft\CraftSystem</Filter>
-    </ClCompile>
-    <ClCompile Include="CraftBinding.cpp">
-      <Filter>Armada\Entity\Game Object\Craft</Filter>
-    </ClCompile>
-    <ClCompile Include="PathBinding.cpp">
-      <Filter>Armada\Path</Filter>
     </ClCompile>
     <ClCompile Include="ScriptErrors.cpp">
       <Filter>Armada\ScriptError</Filter>
     </ClCompile>
     <ClCompile Include="EntityFinder.cpp">
-      <Filter>Armada\EntityFinder</Filter>
-    </ClCompile>
-    <ClCompile Include="EntityFinderBinding.cpp">
       <Filter>Armada\EntityFinder</Filter>
     </ClCompile>
     <ClCompile Include="Monitor.cpp">
@@ -681,12 +561,6 @@
     <ClCompile Include="Timer.cpp">
       <Filter>Armada\Timer</Filter>
     </ClCompile>
-    <ClCompile Include="ResourceInterfaceBinding.cpp">
-      <Filter>Armada\Entity\ResourceInterface</Filter>
-    </ClCompile>
-    <ClCompile Include="TeamBinding.cpp">
-      <Filter>Armada\Team</Filter>
-    </ClCompile>
     <ClCompile Include="LuaBinding.cpp">
       <Filter>Armada\Lua</Filter>
     </ClCompile>
@@ -695,12 +569,6 @@
     </ClCompile>
     <ClCompile Include="Matrix.cpp">
       <Filter>Armada\Matrix</Filter>
-    </ClCompile>
-    <ClCompile Include="MatrixBinding.cpp">
-      <Filter>Armada\Matrix</Filter>
-    </ClCompile>
-    <ClCompile Include="GameObjectClassBinding.cpp">
-      <Filter>Armada\Entity\Game Object\Class</Filter>
     </ClCompile>
     <ClCompile Include="GameObjectClass_Internal.cpp">
       <Filter>Armada\Entity\Game Object\Class</Filter>
@@ -714,13 +582,7 @@
     <ClCompile Include="CraftClass_Internal.cpp">
       <Filter>Armada\Entity\Game Object\Craft\Class</Filter>
     </ClCompile>
-    <ClCompile Include="CraftClassBinding.cpp">
-      <Filter>Armada\Entity\Game Object\Craft\Class</Filter>
-    </ClCompile>
     <ClCompile Include="ProducerClass_Internal.cpp">
-      <Filter>Armada\Entity\Game Object\Craft\Producer\Class</Filter>
-    </ClCompile>
-    <ClCompile Include="ProducerClassBinding.cpp">
       <Filter>Armada\Entity\Game Object\Craft\Producer\Class</Filter>
     </ClCompile>
     <ClCompile Include="ScrapClass_Internal.cpp">
@@ -729,28 +591,13 @@
     <ClCompile Include="TerrainObjectClass_Internal.cpp">
       <Filter>Armada\Entity\Game Object\TerrainObject\Class</Filter>
     </ClCompile>
-    <ClCompile Include="TerrainObjectClassBinding.cpp">
-      <Filter>Armada\Entity\Game Object\TerrainObject\Class</Filter>
-    </ClCompile>
-    <ClCompile Include="ScrapClassBinding.cpp">
-      <Filter>Armada\Entity\Game Object\TerrainObject\Scrap\Class</Filter>
-    </ClCompile>
-    <ClCompile Include="ScrapBinding.cpp">
-      <Filter>Armada\Entity\Game Object\TerrainObject\Scrap</Filter>
-    </ClCompile>
     <ClCompile Include="Scrap_Internal.cpp">
       <Filter>Armada\Entity\Game Object\TerrainObject\Scrap</Filter>
     </ClCompile>
     <ClCompile Include="RepairShip_Internal.cpp">
       <Filter>Armada\Entity\Game Object\Craft\RepairShip</Filter>
     </ClCompile>
-    <ClCompile Include="RepairShipBinding.cpp">
-      <Filter>Armada\Entity\Game Object\Craft\RepairShip</Filter>
-    </ClCompile>
     <ClCompile Include="RepairShipClass_Internal.cpp">
-      <Filter>Armada\Entity\Game Object\Craft\RepairShip\Class</Filter>
-    </ClCompile>
-    <ClCompile Include="RepairShipClassBinding.cpp">
       <Filter>Armada\Entity\Game Object\Craft\RepairShip\Class</Filter>
     </ClCompile>
     <ClCompile Include="BlackHoleClass_Internal.cpp">
@@ -759,19 +606,10 @@
     <ClCompile Include="AreaEffectObjectClass_Internal.cpp">
       <Filter>Armada\Entity\Game Object\TerrainObject\AreaEffectObject\Class</Filter>
     </ClCompile>
-    <ClCompile Include="AreaEffectObjectClassBinding.cpp">
-      <Filter>Armada\Entity\Game Object\TerrainObject\AreaEffectObject\Class</Filter>
-    </ClCompile>
-    <ClCompile Include="BlackHoleClassBinding.cpp">
-      <Filter>Armada\Entity\Game Object\TerrainObject\AreaEffectObject\BlackHole\Class</Filter>
-    </ClCompile>
     <ClCompile Include="AreaEffectObject_Internal.cpp">
       <Filter>Armada\Entity\Game Object\TerrainObject\AreaEffectObject</Filter>
     </ClCompile>
     <ClCompile Include="BlackHole_Internal.cpp">
-      <Filter>Armada\Entity\Game Object\TerrainObject\AreaEffectObject\BlackHole</Filter>
-    </ClCompile>
-    <ClCompile Include="BlackHoleBinding.cpp">
       <Filter>Armada\Entity\Game Object\TerrainObject\AreaEffectObject\BlackHole</Filter>
     </ClCompile>
     <ClCompile Include="Type_ST3D_GraphicsEngine.cpp">
@@ -789,20 +627,8 @@
     <ClCompile Include="TerrainObject_Internal.cpp">
       <Filter>Armada\Entity\Game Object\TerrainObject</Filter>
     </ClCompile>
-    <ClCompile Include="UtritiumBallBinding.cpp">
-      <Filter>Armada\Entity\Game Object\TerrainObject\UtritiumBall</Filter>
-    </ClCompile>
-    <ClCompile Include="UtritiumBallClassBinding.cpp">
-      <Filter>Armada\Entity\Game Object\TerrainObject\UtritiumBall\Class</Filter>
-    </ClCompile>
     <ClCompile Include="Colony_Internal.cpp">
       <Filter>Armada\Entity\Game Object\Craft\Colony</Filter>
-    </ClCompile>
-    <ClCompile Include="ColonyBinding.cpp">
-      <Filter>Armada\Entity\Game Object\Craft\Colony</Filter>
-    </ClCompile>
-    <ClCompile Include="EvolverBinding.cpp">
-      <Filter>Armada\Entity\Game Object\Craft\Producer\Evolver</Filter>
     </ClCompile>
     <ClCompile Include="Evolver_Internal.cpp">
       <Filter>Armada\Entity\Game Object\Craft\Producer\Evolver</Filter>
@@ -810,26 +636,11 @@
     <ClCompile Include="EvolverClass_Internal.cpp">
       <Filter>Armada\Entity\Game Object\Craft\Producer\Evolver\Class</Filter>
     </ClCompile>
-    <ClCompile Include="EvolverClassBinding.cpp">
-      <Filter>Armada\Entity\Game Object\Craft\Producer\Evolver\Class</Filter>
-    </ClCompile>
     <ClCompile Include="ConstructionRig_Internal.cpp">
-      <Filter>Armada\Entity\Game Object\Craft\Producer\ConstructionRig</Filter>
-    </ClCompile>
-    <ClCompile Include="ConstructionRigBinding.cpp">
       <Filter>Armada\Entity\Game Object\Craft\Producer\ConstructionRig</Filter>
     </ClCompile>
     <ClCompile Include="ColonyClass_Internal.cpp">
       <Filter>Armada\Entity\Game Object\Craft\Colony\Class</Filter>
-    </ClCompile>
-    <ClCompile Include="ColonyClassBinding.cpp">
-      <Filter>Armada\Entity\Game Object\Craft\Colony\Class</Filter>
-    </ClCompile>
-    <ClCompile Include="StarbaseBinding.cpp">
-      <Filter>Armada\Entity\Game Object\Craft\Producer\Shipyard\Starbase</Filter>
-    </ClCompile>
-    <ClCompile Include="BackgroundPlanetClassBinding.cpp">
-      <Filter>Armada\Entity\Game Object\TerrainObject\BackgroundObject\BackgroundPlanet\Class</Filter>
     </ClCompile>
     <ClCompile Include="BackgroundPlanetClass_Internal.cpp">
       <Filter>Armada\Entity\Game Object\TerrainObject\BackgroundObject\BackgroundPlanet\Class</Filter>
@@ -837,31 +648,16 @@
     <ClCompile Include="BackgroundObjectClass_Internal.cpp">
       <Filter>Armada\Entity\Game Object\TerrainObject\BackgroundObject\Class</Filter>
     </ClCompile>
-    <ClCompile Include="BackgroundObjectClassBinding.cpp">
-      <Filter>Armada\Entity\Game Object\TerrainObject\BackgroundObject\Class</Filter>
-    </ClCompile>
     <ClCompile Include="BackgroundObject_Internal.cpp">
-      <Filter>Armada\Entity\Game Object\TerrainObject\BackgroundObject</Filter>
-    </ClCompile>
-    <ClCompile Include="BackgroundObjectBinding.cpp">
       <Filter>Armada\Entity\Game Object\TerrainObject\BackgroundObject</Filter>
     </ClCompile>
     <ClCompile Include="BackgroundPlanet_Internal.cpp">
       <Filter>Armada\Entity\Game Object\TerrainObject\BackgroundObject\BackgroundPlanet</Filter>
     </ClCompile>
-    <ClCompile Include="BackgroundPlanetBinding.cpp">
-      <Filter>Armada\Entity\Game Object\TerrainObject\BackgroundObject\BackgroundPlanet</Filter>
-    </ClCompile>
     <ClCompile Include="LatinumNebula_Internal.cpp">
       <Filter>Armada\Entity\Game Object\TerrainObject\LatinumNebula</Filter>
     </ClCompile>
-    <ClCompile Include="LatinumNebulaBinding.cpp">
-      <Filter>Armada\Entity\Game Object\TerrainObject\LatinumNebula</Filter>
-    </ClCompile>
     <ClCompile Include="LatinumNebulaClass_Internal.cpp">
-      <Filter>Armada\Entity\Game Object\TerrainObject\LatinumNebula\Class</Filter>
-    </ClCompile>
-    <ClCompile Include="LatinumNebulaClassBinding.cpp">
       <Filter>Armada\Entity\Game Object\TerrainObject\LatinumNebula\Class</Filter>
     </ClCompile>
     <ClCompile Include="DebuggerConnection.cpp">
@@ -870,32 +666,14 @@
     <ClCompile Include="ResearchPod_Internal.cpp">
       <Filter>Armada\Entity\Game Object\Craft\ResearchPod</Filter>
     </ClCompile>
-    <ClCompile Include="ResearchPodBinding.cpp">
-      <Filter>Armada\Entity\Game Object\Craft\ResearchPod</Filter>
-    </ClCompile>
-    <ClCompile Include="ResearchStationBinding.cpp">
-      <Filter>Armada\Entity\Game Object\Craft\Producer\ResearchStation</Filter>
-    </ClCompile>
     <ClCompile Include="CargoShip_Internal.cpp">
       <Filter>Armada\Entity\Game Object\Craft\CargoShip</Filter>
-    </ClCompile>
-    <ClCompile Include="CargoShipBinding.cpp">
-      <Filter>Armada\Entity\Game Object\Craft\CargoShip</Filter>
-    </ClCompile>
-    <ClCompile Include="TradingStationBinding.cpp">
-      <Filter>Armada\Entity\Game Object\Craft\Producer\MiningStation\TradingStation</Filter>
     </ClCompile>
     <ClCompile Include="TradingStationClass_Internal.cpp">
       <Filter>Armada\Entity\Game Object\Craft\Producer\MiningStation\TradingStation\Class</Filter>
     </ClCompile>
     <ClCompile Include="MiningStationClass_Internal.cpp">
       <Filter>Armada\Entity\Game Object\Craft\Producer\MiningStation\Class</Filter>
-    </ClCompile>
-    <ClCompile Include="MiningStationClassBinding.cpp">
-      <Filter>Armada\Entity\Game Object\Craft\Producer\MiningStation\Class</Filter>
-    </ClCompile>
-    <ClCompile Include="TradingStationClassBinding.cpp">
-      <Filter>Armada\Entity\Game Object\Craft\Producer\MiningStation\TradingStation\Class</Filter>
     </ClCompile>
     <ClCompile Include="TradingStation.cpp">
       <Filter>Armada\Entity\Game Object\Craft\Producer\MiningStation\TradingStation</Filter>
@@ -912,38 +690,20 @@
     <ClCompile Include="Artillery.cpp">
       <Filter>Armada\Entity\Ordnance\Bullet\Artillery</Filter>
     </ClCompile>
-    <ClCompile Include="ArtilleryBinding.cpp">
-      <Filter>Armada\Entity\Ordnance\Bullet\Artillery</Filter>
-    </ClCompile>
     <ClCompile Include="Ordnance.cpp">
       <Filter>Armada\Entity\Ordnance</Filter>
     </ClCompile>
     <ClCompile Include="BeamToggle.cpp">
       <Filter>Armada\Entity\Ordnance\BeamToggle</Filter>
     </ClCompile>
-    <ClCompile Include="BeamToggleBinding.cpp">
-      <Filter>Armada\Entity\Ordnance\BeamToggle</Filter>
-    </ClCompile>
     <ClCompile Include="AntimatterMine.cpp">
-      <Filter>Armada\Entity\Ordnance\Mine\AnimatterMine</Filter>
-    </ClCompile>
-    <ClCompile Include="AntimatterMineBinding.cpp">
       <Filter>Armada\Entity\Ordnance\Mine\AnimatterMine</Filter>
     </ClCompile>
     <ClCompile Include="Mine.cpp">
       <Filter>Armada\Entity\Ordnance\Mine</Filter>
     </ClCompile>
-    <ClCompile Include="MineBinding.cpp">
-      <Filter>Armada\Entity\Ordnance\Mine</Filter>
-    </ClCompile>
     <ClCompile Include="GravityMine.cpp">
       <Filter>Armada\Entity\Ordnance\Mine\GravityMine</Filter>
-    </ClCompile>
-    <ClCompile Include="GravityMineBinding.cpp">
-      <Filter>Armada\Entity\Ordnance\Mine\GravityMine</Filter>
-    </ClCompile>
-    <ClCompile Include="TestBinding.cpp">
-      <Filter>Armada\Test</Filter>
     </ClCompile>
     <ClCompile Include="Test.cpp">
       <Filter>Armada\Test</Filter>
@@ -952,9 +712,6 @@
       <Filter>Armada\Entity\Game Object\TerrainObject\AreaEffectObject\Wormhole</Filter>
     </ClCompile>
     <ClCompile Include="AsteroidField.cpp">
-      <Filter>Armada\Entity\Game Object\TerrainObject\AsteroidField</Filter>
-    </ClCompile>
-    <ClCompile Include="AsteroidFieldBinding.cpp">
       <Filter>Armada\Entity\Game Object\TerrainObject\AsteroidField</Filter>
     </ClCompile>
     <ClCompile Include="Producer.cpp">
@@ -966,34 +723,16 @@
     <ClCompile Include="Scavenger.cpp">
       <Filter>Armada\Entity\Game Object\Craft\Scavenger</Filter>
     </ClCompile>
-    <ClCompile Include="ScavengerBinding.cpp">
-      <Filter>Armada\Entity\Game Object\Craft\Scavenger</Filter>
-    </ClCompile>
     <ClCompile Include="PlanetMiningBase.cpp">
-      <Filter>Armada\Entity\Game Object\Craft\PlanetMiningBase</Filter>
-    </ClCompile>
-    <ClCompile Include="PlanetMiningBaseBinding.cpp">
       <Filter>Armada\Entity\Game Object\Craft\PlanetMiningBase</Filter>
     </ClCompile>
     <ClCompile Include="SensorArray.cpp">
       <Filter>Armada\Entity\Game Object\Craft\SensorArray</Filter>
     </ClCompile>
-    <ClCompile Include="SensorArrayBinding.cpp">
-      <Filter>Armada\Entity\Game Object\Craft\SensorArray</Filter>
-    </ClCompile>
-    <ClCompile Include="QueueBinding.cpp">
-      <Filter>Armada\Queue</Filter>
-    </ClCompile>
     <ClCompile Include="Queue.cpp">
       <Filter>Armada\Queue</Filter>
     </ClCompile>
-    <ClCompile Include="SplineQueueBinding.cpp">
-      <Filter>Armada\Queue\SplineQueue</Filter>
-    </ClCompile>
     <ClCompile Include="OrientedQueue.cpp">
-      <Filter>Armada\Queue\SplineQueue\OrientedQueue</Filter>
-    </ClCompile>
-    <ClCompile Include="OrientedQueueBinding.cpp">
       <Filter>Armada\Queue\SplineQueue\OrientedQueue</Filter>
     </ClCompile>
     <ClCompile Include="SplineQueue.cpp">
@@ -1002,16 +741,10 @@
     <ClCompile Include="MineArray.cpp">
       <Filter>Armada\Entity\Game Object\Craft\MineArray</Filter>
     </ClCompile>
-    <ClCompile Include="MineArrayBinding.cpp">
-      <Filter>Armada\Entity\Game Object\Craft\MineArray</Filter>
-    </ClCompile>
     <ClCompile Include="Container.cpp">
       <Filter>Armada\Helpers\Container</Filter>
     </ClCompile>
     <ClCompile Include="BuildQueue.cpp">
-      <Filter>Armada\Entity\Game Object\Craft\Producer\BuildQueue</Filter>
-    </ClCompile>
-    <ClCompile Include="BuildQueueBinding.cpp">
       <Filter>Armada\Entity\Game Object\Craft\Producer\BuildQueue</Filter>
     </ClCompile>
     <ClCompile Include="Type_GameObjectClass.cpp">
@@ -1020,23 +753,8 @@
     <ClCompile Include="OrdnanceDamage.cpp">
       <Filter>Armada\Entity\Ordnance\Damage</Filter>
     </ClCompile>
-    <ClCompile Include="OrdnanceDamageBinding.cpp">
-      <Filter>Armada\Entity\Ordnance\Damage</Filter>
-    </ClCompile>
     <ClCompile Include="Objective.cpp">
       <Filter>Armada\Objectives</Filter>
-    </ClCompile>
-    <ClCompile Include="MonitorWrapper.cpp">
-      <Filter>Armada\Monitor</Filter>
-    </ClCompile>
-    <ClCompile Include="MonitorWrapperBinding.cpp">
-      <Filter>Armada\Monitor</Filter>
-    </ClCompile>
-    <ClCompile Include="TimerWrapper.cpp">
-      <Filter>Armada\Timer</Filter>
-    </ClCompile>
-    <ClCompile Include="TimerWrapperBinding.cpp">
-      <Filter>Armada\Timer</Filter>
     </ClCompile>
     <ClCompile Include="Hook.cpp">
       <Filter>Armada\Hooks</Filter>
@@ -1065,11 +783,11 @@
     <ClCompile Include="Game_Internal.cpp">
       <Filter>Armada\Armada</Filter>
     </ClCompile>
-    <ClCompile Include="GameBinding.cpp">
-      <Filter>Armada\Armada</Filter>
-    </ClCompile>
     <ClCompile Include="Type_DebriefingData.cpp">
       <Filter>Armada\DebriefingData</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptInterface.cpp">
+      <Filter>Armada</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -1619,9 +1337,6 @@
     <ClInclude Include="MineType.h">
       <Filter>Armada\Entity\Ordnance\Mine</Filter>
     </ClInclude>
-    <ClInclude Include="OrdnanceType.h">
-      <Filter>Armada\Entity\Ordnance</Filter>
-    </ClInclude>
     <ClInclude Include="AntimatterMine.h">
       <Filter>Armada\Entity\Ordnance\Mine\AnimatterMine</Filter>
     </ClInclude>
@@ -1718,12 +1433,6 @@
     <ClInclude Include="Objective.h">
       <Filter>Armada\Objectives</Filter>
     </ClInclude>
-    <ClInclude Include="MonitorWrapper.h">
-      <Filter>Armada\Monitor</Filter>
-    </ClInclude>
-    <ClInclude Include="TimerWrapper.h">
-      <Filter>Armada\Timer</Filter>
-    </ClInclude>
     <ClInclude Include="Hook.h">
       <Filter>Armada\Hooks</Filter>
     </ClInclude>
@@ -1757,9 +1466,14 @@
     <ClInclude Include="Game_Internal.h">
       <Filter>Armada\Armada</Filter>
     </ClInclude>
-    <ClInclude Include="Entities.h" />
     <ClInclude Include="Type_DebriefingData.h">
       <Filter>Armada\DebriefingData</Filter>
+    </ClInclude>
+    <ClInclude Include="Entities.h">
+      <Filter>Armada</Filter>
+    </ClInclude>
+    <ClInclude Include="OrdnanceType.h">
+      <Filter>Armada\Entity\Ordnance</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -1775,14 +1489,17 @@
     <None Include="ListAdapter.inl">
       <Filter>Armada\Conversion</Filter>
     </None>
-    <None Include="Entity_Internal.inl">
-      <Filter>Armada\Entity</Filter>
-    </None>
     <None Include="Container.inl">
       <Filter>Armada\Helpers\Container</Filter>
     </None>
     <None Include="Entities.inl">
       <Filter>Armada</Filter>
+    </None>
+    <None Include="LuaBinding.inl">
+      <Filter>Armada\Lua</Filter>
+    </None>
+    <None Include="Entity_Internal.inl">
+      <Filter>Armada\Entity</Filter>
     </None>
   </ItemGroup>
 </Project>

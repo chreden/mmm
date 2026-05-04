@@ -3,8 +3,8 @@
 
 namespace mmm
 {
-	TerrainObjectClass::TerrainObjectClass( types::TerrainObjectClass* object )
-		: GameObjectClass( object )
+	TerrainObjectClass::TerrainObjectClass(types::TerrainObjectClass* object)
+		: GameObjectClass(object)
 	{
 
 	}
@@ -12,6 +12,6 @@ namespace mmm
 	types::TerrainObjectClass*
 	TerrainObjectClass::getTerrainObjectClass() const
 	{
-		return static_cast<types::TerrainObjectClass*>( getClass() );
+		return static_cast<types::TerrainObjectClass*>(getClass());
 	}
 }

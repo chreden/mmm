@@ -4,29 +4,30 @@
 
 namespace mmm
 {
-	namespace types 
-	{ 
-		struct Planet; 
-	} 
+    namespace types 
+    { 
+        struct Planet; 
+    } 
 
-	class Planet :
-		public Producer
-	{
-	public:
-		static PlanetPtr create( types::Entity* entity );
-		EntityPtr getColonyShip() const;
-		eCivPopulationLevel getPopulationLevel() const;
-		float	 getPopulation() const;
-		float	 getMaxPopulation() const;
-		RacePtr	 getOldRace() const;
-		bool	 getHasShields() const;
-		void	 setPopulation( float value );
-	protected:
-		explicit	   Planet( types::Planet* planet );
-		virtual void   allocateReplacement( luabind::detail::object_rep* object );
-	private:
-		types::Planet* getPlanet() const;
-	};
+    class Planet : public Producer
+    {
+    public:
+        static PlanetPtr create(types::Entity* entity);
+        std::shared_ptr<Entity> getColonyShip() const;
+        eCivPopulationLevel getPopulationLevel() const;
+        float getPopulation() const;
+        float getMaxPopulation() const;
+        std::shared_ptr<Race> getOldRace() const;
+        bool getHasShields() const;
+        void setPopulation(float value);
 
-	void planet_register( lua_State* state );
+        int index(lua_State* L, const std::string& key) const override;
+        int newindex(lua_State* L, const std::string& key) override;
+    protected:
+        explicit   Planet(types::Planet* planet);
+    private:
+        types::Planet* getPlanet() const;
+    };
+
+    void planet_register(lua_State* state);
 }

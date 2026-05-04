@@ -9,7 +9,7 @@ namespace mmm
     class Nebula : public AreaEffectObject
     {
     public:
-        static NebulaPtr create(types::Entity* entity);
+        static std::shared_ptr<Nebula> create(types::Entity* entity);
         bool getCanBuildInNebula() const;
         void setCanBuildInNebula(bool value);
         float getDeltaRoll() const;
@@ -19,10 +19,9 @@ namespace mmm
         void setDeltaPitch(float value);
         void setDeltaYaw(float value);
         types::Nebula* getNebula() const;
+        int index(lua_State* L, const std::string& key) const override;
+        int newindex(lua_State* L, const std::string& key) override;
     protected:
-        virtual void allocateReplacement(luabind::detail::object_rep* object);
         explicit Nebula(types::Nebula* nebula);
     };
-
-    void nebula_register(lua_State* state);
 }

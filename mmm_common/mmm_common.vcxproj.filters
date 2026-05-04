@@ -7,9 +7,6 @@
     <Filter Include="Precompiled Header">
       <UniqueIdentifier>{6c533e68-85ea-47d2-a1f6-20f730370a9a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Common\Hash">
-      <UniqueIdentifier>{64b1ade3-1f6f-4bb9-ac96-de0eecf67204}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Common\Path">
       <UniqueIdentifier>{cc9e999f-273f-49a5-b879-2c8dd3aea4b9}</UniqueIdentifier>
     </Filter>
@@ -24,9 +21,6 @@
     <ClInclude Include="pch.h">
       <Filter>Precompiled Header</Filter>
     </ClInclude>
-    <ClInclude Include="Hash.h">
-      <Filter>Common\Hash</Filter>
-    </ClInclude>
     <ClInclude Include="FilePath.h">
       <Filter>Common\Path</Filter>
     </ClInclude>
@@ -40,9 +34,6 @@
     </ClCompile>
     <ClCompile Include="pch.cpp">
       <Filter>Precompiled Header</Filter>
-    </ClCompile>
-    <ClCompile Include="Hash.cpp">
-      <Filter>Common\Hash</Filter>
     </ClCompile>
     <ClCompile Include="FilePath.cpp">
       <Filter>Common\Path</Filter>

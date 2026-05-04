@@ -4,31 +4,30 @@
 
 namespace mmm
 {
-	namespace types
-	{
-		struct Colony;
-	}
+    namespace types
+    {
+        struct Colony;
+    }
 
-	class Colony
-		: public Craft
-	{
-	public:
-		static ColonyPtr create( types::Entity* entity );
+    class Colony : public Craft
+    {
+    public:
+        static ColonyPtr create(types::Entity* entity);
 
-		EntityPtr	getPlanet() const;
-		int			getColonists() const;
-		int			getInitialColonists() const;
-		float		getInitialPopulation() const;
+        std::shared_ptr<Entity> getPlanet() const;
+        int getColonists() const;
+        int getInitialColonists() const;
+        float getInitialPopulation() const;
 
-		void	setColonists( int value );
-		void	setInitialColonists( int value );
-		void	setInitialPopulation( float value );
-	protected:
-		explicit	 Colony( types::Colony* colony );
-		virtual void allocateReplacement( luabind::detail::object_rep* object );
-	private:
-		types::Colony* getColony() const;
-	};
+        void setColonists(int value);
+        void setInitialColonists(int value);
+        void setInitialPopulation(float value);
 
-	void colony_register( lua_State* state );
+        int index(lua_State* L, const std::string& key) const override;
+        int newindex(lua_State* L, const std::string& key) override;
+    protected:
+        explicit Colony(types::Colony* colony);
+    private:
+        types::Colony* getColony() const;
+    };
 }

@@ -2,33 +2,32 @@
 
 namespace mmm
 {
-	namespace types
-	{
-		struct GameObjectClass;
-	}
+    namespace types
+    {
+        struct GameObjectClass;
+    }
 
-	class GameObjectClass
-	{
-	public:
-		static GameObjectClassPtr create( types::GameObjectClass* ptr );
-		virtual ~GameObjectClass();
+    class GameObjectClass
+    {
+    public:
+        static std::shared_ptr<GameObjectClass> create(types::GameObjectClass* ptr);
+        virtual ~GameObjectClass();
+        std::string getLabel() const;
+        std::string getUnitString() const;
+        long getMaxSpecialEnergy() const;
+        std::string getODF() const;
+        void setUnitString(const std::string& name);
+        void setMaxSpecialEnergy(long value);
+        types::GameObjectClass* getClass() const;
+        virtual int index(lua_State* L, const std::string& key) const;
+        virtual int newindex(lua_State* L, const std::string& key);
+    protected:
+        explicit GameObjectClass(types::GameObjectClass* goClass);
+    private:
+        types::GameObjectClass* class_;
+    };
 
-		const std::string getLabel() const;
-		const std::string getUnitString() const;
-		long			  getMaxSpecialEnergy() const;
-		const std::string getODF() const;
-
-		void setUnitString( const std::string& name );
-		void setMaxSpecialEnergy( long value );
-		
-		types::GameObjectClass* getClass() const;
-	protected:
-		explicit GameObjectClass( types::GameObjectClass* goClass );
-	private:
-		types::GameObjectClass* class_;
-	};
-
-	void gameobjectclass_register( lua_State* state );
-
-	GameObjectClassPtr createGameObjectClassPtr( types::GameObjectClass* ptr );
+    int gameobjectclass_new(lua_State* L, const std::shared_ptr<GameObjectClass>& ptr);
+    void gameobjectclass_register(lua_State* state);
+    std::shared_ptr<GameObjectClass> createGameObjectClassPtr(types::GameObjectClass* ptr);
 }

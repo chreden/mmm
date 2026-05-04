@@ -4,25 +4,26 @@
 
 namespace mmm
 {
-	namespace types { struct TradingStation; }
+    namespace types { struct TradingStation; }
 
-	class TradingStation
-		: public MiningStation
-	{
-	public:
-		static TradingStationPtr create( types::Entity* entity );
-		virtual GameObjectClassPtr getClass() const;
+    class TradingStation : public MiningStation
+    {
+    public:
+        static TradingStationPtr create(types::Entity* entity);
+        virtual std::shared_ptr<GameObjectClass> getClass() const;
 
-		eDockingState getDockingState() const;
-		Vector3		  getRallyPoint() const;
-		EntityPtr	  getDockedFerengi() const;
-		void		  setRallyPoint( const Vector3& rallyPoint );
-	protected:
-		explicit	 TradingStation( types::TradingStation* station );
-		virtual void allocateReplacement( luabind::detail::object_rep* object );
-	private:
-		types::TradingStation* getTradingStation() const;
-	};
+        eDockingState getDockingState() const;
+        Vector3  getRallyPoint() const;
+        std::shared_ptr<Entity>  getDockedFerengi() const;
+        void  setRallyPoint(const Vector3& rallyPoint);
 
-	void tradingstation_register( lua_State* state );
+        int index(lua_State* L, const std::string& key) const override;
+        int newindex(lua_State* L, const std::string& key) override;
+    protected:
+        explicit TradingStation(types::TradingStation* station);
+    private:
+        types::TradingStation* getTradingStation() const;
+    };
+
+    void tradingstation_register(lua_State* state);
 }

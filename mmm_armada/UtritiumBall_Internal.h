@@ -4,24 +4,23 @@
 
 namespace mmm
 {
-	namespace types { struct UtritiumBall; }
+    namespace types { struct UtritiumBall; }
 
-	class UtritiumBall
-		: public TerrainObject
-	{
-	public:
-		static UtritiumBallPtr create( types::Entity* ent );
-		virtual GameObjectClassPtr getClass() const;
+    class UtritiumBall : public TerrainObject
+    {
+    public:
+        static UtritiumBallPtr create(types::Entity* ent);
+        virtual std::shared_ptr<GameObjectClass> getClass() const;
 
-		float		getTimeLeft() const;
-		EntityPtr	getOwner() const;
-		void		setTimeLeft( float value );
-	protected:
-		explicit	   UtritiumBall( types::UtritiumBall* type );
-		virtual void   allocateReplacement( luabind::detail::object_rep* object );
-	private:
-		types::UtritiumBall* getUtritiumBall() const;
-	};
+        float getTimeLeft() const;
+        std::shared_ptr<Entity> getOwner() const;
+        void setTimeLeft(float value);
 
-	void utritiumball_register( lua_State* state );
+        int index(lua_State* L, const std::string& key) const override;
+        int newindex(lua_State* L, const std::string& key) override;
+    protected:
+        explicit UtritiumBall(types::UtritiumBall* type);
+    private:
+        types::UtritiumBall* getUtritiumBall() const;
+    };
 }

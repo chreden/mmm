@@ -2,60 +2,89 @@
 #include "TradingStationClass_Internal.h"
 #include "Type_TradingStation.h"
 #include "Type_TradingStationClass.h"
+#include "LuaBinding.h"
 
 namespace mmm
 {
-	TradingStationPtr
-	TradingStation::create( types::Entity* entity )
-	{
-		return TradingStationPtr( new TradingStation( static_cast<types::TradingStation*>( entity ) ) );
-	}
+    TradingStationPtr TradingStation::create(types::Entity* entity)
+    {
+        return TradingStationPtr(new TradingStation(static_cast<types::TradingStation*>(entity)));
+    }
 
-	TradingStation::TradingStation( types::TradingStation* station )
-		: MiningStation( station )
-	{
+    TradingStation::TradingStation(types::TradingStation* station)
+        : MiningStation(station)
+    {
 
-	}
+    }
 
-	void
-	TradingStation::allocateReplacement( luabind::detail::object_rep* object )
-	{
-		entity_allocate_replacement<TradingStation>( object, boost::static_pointer_cast<TradingStation>( shared_from_this() ) );
-	}
+    types::TradingStation* TradingStation::getTradingStation() const
+    {
+        return static_cast<types::TradingStation*>(getEntity());
+    }
 
-	types::TradingStation*
-	TradingStation::getTradingStation() const
-	{
-		return static_cast<types::TradingStation*>( getEntity() );
-	}
+    std::shared_ptr<GameObjectClass> TradingStation::getClass() const
+    {
+        return std::shared_ptr<GameObjectClass>(new TradingStationClass(static_cast<types::TradingStationClass*>(getTradingStation()->m_class)));
+    }
 
-	GameObjectClassPtr 
-	TradingStation::getClass() const
-	{
-		return GameObjectClassPtr( new TradingStationClass( static_cast<types::TradingStationClass*>( getTradingStation()->m_class ) ) );
-	}
+    eDockingState TradingStation::getDockingState() const
+    {
+        return getTradingStation()->m_DockingState;
+    }
 
-	eDockingState 
-	TradingStation::getDockingState() const
-	{
-		return getTradingStation()->m_DockingState;
-	}
+    Vector3 TradingStation::getRallyPoint() const
+    {
+        return getTradingStation()->m_rallyPoint;
+    }
 
-	Vector3
-	TradingStation::getRallyPoint() const
-	{
-		return getTradingStation()->m_rallyPoint;
-	}
+    std::shared_ptr<Entity> TradingStation::getDockedFerengi() const
+    {
+        return createEntityPtr(GetEntity<types::Entity>(getTradingStation()->m_ferengiNowTradingHandle));
+    }
 
-	EntityPtr 
-	TradingStation::getDockedFerengi() const
-	{
-		return createEntityPtr( GetEntity<types::Entity>( getTradingStation()->m_ferengiNowTradingHandle ) );
-	}
+    void TradingStation::setRallyPoint(const Vector3& rallyPoint)
+    {
+        getTradingStation()->m_rallyPoint = rallyPoint;
+    }
 
-	void
-	TradingStation::setRallyPoint( const Vector3& rallyPoint )
-	{
-		getTradingStation()->m_rallyPoint = rallyPoint;
-	}
+    int TradingStation::index(lua_State* L, const std::string& key) const
+    {
+        if (key == "dockedFerengi")
+        {
+            return entity_new(L, getDockedFerengi());
+        }
+        else if (key == "dockingState")
+        {
+            lua_pushnumber(L, getDockingState());
+            return 1;
+        }
+        else if (key == "rallyPoint")
+        {
+            return vector_new(L, getRallyPoint());
+        }
+        return MiningStation::index(L, key);
+    }
+
+    int TradingStation::newindex(lua_State* L, const std::string& key)
+    {
+        if (key == "rallyPoint")
+        {
+            setRallyPoint(get_userdata<Vector3>(L, 3));
+            return 0;
+        }
+        return MiningStation::newindex(L, key);
+    }
+
+    void tradingstation_register(lua_State* L)
+    {
+        lua_newtable(L);
+        create_enum(L, "DockingState",
+            {
+                { "JustDocked", JustDocked },
+                { "LoadCargo", LoadCargo },
+                { "UnloadCargo", UnloadCargo },
+                { "Exit", Exit },
+            });
+        lua_setglobal(L, "TradingStation");
+    }
 }

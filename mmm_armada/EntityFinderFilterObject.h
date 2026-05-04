@@ -4,14 +4,15 @@
 
 namespace mmm
 {
-	class EntityFinderFilterObject : public EntityFinderFilter
-	{
-	public:
-		explicit EntityFinderFilterObject( luabind::object table, luabind::object function );
-		virtual ~EntityFinderFilterObject( );
-		virtual bool call( EntityPtr entity );
-	private:
-		luabind::object table_;
-		luabind::object function_;
-	};
+    class EntityFinderFilterObject final : public EntityFinderFilter
+    {
+    public:
+        explicit EntityFinderFilterObject(lua_State* L, int table, int function);
+        virtual ~EntityFinderFilterObject();
+        bool call(const std::shared_ptr<Entity>& entity) override;
+    private:
+        lua_State* _L{ nullptr };
+        int _table{ -2 };
+        int _function{ -2 };
+    };
 }

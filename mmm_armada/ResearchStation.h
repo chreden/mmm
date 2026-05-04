@@ -4,20 +4,17 @@
 
 namespace mmm
 {
-	namespace types { struct ResearchStation; }
+    namespace types { struct ResearchStation; }
 
-	class ResearchStation
-		: public Producer
-	{
-	public:
-		static ResearchStationPtr create( types::Entity* entity );
-		luabind::object getPods() const;
-	protected:
-		explicit	 ResearchStation( types::ResearchStation* station );
-		virtual void allocateReplacement( luabind::detail::object_rep* object );
-	private:
-		types::ResearchStation* getResearchStation() const;
-	};
-
-	void researchstation_register( lua_State* state );
+    class ResearchStation : public Producer
+    {
+    public:
+        static ResearchStationPtr create(types::Entity* entity);
+        int getPods(lua_State* L) const;
+        int index(lua_State* L, const std::string& key) const override;
+    protected:
+        explicit ResearchStation(types::ResearchStation* station);
+    private:
+        types::ResearchStation* getResearchStation() const;
+    };
 }

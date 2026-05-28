@@ -959,9 +959,6 @@
     <ClInclude Include="LuaBinding.h">
       <Filter>Armada\Lua</Filter>
     </ClInclude>
-    <ClInclude Include="TypeDeclarations.h">
-      <Filter>Armada</Filter>
-    </ClInclude>
     <ClInclude Include="Team_Resources.h">
       <Filter>Armada\Team</Filter>
     </ClInclude>

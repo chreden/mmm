@@ -12,11 +12,13 @@ namespace mmm
 
     class Entity;
     class Race;
-    class Team : private NoCopy
+    class Team
     {
     public:
         explicit Team(int teamNumber);
         explicit Team(types::Team* team);
+        Team(const Team& other) = delete;
+        Team& operator=(const Team& other) = delete;
         float getResource(eResource resource) const;
         eTeamRelation getRelation(const std::shared_ptr<Team>& other) const;
         int getMaxOfficers() const;

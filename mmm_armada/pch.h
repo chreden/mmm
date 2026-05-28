@@ -13,12 +13,8 @@
 
 #include "Types.h"
 
-#include "TypeDeclarations.h"
-
-
-
 namespace mmm
 { 
-	const std::string HolderName = "mmm_holder.odf";
-	const std::string MapperName = "mmm_mapper.odf";
+    const std::string HolderName = "mmm_holder.odf";
+    const std::string MapperName = "mmm_mapper.odf";
 }

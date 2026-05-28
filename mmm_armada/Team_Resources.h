@@ -3,10 +3,12 @@
 //Resources class manages interaction between lua and the actual Team resources.
 namespace mmm
 {
-    class Team::Resources : private NoCopy
+    class Team::Resources
     {
     public:
         explicit Resources(types::Team* team);
+        Team::Resources(const Team::Resources& other) = delete;
+        Team::Resources& operator=(const Team::Resources& other) = delete;
         float getDilithium() const;
         float getMetal() const;
         float getCrew() const;

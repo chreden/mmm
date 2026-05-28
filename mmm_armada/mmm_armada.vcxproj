@@ -407,7 +407,6 @@
     <ClInclude Include="TimerHook.h" />
     <ClInclude Include="TradingStationClass_Internal.h" />
     <ClInclude Include="TradingStation.h" />
-    <ClInclude Include="TypeDeclarations.h" />
     <ClInclude Include="Type_AI.h" />
     <ClInclude Include="Type_AreaEffectObjectClass.h" />
     <ClInclude Include="Type_Artillery.h" />

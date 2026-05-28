@@ -107,7 +107,6 @@ namespace mmm
         }
         else if(active != previousActive_)
         {
-            // TODO: Reinstate
             lua_getglobal(L, "string");
             lua_getfield(L, -1, "find");
             int findFunction = luaL_ref(L, LUA_REGISTRYINDEX);
@@ -153,52 +152,6 @@ namespace mmm
                     lua_pop(L, 1);
                 }
             }
-
-            /*
-            //Used with pattern matching hooks.
-            luabind::object findFunction;
-            luabind::object stringObject = luabind::globals(common::Storage::instance().mainLuaVM)["string"];
-            if(stringObject.is_valid())
-            {
-                findFunction = stringObject["find"];
-            }
-
-            auto hookCopy = hooks_;
-            for(auto iter = hookCopy.begin();
-                 iter != hookCopy.end();
-                 ++iter)
-            {
-                try
-                {
-                    TextInputHookPtr hook = iter->second;
-
-                    if(!hook->getPattern().empty() && findFunction.is_valid())
-                    {
-                        //The hook has a pattern that needs to be matched -
-                        //if it passes then we will use it, otherwise we just
-                        //bail out.
-                        luabind::object found = luabind::call_function<luabind::object>(findFunction, previousString_, hook->getPattern());
-                        if(luabind::type(found) == LUA_TNIL) 
-                        {
-                            continue;
-                        }
-                    }
-
-                    if(hook->getTable().is_valid() && 
-                        luabind::type(hook->getTable()) != LUA_TNIL)
-                    {
-                        luabind::call_function<void>(hook->getFunction(), hook->getTable(), previousString_, hook);
-                    }
-                    else
-                    {
-                        luabind::call_function<void>(hook->getFunction(), previousString_, hook);
-                    }
-                }
-                catch(const luabind::error&)
-                {
-                    scriptError(std::string("Error in TextInput hook (" + iter->first + "): ") + lua_tostring(state, -1));
-                }
-            }*/
         }
 
         previousActive_ = active;

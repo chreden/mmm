@@ -3,9 +3,9 @@
 
 namespace mmm
 {
-    ResearchStationPtr ResearchStation::create(types::Entity* entity)
+    std::shared_ptr<ResearchStation> ResearchStation::create(types::Entity* entity)
     {
-        return ResearchStationPtr(new ResearchStation(static_cast<types::ResearchStation*>(entity)));
+        return std::shared_ptr<ResearchStation>(new ResearchStation(static_cast<types::ResearchStation*>(entity)));
     }
 
     ResearchStation::ResearchStation(types::ResearchStation* station)

@@ -5,9 +5,9 @@
 
 namespace mmm
 {
-    BackgroundObjectPtr BackgroundObject::create(types::Entity* entity)
+    std::shared_ptr<BackgroundObject> BackgroundObject::create(types::Entity* entity)
     {
-        return BackgroundObjectPtr(new BackgroundObject(static_cast<types::BackgroundObject*>(entity)));
+        return std::shared_ptr<BackgroundObject>(new BackgroundObject(static_cast<types::BackgroundObject*>(entity)));
     }
 
     BackgroundObject::BackgroundObject(types::BackgroundObject* object)

@@ -9,7 +9,7 @@ namespace mmm
     class GravityMine : public Mine
     {
     public:
-        static GravityMinePtr create(types::Entity* entity);
+        static std::shared_ptr<GravityMine> create(types::Entity* entity);
     protected:
         explicit GravityMine(types::GravityMine* gravityMine);
     private:

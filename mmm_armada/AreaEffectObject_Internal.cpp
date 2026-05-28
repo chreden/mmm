@@ -5,9 +5,9 @@
 
 namespace mmm
 {
-    AreaEffectObjectPtr AreaEffectObject::create(types::Entity* entity)
+    std::shared_ptr<AreaEffectObject> AreaEffectObject::create(types::Entity* entity)
     {
-        return AreaEffectObjectPtr(new AreaEffectObject(static_cast<types::AreaEffectObject*>(entity)));
+        return std::shared_ptr<AreaEffectObject>(new AreaEffectObject(static_cast<types::AreaEffectObject*>(entity)));
     }
 
     AreaEffectObject::AreaEffectObject(types::AreaEffectObject* object)

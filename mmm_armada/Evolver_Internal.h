@@ -12,7 +12,7 @@ namespace mmm
     class Evolver : public Producer
     {
     public:
-        static EvolverPtr create(types::Entity* entity);
+        static std::shared_ptr<Evolver> create(types::Entity* entity);
         virtual std::shared_ptr<GameObjectClass> getClass() const;
         float getEvolutionProgress() const;
         void setEvolutionProgress(float value);

@@ -5,9 +5,9 @@
 
 namespace mmm
 {
-    BlackHolePtr BlackHole::create( types::Entity* entity )
+    std::shared_ptr<BlackHole> BlackHole::create( types::Entity* entity )
     {
-        return BlackHolePtr( new BlackHole( static_cast<types::BlackHole*>( entity ) ) );
+        return std::shared_ptr<BlackHole>(new BlackHole(static_cast<types::BlackHole*>(entity)));
     }
 
     BlackHole::BlackHole( types::BlackHole* type )

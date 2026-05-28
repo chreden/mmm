@@ -4,9 +4,9 @@
 
 namespace mmm
 {
-    MissilePtr Missile::create(types::Entity* entity)
+    std::shared_ptr<Missile> Missile::create(types::Entity* entity)
     {
-        return MissilePtr(new Missile(static_cast<types::Missile*>(entity)));
+        return std::shared_ptr<Missile>(new Missile(static_cast<types::Missile*>(entity)));
     }
 
     Missile::Missile(types::Missile* missile)

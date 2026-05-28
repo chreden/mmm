@@ -9,7 +9,7 @@ namespace mmm
     class UtritiumBall : public TerrainObject
     {
     public:
-        static UtritiumBallPtr create(types::Entity* ent);
+        static std::shared_ptr<UtritiumBall> create(types::Entity* ent);
         virtual std::shared_ptr<GameObjectClass> getClass() const;
 
         float getTimeLeft() const;

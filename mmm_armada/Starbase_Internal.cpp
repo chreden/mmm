@@ -3,9 +3,9 @@
 
 namespace mmm
 {
-    StarbasePtr Starbase::create(types::Entity* entity)
+    std::shared_ptr<Starbase> Starbase::create(types::Entity* entity)
     {
-        return StarbasePtr(new Starbase(static_cast<types::Starbase*>(entity)));
+        return std::shared_ptr<Starbase>(new Starbase(static_cast<types::Starbase*>(entity)));
     }
 
     Starbase::Starbase(types::Starbase* starbase)

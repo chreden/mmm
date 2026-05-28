@@ -11,7 +11,7 @@ namespace mmm
     class MiningStation : public Producer, public ResourceTransferInterface
     {
     public:
-        static MiningStationPtr create(types::Entity* entity);
+        static std::shared_ptr<MiningStation> create(types::Entity* entity);
         std::shared_ptr<Freighter> buildFreighter() const;
         virtual std::shared_ptr<GameObjectClass> getClass() const;
 

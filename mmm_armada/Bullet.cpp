@@ -4,9 +4,9 @@
 
 namespace mmm
 {
-    BulletPtr Bullet::create(types::Entity* entity)
+    std::shared_ptr<Bullet> Bullet::create(types::Entity* entity)
     {
-        return BulletPtr(new Bullet(static_cast<types::Bullet*>(entity)));
+        return std::shared_ptr<Bullet>(new Bullet(static_cast<types::Bullet*>(entity)));
     }
 
     Bullet::Bullet(types::Bullet* bullet)

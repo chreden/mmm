@@ -5,9 +5,9 @@
 
 namespace mmm
 {
-    EvolverPtr Evolver::create(types::Entity* entity)
+    std::shared_ptr<Evolver> Evolver::create(types::Entity* entity)
     {
-        return EvolverPtr(new Evolver(static_cast<types::Evolver*>(entity)));
+        return std::shared_ptr<Evolver>(new Evolver(static_cast<types::Evolver*>(entity)));
     }
 
     Evolver::Evolver(types::Evolver* evolver)

@@ -6,6 +6,7 @@ namespace mmm
 {
     namespace types
     {
+        struct GameObject;
         struct Queue
         {
             void* _vfptr; //Virtual pointer

@@ -5,9 +5,9 @@
 
 namespace mmm
 {
-    LatinumNebulaPtr LatinumNebula::create(types::Entity* entity)
+    std::shared_ptr<LatinumNebula> LatinumNebula::create(types::Entity* entity)
     {
-        return LatinumNebulaPtr(new LatinumNebula(static_cast<types::LatinumNebula*>(entity)));
+        return std::shared_ptr<LatinumNebula>(new LatinumNebula(static_cast<types::LatinumNebula*>(entity)));
     }
 
     LatinumNebula::LatinumNebula(types::LatinumNebula* nebula)

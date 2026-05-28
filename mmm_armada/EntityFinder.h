@@ -17,7 +17,7 @@ namespace mmm
     private:
         void inner_find(std::vector<std::shared_ptr<Entity>>& results, int max = -1) const;
 
-        std::vector<EntityFinderFilterPtr> _filters;
+        std::vector<std::shared_ptr<EntityFinderFilter>> _filters;
         lua_State* _L{ nullptr };
     };
 

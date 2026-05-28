@@ -12,7 +12,7 @@ namespace mmm
     class AreaEffectObject  : public TerrainObject
     {
     public:
-        static AreaEffectObjectPtr create(types::Entity* entity);
+        static std::shared_ptr<AreaEffectObject> create(types::Entity* entity);
         virtual std::shared_ptr<GameObjectClass> getClass() const;
     protected:
         explicit AreaEffectObject(types::AreaEffectObject* object);

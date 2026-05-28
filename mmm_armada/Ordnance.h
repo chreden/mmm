@@ -9,6 +9,7 @@ namespace mmm
         struct Ordnance;
     }
 
+    class OrdnanceDamage;
     class Ordnance : public Entity
     {
     public:
@@ -22,7 +23,7 @@ namespace mmm
         std::shared_ptr<Entity> getTarget() const;
         float getLifetime() const;
         Vector3 getVelocity() const;
-        OrdnanceDamagePtr getDamage() const;
+        std::shared_ptr<OrdnanceDamage> getDamage() const;
 
         void setTarget(const std::shared_ptr<Entity>& target);
         void setLifetime(float value);

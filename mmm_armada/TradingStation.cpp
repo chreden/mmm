@@ -6,9 +6,9 @@
 
 namespace mmm
 {
-    TradingStationPtr TradingStation::create(types::Entity* entity)
+    std::shared_ptr<TradingStation> TradingStation::create(types::Entity* entity)
     {
-        return TradingStationPtr(new TradingStation(static_cast<types::TradingStation*>(entity)));
+        return std::shared_ptr<TradingStation>(new TradingStation(static_cast<types::TradingStation*>(entity)));
     }
 
     TradingStation::TradingStation(types::TradingStation* station)

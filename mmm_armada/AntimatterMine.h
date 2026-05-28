@@ -9,7 +9,7 @@ namespace mmm
     class AntimatterMine : public Mine
     {
     public:
-        static AntimatterMinePtr create(types::Entity* entity);
+        static std::shared_ptr<AntimatterMine> create(types::Entity* entity);
     protected:
         explicit AntimatterMine(types::AntimatterMine* antimatterMine);
     private:

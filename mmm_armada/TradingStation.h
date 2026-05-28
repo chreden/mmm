@@ -9,7 +9,7 @@ namespace mmm
     class TradingStation : public MiningStation
     {
     public:
-        static TradingStationPtr create(types::Entity* entity);
+        static std::shared_ptr<TradingStation> create(types::Entity* entity);
         virtual std::shared_ptr<GameObjectClass> getClass() const;
 
         eDockingState getDockingState() const;

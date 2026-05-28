@@ -9,7 +9,7 @@ namespace mmm
     class Mine : public Ordnance
     {
     public:
-        static MinePtr create(types::Entity* entity);
+        static std::shared_ptr<Mine> create(types::Entity* entity);
         eMineStatus getMineStatus() const;
         int index(lua_State* L, const std::string& key) const override;
     protected:

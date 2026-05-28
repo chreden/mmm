@@ -4,9 +4,9 @@
 
 namespace mmm
 {
-    ConstructionRigPtr ConstructionRig::create(types::Entity* entity)
+    std::shared_ptr<ConstructionRig> ConstructionRig::create(types::Entity* entity)
     {
-        return ConstructionRigPtr(new ConstructionRig(static_cast<types::ConstructionRig*>(entity)));
+        return std::shared_ptr<ConstructionRig>(new ConstructionRig(static_cast<types::ConstructionRig*>(entity)));
     }
 
     ConstructionRig::ConstructionRig(types::ConstructionRig* rig)

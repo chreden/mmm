@@ -12,7 +12,7 @@ namespace mmm
     class RepairShipClass : public CraftClass
     {
     public:
-        static RepairShipClassPtr create(types::GameObjectClass* ptr);
+        static std::shared_ptr<RepairShipClass> create(types::GameObjectClass* ptr);
         float getRepairRate() const;
         void setRepairRate(float value);
         int index(lua_State* L, const std::string& key) const override;

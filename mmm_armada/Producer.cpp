@@ -14,9 +14,9 @@ namespace mmm
         const std::size_t Address_GetBuildObjectTime = 0x004b7cd0;
     }
 
-    ProducerPtr Producer::create(types::Entity* entity)
+    std::shared_ptr<Producer> Producer::create(types::Entity* entity)
     {
-        return ProducerPtr(new Producer(static_cast<types::Producer*>(entity)));
+        return std::shared_ptr<Producer>(new Producer(static_cast<types::Producer*>(entity)));
     }
 
     Producer::Producer(types::Producer* producer)
@@ -30,7 +30,7 @@ namespace mmm
         return static_cast<types::Producer*>(getEntity());
     }
 
-    BuildQueuePtr Producer::getBuildQueue() const
+    std::shared_ptr<BuildQueue> Producer::getBuildQueue() const
     {
         return BuildQueue::create(std::static_pointer_cast<Producer>(std::const_pointer_cast<Entity>(shared_from_this())));
     }

@@ -3,9 +3,9 @@
 
 namespace mmm
 {
-    ColonyClassPtr ColonyClass::create(types::GameObjectClass* ptr)
+    std::shared_ptr<ColonyClass> ColonyClass::create(types::GameObjectClass* ptr)
     {
-        return ColonyClassPtr(new ColonyClass(static_cast<types::ColonyClass*>(ptr)));
+        return std::shared_ptr<ColonyClass>(new ColonyClass(static_cast<types::ColonyClass*>(ptr)));
     }
 
     ColonyClass::ColonyClass(types::ColonyClass* colony)

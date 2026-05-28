@@ -7,9 +7,9 @@
 
 namespace mmm
 {
-    MiningStationPtr MiningStation::create(types::Entity* entity)
+    std::shared_ptr<MiningStation> MiningStation::create(types::Entity* entity)
     {
-        return MiningStationPtr(new MiningStation(static_cast<types::MiningStation*>(entity)));
+        return std::shared_ptr<MiningStation>(new MiningStation(static_cast<types::MiningStation*>(entity)));
     }
 
     MiningStation::MiningStation(types::MiningStation* station)

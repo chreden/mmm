@@ -9,7 +9,7 @@ namespace mmm
     class PlanetMiningBase : public Craft
     {
     public:
-        static PlanetMiningBasePtr create(types::Entity* entity);
+        static std::shared_ptr<PlanetMiningBase> create(types::Entity* entity);
 
         std::shared_ptr<Entity> getPlanet() const;
         float  getOrbitOmega() const;

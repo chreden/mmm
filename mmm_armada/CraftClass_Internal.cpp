@@ -3,9 +3,9 @@
 
 namespace mmm
 {
-    CraftClassPtr CraftClass::create(types::GameObjectClass* ptr)
+    std::shared_ptr<CraftClass> CraftClass::create(types::GameObjectClass* ptr)
     {
-        return CraftClassPtr(new CraftClass(static_cast<types::CraftClass*>(ptr)));
+        return std::shared_ptr<CraftClass>(new CraftClass(static_cast<types::CraftClass*>(ptr)));
     }
 
     CraftClass::CraftClass(types::CraftClass* craftClass)

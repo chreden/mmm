@@ -11,7 +11,7 @@ namespace mmm
     class Missile : public Ordnance
     {
     public:
-        static MissilePtr create(types::Entity* entity);
+        static std::shared_ptr<Missile> create(types::Entity* entity);
         virtual ~Missile(){};
         Vector3 getOmega() const;
         float getSeekTimer() const;

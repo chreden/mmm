@@ -5,9 +5,9 @@
 
 namespace mmm
 {
-    BackgroundPlanetPtr BackgroundPlanet::create(types::Entity* entity)
+    std::shared_ptr<BackgroundPlanet> BackgroundPlanet::create(types::Entity* entity)
     {
-        return BackgroundPlanetPtr(new BackgroundPlanet(static_cast<types::BackgroundPlanet*>(entity)));
+        return std::shared_ptr<BackgroundPlanet>(new BackgroundPlanet(static_cast<types::BackgroundPlanet*>(entity)));
     }
 
     BackgroundPlanet::BackgroundPlanet(types::BackgroundPlanet* planet)

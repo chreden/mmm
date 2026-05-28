@@ -5,9 +5,9 @@
 
 namespace mmm
 {
-    UtritiumBallPtr UtritiumBall::create(types::Entity* ent)
+    std::shared_ptr<UtritiumBall> UtritiumBall::create(types::Entity* ent)
     {
-        return UtritiumBallPtr(new UtritiumBall(static_cast<types::UtritiumBall*>(ent)));
+        return std::shared_ptr<UtritiumBall>(new UtritiumBall(static_cast<types::UtritiumBall*>(ent)));
     }
 
     UtritiumBall::UtritiumBall(types::UtritiumBall* type)

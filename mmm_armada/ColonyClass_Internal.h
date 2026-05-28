@@ -12,7 +12,7 @@ namespace mmm
     class ColonyClass : public CraftClass
     {
     public:
-        static ColonyClassPtr create(types::GameObjectClass* ptr);
+        static std::shared_ptr<ColonyClass> create(types::GameObjectClass* ptr);
     private:
         explicit ColonyClass(types::ColonyClass* colony);
     };

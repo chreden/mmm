@@ -9,7 +9,7 @@ namespace mmm
     class PulsePhaser : public Bullet
     {
     public:
-        static PulsePhaserPtr create(types::Entity* entity);
+        static std::shared_ptr<PulsePhaser> create(types::Entity* entity);
 
         ST3D_Colour getPhaserColour() const;
         void setPhaserColour(const ST3D_Colour& colour);

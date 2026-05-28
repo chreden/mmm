@@ -12,9 +12,9 @@ namespace mmm
         const std::size_t Address_SetPopulation		=	0x004b5970;
     }
 
-    PlanetPtr Planet::create(types::Entity* entity)
+    std::shared_ptr<Planet> Planet::create(types::Entity* entity)
     {
-        return PlanetPtr(new Planet(static_cast<types::Planet*>(entity)));
+        return std::shared_ptr<Planet>(new Planet(static_cast<types::Planet*>(entity)));
     }
 
     Planet::Planet(types::Planet* planet)

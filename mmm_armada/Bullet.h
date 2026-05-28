@@ -9,7 +9,7 @@ namespace mmm
     class Bullet : public Ordnance
     {
     public:
-        static BulletPtr create(types::Entity* entity);
+        static std::shared_ptr<Bullet> create(types::Entity* entity);
         virtual	~Bullet(){};
         Vector3 getStartPosition() const;
         Vector3 getCurrentPosition() const;

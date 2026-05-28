@@ -5,9 +5,9 @@
 
 namespace mmm
 {
-    ResearchPodPtr ResearchPod::create(types::Entity* entity)
+    std::shared_ptr<ResearchPod> ResearchPod::create(types::Entity* entity)
     {
-        return ResearchPodPtr(new ResearchPod(static_cast<types::ResearchPod*>(entity)));
+        return std::shared_ptr<ResearchPod>(new ResearchPod(static_cast<types::ResearchPod*>(entity)));
     }
 
     ResearchPod::ResearchPod(types::ResearchPod* pod)

@@ -3,9 +3,9 @@
 
 namespace mmm
 {
-    CargoShipPtr CargoShip::create(types::Entity* entity)
+    std::shared_ptr<CargoShip> CargoShip::create(types::Entity* entity)
     {
-        return CargoShipPtr(new CargoShip(static_cast<types::CargoShip*>(entity)));
+        return std::shared_ptr<CargoShip>(new CargoShip(static_cast<types::CargoShip*>(entity)));
     }
 
     CargoShip::CargoShip(types::CargoShip* cargoShip)

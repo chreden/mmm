@@ -144,12 +144,12 @@ namespace mmm
         }
     }
 
-    BuildQueuePtr BuildQueue::create(ProducerPtr producer)
+    std::shared_ptr<BuildQueue> BuildQueue::create(const std::shared_ptr<Producer>& producer)
     {
-        return BuildQueuePtr(new BuildQueue(producer));
+        return std::shared_ptr<BuildQueue>(new BuildQueue(producer));
     }
 
-    BuildQueue::BuildQueue(ProducerPtr producer)
+    BuildQueue::BuildQueue(const std::shared_ptr<Producer>& producer)
         : producer_(producer)
     {
     }

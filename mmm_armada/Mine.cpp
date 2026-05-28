@@ -4,9 +4,9 @@
 
 namespace mmm
 {
-    MinePtr Mine::create(types::Entity* entity)
+    std::shared_ptr<Mine> Mine::create(types::Entity* entity)
     {
-        return MinePtr(new Mine(static_cast<types::Mine*>(entity)));
+        return std::shared_ptr<Mine>(new Mine(static_cast<types::Mine*>(entity)));
     }
 
     Mine::Mine(types::Mine* mine)

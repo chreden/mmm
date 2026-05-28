@@ -43,9 +43,9 @@ namespace mmm
         }
     }
 
-    OrdnanceDamagePtr OrdnanceDamage::create(types::Ordnance* ordnance)
+    std::shared_ptr<OrdnanceDamage> OrdnanceDamage::create(types::Ordnance* ordnance)
     {
-        return OrdnanceDamagePtr(new OrdnanceDamage(ordnance));
+        return std::shared_ptr<OrdnanceDamage>(new OrdnanceDamage(ordnance));
     }
 
     OrdnanceDamage::OrdnanceDamage(types::Ordnance* ordnance)

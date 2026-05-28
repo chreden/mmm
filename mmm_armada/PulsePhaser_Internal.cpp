@@ -4,9 +4,9 @@
 
 namespace mmm
 {
-    PulsePhaserPtr PulsePhaser::create(types::Entity* entity)
+    std::shared_ptr<PulsePhaser> PulsePhaser::create(types::Entity* entity)
     {
-        return PulsePhaserPtr(new PulsePhaser(static_cast<types::PulsePhaser*>(entity)));
+        return std::shared_ptr<PulsePhaser>(new PulsePhaser(static_cast<types::PulsePhaser*>(entity)));
     }
 
     PulsePhaser::PulsePhaser(types::PulsePhaser* pulsePhaser)

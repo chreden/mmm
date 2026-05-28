@@ -12,7 +12,7 @@ namespace mmm
     class Planet : public Producer
     {
     public:
-        static PlanetPtr create(types::Entity* entity);
+        static std::shared_ptr<Planet> create(types::Entity* entity);
         std::shared_ptr<Entity> getColonyShip() const;
         eCivPopulationLevel getPopulationLevel() const;
         float getPopulation() const;

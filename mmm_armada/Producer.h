@@ -6,12 +6,13 @@ namespace mmm
 {
     namespace types { class Producer; }
 
+    class BuildQueue;
     class Producer : public Craft
     {
     public:
-        static ProducerPtr create(types::Entity* entity);
+        static std::shared_ptr<Producer> create(types::Entity* entity);
         std::shared_ptr<Entity> getLastBuilt() const;
-        BuildQueuePtr getBuildQueue() const;
+        std::shared_ptr<BuildQueue> getBuildQueue() const;
         float getBuildObjectTime() const;
         types::Producer* getProducer() const;
         int index(lua_State* L, const std::string& key) const override;

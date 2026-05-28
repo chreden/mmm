@@ -104,9 +104,9 @@ namespace mmm
         }
     }
 
-    GameObjectPtr GameObject::create(types::Entity* entity)
+    std::shared_ptr<GameObject> GameObject::create(types::Entity* entity)
     {
-        return GameObjectPtr( new GameObject( static_cast<types::GameObject*>( entity ) ) ); 
+        return std::shared_ptr<GameObject>(new GameObject(static_cast<types::GameObject*>(entity)));
     }
 
     GameObject::GameObject(types::GameObject* entity)

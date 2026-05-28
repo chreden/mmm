@@ -9,7 +9,7 @@ namespace mmm
     class PhotonTorpedo : public Missile
     {
     public:
-        static PhotonTorpedoPtr create(types::Entity* entity);
+        static std::shared_ptr<PhotonTorpedo> create(types::Entity* entity);
         virtual	~PhotonTorpedo(){};
         ST3D_Colour getPhotonColour() const;
         void setPhotonColour(const ST3D_Colour& colour);

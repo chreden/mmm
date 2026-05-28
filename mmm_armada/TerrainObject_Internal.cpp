@@ -3,9 +3,9 @@
 
 namespace mmm
 {
-    TerrainObjectPtr TerrainObject::create(types::Entity* entity)
+    std::shared_ptr<TerrainObject> TerrainObject::create(types::Entity* entity)
     {
-        return TerrainObjectPtr(new TerrainObject(static_cast<types::TerrainObject*>(entity)));
+        return std::shared_ptr<TerrainObject>(new TerrainObject(static_cast<types::TerrainObject*>(entity)));
     }
 
     TerrainObject::TerrainObject(types::TerrainObject* object)

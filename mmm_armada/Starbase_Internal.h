@@ -12,7 +12,7 @@ namespace mmm
     class Starbase : public Shipyard
     {
     public:
-        static StarbasePtr create(types::Entity* entity);
+        static std::shared_ptr<Starbase> create(types::Entity* entity);
     protected:
         explicit Starbase(types::Starbase* starbase);
     private:

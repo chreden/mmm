@@ -50,7 +50,7 @@ namespace mmm
         return getOrdnance()->m_euler.m_vel;
     }
 
-    OrdnanceDamagePtr Ordnance::getDamage() const
+    std::shared_ptr<OrdnanceDamage> Ordnance::getDamage() const
     {
         return OrdnanceDamage::create(getOrdnance());
     }

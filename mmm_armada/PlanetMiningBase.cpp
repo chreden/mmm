@@ -16,9 +16,9 @@ namespace mmm
         }
     }
 
-    PlanetMiningBasePtr PlanetMiningBase::create(types::Entity* ent)
+    std::shared_ptr<PlanetMiningBase> PlanetMiningBase::create(types::Entity* ent)
     {
-        return PlanetMiningBasePtr(new PlanetMiningBase(static_cast<types::PlanetMiningBase*>(ent)));
+        return std::shared_ptr<PlanetMiningBase>(new PlanetMiningBase(static_cast<types::PlanetMiningBase*>(ent)));
     }
 
     PlanetMiningBase::PlanetMiningBase(types::PlanetMiningBase* base)

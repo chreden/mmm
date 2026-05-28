@@ -3,9 +3,9 @@
 
 namespace mmm
 {
-    AsteroidFieldPtr AsteroidField::create(types::Entity* entity)
+    std::shared_ptr<AsteroidField> AsteroidField::create(types::Entity* entity)
     {
-        return AsteroidFieldPtr(new AsteroidField(static_cast<types::AsteroidField*>(entity)));
+        return std::shared_ptr<AsteroidField>(new AsteroidField(static_cast<types::AsteroidField*>(entity)));
     }
 
     AsteroidField::AsteroidField(types::AsteroidField* asteroid)

@@ -5,9 +5,9 @@
 
 namespace mmm
 {
-    ColonyPtr Colony::create(types::Entity* entity)
+    std::shared_ptr<Colony> Colony::create(types::Entity* entity)
     {
-        return ColonyPtr(new Colony(static_cast<types::Colony*>(entity)));
+        return std::shared_ptr<Colony>(new Colony(static_cast<types::Colony*>(entity)));
     }
 
     Colony::Colony(types::Colony* colony)

@@ -10,7 +10,7 @@ namespace mmm
     class BuildQueue
     {
     public:
-        static BuildQueuePtr create(ProducerPtr producer);
+        static std::shared_ptr<BuildQueue> create(const std::shared_ptr<Producer>& producer);
         //Removes all items from the build queue
         void clear();
         //Add an item to the queue
@@ -30,9 +30,9 @@ namespace mmm
         //Get time remaining on the current item.
         float getTimeRemaining() const;
     private:
-        explicit BuildQueue(ProducerPtr producer);
+        explicit BuildQueue(const std::shared_ptr<Producer>& producer);
 
-        ProducerPtr producer_;
+        std::shared_ptr<Producer> producer_;
     };
 
     int buildqueue_new(lua_State* L, const std::shared_ptr<BuildQueue>& queue);

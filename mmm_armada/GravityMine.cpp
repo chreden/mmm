@@ -3,9 +3,9 @@
 
 namespace mmm
 {
-    GravityMinePtr GravityMine::create(types::Entity* entity)
+    std::shared_ptr<GravityMine> GravityMine::create(types::Entity* entity)
     {
-        return GravityMinePtr(new GravityMine(static_cast<types::GravityMine*>(entity)));
+        return std::shared_ptr<GravityMine>(new GravityMine(static_cast<types::GravityMine*>(entity)));
     }
 
     GravityMine::GravityMine(types::GravityMine* gravityMine)

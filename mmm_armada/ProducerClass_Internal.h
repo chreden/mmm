@@ -12,7 +12,7 @@ namespace mmm
     class ProducerClass : public CraftClass
     {
     public:
-        static ProducerClassPtr create(types::GameObjectClass* ptr);
+        static std::shared_ptr<ProducerClass> create(types::GameObjectClass* ptr);
         void setitem(int index, const std::shared_ptr<GameObjectClass>& obj);
         int index(lua_State* L, const std::string& key) const override;
     protected:

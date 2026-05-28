@@ -7,7 +7,7 @@ namespace mmm
     class OrdnanceDamage
     {
     public:
-        static OrdnanceDamagePtr create(types::Ordnance* ordnance);
+        static std::shared_ptr<OrdnanceDamage> create(types::Ordnance* ordnance);
         float getTotal() const;
         Special getFlags() const;
         void setTotal(float value);

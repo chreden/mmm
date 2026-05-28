@@ -11,9 +11,9 @@
 
 namespace mmm
 {
-    RepairShipPtr RepairShip::create(types::Entity* entity)
+    std::shared_ptr<RepairShip> RepairShip::create(types::Entity* entity)
     {
-        return RepairShipPtr(new RepairShip(static_cast<types::RepairShip*>(entity)));
+        return std::shared_ptr<RepairShip>(new RepairShip(static_cast<types::RepairShip*>(entity)));
     }
 
     RepairShip::RepairShip(types::RepairShip* ship)

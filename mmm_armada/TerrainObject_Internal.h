@@ -12,7 +12,7 @@ namespace mmm
     class TerrainObject : public GameObject
     {
     public:
-        static TerrainObjectPtr create(types::Entity* entity);
+        static std::shared_ptr<TerrainObject> create(types::Entity* entity);
     protected:
         explicit TerrainObject(types::TerrainObject* object);
     };

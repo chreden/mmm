@@ -14,9 +14,9 @@ namespace mmm
         }
     }
 
-    ProducerClassPtr ProducerClass::create(types::GameObjectClass* ptr)
+    std::shared_ptr<ProducerClass> ProducerClass::create(types::GameObjectClass* ptr)
     {
-        return ProducerClassPtr(new ProducerClass(static_cast<types::ProducerClass*>(ptr)));
+        return std::shared_ptr<ProducerClass>(new ProducerClass(static_cast<types::ProducerClass*>(ptr)));
     }
 
     ProducerClass::ProducerClass(types::ProducerClass* producer)

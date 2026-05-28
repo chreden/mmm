@@ -12,7 +12,7 @@ namespace mmm
     class CraftClass : public GameObjectClass
     {
     public:
-        static CraftClassPtr create(types::GameObjectClass* ptr);
+        static std::shared_ptr<CraftClass> create(types::GameObjectClass* ptr);
     protected:
         explicit CraftClass(types::CraftClass* craftClass);
     private:

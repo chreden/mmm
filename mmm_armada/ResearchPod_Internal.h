@@ -9,7 +9,7 @@ namespace mmm
     class ResearchPod : public Craft
     {
     public:
-        static ResearchPodPtr create(types::Entity* entity);
+        static std::shared_ptr<ResearchPod> create(types::Entity* entity);
         std::shared_ptr<Entity> getStation() const;
         int index(lua_State* L, const std::string& key) const override;
     protected:

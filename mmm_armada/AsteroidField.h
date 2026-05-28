@@ -9,7 +9,7 @@ namespace mmm
     class AsteroidField : public TerrainObject
     {
     public:
-        static AsteroidFieldPtr create(types::Entity* entity);
+        static std::shared_ptr<AsteroidField> create(types::Entity* entity);
     protected:
         explicit AsteroidField(types::AsteroidField* asteroid);
     private:

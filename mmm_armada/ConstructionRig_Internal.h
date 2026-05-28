@@ -12,7 +12,7 @@ namespace mmm
     class ConstructionRig : public Producer
     {
     public:
-        static ConstructionRigPtr create(types::Entity* entity);
+        static std::shared_ptr<ConstructionRig> create(types::Entity* entity);
         int getBeesOnboard() const;
         std::shared_ptr<Entity> getConstructionObject() const;
         void setBeesOnboard(int value);

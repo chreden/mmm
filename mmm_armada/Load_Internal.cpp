@@ -101,7 +101,7 @@ namespace mmm
     {
         for(std::size_t i = 0; i < objects.size(); ++i)
         {
-            CraftPtr craft = std::static_pointer_cast<Craft>(objects[i]);
+            auto craft = std::static_pointer_cast<Craft>(objects[i]);
             if(craft->getOdf() == HolderName)
             {
                 const std::string name = craft->getName();
@@ -125,7 +125,7 @@ namespace mmm
     {
         for(std::size_t i = 0; i < objects.size(); ++i)
         {
-            CraftPtr craft = std::static_pointer_cast<Craft>(objects[i]);
+            auto craft = std::static_pointer_cast<Craft>(objects[i]);
             if(craft->getOdf() == MapperName)
             {
                 const std::string name = craft->getName();

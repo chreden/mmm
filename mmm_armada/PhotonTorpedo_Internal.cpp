@@ -4,9 +4,9 @@
 
 namespace mmm
 {
-    PhotonTorpedoPtr PhotonTorpedo::create(types::Entity* entity)
+    std::shared_ptr<PhotonTorpedo> PhotonTorpedo::create(types::Entity* entity)
     {
-        return PhotonTorpedoPtr(new PhotonTorpedo(static_cast<types::PhotonTorpedo*>(entity)));
+        return std::shared_ptr<PhotonTorpedo>(new PhotonTorpedo(static_cast<types::PhotonTorpedo*>(entity)));
     }
 
     PhotonTorpedo::PhotonTorpedo(types::PhotonTorpedo* torpedo)

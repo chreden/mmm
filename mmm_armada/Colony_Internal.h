@@ -12,7 +12,7 @@ namespace mmm
     class Colony : public Craft
     {
     public:
-        static ColonyPtr create(types::Entity* entity);
+        static std::shared_ptr<Colony> create(types::Entity* entity);
 
         std::shared_ptr<Entity> getPlanet() const;
         int getColonists() const;

@@ -18,7 +18,7 @@ namespace mmm
     class GameObject : public Entity, public ResourceInterface
     {
     public:
-        static GameObjectPtr create( types::Entity* entity );
+        static std::shared_ptr<GameObject> create( types::Entity* entity );
         virtual ~GameObject() = default;
         std::string getOdf() const;
         std::string getHandle() const;

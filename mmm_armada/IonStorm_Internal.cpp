@@ -4,9 +4,9 @@
 
 namespace mmm
 {
-    IonStormPtr IonStorm::create(types::Entity* entity)
+    std::shared_ptr<IonStorm> IonStorm::create(types::Entity* entity)
     {
-        return IonStormPtr(new IonStorm(static_cast<types::IonStorm*>(entity)));
+        return std::shared_ptr<IonStorm>(new IonStorm(static_cast<types::IonStorm*>(entity)));
     }
 
     IonStorm::IonStorm(types::IonStorm* storm)

@@ -3,9 +3,9 @@
 
 namespace mmm
 {
-    AntimatterMinePtr AntimatterMine::create(types::Entity* entity)
+    std::shared_ptr<AntimatterMine> AntimatterMine::create(types::Entity* entity)
     {
-        return AntimatterMinePtr(new AntimatterMine(static_cast<types::AntimatterMine*>(entity)));
+        return std::shared_ptr<AntimatterMine>(new AntimatterMine(static_cast<types::AntimatterMine*>(entity)));
     }
 
     AntimatterMine::AntimatterMine(types::AntimatterMine* antimatterMine)

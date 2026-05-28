@@ -3,9 +3,9 @@
 
 namespace mmm
 {
-    RepairShipClassPtr RepairShipClass::create(types::GameObjectClass* ptr)
+    std::shared_ptr<RepairShipClass> RepairShipClass::create(types::GameObjectClass* ptr)
     {
-        return RepairShipClassPtr(new RepairShipClass(static_cast<types::RepairShipClass*>(ptr)));
+        return std::shared_ptr<RepairShipClass>(new RepairShipClass(static_cast<types::RepairShipClass*>(ptr)));
     }
 
     RepairShipClass::RepairShipClass(types::RepairShipClass* ship)

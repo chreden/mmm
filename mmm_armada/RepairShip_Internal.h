@@ -12,7 +12,7 @@ namespace mmm
     class RepairShip : public Craft
     {
     public:
-        static RepairShipPtr create(types::Entity* entity);
+        static std::shared_ptr<RepairShip> create(types::Entity* entity);
         std::shared_ptr<Entity> getRepairTarget() const;
         void setRepairTarget(const std::shared_ptr<Entity>& ent);
         int index(lua_State* L, const std::string& key) const override;

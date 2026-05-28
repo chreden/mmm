@@ -9,7 +9,7 @@ namespace mmm
     class Scavenger : public Craft
     {
     public:
-        static ScavengerPtr create(types::Entity* scavenger);
+        static std::shared_ptr<Scavenger> create(types::Entity* scavenger);
     protected:
     private:
         explicit Scavenger(types::Scavenger* scavenger);

@@ -12,7 +12,7 @@ namespace mmm
     class Craft : public GameObject
     {
     public:
-        static CraftPtr create(types::Entity* entity);
+        static std::shared_ptr<Craft> create(types::Entity* entity);
         std::string getName() const;
         float getShields() const;
         float getShieldsValue() const;

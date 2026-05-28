@@ -41,9 +41,9 @@ namespace mmm
         }
     }
 
-    CraftPtr Craft::create(types::Entity* entity)
+    std::shared_ptr<Craft> Craft::create(types::Entity* entity)
     {
-        return CraftPtr(new Craft(static_cast<types::Craft*>(entity)));
+        return std::shared_ptr<Craft>(new Craft(static_cast<types::Craft*>(entity)));
     }
 
     Craft::Craft(types::Craft* craft)

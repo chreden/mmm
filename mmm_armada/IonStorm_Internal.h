@@ -8,7 +8,7 @@ namespace mmm
     class IonStorm : public AreaEffectObject
     {
     public:
-        static IonStormPtr create(types::Entity* entity);
+        static std::shared_ptr<IonStorm> create(types::Entity* entity);
         types::IonStorm::StormState getState() const;
         float getTimeLeft() const;
         float getCurrentScaleCount() const;

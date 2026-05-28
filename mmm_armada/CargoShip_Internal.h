@@ -9,7 +9,7 @@ namespace mmm
     class CargoShip : public Craft
     {
     public:
-        static CargoShipPtr create(types::Entity* entity);
+        static std::shared_ptr<CargoShip> create(types::Entity* entity);
         //Properties that are part of the actual cargo ship
         std::shared_ptr<Entity>	getStartStation() const;
         std::shared_ptr<Entity>	getDestinationStation() const;

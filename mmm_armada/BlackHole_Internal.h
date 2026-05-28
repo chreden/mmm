@@ -9,7 +9,7 @@ namespace mmm
     class BlackHole : public AreaEffectObject
     {
     public:
-        static BlackHolePtr   create(types::Entity* entity);
+        static std::shared_ptr<BlackHole> create(types::Entity* entity);
         virtual std::shared_ptr<GameObjectClass> getClass() const;
     protected:
         explicit   BlackHole(types::BlackHole* type);

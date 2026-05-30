@@ -59,7 +59,7 @@ namespace mmm
     {
         if(target)
         {
-            getOrdnance()->targetHandle = target->getID();	
+            getOrdnance()->targetHandle = target->getID();
         }
         else
         {

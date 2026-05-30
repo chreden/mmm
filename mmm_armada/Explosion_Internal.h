@@ -13,7 +13,7 @@ namespace mmm
     {
     public:
         explicit Explosion(types::Explosion* explosion);
-        std::shared_ptr<Entity>	getEntityResponsible() const;
+        std::shared_ptr<Entity> getEntityResponsible() const;
         float getRadius() const;
         bool getSoundPlayed() const;
         types::Explosion* getExplosion() const;

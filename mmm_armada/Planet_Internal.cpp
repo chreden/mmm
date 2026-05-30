@@ -7,9 +7,9 @@ namespace mmm
 {
     namespace
     {
-        const std::size_t Address_GetMaxPopulation	=	0x004b5550;
-        const std::size_t Address_GetPopulation		=	0x004b5960;
-        const std::size_t Address_SetPopulation		=	0x004b5970;
+        const std::size_t Address_GetMaxPopulation = 0x004b5550;
+        const std::size_t Address_GetPopulation = 0x004b5960;
+        const std::size_t Address_SetPopulation = 0x004b5970;
     }
 
     std::shared_ptr<Planet> Planet::create(types::Entity* entity)

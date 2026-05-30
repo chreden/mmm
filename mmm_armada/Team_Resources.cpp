@@ -5,11 +5,11 @@ namespace mmm
 {
     namespace
     {
-        const std::size_t Address_SetBiomatter	= 0x00496dd0;
-        const std::size_t Address_SetDilithium	= 0x00496ec0;
-        const std::size_t Address_SetLatinum	= 0x00496fb0;
-        const std::size_t Address_SetMetal		= 0x004970a0;
-        const std::size_t Address_GetResource	= 0x00498b00;
+        const std::size_t Address_SetBiomatter = 0x00496dd0;
+        const std::size_t Address_SetDilithium = 0x00496ec0;
+        const std::size_t Address_SetLatinum = 0x00496fb0;
+        const std::size_t Address_SetMetal = 0x004970a0;
+        const std::size_t Address_GetResource = 0x00498b00;
     }
 
     Team::Resources::Resources(types::Team* team)

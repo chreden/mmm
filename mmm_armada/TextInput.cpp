@@ -152,6 +152,8 @@ namespace mmm
                     lua_pop(L, 1);
                 }
             }
+
+            luaL_unref(L, LUA_REGISTRYINDEX, findFunction);
         }
 
         previousActive_ = active;

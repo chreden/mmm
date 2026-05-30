@@ -2,12 +2,12 @@
 
 namespace mmm
 {
-	namespace types
-	{
-		struct SObject
-		{
-			virtual ~SObject() { };
-			bool	bDontSave;
-		};
-	}
+    namespace types
+    {
+        struct SObject
+        {
+            virtual ~SObject() { };
+            bool bDontSave;
+        };
+    }
 }

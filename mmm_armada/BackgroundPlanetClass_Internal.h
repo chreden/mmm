@@ -5,7 +5,7 @@
 namespace mmm
 {
     namespace types
-    {	
+    {
         struct BackgroundPlanetClass;
     }
 

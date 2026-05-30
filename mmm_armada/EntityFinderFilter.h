@@ -6,7 +6,7 @@ namespace mmm
     class EntityFinderFilter
     {
     public:
-        virtual ~EntityFinderFilter( );
+        virtual ~EntityFinderFilter() = default;
         virtual bool call(const std::shared_ptr<Entity>& entity) = 0;
     };
 }

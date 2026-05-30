@@ -1,4 +1,4 @@
-#include "LuaBinding.h"	
+#include "LuaBinding.h"
 
 #include "Globals.h"
 #include "Application.h"
@@ -71,7 +71,7 @@
         #include "IonStorm_Internal.h"
         #include "Nebula_Internal.h"
         #include "Wormhole.h"
-        #include "BlackHole_Internal.h"	
+        #include "BlackHole_Internal.h"
         #include "LatinumNebula_Internal.h"
 
     #include "PulsePhaser_Internal.h"
@@ -249,7 +249,7 @@ namespace mmm
         mission_register(state);
             
         load_register(state);
-        textinput_register(state);	
+        textinput_register(state);
         
         */
     }

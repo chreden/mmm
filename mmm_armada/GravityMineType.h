@@ -4,12 +4,10 @@
 
 namespace mmm
 {
-	namespace types
-	{
-		struct GravityMine
-			: public Mine
-		{
-
-		};
-	}
+    namespace types
+    {
+        struct GravityMine : public Mine
+        {
+        };
+    }
 }

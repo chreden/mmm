@@ -80,7 +80,7 @@ namespace mmm
         //store it for next time.
         Message newMessage;
         newMessage.message  = message;
-        newMessage.type		= type;
+        newMessage.type = type;
 
         if(!innerSend(newMessage))
         {

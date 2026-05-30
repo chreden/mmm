@@ -8,7 +8,7 @@ namespace mmm
     namespace
     {
         const std::size_t Address_MissionRace = 0x00737cc0;
-        const std::size_t Address_Jukebox	  = 0x00736728;
+        const std::size_t Address_Jukebox  = 0x00736728;
         const std::size_t Address_JukeboxStop = 0x00463660;
         const std::size_t Address_JukeboxPlay = 0x00463640;
 
@@ -124,7 +124,7 @@ namespace mmm
 
     struct JukeBox // : public gamefeature
     { 
-        char		_padding_[0x2c];
+        char _padding_[0x2c];
         AudioSound* m_currentTrack;
     };
 

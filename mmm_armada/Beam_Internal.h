@@ -10,7 +10,7 @@ namespace mmm
     {
     public:
         static std::shared_ptr<Beam> create(types::Entity* entity);
-        virtual	~Beam(){};
+        virtual ~Beam(){};
         Vector3 getStartPos() const;
         Vector3 getEndPos() const;
         int index(lua_State* L, const std::string& key) const override;

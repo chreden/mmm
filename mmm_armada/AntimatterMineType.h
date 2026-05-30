@@ -4,12 +4,10 @@
 
 namespace mmm
 {
-	namespace types
-	{
-		struct AntimatterMine
-			: public Mine
-		{
-
-		};
-	}
+    namespace types
+    {
+        struct AntimatterMine : public Mine
+        {
+        };
+    }
 }

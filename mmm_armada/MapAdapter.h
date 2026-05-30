@@ -2,49 +2,49 @@
 
 namespace mmm
 {
-	template < typename K, typename V >
-	class MapAdapter
-	{
-	public:
-		enum Redbl
-		{
-			_RED,
-			_BLACK
-		};
+    template <typename K, typename V>
+    class MapAdapter
+    {
+    public:
+        enum Redbl
+        {
+            _RED,
+            _BLACK
+        };
 
-		struct Pair
-		{
-			K first;
-			V second;
-		};
+        struct Pair
+        {
+            K first;
+            V second;
+        };
 
-		std::size_t size() const
-		{
-			return tree._size;
-		}
+        std::size_t size() const
+        {
+            return tree._size;
+        }
 
-		class Tree
-		{
-		public:
-			struct Node
-			{
-				Node*	left;
-				Node*	parent;
-				Node*	right;
-				Pair	value;
-				Redbl	rb;
-			};
-			char _padding_[0x4];
-			Node*		  _head;
-			unsigned char _multi;
-			unsigned int  _size;
-		};	
-		Tree tree;
-	};
+        class Tree
+        {
+        public:
+            struct Node
+            {
+                Node* left;
+                Node* parent;
+                Node* right;
+                Pair value;
+                Redbl rb;
+            };
+            char _padding_[0x4];
+            Node*  _head;
+            unsigned char _multi;
+            unsigned int  _size;
+        };
+        Tree tree;
+    };
 }
 
-		/*
-		UserDefinedType: std::_Tree<int,std::pair<int const ,AudioStream2D *>,std::map<int,AudioStream2D *,std::less<int>,std::allocator<AudioStream2D *> >::_Kfn,std::less<int>,std::allocator<AudioStream2D *> >
+        /*
+        UserDefinedType: std::_Tree<int,std::pair<int const ,AudioStream2D *>,std::map<int,AudioStream2D *,std::less<int>,std::allocator<AudioStream2D *> >::_Kfn,std::less<int>,std::allocator<AudioStream2D *> >
 Enum           :   _Redbl, Type: int
 Data           :     constant 0x0, Constant, Type: int, _Red
 Data           :     constant 0x1, Constant, Type: int, _Black
@@ -63,17 +63,17 @@ Data           :     this+0x14, Member, Type: enum std::_Tree<int,std::pair<int 
 //Data           :   this+0x0, Member, 
 /*
 Type: class std::_Tree
-				<int,
-				std::pair<int const ,AudioStream2D *>,
-					std::map<int,
-							 AudioStream2D *,
-							 std::less<int>,
-							 std::allocator<AudioStream2D *>
-							 >::_Kfn,
-				std::less<int>,
-				std::allocator<AudioStream2D *> 
-				>, _Tr
-	
-	*/
+                <int,
+                std::pair<int const ,AudioStream2D *>,
+                    std::map<int,
+                             AudioStream2D *,
+                             std::less<int>,
+                             std::allocator<AudioStream2D *>
+                             >::_Kfn,
+                std::less<int>,
+                std::allocator<AudioStream2D *> 
+                >, _Tr
+    
+    */
 
 

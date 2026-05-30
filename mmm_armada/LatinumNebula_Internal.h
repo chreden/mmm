@@ -16,6 +16,6 @@ namespace mmm
         static std::shared_ptr<LatinumNebula> create(types::Entity* entity);
         virtual std::shared_ptr<GameObjectClass> getClass() const;
     protected:
-        explicit	 LatinumNebula(types::LatinumNebula* nebula);
+        explicit LatinumNebula(types::LatinumNebula* nebula);
     };
 }

@@ -2,8 +2,4 @@
 
 namespace mmm
 {
-	EntityFinderFilter::~EntityFinderFilter( )
-	{
-
-	}
 }

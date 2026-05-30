@@ -20,7 +20,7 @@ namespace mmm
     private:
         std::unordered_map<std::string, std::shared_ptr<TextInputHook>> hooks_;
         bool previousActive_{ false };
-        std::string	previousString_;
+        std::string previousString_;
     };
 
     void textinput_update();

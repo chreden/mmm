@@ -14,7 +14,7 @@ namespace mmm
     {
     public:
         explicit Ordnance(types::Ordnance* ordnance);
-        virtual	~Ordnance(){};
+        virtual ~Ordnance(){};
 
         std::shared_ptr<Team> getTeam() const;
         Vector3 getTargetLocation() const;

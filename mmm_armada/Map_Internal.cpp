@@ -101,8 +101,8 @@ namespace mmm
         float m_max_x;
         float m_max_y;
         float m_max_z;
-        //static unsigned char s_load_new_terrain_size;	007395b4
-        //static unsigned char s_save_new_terrain_size;	007395b5
+        //static unsigned char s_load_new_terrain_size; 007395b4
+        //static unsigned char s_save_new_terrain_size; 007395b5
     };
 
     void Map::updateMapSize()

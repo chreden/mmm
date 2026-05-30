@@ -5,7 +5,7 @@ namespace mmm
 {
     namespace
     {
-        const std::size_t Address_GetResourceSpaceRemaining	= 0x004b1800;
+        const std::size_t Address_GetResourceSpaceRemaining = 0x004b1800;
 
         int freighter_get_max_amount(lua_State* L)
         {

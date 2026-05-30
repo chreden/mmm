@@ -10,7 +10,7 @@ namespace mmm
     {
     public:
         static std::shared_ptr<Bullet> create(types::Entity* entity);
-        virtual	~Bullet(){};
+        virtual ~Bullet(){};
         Vector3 getStartPosition() const;
         Vector3 getCurrentPosition() const;
         void setStartPosition(const Vector3& position);

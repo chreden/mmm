@@ -2,33 +2,28 @@
 
 namespace memraider
 {
-	MrNode::MrNode( std::size_t address )
-		: address_( address )
-	{
-				
-	}
+    MrNode::MrNode(std::size_t address)
+        : address_(address)
+    {
+    }
 
-	MrNode::MrNode( const void* target )
-		: address_( reinterpret_cast<std::size_t>( target ) )
-	{
+    MrNode::MrNode(const void* target)
+        : address_(reinterpret_cast<std::size_t>(target))
+    {
+    }
 
-	}
+    std::size_t MrNode::getAddress() const
+    {
+        return address_;
+    }
 
-	std::size_t
-	MrNode::getAddress( ) const
-	{
-		return address_;
-	}
+    void MrNode::setAddress(std::size_t address)
+    {
+        address_ = address;
+    }
 
-	void
-	MrNode::setAddress( std::size_t address ) 
-	{
-		address_ = address;
-	}
-
-	MrNode
-	MrNode::getInner( std::size_t offset ) const
-	{
-		return MrNode( reinterpret_cast<std::size_t>( *reinterpret_cast<char**>( address_ + offset ) ) );
-	}
+    MrNode MrNode::getInner(std::size_t offset) const
+    {
+        return MrNode(reinterpret_cast<std::size_t>(*reinterpret_cast<char**>(address_ + offset)));
+    }
 }

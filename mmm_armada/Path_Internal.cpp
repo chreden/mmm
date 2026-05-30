@@ -10,13 +10,13 @@ namespace mmm
         using namespace types;
 
         // Address of the static AiPath::find function.
-        const std::size_t Address_Find			= 0x0044fb10;
+        const std::size_t Address_Find = 0x0044fb10;
 
-        const std::size_t Address_SetPointCount	= 0x0044f990;
+        const std::size_t Address_SetPointCount = 0x0044f990;
 
-        const std::size_t Address_SetPoints		= 0x0044f990;
+        const std::size_t Address_SetPoints = 0x0044f990;
         // Address of the AiPath set label function.
-        const std::size_t Address_SetLabel		= 0x0044f920;
+        const std::size_t Address_SetLabel = 0x0044f920;
         // Address of the AiPath class' default constructor
         const std::size_t Address_PathDefaultConstructor = 0x0044ef40;
 

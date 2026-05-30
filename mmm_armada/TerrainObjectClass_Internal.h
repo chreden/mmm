@@ -9,8 +9,7 @@ namespace mmm
         struct TerrainObjectClass;
     }
 
-    class TerrainObjectClass
-        : public GameObjectClass
+    class TerrainObjectClass : public GameObjectClass
     {
     public:
         explicit TerrainObjectClass(types::TerrainObjectClass* object);

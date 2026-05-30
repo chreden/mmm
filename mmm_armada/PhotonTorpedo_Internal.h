@@ -10,7 +10,7 @@ namespace mmm
     {
     public:
         static std::shared_ptr<PhotonTorpedo> create(types::Entity* entity);
-        virtual	~PhotonTorpedo(){};
+        virtual ~PhotonTorpedo(){};
         ST3D_Colour getPhotonColour() const;
         void setPhotonColour(const ST3D_Colour& colour);
         int index(lua_State* L, const std::string& key) const override;

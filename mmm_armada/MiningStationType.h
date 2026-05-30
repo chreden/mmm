@@ -4,15 +4,14 @@
 
 namespace mmm
 {
-	namespace types
-	{
-		struct ResourceTransferInterface;
+    namespace types
+    {
+        struct ResourceTransferInterface;
 
-		struct MiningStation
-			: public Producer
-		{
-			float					   m_nextResourceCheckTime;
-			ResourceTransferInterface* m_pResourceTransferInterface;
-		};
-	}
+        struct MiningStation : public Producer
+        {
+            float m_nextResourceCheckTime;
+            ResourceTransferInterface* m_pResourceTransferInterface;
+        };
+    }
 }

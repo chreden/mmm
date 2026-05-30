@@ -11,8 +11,8 @@ namespace mmm
     public:
         static std::shared_ptr<CargoShip> create(types::Entity* entity);
         //Properties that are part of the actual cargo ship
-        std::shared_ptr<Entity>	getStartStation() const;
-        std::shared_ptr<Entity>	getDestinationStation() const;
+        std::shared_ptr<Entity> getStartStation() const;
+        std::shared_ptr<Entity> getDestinationStation() const;
         bool getIsTrading() const;
         float getMaxCargo() const;
         eResource getNextResource() const;

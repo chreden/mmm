@@ -404,7 +404,7 @@ namespace mmm
         {
             types::AI_Team& team = ai->m_team[getNumber()];
             team.m_AI_controlled = value;
-            team.m_enabled		 = value;
+            team.m_enabled = value;
         }
 
         types::Transport* transport = LoadMemPointer<types::Transport>(Address_GTransport);

@@ -7,6 +7,7 @@ namespace mmm
     namespace
     {
         int vector_metatable{ LUA_NOREF };
+        std::unordered_map<std::string, std::function<int(lua_State*, const Vector3&)>> getters;
 
         int vector_add(lua_State* L)
         {
@@ -73,53 +74,11 @@ namespace mmm
         {
             auto& self = get_userdata<Vector3>(L, 1);
             const std::string key = lua_tostring(L, 2);
-
-            if (key == "cross")
+            const auto& getter = getters.find(key);
+            if (getter != getters.end())
             {
-                lua_pushcfunction(L, vector_cross);
-                return 1;
+                return getter->second(L, self);
             }
-            else if (key == "dot")
-            {
-                lua_pushcfunction(L, vector_dot);
-                return 1;
-            }
-            else if (key == "length")
-            {
-                lua_pushnumber(L, self.length());
-                return 1;
-            }
-            else if (key == "lengthSquared")
-            {
-                lua_pushnumber(L, self.lengthSquared());
-                return 1;
-            }
-            else if (key == "lerp")
-            {
-                lua_pushcfunction(L, vector_lerp);
-                return 1;
-            }
-            else if (key == "normalize")
-            {
-                lua_pushcfunction(L, vector_normalize);
-                return 1;
-            }
-            else if (key == "x")
-            {
-                lua_pushnumber(L, self.x);
-                return 1;
-            }
-            else if (key == "y")
-            {
-                lua_pushnumber(L, self.y);
-                return 1;
-            }
-            else if (key == "z")
-            {
-                lua_pushnumber(L, self.z);
-                return 1;
-            }
-
             return 0;
         }
 
@@ -257,5 +216,18 @@ namespace mmm
                 { "__mul", vector_mul },
                 { "__div", vector_div }
             });
+
+        getters =
+        {
+            { "cross", [](auto&& L, auto&& V) { lua_pushcfunction(L, vector_cross); return 1; } },
+            { "dot", [](auto&& L, auto&& V) { lua_pushcfunction(L, vector_dot); return 1; } },
+            { "length", [](auto&& L, auto&& V) { lua_pushnumber(L, V.length()); return 1; } },
+            { "lengthSquared", [](auto&& L, auto&& V) { lua_pushnumber(L, V.lengthSquared()); return 1; } },
+            { "lerp", [](auto&& L, auto&& V) { lua_pushcfunction(L, vector_lerp); return 1; } },
+            { "normalize", [](auto&& L, auto&& V) { lua_pushcfunction(L, vector_normalize); return 1; } },
+            { "x", [](auto&& L, auto&& V) { lua_pushnumber(L, V.x); return 1; } },
+            { "y", [](auto&& L, auto&& V) { lua_pushnumber(L, V.y); return 1; } },
+            { "z", [](auto&& L, auto&& V) { lua_pushnumber(L, V.z); return 1; } },
+        };
     }
 }

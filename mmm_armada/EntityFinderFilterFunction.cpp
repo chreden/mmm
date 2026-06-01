@@ -17,7 +17,6 @@ namespace mmm
 
     bool EntityFinderFilterFunction::call(const std::shared_ptr<Entity>& entity)
     {
-        int x = lua_gettop(_L);
         lua_rawgeti(_L, LUA_REGISTRYINDEX, _index);
         entity_new(_L, entity);
         if (LUA_OK != lua_pcall(_L, 1, 1, 0))
@@ -27,7 +26,6 @@ namespace mmm
         }
         bool result = lua_toboolean(_L, -1);
         lua_pop(_L, 1);
-        int y = lua_gettop(_L);
         return result;
     }
 }

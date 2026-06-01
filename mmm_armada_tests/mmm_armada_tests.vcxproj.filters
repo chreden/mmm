@@ -4,6 +4,7 @@
     <ClCompile Include="MonitorTests.cpp" />
     <ClCompile Include="pch.cpp" />
     <ClCompile Include="MonitorHookTests.cpp" />
+    <ClCompile Include="Vector3Tests.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />

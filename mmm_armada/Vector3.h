@@ -30,6 +30,8 @@ namespace mmm
         Vector3 operator/(float other) const;
         Vector3 operator*(const Matrix& other) const;
 
+        auto operator<=>(const Vector3& other) const = default;
+
         float x{ 0.0f };
         float y{ 0.0f };
         float z{ 0.0f };

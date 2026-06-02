@@ -16,6 +16,8 @@ namespace mmm
 
         Matrix transpose() const;
 
+        auto operator<=>(const Matrix& other) const = default;
+
         float get(int row, int column) const;
 
         void set(int row, int column, float value);

@@ -64,30 +64,30 @@ namespace mmm
 
         int matrix_rotation(lua_State* L)
         {
-            if (lua_type(L, 2) == LUA_TNUMBER && lua_gettop(L) == 4)
+            if (lua_type(L, 1) == LUA_TNUMBER && lua_gettop(L) == 3)
             {
-                return matrix_new(L, Matrix::rotation(lua_tonumber(L, 2), lua_tonumber(L, 3), lua_tonumber(L, 4)));
+                return matrix_new(L, Matrix::rotation(lua_tonumber(L, 1), lua_tonumber(L, 2), lua_tonumber(L, 3)));
             }
-            else if (is_vector(L, 2))
+            else if (is_vector(L, 1))
             {
-                return matrix_new(L, Matrix::rotation(get_userdata<Vector3>(L, 2)));
+                return matrix_new(L, Matrix::rotation(get_userdata<Vector3>(L, 1)));
             }
             return 0;
         }
 
         int matrix_rotation_x(lua_State* L)
         {
-            return matrix_new(L, Matrix::rotationX(lua_tonumber(L, 2)));
+            return matrix_new(L, Matrix::rotationX(lua_tonumber(L, 1)));
         }
 
         int matrix_rotation_y(lua_State* L)
         {
-            return matrix_new(L, Matrix::rotationY(lua_tonumber(L, 2)));
+            return matrix_new(L, Matrix::rotationY(lua_tonumber(L, 1)));
         }
 
         int matrix_rotation_z(lua_State* L)
         {
-            return matrix_new(L, Matrix::rotationZ(lua_tonumber(L, 2)));
+            return matrix_new(L, Matrix::rotationZ(lua_tonumber(L, 1)));
         }
 
         int matrix_scaling(lua_State* L)
@@ -109,13 +109,13 @@ namespace mmm
 
         int matrix_translation(lua_State* L)
         {
-            if (lua_type(L, 2) == LUA_TNUMBER && lua_gettop(L) == 4)
+            if (lua_type(L, 1) == LUA_TNUMBER && lua_gettop(L) == 3)
             {
-                return matrix_new(L, Matrix::translation(lua_tonumber(L, 2), lua_tonumber(L, 3), lua_tonumber(L, 4)));
+                return matrix_new(L, Matrix::translation(lua_tonumber(L, 1), lua_tonumber(L, 2), lua_tonumber(L, 3)));
             }
-            else if (is_vector(L, 2))
+            else if (is_vector(L, 1))
             {
-                return matrix_new(L, Matrix::translation(get_userdata<Vector3>(L, 2)));
+                return matrix_new(L, Matrix::translation(get_userdata<Vector3>(L, 1)));
             }
             return 0;
         }

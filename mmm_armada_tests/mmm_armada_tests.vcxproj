@@ -93,6 +93,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="MatrixTests.cpp" />
     <ClCompile Include="MonitorHookTests.cpp" />
     <ClCompile Include="MonitorTests.cpp" />
     <ClCompile Include="pch.cpp">

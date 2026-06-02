@@ -16,8 +16,8 @@ namespace mmm
         explicit Vector3() = default;
         explicit Vector3(float nX, float nY, float nZ);
 
-        float length() const;
-        float lengthSquared() const;
+        float length() const noexcept;
+        float lengthSquared() const noexcept;
 
         Vector3 normalize() const;
         float dot(const Vector3& other) const;

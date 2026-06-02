@@ -92,17 +92,17 @@ namespace mmm
 
         int matrix_scaling(lua_State* L)
         {
-            if (lua_type(L, 2) == LUA_TNUMBER)
+            if (lua_type(L, 1) == LUA_TNUMBER)
             {
-                if (lua_gettop(L) == 4)
+                if (lua_gettop(L) == 3)
                 {
-                    return matrix_new(L, Matrix::scaling(lua_tonumber(L, 2), lua_tonumber(L, 3), lua_tonumber(L, 4)));
+                    return matrix_new(L, Matrix::scaling(lua_tonumber(L, 1), lua_tonumber(L, 2), lua_tonumber(L, 3)));
                 }
-                return matrix_new(L, Matrix::scaling(lua_tonumber(L, 2)));
+                return matrix_new(L, Matrix::scaling(lua_tonumber(L, 1)));
             }
-            else if (is_vector(L, 2))
+            else if (is_vector(L, 1))
             {
-                return matrix_new(L, Matrix::scaling(get_userdata<Vector3>(L, 2)));
+                return matrix_new(L, Matrix::scaling(get_userdata<Vector3>(L, 1)));
             }
             return 0;
         }
